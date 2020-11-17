@@ -16,3 +16,13 @@ C:\Users\THANHDUY\Documents\GitHub\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\
 C:\Users\THANHDUY\Documents\GitHub\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.CoreCompileInputs.cache
 C:\Users\THANHDUY\Documents\GitHub\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.exe
 C:\Users\THANHDUY\Documents\GitHub\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.pdb
+D:\DING_DONG_SOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\GUI_DingDoong.exe.config
+D:\DING_DONG_SOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\GUI_DingDoong.exe
+D:\DING_DONG_SOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\GUI_DingDoong.pdb
+D:\DING_DONG_SOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csprojAssemblyReference.cache
+D:\DING_DONG_SOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.Form1.resources
+D:\DING_DONG_SOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.Properties.Resources.resources
+D:\DING_DONG_SOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.GenerateResource.cache
+D:\DING_DONG_SOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.CoreCompileInputs.cache
+D:\DING_DONG_SOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.exe
+D:\DING_DONG_SOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.pdb
