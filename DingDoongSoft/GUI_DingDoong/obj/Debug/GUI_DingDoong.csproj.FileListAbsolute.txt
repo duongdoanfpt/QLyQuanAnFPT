@@ -1,0 +1,8 @@
+E:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\GUI_DingDoong.exe.config
+E:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\GUI_DingDoong.exe
+E:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\GUI_DingDoong.pdb
+E:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csprojAssemblyReference.cache
+E:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.Properties.Resources.resources
+E:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.GenerateResource.cache
+E:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.exe
+E:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.pdb
