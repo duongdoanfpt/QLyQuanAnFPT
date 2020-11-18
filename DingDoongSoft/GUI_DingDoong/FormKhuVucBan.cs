@@ -16,5 +16,11 @@ namespace GUI_DingDoong
         {
             InitializeComponent();
         }
+
+        private void FormKhuVucBan_Load(object sender, EventArgs e)
+        {
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
     }
 }
