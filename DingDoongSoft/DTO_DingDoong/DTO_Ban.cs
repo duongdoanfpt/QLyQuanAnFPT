@@ -34,9 +34,9 @@ namespace DTO_DingDoong
             }
         }
 
-        public DTO_Ban(string TenBan, int TrangThai)
+        public DTO_Ban(int TrangThai)
         {
-            this.tenban = TenBan;
+            
             this.trangthai = TrangThai;
         }
 
