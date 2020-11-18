@@ -453,6 +453,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(1005, 613);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.lblMainTitle);
