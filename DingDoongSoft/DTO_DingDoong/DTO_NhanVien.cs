@@ -9,7 +9,7 @@ namespace DTO_DingDoong
    
     public class DTO_NhanVien
     {
-        private string manv;
+     
         private string tennv;
         private string email;
         private string diachi;
@@ -19,17 +19,7 @@ namespace DTO_DingDoong
         private string hinh;
         private string matkhau;
 
-        public string MaNV
-        {
-            get
-            {
-                return manv;
-            }
-            set
-            {
-                manv = value;
-            }
-        }
+       
         public string TenNV
         {
             get
@@ -119,9 +109,9 @@ namespace DTO_DingDoong
             }
         }
 
-        public DTO_NhanVien(string MaNV, string TenNV, string Email, string Diachi, string NgayVL, int VaiTro, int TinhTrang, string Hinh, string MatKhau)
+        public DTO_NhanVien(string TenNV, string Email, string Diachi, string NgayVL, int VaiTro, int TinhTrang, string Hinh, string MatKhau)
         {
-            this.manv = MaNV;
+            
             this.tennv = TenNV;
             this.email = Email;
             this.diachi = Diachi;

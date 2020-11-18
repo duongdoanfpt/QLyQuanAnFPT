@@ -10,23 +10,13 @@ namespace DTO_DingDoong
 {
     public class DTO_KhuyenMai
     {
-        private string makm;
+       
         private string tenkm;
         private float chietkhau;
         private string ngaybd;
         private string ngaykt;
 
-        public string MaKM
-        {
-            get
-            {
-                return makm;
-            }
-            set
-            {
-                makm = value;
-            }
-        }
+     
         public string TenKM
         {
             get
@@ -72,9 +62,9 @@ namespace DTO_DingDoong
             }
         }
 
-        public DTO_KhuyenMai(string MaKM, string TenKM, float ChietKhau, string NgayBD, string NgayKT)
+        public DTO_KhuyenMai( string TenKM, float ChietKhau, string NgayBD, string NgayKT)
         {
-            this.makm = MaKM;
+           
             this.tenkm = TenKM;
             this.chietkhau = ChietKhau;
             this.ngaybd = NgayBD;
