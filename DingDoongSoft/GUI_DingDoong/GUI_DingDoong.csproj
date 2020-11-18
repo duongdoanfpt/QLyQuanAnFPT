@@ -47,16 +47,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,6 +89,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.clipboard.variant.edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.book.hardcover.open.writing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.book.perspective.help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.customerservice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

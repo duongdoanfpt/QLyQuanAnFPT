@@ -117,38 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="appbar.settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.book.perspective.help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.book.perspective.help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.book.hardcover.open.writing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.book.hardcover.open.writing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.tag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.tag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.people.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.food" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.food.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.clipboard.variant.edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.clipboard.variant.edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.customerservice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.customerservice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.message" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.message.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
