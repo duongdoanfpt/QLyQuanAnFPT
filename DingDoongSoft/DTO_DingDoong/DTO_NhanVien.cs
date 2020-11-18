@@ -10,116 +10,116 @@ namespace DTO_DingDoong
     public class DTO_NhanVien
     {
      
-        private string tennv;
-        private string email;
-        private string diachi;
-        private string ngayvl;
-        private int vaitro;
-        private int trangthai;
-        private string hinh;
-        private string matkhau;
+        private string _TenNV;
+        private string _Email;
+        private string _DiaChi;
+        private string _NgayVL;
+        private int _Quyen;
+        private int _TrangThai;
+        private Byte[] _Hinh;
+        private string _MatKhau;
 
        
         public string TenNV
         {
             get
             {
-                return tennv;
+                return _TenNV;
             }
             set
             {
-                tennv = value;
+                _TenNV = value;
             }
         }
         public string Email
         {
             get
             {
-                return email;
+                return _Email;
             }
             set
             {
-                email = value;
+                _Email = value;
             }
         }
         public string DiaChi
         {
             get
             {
-                return diachi;
+                return _DiaChi;
             }
             set
             {
-                diachi = value;
+                _DiaChi = value;
             }
         }
         public string NgayVL
         {
             get
             {
-                return ngayvl;
+                return _NgayVL;
             }
             set
             {
-                ngayvl = value;
+               _NgayVL = value;
             }
         }
-        public int VaiTro
+        public int Quyen
         {
             get
             {
-                return vaitro;
+                return _Quyen;
             }
             set
             {
-                vaitro = value;
+                _Quyen = value;
             }
         }
         public int TrangThai
         {
             get
             {
-                return trangthai;
+                return _TrangThai;
             }
             set
             {
-                trangthai = value;
+                _TrangThai = value;
             }
         }
-        public string Hinh
+        public byte[] Hinh
         {
             get
             {
-                return hinh;
+                return _Hinh;
             }
             set
             {
-                hinh = value;
+                _Hinh = value;
             }
         }
         public string MatKhau
         {
             get
             {
-                return matkhau;
+                return _MatKhau;
             }
             set
             {
-                matkhau = value;
+                _MatKhau = value;
             }
         }
 
-        public DTO_NhanVien(string TenNV, string Email, string Diachi, string NgayVL, int VaiTro, int TinhTrang, string Hinh, string MatKhau)
+        public DTO_NhanVien(string TenNV, string Email, string Diachi, string NgayVL, int Quyen, int TinhTrang, byte[] Hinh, string MatKhau)
         {
             
-            this.tennv = TenNV;
-            this.email = Email;
-            this.diachi = Diachi;
-            this.ngayvl = NgayVL;
-            this.vaitro = VaiTro;
-            this.trangthai = TinhTrang;
-            this.hinh = Hinh;
-            this.matkhau = MatKhau;
+            this._TenNV = TenNV;
+            this._Email = Email;
+            this._DiaChi = Diachi;
+            this._NgayVL = NgayVL;
+            this._Quyen = Quyen;
+            this._TrangThai = TinhTrang;
+            this._Hinh = Hinh;
+            this._MatKhau = MatKhau;
         }
 
         public DTO_NhanVien()

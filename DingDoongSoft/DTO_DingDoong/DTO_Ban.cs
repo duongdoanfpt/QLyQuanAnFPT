@@ -8,42 +8,42 @@ namespace DTO_DingDoong
 {
     public class DTO_Ban
     {
-        private string tenban;
-        private int trangthai;
+        private string _TenBan;
+        private int _TrangThai;
 
         public string TenBan
         {
             get
             {
-                return tenban;
+                return _TenBan;
             }
             set
             {
-                tenban = value;
+                _TenBan = value;
             }
         }
         public int TrangThai
         {
             get
             {
-                return trangthai;
+                return _TrangThai;
             }
             set
             {
-                trangthai = value;
+                _TrangThai = value;
             }
         }
 
         public DTO_Ban(int TrangThai)
         {
             
-            this.trangthai = TrangThai;
+            this._TrangThai = TrangThai;
         }
 
         public DTO_Ban(string tenBan,int TrangThai)
         {
-            this.tenban = tenBan;
-            this.trangthai = TrangThai;
+            this._TenBan = tenBan;
+            this._TrangThai = TrangThai;
         }
         public DTO_Ban()
         {
