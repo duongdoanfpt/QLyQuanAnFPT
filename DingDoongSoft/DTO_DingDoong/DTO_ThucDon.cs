@@ -9,24 +9,15 @@ using System.Threading.Tasks;
     {
         public class DTO_ThucDon
         {
-            private string matd;
+           
             private string tentd;
             private float giaban;
             private string mota;
             private string nhom;
             private string hinh;
 
-            public string MaTD
-            {
-                get
-                {
-                    return matd;
-                }
-                set
-                {
-                    matd = value;
-                }
-            }
+
+            
             public string TenTD
             {
                 get
@@ -83,9 +74,9 @@ using System.Threading.Tasks;
                 }
             }
 
-            public DTO_ThucDon(string MaTD, string TenTD, float GiaBan, string MoTa, string Nhom, string HInh)
+            public DTO_ThucDon(string TenTD, float GiaBan, string MoTa, string Nhom, string HInh)
             {
-                this.matd = MaTD;
+               
                 this.tentd = TenTD;
                 this.giaban = GiaBan;
                 this.mota = MoTa;
