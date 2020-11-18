@@ -4,98 +4,100 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO_DingDoong
-{
-    public class DTO_ThucDon
+
+    namespace DTO_DingDoong
     {
-        private string matd;
-        private string tentd;
-        private float giaban;
-        private string mota;
-        private string nhom;
-        private string hinh;
+        public class DTO_ThucDon
+        {
+            private string matd;
+            private string tentd;
+            private float giaban;
+            private string mota;
+            private string nhom;
+            private string hinh;
 
-        public string MaTD
-        {
-            get
+            public string MaTD
             {
-                return matd;
+                get
+                {
+                    return matd;
+                }
+                set
+                {
+                    matd = value;
+                }
             }
-            set
+            public string TenTD
             {
-                matd = value;
+                get
+                {
+                    return tentd;
+                }
+                set
+                {
+                    tentd = value;
+                }
             }
-        }
-        public string TenTD
-        {
-            get
+            public float GiaBan
             {
-                return tentd;
+                get
+                {
+                    return giaban;
+                }
+                set
+                {
+                    giaban = value;
+                }
             }
-            set
+            public string MoTa
             {
-                tentd = value;
+                get
+                {
+                    return mota;
+                }
+                set
+                {
+                    mota = value;
+                }
             }
-        }
-        public float GiaBan
-        {
-            get
+            public string Nhom
             {
-                return giaban;
+                get
+                {
+                    return nhom;
+                }
+                set
+                {
+                    nhom = value;
+                }
             }
-            set
+            public string Hinh
             {
-                giaban = value;
+                get
+                {
+                    return hinh;
+                }
+                set
+                {
+                    hinh = value;
+                }
             }
-        }
-        public string MoTa
-        {
-            get
-            {
-                return mota;
-            }
-            set
-            {
-                mota = value;
-            }
-        }
-        public string Nhom
-        {
-            get
-            {
-                return nhom;
-            }
-            set
-            {
-                nhom = value;
-            }
-        }
-        public string Hinh
-        {
-            get
-            {
-                return hinh;
-            }
-            set
-            {
-                hinh = value;
-            }
-        }
 
-        public DTO_ThucDon(string MaTD, string TenTD, float GiaBan, string MoTa, string Nhom, string HInh)
-        {
-            this.matd = MaTD;
-            this.tentd = TenTD;
-            this.giaban = GiaBan;
-            this.mota = MoTa;
-            this.nhom = Nhom;
-            this.hinh = Hinh;
+            public DTO_ThucDon(string MaTD, string TenTD, float GiaBan, string MoTa, string Nhom, string HInh)
+            {
+                this.matd = MaTD;
+                this.tentd = TenTD;
+                this.giaban = GiaBan;
+                this.mota = MoTa;
+                this.nhom = Nhom;
+                this.hinh = Hinh;
+            }
+
+            public DTO_ThucDon()
+            {
+
+            }
+
         }
-
-        public DTO_ThucDon()
-        {
-
-        }
-
     }
-}
+

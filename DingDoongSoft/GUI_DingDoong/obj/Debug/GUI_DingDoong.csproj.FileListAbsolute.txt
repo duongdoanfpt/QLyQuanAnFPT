@@ -29,3 +29,16 @@ D:\DING_DONG_SOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoo
 E:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormMain.resources
 E:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormLogin.resources
 E:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormChangePass.resources
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\GUI_DingDoong.exe.config
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\GUI_DingDoong.exe
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\GUI_DingDoong.pdb
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csprojAssemblyReference.cache
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormChangePass.resources
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormForgot.resources
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormLogin.resources
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormMain.resources
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.Properties.Resources.resources
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.GenerateResource.cache
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.CoreCompileInputs.cache
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.exe
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.pdb
