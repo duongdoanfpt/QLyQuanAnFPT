@@ -59,6 +59,12 @@
     <Compile Include="FormForgot.Designer.cs">
       <DependentUpon>FormForgot.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKhuVucBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhuVucBan.Designer.cs">
+      <DependentUpon>FormKhuVucBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormForgot.resx">
       <DependentUpon>FormForgot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKhuVucBan.resx">
+      <DependentUpon>FormKhuVucBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -140,6 +149,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons-Land-Vista-People-Office-Customer-Male-Light.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apathae-Chakram-2-Home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Sleek-Xp-Basic-User-Group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chrisl21-Minecraft-Crafting-Table.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fasticon-Database-Table-edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chrisl21-Minecraft-Crafting-Table1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apathae-Chakram-2-Home1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Sleek-Xp-Basic-User-Group1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons-Land-Vista-People-Office-Customer-Male-Light1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Sleek-Xp-Basic-User-Group2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chrisl21-Minecraft-Crafting-Table2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fasticon-Database-Table-edit1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chrisl21-Minecraft-Crafting-Table3.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

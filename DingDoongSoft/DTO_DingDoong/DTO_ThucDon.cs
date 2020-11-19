@@ -10,11 +10,11 @@ using System.Threading.Tasks;
         public class DTO_ThucDon
         {
            
-            private string tentd;
-            private float giaban;
-            private string mota;
-            private string nhom;
-            private string hinh;
+            private string _TenTD;
+            private float _GiaBan;
+            private string _MoTa;
+            private string _Nhom;
+            private string _Hinh;
 
 
             
@@ -22,66 +22,66 @@ using System.Threading.Tasks;
             {
                 get
                 {
-                    return tentd;
+                    return _TenTD;
                 }
                 set
                 {
-                    tentd = value;
+                    _TenTD = value;
                 }
             }
             public float GiaBan
             {
                 get
                 {
-                    return giaban;
+                    return _GiaBan;
                 }
                 set
                 {
-                    giaban = value;
+                    _GiaBan = value;
                 }
             }
             public string MoTa
             {
                 get
                 {
-                    return mota;
+                    return _MoTa;
                 }
                 set
                 {
-                    mota = value;
+                    _MoTa = value;
                 }
             }
             public string Nhom
             {
                 get
                 {
-                    return nhom;
+                    return _Nhom;
                 }
                 set
                 {
-                    nhom = value;
+                    _Nhom = value;
                 }
             }
             public string Hinh
             {
                 get
                 {
-                    return hinh;
+                    return _Hinh;
                 }
                 set
                 {
-                    hinh = value;
+                    _Hinh = value;
                 }
             }
 
             public DTO_ThucDon(string TenTD, float GiaBan, string MoTa, string Nhom, string HInh)
             {
                
-                this.tentd = TenTD;
-                this.giaban = GiaBan;
-                this.mota = MoTa;
-                this.nhom = Nhom;
-                this.hinh = Hinh;
+                this._TenTD = TenTD;
+                this._GiaBan = GiaBan;
+                this._MoTa = MoTa;
+                this._Nhom = Nhom;
+                this._Hinh = Hinh;
             }
 
             public DTO_ThucDon()
