@@ -63,6 +63,26 @@ namespace GUI_DingDoong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Apathae_Chakram_2_Home {
+            get {
+                object obj = ResourceManager.GetObject("Apathae-Chakram-2-Home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Apathae_Chakram_2_Home1 {
+            get {
+                object obj = ResourceManager.GetObject("Apathae-Chakram-2-Home1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_book_hardcover_open_writing {
             get {
                 object obj = ResourceManager.GetObject("appbar.book.hardcover.open.writing", resourceCulture);
@@ -156,6 +176,116 @@ namespace GUI_DingDoong.Properties {
         internal static System.Drawing.Bitmap appbar_user {
             get {
                 object obj = ResourceManager.GetObject("appbar.user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chrisl21_Minecraft_Crafting_Table {
+            get {
+                object obj = ResourceManager.GetObject("Chrisl21-Minecraft-Crafting-Table", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chrisl21_Minecraft_Crafting_Table1 {
+            get {
+                object obj = ResourceManager.GetObject("Chrisl21-Minecraft-Crafting-Table1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chrisl21_Minecraft_Crafting_Table2 {
+            get {
+                object obj = ResourceManager.GetObject("Chrisl21-Minecraft-Crafting-Table2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chrisl21_Minecraft_Crafting_Table3 {
+            get {
+                object obj = ResourceManager.GetObject("Chrisl21-Minecraft-Crafting-Table3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fasticon_Database_Table_edit {
+            get {
+                object obj = ResourceManager.GetObject("Fasticon-Database-Table-edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fasticon_Database_Table_edit1 {
+            get {
+                object obj = ResourceManager.GetObject("Fasticon-Database-Table-edit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hopstarter_Sleek_Xp_Basic_User_Group {
+            get {
+                object obj = ResourceManager.GetObject("Hopstarter-Sleek-Xp-Basic-User-Group", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hopstarter_Sleek_Xp_Basic_User_Group1 {
+            get {
+                object obj = ResourceManager.GetObject("Hopstarter-Sleek-Xp-Basic-User-Group1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hopstarter_Sleek_Xp_Basic_User_Group2 {
+            get {
+                object obj = ResourceManager.GetObject("Hopstarter-Sleek-Xp-Basic-User-Group2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icons_Land_Vista_People_Office_Customer_Male_Light {
+            get {
+                object obj = ResourceManager.GetObject("Icons-Land-Vista-People-Office-Customer-Male-Light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icons_Land_Vista_People_Office_Customer_Male_Light1 {
+            get {
+                object obj = ResourceManager.GetObject("Icons-Land-Vista-People-Office-Customer-Male-Light1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

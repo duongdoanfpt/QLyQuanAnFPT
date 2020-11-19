@@ -11,64 +11,64 @@ namespace DTO_DingDoong
     public class DTO_KhuyenMai
     {
        
-        private string tenkm;
-        private float chietkhau;
-        private string ngaybd;
-        private string ngaykt;
+        private string _TenKM;
+        private float _ChietKhau;
+        private string _NgayBD;
+        private string _NgayKT;
 
      
         public string TenKM
         {
             get
             {
-                return tenkm;
+                return _TenKM;
             }
             set
             {
-                tenkm = value;
+                _TenKM = value;
             }
         }
         public float ChietKhau
         {
             get
             {
-                return chietkhau;
+                return _ChietKhau;
             }
             set
             {
-                chietkhau = value;
+                _ChietKhau = value;
             }
         }
         public string NgayBD
         {
             get
             {
-                return ngaybd;
+                return _NgayBD;
             }
             set
             {
-                ngaybd = value;
+                _NgayBD = value;
             }
         }
         public string NgayKT
         {
             get
             {
-                return ngaykt;
+                return _NgayKT;
             }
             set
             {
-                ngaykt = value;
+                _NgayKT = value;
             }
         }
 
         public DTO_KhuyenMai( string TenKM, float ChietKhau, string NgayBD, string NgayKT)
         {
            
-            this.tenkm = TenKM;
-            this.chietkhau = ChietKhau;
-            this.ngaybd = NgayBD;
-            this.ngaykt = NgayKT;
+            this._TenKM = TenKM;
+            this._ChietKhau = ChietKhau;
+            this._NgayBD = NgayBD;
+            this.NgayKT = NgayKT;
         }
 
         public DTO_KhuyenMai()

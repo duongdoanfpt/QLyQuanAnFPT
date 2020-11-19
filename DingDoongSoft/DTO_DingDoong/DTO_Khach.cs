@@ -8,75 +8,75 @@ namespace DTO_DingDoong
 {
     public class DTO_Khach
     {
-        private string tenkh;
-        private int sdt;
-        private string ngaysinh;
-        private string email;
-        private int gioitinh;
+        private string _TenKH;
+        private int _SDT;
+        private string _NgaySinh;
+        private string _Email;
+        private int _GioiTinh;
 
         public string TenKH
         {
             get
             {
-                return tenkh;
+                return _TenKH;
             }
             set
             {
-                tenkh = value;
+                _TenKH = value;
             }
         }
         public int SDT
         {
             get
             {
-                return sdt;
+                return _SDT;
             }
             set
             {
-                sdt = value;
+                _SDT = value;
             }
         }
         public string NgaySinh
         {
             get
             {
-                return ngaysinh;
+                return _NgaySinh;
             }
             set
             {
-                ngaysinh = value;
+                _NgaySinh = value;
             }
         }
         public string Email
         {
             get
             {
-                return email;
+                return _Email;
             }
             set
             {
-                email = value;
+                _Email = value;
             }
         }
         public int GioiTinh
         {
             get
             {
-                return gioitinh;
+                return _GioiTinh;
             }
             set
             {
-                gioitinh = value;
+                _GioiTinh = value;
             }
         }
 
         public DTO_Khach(string TenKH, int SDT, string NgaySinh, string Email, int GioiTinh)
         {
-            this.tenkh = TenKH;
-            this.sdt = SDT;
-            this.ngaysinh = NgaySinh;
-            this.email = Email;
-            this.gioitinh = GioiTinh;
+            this._TenKH = TenKH;
+            this._SDT = SDT;
+            this._NgaySinh = NgaySinh;
+            this._Email = Email;
+            this._GioiTinh = GioiTinh;
         }
         public DTO_Khach()
         {
