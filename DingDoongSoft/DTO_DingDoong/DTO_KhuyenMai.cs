@@ -68,7 +68,7 @@ namespace DTO_DingDoong
             this._TenKM = TenKM;
             this._ChietKhau = ChietKhau;
             this._NgayBD = NgayBD;
-            this.NgayKT = NgayKT;
+            this._NgayKT = NgayKT;
         }
 
         public DTO_KhuyenMai()
