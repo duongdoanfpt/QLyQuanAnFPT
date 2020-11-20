@@ -14,7 +14,7 @@ using System.Threading.Tasks;
             private float _GiaBan;
             private string _MoTa;
             private string _Nhom;
-            private string _Hinh;
+            private byte[] _Hinh;
 
 
             
@@ -62,7 +62,7 @@ using System.Threading.Tasks;
                     _Nhom = value;
                 }
             }
-            public string Hinh
+            public byte[] Hinh
             {
                 get
                 {
@@ -74,7 +74,7 @@ using System.Threading.Tasks;
                 }
             }
 
-            public DTO_ThucDon(string TenTD, float GiaBan, string MoTa, string Nhom, string HInh)
+            public DTO_ThucDon(string TenTD, float GiaBan, string MoTa, string Nhom, byte[] HInh)
             {
                
                 this._TenTD = TenTD;
