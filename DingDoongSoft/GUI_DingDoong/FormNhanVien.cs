@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace GUI_DingDoong
 {
-    public partial class FormKhachHang : Form
+    public partial class FormNhanVien : Form
     {
-        public FormKhachHang()
+        public FormNhanVien()
         {
             InitializeComponent();
         }
 
-        private void FormKhachHang_Load(object sender, EventArgs e)
+        private void FormNhanVien_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
