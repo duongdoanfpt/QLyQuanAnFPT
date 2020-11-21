@@ -113,6 +113,9 @@ namespace GUI_DingDoong
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.button17 = new System.Windows.Forms.Button();
+            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -146,7 +149,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1102F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1105F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
@@ -859,6 +862,9 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.domainUpDown1);
+            this.panel9.Controls.Add(this.button17);
+            this.panel9.Controls.Add(this.textBox12);
             this.panel9.Controls.Add(this.dataGridView2);
             this.panel9.Controls.Add(this.comboBox1);
             this.panel9.Controls.Add(this.button14);
@@ -877,9 +883,9 @@ namespace GUI_DingDoong
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4});
-            this.dataGridView2.Location = new System.Drawing.Point(3, 132);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 148);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(288, 488);
+            this.dataGridView2.Size = new System.Drawing.Size(288, 472);
             this.dataGridView2.TabIndex = 3;
             // 
             // Column4
@@ -889,21 +895,24 @@ namespace GUI_DingDoong
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Thức ăn",
             "Đồ uống"});
-            this.comboBox1.Location = new System.Drawing.Point(-1, 74);
+            this.comboBox1.Location = new System.Drawing.Point(2, 80);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 21);
+            this.comboBox1.Size = new System.Drawing.Size(289, 29);
             this.comboBox1.TabIndex = 2;
             // 
             // button14
             // 
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button14.Location = new System.Drawing.Point(204, 97);
+            this.button14.Location = new System.Drawing.Point(201, 118);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(87, 26);
+            this.button14.Size = new System.Drawing.Size(90, 26);
             this.button14.TabIndex = 1;
             this.button14.Text = "Tìm kiếm";
             this.button14.UseVisualStyleBackColor = true;
@@ -912,7 +921,7 @@ namespace GUI_DingDoong
             // 
             this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.Location = new System.Drawing.Point(2, 101);
+            this.textBox11.Location = new System.Drawing.Point(3, 122);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(196, 20);
             this.textBox11.TabIndex = 0;
@@ -1059,6 +1068,58 @@ namespace GUI_DingDoong
             this.button6.Text = "Chuyển bàn";
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // textBox12
+            // 
+            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Location = new System.Drawing.Point(4, 4);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(287, 29);
+            this.textBox12.TabIndex = 4;
+            // 
+            // button17
+            // 
+            this.button17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.Location = new System.Drawing.Point(206, 40);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(85, 29);
+            this.button17.TabIndex = 6;
+            this.button17.Text = "Thêm";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // domainUpDown1
+            // 
+            this.domainUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.domainUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.domainUpDown1.Items.Add("1");
+            this.domainUpDown1.Items.Add("2");
+            this.domainUpDown1.Items.Add("3");
+            this.domainUpDown1.Items.Add("4");
+            this.domainUpDown1.Items.Add("5");
+            this.domainUpDown1.Items.Add("6");
+            this.domainUpDown1.Items.Add("7");
+            this.domainUpDown1.Items.Add("8");
+            this.domainUpDown1.Items.Add("9");
+            this.domainUpDown1.Items.Add("10");
+            this.domainUpDown1.Items.Add("11");
+            this.domainUpDown1.Items.Add("12");
+            this.domainUpDown1.Items.Add("13");
+            this.domainUpDown1.Items.Add("14");
+            this.domainUpDown1.Items.Add("15");
+            this.domainUpDown1.Items.Add("16");
+            this.domainUpDown1.Items.Add("17");
+            this.domainUpDown1.Items.Add("18");
+            this.domainUpDown1.Items.Add("19");
+            this.domainUpDown1.Items.Add("20");
+            this.domainUpDown1.Location = new System.Drawing.Point(4, 42);
+            this.domainUpDown1.Name = "domainUpDown1";
+            this.domainUpDown1.Size = new System.Drawing.Size(196, 26);
+            this.domainUpDown1.TabIndex = 7;
+            this.domainUpDown1.Text = "1";
+            // 
             // FormKhuVucBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1189,5 +1250,8 @@ namespace GUI_DingDoong
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DomainUpDown domainUpDown1;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.TextBox textBox12;
     }
 }
