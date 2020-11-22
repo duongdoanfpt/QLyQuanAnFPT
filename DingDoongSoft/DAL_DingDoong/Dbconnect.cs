@@ -9,6 +9,7 @@ namespace DAL_DingDoong
 {
     public class Dbconnect
     {
-        protected SqlConnection _conn = new SqlConnection("Data Source=DESKTOP-6D7E27J;Initial Catalog=QLyQuanAn;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        //protected SqlConnection _conn = new SqlConnection("Data Source=DESKTOP-6D7E27J;Initial Catalog=QLyQuanAn;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        protected SqlConnection _conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QLyQuanAn.mdf;Integrated Security=True");
     }
 }
