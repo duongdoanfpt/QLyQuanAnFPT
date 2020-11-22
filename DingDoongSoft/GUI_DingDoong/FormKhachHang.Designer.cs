@@ -30,6 +30,7 @@ namespace GUI_DingDoong
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +73,6 @@ namespace GUI_DingDoong
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -103,19 +103,30 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1024F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1033F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1262, 37);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1136, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(162, 21);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "email123@gmail.com";
             // 
             // panel1
             // 
@@ -214,6 +225,7 @@ namespace GUI_DingDoong
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(1158, 3);
@@ -228,6 +240,7 @@ namespace GUI_DingDoong
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(948, 3);
@@ -242,6 +255,7 @@ namespace GUI_DingDoong
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(738, 3);
@@ -256,6 +270,7 @@ namespace GUI_DingDoong
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(528, 3);
@@ -270,6 +285,7 @@ namespace GUI_DingDoong
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(318, 3);
@@ -284,6 +300,7 @@ namespace GUI_DingDoong
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(108, 3);
@@ -304,7 +321,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.06536F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.29785F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.radioButton2, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.label5, 4, 0);
@@ -331,7 +348,7 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(1156, 3);
+            this.radioButton2.Location = new System.Drawing.Point(1148, 3);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(55, 44);
             this.radioButton2.TabIndex = 10;
@@ -344,7 +361,7 @@ namespace GUI_DingDoong
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(975, 12);
+            this.label5.Location = new System.Drawing.Point(967, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 25);
             this.label5.TabIndex = 8;
@@ -354,9 +371,9 @@ namespace GUI_DingDoong
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(634, 8);
+            this.textBox3.Location = new System.Drawing.Point(629, 8);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(318, 33);
+            this.textBox3.Size = new System.Drawing.Size(316, 33);
             this.textBox3.TabIndex = 5;
             // 
             // label3
@@ -364,9 +381,9 @@ namespace GUI_DingDoong
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(496, 12);
+            this.label3.Location = new System.Drawing.Point(492, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 25);
+            this.label3.Size = new System.Drawing.Size(128, 50);
             this.label3.TabIndex = 4;
             this.label3.Text = "Số điện thoại : ";
             // 
@@ -396,18 +413,18 @@ namespace GUI_DingDoong
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(165, 8);
+            this.textBox1.Location = new System.Drawing.Point(164, 8);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(325, 33);
+            this.textBox1.Size = new System.Drawing.Size(322, 33);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(165, 58);
+            this.textBox2.Location = new System.Drawing.Point(164, 58);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(325, 33);
+            this.textBox2.Size = new System.Drawing.Size(322, 33);
             this.textBox2.TabIndex = 3;
             // 
             // label4
@@ -415,7 +432,7 @@ namespace GUI_DingDoong
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(496, 62);
+            this.label4.Location = new System.Drawing.Point(492, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 25);
             this.label4.TabIndex = 6;
@@ -425,9 +442,9 @@ namespace GUI_DingDoong
             // 
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(634, 58);
+            this.textBox4.Location = new System.Drawing.Point(629, 58);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(318, 33);
+            this.textBox4.Size = new System.Drawing.Size(316, 33);
             this.textBox4.TabIndex = 7;
             // 
             // radioButton1
@@ -436,7 +453,7 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(1079, 3);
+            this.radioButton1.Location = new System.Drawing.Point(1071, 3);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(70, 44);
             this.radioButton1.TabIndex = 9;
@@ -457,6 +474,7 @@ namespace GUI_DingDoong
             // button7
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(292, 3);
@@ -587,7 +605,7 @@ namespace GUI_DingDoong
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GUI_DingDoong.Properties.Resources.Icons_Land_Vista_People_Office_Customer_Male_Light1;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(59, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(44, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -597,7 +615,7 @@ namespace GUI_DingDoong
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GUI_DingDoong.Properties.Resources.Apathae_Chakram_2_Home1;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -623,17 +641,6 @@ namespace GUI_DingDoong
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1127, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(162, 21);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "email123@gmail.com";
             // 
             // FormKhachHang
             // 
