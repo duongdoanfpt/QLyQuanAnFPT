@@ -28,10 +28,10 @@ namespace GUI_DingDoong
             {
                 
                 FlowLayoutPanel flp = new FlowLayoutPanel();
-                flp.Width = 80;
+                flp.Width = 70;
                 flp.Height = 120;
                 PictureBox ptb = new PictureBox();
-                ptb.Width = 70;
+                ptb.Width = 60;
                 ptb.Height = 80;
                 flp.Margin = new Padding(15, 15, 15, 15);
                 if (int.Parse(dtBan.Rows[i][1].ToString())==1)
