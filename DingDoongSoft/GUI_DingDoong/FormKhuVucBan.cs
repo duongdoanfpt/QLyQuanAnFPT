@@ -23,6 +23,8 @@ namespace GUI_DingDoong
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            string startupPath = Environment.CurrentDirectory;
+
             DataTable dtBan = busBan.dtBan();
             for(int i = 0; i < dtBan.Rows.Count;i++)
             {
@@ -32,17 +34,17 @@ namespace GUI_DingDoong
                 flp.Height = 120;
                 PictureBox ptb = new PictureBox();
                 ptb.Width = 60;
-                ptb.Height = 80;
+                ptb.Height = 70;
                 flp.Margin = new Padding(15, 15, 15, 15);
                 if (int.Parse(dtBan.Rows[i][1].ToString())==1)
                 {
-                    ptb.Image = Image.FromFile(@"D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\image\banMo.ico");
+                    ptb.Image = Image.FromFile(startupPath+@"\image\banMo.ico");
                    
 
                 } 
                 else if(int.Parse(dtBan.Rows[i][1].ToString()) == 0)
                 {
-                    ptb.Image = Image.FromFile(@"D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\image\banDong.png");
+                    ptb.Image = Image.FromFile(startupPath+@"\image\banDong.png");
 
                 }
                 ptb.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -76,6 +78,7 @@ namespace GUI_DingDoong
             Label lbBan = (Label)ptb.Parent.Controls[1];
             lbViTriBan.Text = lbBan.Text;
             Label lbTrangThai = (Label)ptb.Parent.Controls[2];
+            lbBan.BackColor = Color.Transparent;
             var Index = ptb.Parent.Parent.Controls.IndexOf(ptb.Parent);
             for(int i = 0; i < ptb.Parent.Parent.Controls.Count; i++)
             {
@@ -83,6 +86,7 @@ namespace GUI_DingDoong
                 if (ptb.Parent.Parent.Controls[i] == ptb.Parent.Parent.Controls[Index])
                 {
                     ptb.Parent.Parent.Controls[i].BackColor = Color.FromArgb(128, 72, 145, 220);
+
                 }
                 else
                 {
