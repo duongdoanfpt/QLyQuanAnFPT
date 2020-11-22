@@ -1,0 +1,6 @@
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\bin\Debug\DAL_DingDoong.dll
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\bin\Debug\DAL_DingDoong.pdb
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.csprojAssemblyReference.cache
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.csproj.CoreCompileInputs.cache
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.dll
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.pdb

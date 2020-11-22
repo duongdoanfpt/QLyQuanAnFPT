@@ -71,3 +71,11 @@ D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong
 D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.pdb
 D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormKhachHang.resources
 D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormNhanVien.resources
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\BUS_DingDoong.dll
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\DAL_DingDoong.dll
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\BUS_DingDoong.pdb
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\DAL_DingDoong.pdb
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormKhachHang.resources
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormKhuVucBan.resources
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormNhanVien.resources
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.CopyComplete
