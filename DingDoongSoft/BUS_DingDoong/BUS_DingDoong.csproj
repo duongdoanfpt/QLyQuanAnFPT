@@ -42,7 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_Ban.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL_DingDoong\DAL_DingDoong.csproj">
+      <Project>{2812ad44-a441-4f36-976b-a540ffd7094e}</Project>
+      <Name>DAL_DingDoong</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO_DingDoong\DTO_DingDoong.csproj">
+      <Project>{945c8497-9d02-4b48-b823-eac81d3bd620}</Project>
+      <Name>DTO_DingDoong</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

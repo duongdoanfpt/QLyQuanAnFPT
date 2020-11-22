@@ -273,5 +273,11 @@
   <ItemGroup>
     <None Include="Resources\appbar.door.enter.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS_DingDoong\BUS_DingDoong.csproj">
+      <Project>{1670de57-89f3-4a8c-ab94-5a8ddf24a561}</Project>
+      <Name>BUS_DingDoong</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
