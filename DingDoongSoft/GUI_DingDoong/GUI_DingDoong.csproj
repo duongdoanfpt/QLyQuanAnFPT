@@ -65,11 +65,29 @@
     <Compile Include="FormKhachHang.Designer.cs">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKhachHangMini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhachHangMini.Designer.cs">
+      <DependentUpon>FormKhachHangMini.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKhuVucBan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormKhuVucBan.Designer.cs">
       <DependentUpon>FormKhuVucBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhuyenMai.Designer.cs">
+      <DependentUpon>FormKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKhuyenMaiMini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhuyenMaiMini.Designer.cs">
+      <DependentUpon>FormKhuyenMaiMini.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -89,6 +107,18 @@
     <Compile Include="FormNhanVien.Designer.cs">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongKe.Designer.cs">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThucDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThucDon.Designer.cs">
+      <DependentUpon>FormThucDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormChangePass.resx">
@@ -100,8 +130,17 @@
     <EmbeddedResource Include="FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormKhachHangMini.resx">
+      <DependentUpon>FormKhachHangMini.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormKhuVucBan.resx">
       <DependentUpon>FormKhuVucBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKhuyenMai.resx">
+      <DependentUpon>FormKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKhuyenMaiMini.resx">
+      <DependentUpon>FormKhuyenMaiMini.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -111,6 +150,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhanVien.resx">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongKe.resx">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThucDon.resx">
+      <DependentUpon>FormThucDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -227,6 +272,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\appbar.door.enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS_DingDoong\BUS_DingDoong.csproj">
+      <Project>{1670de57-89f3-4a8c-ab94-5a8ddf24a561}</Project>
+      <Name>BUS_DingDoong</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
