@@ -90,3 +90,5 @@ D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\DAL_DingDoong
 D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\BUS_DingDoong.pdb
 D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\DAL_DingDoong.pdb
 D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.CopyComplete
+D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\DTO_DingDoong.dll
+D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\DTO_DingDoong.pdb

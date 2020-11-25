@@ -278,6 +278,10 @@
       <Project>{1670de57-89f3-4a8c-ab94-5a8ddf24a561}</Project>
       <Name>BUS_DingDoong</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DTO_DingDoong\DTO_DingDoong.csproj">
+      <Project>{945c8497-9d02-4b48-b823-eac81d3bd620}</Project>
+      <Name>DTO_DingDoong</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

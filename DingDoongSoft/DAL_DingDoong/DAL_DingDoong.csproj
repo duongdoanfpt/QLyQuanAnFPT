@@ -43,8 +43,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_Ban.cs" />
+    <Compile Include="DAL_ThucDon.cs" />
     <Compile Include="Dbconnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO_DingDoong\DTO_DingDoong.csproj">
+      <Project>{945c8497-9d02-4b48-b823-eac81d3bd620}</Project>
+      <Name>DTO_DingDoong</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
