@@ -9,7 +9,7 @@ namespace DTO_DingDoong
    
     public class DTO_NhanVien
     {
-     
+        private string _MaNV;
         private string _TenNV;
         private string _Email;
         private string _DiaChi;
@@ -19,7 +19,18 @@ namespace DTO_DingDoong
         private Byte[] _Hinh;
         private string _MatKhau;
 
-       
+        public string MaNV
+        {
+            get
+            {
+                return _MaNV;
+            }
+            set
+            {
+                _MaNV = value;
+            }
+        }
+
         public string TenNV
         {
             get

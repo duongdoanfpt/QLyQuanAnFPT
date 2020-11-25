@@ -16,18 +16,34 @@ namespace GUI_DingDoong
     {
         BUS_Ban busBan = new BUS_Ban();
         BUS_ThucDon busTD = new BUS_ThucDon();
+        BUS_NhanVien busNV = new BUS_NhanVien();
 
         private List<DTO_Ban> DanhSachBan(DataTable dsBan)
         {
             List<DTO_Ban> listBan = new List<DTO_Ban>();
-            foreach (DataRow dr in dsBan.Rows) 
-            {
-                DTO_Ban ban = new DTO_Ban(int.Parse(dr["ID"].ToString()),dr["TenBan"].ToString(),int.Parse(dr["TrangThai"].ToString()));
-                listBan.Add(ban);
-                
-            }
+            listBan = (from DataRow dr in dsBan.Rows
+                       select new DTO_Ban(int.Parse(dr["ID"].ToString()), dr["TenBan"].ToString(), int.Parse(dr["TrangThai"].ToString()))).ToList();
+
             return listBan;
         }
+
+        private DTO_NhanVien curNV(string Email)
+        {
+            DTO_NhanVien NV = new DTO_NhanVien();
+            NV = (from DataRow dr in busNV.getDanhSachNV().Rows
+                  where dr[1].ToString() == Email
+                  select new DTO_NhanVien
+                  {
+                      MaNV = dr[0].ToString(),
+                      TenNV = dr[2].ToString(),
+                      Email = dr[1].ToString()
+
+
+                  }).FirstOrDefault();
+            return NV;
+
+        }
+
         private void loadThucDonkvBan()
         {
             dgvThucDon.DataSource = busTD.DanhSachThucDonBan();
@@ -87,11 +103,13 @@ namespace GUI_DingDoong
 
         private void FormKhuVucBan_Load(object sender, EventArgs e)
         {
+            DTO_NhanVien NV = curNV(lbEmailNV.Text);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThucDon.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             loadban();
             loadThucDonkvBan();
+            lbTenNV.Text = NV.TenNV;
 
            
 
@@ -108,7 +126,6 @@ namespace GUI_DingDoong
             int vitriBan = dsBan.FindIndex(a => a.TenBan == lbBan.Text);
 
             DTO_Ban ban = dsBan[vitriBan];
-            MessageBox.Show(ban.TrangThai.ToString());
             lbBan.BackColor = Color.Transparent;
             var Index = ptb.Parent.Parent.Controls.IndexOf(ptb.Parent);
             for(int i = 0; i < ptb.Parent.Parent.Controls.Count; i++)
@@ -129,6 +146,9 @@ namespace GUI_DingDoong
 
         }
 
-        
+        private void dgvThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
