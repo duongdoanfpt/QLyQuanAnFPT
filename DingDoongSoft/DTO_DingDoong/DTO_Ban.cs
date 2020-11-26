@@ -23,6 +23,8 @@ namespace DTO_DingDoong
             }
         }
 
+
+
         public string TenBan
         {
             get

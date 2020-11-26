@@ -17,33 +17,29 @@ namespace GUI_DingDoong
         BUS_Ban busBan = new BUS_Ban();
         BUS_ThucDon busTD = new BUS_ThucDon();
         BUS_NhanVien busNV = new BUS_NhanVien();
-
-        private List<DTO_Ban> DanhSachBan(DataTable dsBan)
+        public IEnumerable<Control> GetAll(Control control, Type type)
         {
-            List<DTO_Ban> listBan = new List<DTO_Ban>();
-            listBan = (from DataRow dr in dsBan.Rows
-                       select new DTO_Ban(int.Parse(dr["ID"].ToString()), dr["TenBan"].ToString(), int.Parse(dr["TrangThai"].ToString()))).ToList();
+            var controls = control.Controls.Cast<Control>();
 
-            return listBan;
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+        private void FrmLoad()
+        {
+           foreach(var bt in GetAll(this,typeof(Button)) )
+            {
+
+                (bt as Button).Enabled = false;
+
+
+
+            }    
+           
         }
 
-        private DTO_NhanVien curNV(string Email)
-        {
-            DTO_NhanVien NV = new DTO_NhanVien();
-            NV = (from DataRow dr in busNV.getDanhSachNV().Rows
-                  where dr[1].ToString() == Email
-                  select new DTO_NhanVien
-                  {
-                      MaNV = dr[0].ToString(),
-                      TenNV = dr[2].ToString(),
-                      Email = dr[1].ToString()
-
-
-                  }).FirstOrDefault();
-            return NV;
-
-        }
-
+        
+       
         private void loadThucDonkvBan()
         {
             dgvThucDon.DataSource = busTD.DanhSachThucDonBan();
@@ -54,8 +50,8 @@ namespace GUI_DingDoong
         {
             string startupPath = Environment.CurrentDirectory;
 
-            List<DTO_Ban> dsBan = DanhSachBan(busBan.dtBan());
-            foreach(DTO_Ban ban in dsBan)
+            
+            foreach(DataRow dr  in busBan.dtBan().Rows)
             {
 
                 FlowLayoutPanel flp = new FlowLayoutPanel();
@@ -65,20 +61,20 @@ namespace GUI_DingDoong
                 ptb.Width = 60;
                 ptb.Height = 70;
                 flp.Margin = new Padding(15, 15, 15, 15);
-                if (ban.TrangThai == 1)
+                if (int.Parse(dr[2].ToString()) == 1)
                 {
                     ptb.Image = Image.FromFile(startupPath + @"\image\banMo.ico");
 
 
                 }
-                else if (ban.TrangThai == 0)
+                else if (int.Parse(dr[2].ToString()) == 0)
                 {
                     ptb.Image = Image.FromFile(startupPath + @"\image\banDong.png");
 
                 }
                 ptb.SizeMode = PictureBoxSizeMode.StretchImage;
                 Label lbBan = new Label();
-                lbBan.Text = ban.TenBan;
+                lbBan.Text = dr[1].ToString();
                 lbBan.Font = new Font("Segoe UI", 10);
                 lbBan.ForeColor = Color.Black;
                 
@@ -103,13 +99,14 @@ namespace GUI_DingDoong
 
         private void FormKhuVucBan_Load(object sender, EventArgs e)
         {
-            DTO_NhanVien NV = curNV(lbEmailNV.Text);
+            DTO_NhanVien NV = busNV.curNV(lbEmailNV.Text);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThucDon.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             loadban();
             loadThucDonkvBan();
             lbTenNV.Text = NV.TenNV;
+            FrmLoad();
 
            
 
@@ -117,20 +114,19 @@ namespace GUI_DingDoong
 
         private void Ptb_Click(object sender, EventArgs e)
         {
-            List<DTO_Ban> dsBan = DanhSachBan(busBan.dtBan());
+            
             PictureBox ptb = sender as PictureBox;
            
             PictureBox image = (PictureBox)ptb.Parent.Controls[0];
             Label lbBan = (Label)ptb.Parent.Controls[1];
             lbViTriBan.Text = lbBan.Text;
-            int vitriBan = dsBan.FindIndex(a => a.TenBan == lbBan.Text);
+            DTO_Ban Ban = busBan.curBan(lbViTriBan.Text);
 
-            DTO_Ban ban = dsBan[vitriBan];
             lbBan.BackColor = Color.Transparent;
             var Index = ptb.Parent.Parent.Controls.IndexOf(ptb.Parent);
-            for(int i = 0; i < ptb.Parent.Parent.Controls.Count; i++)
+            for (int i = 0; i < ptb.Parent.Parent.Controls.Count; i++)
             {
-             
+
                 if (ptb.Parent.Parent.Controls[i] == ptb.Parent.Parent.Controls[Index])
                 {
                     ptb.Parent.Parent.Controls[i].BackColor = Color.FromArgb(128, 72, 145, 220);
@@ -140,14 +136,81 @@ namespace GUI_DingDoong
                 {
                     ptb.Parent.Parent.Controls[i].BackColor = Color.White;
                 }
+            }
+            if(Ban.TrangThai ==0)
+            {
+                btBatDau.Enabled = true;
+
+            }
+            else
+            {
+                btBatDau.Enabled = false;
             }    
-           
+
+
+
+
 
 
         }
 
         private void dgvThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+          
+        }
+
+        private void dgvThucDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvThucDon.Rows.Count > 1)
+            {
+                if (dgvThucDon.CurrentRow.Index < dgvThucDon.Rows.Count - 1)
+                {
+
+                    DTO_ThucDon TD = busTD.curTD(dgvThucDon.CurrentRow.Cells[0].FormattedValue.ToString());
+
+                    lbTenMon.Text = TD.TenTD;
+                }
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btBatDau_Click(object sender, EventArgs e)
+        {
+            lbStartTime.Visible = true;
+            lbStartTime.Text = DateTime.Now.ToString("h:mm:ss");
+            lbEndTime.Visible = true;
+            lbMaHD.Text = "HD" + DateTime.Now.ToString("ddMMyyyy_hhmmss");
+            btBatDau.Enabled = false;
+            //btBatDau.Click += timer1_Tick;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbEndTime.Text = (DateTime.Now.Hour < 10 ? "0" + DateTime.Now.Hour.ToString() : DateTime.Now.Hour.ToString()) + ":" + (DateTime.Now.Minute < 10 ? "0" + DateTime.Now.Minute.ToString() : DateTime.Now.Minute.ToString()) + ":" + (DateTime.Now.Second < 10 ? "0" + DateTime.Now.Second.ToString() : DateTime.Now.Second.ToString());
+        }
+
+        private void flpkvBan_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ChkBKhachHang_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ChkBKhachHang.Checked  == true)
+            {
+                txtSDTKH.Enabled = true;
+                btThemKhach.Enabled = true;
+            } 
+            else
+            {
+                txtSDTKH.Enabled = false;
+                btThemKhach.Enabled = false;
+            }    
+
 
         }
     }

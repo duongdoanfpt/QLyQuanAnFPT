@@ -9,15 +9,26 @@ using System.Threading.Tasks;
     {
         public class DTO_ThucDon
         {
-           
+            private string _MaTD;
             private string _TenTD;
             private float _GiaBan;
             private string _MoTa;
             private string _Nhom;
             private byte[] _Hinh;
 
+            public string MaTD
+            {
+                get
+                {
+                    return _MaTD;
+                }
+                set
+                {
+                    _MaTD = value;
+                }
+            }
 
-            
+
             public string TenTD
             {
                 get

@@ -21,5 +21,26 @@ namespace BUS_DingDoong
         {
             return dalThucDon.DanhSachThucDonBan();
         }
+        public DataTable DanhSachThucDon()
+        {
+            return dalThucDon.DanhSachThucDon();
+        }
+
+        public DTO_ThucDon curTD(string TenTD)
+        {
+            DTO_ThucDon curTD = (from DataRow dr in DanhSachThucDon().Rows
+                                 where string.Compare(dr[1].ToString(), TenTD, true) == 0
+                                 select new DTO_ThucDon
+                                 {
+                                     MaTD = dr[0].ToString(),
+                                     TenTD = dr[1].ToString(),
+                                     GiaBan = float.Parse(dr[2].ToString()),
+                                     MoTa = dr[4].ToString()
+
+                                 }).FirstOrDefault();
+            return curTD;
+
+        }
+
     }
 }
