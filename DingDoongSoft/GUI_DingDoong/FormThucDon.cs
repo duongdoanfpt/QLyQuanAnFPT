@@ -25,6 +25,7 @@ namespace GUI_DingDoong
 
         private void FormThucDon_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = busThucDon.DanhSachThucDon_1();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -66,14 +67,16 @@ namespace GUI_DingDoong
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-           
-                Image img = ptbThucDon.BackgroundImage;
-                byte[] arr;
-                ImageConverter converter = new ImageConverter();
-                arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
 
-                DTO_ThucDon td = new DTO_ThucDon(txtTenMon.Text, float.Parse(txtDonGia.Text), txtMoTa.Text, txtNhom.Text, arr);
-                if (busThucDon.insertThucDon(td))
+
+            Image img = ptbThucDon.BackgroundImage;
+            byte[] arr;
+            ImageConverter converter = new ImageConverter();
+            arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
+            DTO_ThucDon curTD = new DTO_ThucDon(txtTenMon.Text, float.Parse(txtDonGia.Text), txtMoTa.Text, txtNhom.Text, arr);
+            MessageBox.Show(curTD.Hinh.ToString());
+                
+                if (busThucDon.insertThucDon(curTD))
                 {
                     MessageBox.Show("Thêm món vào thực đơn thành công");
 

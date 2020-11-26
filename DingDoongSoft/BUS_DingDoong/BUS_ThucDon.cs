@@ -26,6 +26,11 @@ namespace BUS_DingDoong
             return dalThucDon.DanhSachThucDon();
         }
 
+        public DataTable DanhSachThucDon_1()
+        {
+            return dalThucDon.DanhSachThucDon_1();
+        }
+
         public DTO_ThucDon curTD(string TenTD)
         {
             DTO_ThucDon curTD = (from DataRow dr in DanhSachThucDon().Rows

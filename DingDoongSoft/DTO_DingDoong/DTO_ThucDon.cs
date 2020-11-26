@@ -85,7 +85,7 @@ using System.Threading.Tasks;
                 }
             }
 
-            public DTO_ThucDon(string TenTD, float GiaBan, string MoTa, string Nhom, byte[] HInh)
+            public DTO_ThucDon(string TenTD, float GiaBan, string MoTa, string Nhom, byte[] Hinh)
             {
                
                 this._TenTD = TenTD;

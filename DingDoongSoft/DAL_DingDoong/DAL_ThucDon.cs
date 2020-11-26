@@ -19,22 +19,17 @@ namespace DAL_DingDoong
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "Sp_InsertTD";
-                cmd.Parameters.AddWithValue("TenTD", td.TenTD);
+                cmd.Parameters.AddWithValue("tenTD", td.TenTD);
                 cmd.Parameters.AddWithValue("GiaBan", td.GiaBan);
-                cmd.Parameters.AddWithValue("Nhom", td.Nhom);
-                cmd.Parameters.AddWithValue("Mota", td.MoTa);
-                cmd.Parameters.AddWithValue("HinhTD", td.Hinh);
+                cmd.Parameters.AddWithValue("hinhAnh", td.Hinh);
+                cmd.Parameters.AddWithValue("nhom", td.Nhom);
+                cmd.Parameters.AddWithValue("mota", td.MoTa);
 
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     return true;
                 }                
-
                 
-            }
-            catch(Exception ex)
-            {
-
             }
             
             finally
@@ -63,6 +58,25 @@ namespace DAL_DingDoong
             }
         }
         public DataTable DanhSachThucDon()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_DanhSachTD";
+                DataTable dtThucDon = new DataTable();
+                dtThucDon.Load(cm.ExecuteReader());
+                return dtThucDon;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public DataTable DanhSachThucDon_1()
         {
             try
             {
