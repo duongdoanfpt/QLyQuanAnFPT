@@ -30,12 +30,7 @@ namespace GUI_DingDoong
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,51 +41,44 @@ namespace GUI_DingDoong
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btOpenDialog = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.btLuu = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btLuu = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.ptbThucDon = new System.Windows.Forms.PictureBox();
-            this.btOpenDialog = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbThucDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbThucDon)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -104,7 +92,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1033F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1057F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
@@ -118,66 +106,16 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1262, 37);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::GUI_DingDoong.Properties.Resources.Fasticon_Database_Table_edit1;
-            this.pictureBox5.Location = new System.Drawing.Point(218, 6);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(44, 25);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GUI_DingDoong.Properties.Resources.Chrisl21_Minecraft_Crafting_Table2;
-            this.pictureBox4.Location = new System.Drawing.Point(165, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(44, 25);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Basic_User_Group2;
-            this.pictureBox3.Location = new System.Drawing.Point(112, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1136, 8);
+            this.label7.Location = new System.Drawing.Point(1160, 8);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(162, 21);
             this.label7.TabIndex = 6;
             this.label7.Text = "email123@gmail.com";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GUI_DingDoong.Properties.Resources.Icons_Land_Vista_People_Office_Customer_Male_Light1;
-            this.pictureBox2.Location = new System.Drawing.Point(59, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI_DingDoong.Properties.Resources.Apathae_Chakram_2_Home1;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel2
             // 
@@ -302,6 +240,30 @@ namespace GUI_DingDoong
             this.label3.TabIndex = 1;
             this.label3.Text = "Mô tả: ";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btOpenDialog);
+            this.panel1.Controls.Add(this.ptbThucDon);
+            this.panel1.Location = new System.Drawing.Point(534, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(223, 125);
+            this.panel1.TabIndex = 4;
+            // 
+            // btOpenDialog
+            // 
+            this.btOpenDialog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btOpenDialog.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btOpenDialog.Location = new System.Drawing.Point(184, 99);
+            this.btOpenDialog.Name = "btOpenDialog";
+            this.btOpenDialog.Size = new System.Drawing.Size(36, 23);
+            this.btOpenDialog.TabIndex = 1;
+            this.btOpenDialog.Text = "...";
+            this.btOpenDialog.UseVisualStyleBackColor = true;
+            this.btOpenDialog.Click += new System.EventHandler(this.btOpenDialog_Click);
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -369,195 +331,27 @@ namespace GUI_DingDoong
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.ColumnCount = 12;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel5.Controls.Add(this.button6, 11, 0);
-            this.tableLayoutPanel5.Controls.Add(this.pictureBox11, 10, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button5, 9, 0);
-            this.tableLayoutPanel5.Controls.Add(this.pictureBox10, 8, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button4, 7, 0);
-            this.tableLayoutPanel5.Controls.Add(this.pictureBox9, 6, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button3, 5, 0);
-            this.tableLayoutPanel5.Controls.Add(this.pictureBox8, 4, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btLuu, 3, 0);
-            this.tableLayoutPanel5.Controls.Add(this.pictureBox7, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.pictureBox12, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel5.ColumnCount = 6;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66666F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.Controls.Add(this.button6, 5, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button5, 4, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button4, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button3, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btLuu, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(-1, 172);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1262, 39);
             this.tableLayoutPanel5.TabIndex = 4;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(1158, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(101, 33);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Thoát";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox11.Image = global::GUI_DingDoong.Properties.Resources.appbar_door_enter;
-            this.pictureBox11.Location = new System.Drawing.Point(1119, 3);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 10;
-            this.pictureBox11.TabStop = false;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(948, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 33);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Bỏ qua";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox10.Image = global::GUI_DingDoong.Properties.Resources.appbar_3d_x;
-            this.pictureBox10.Location = new System.Drawing.Point(909, 3);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 8;
-            this.pictureBox10.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(738, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(99, 33);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Cập nhật";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox9.Image = global::GUI_DingDoong.Properties.Resources.appbar_clipboard_variant1;
-            this.pictureBox9.Location = new System.Drawing.Point(699, 3);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 6;
-            this.pictureBox9.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(528, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 33);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox8.Image = global::GUI_DingDoong.Properties.Resources.appbar_delete;
-            this.pictureBox8.Location = new System.Drawing.Point(489, 3);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 4;
-            this.pictureBox8.TabStop = false;
-            // 
-            // btLuu
-            // 
-            this.btLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLuu.Location = new System.Drawing.Point(318, 3);
-            this.btLuu.Name = "btLuu";
-            this.btLuu.Size = new System.Drawing.Size(99, 33);
-            this.btLuu.TabIndex = 3;
-            this.btLuu.Text = "Lưu";
-            this.btLuu.UseVisualStyleBackColor = true;
-            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.Image = global::GUI_DingDoong.Properties.Resources.appbar_save;
-            this.pictureBox7.Location = new System.Drawing.Point(279, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 2;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox12.Image = global::GUI_DingDoong.Properties.Resources.appbar_add;
-            this.pictureBox12.Location = new System.Drawing.Point(69, 3);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 0;
-            this.pictureBox12.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(108, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 33);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -596,17 +390,91 @@ namespace GUI_DingDoong
             this.Column4.HeaderText = "Mô tả";
             this.Column4.Name = "Column4";
             // 
-            // panel1
+            // button6
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btOpenDialog);
-            this.panel1.Controls.Add(this.ptbThucDon);
-            this.panel1.Location = new System.Drawing.Point(534, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 125);
-            this.panel1.TabIndex = 4;
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Image = global::GUI_DingDoong.Properties.Resources.appbar_door1;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(1103, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(106, 33);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Thoát";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = global::GUI_DingDoong.Properties.Resources.appbar_3d1;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(890, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(110, 33);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Bỏ qua";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = global::GUI_DingDoong.Properties.Resources.appbar_clipboard_variant2;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(678, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(113, 33);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Cập nhật";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::GUI_DingDoong.Properties.Resources.appbar5;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(467, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(116, 33);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Xóa";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btLuu
+            // 
+            this.btLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLuu.Image = global::GUI_DingDoong.Properties.Resources.appbar4;
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.Location = new System.Drawing.Point(260, 3);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(109, 33);
+            this.btLuu.TabIndex = 3;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.UseVisualStyleBackColor = true;
+            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::GUI_DingDoong.Properties.Resources.appbar3;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(54, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 33);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Thêm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // ptbThucDon
             // 
@@ -619,17 +487,55 @@ namespace GUI_DingDoong
             this.ptbThucDon.TabIndex = 0;
             this.ptbThucDon.TabStop = false;
             // 
-            // btOpenDialog
+            // pictureBox5
             // 
-            this.btOpenDialog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btOpenDialog.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btOpenDialog.Location = new System.Drawing.Point(184, 99);
-            this.btOpenDialog.Name = "btOpenDialog";
-            this.btOpenDialog.Size = new System.Drawing.Size(36, 23);
-            this.btOpenDialog.TabIndex = 1;
-            this.btOpenDialog.Text = "...";
-            this.btOpenDialog.UseVisualStyleBackColor = true;
-            this.btOpenDialog.Click += new System.EventHandler(this.btOpenDialog_Click);
+            this.pictureBox5.Image = global::GUI_DingDoong.Properties.Resources.Fasticon_Database_Table_edit1;
+            this.pictureBox5.Location = new System.Drawing.Point(218, 6);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(44, 25);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::GUI_DingDoong.Properties.Resources.Chrisl21_Minecraft_Crafting_Table2;
+            this.pictureBox4.Location = new System.Drawing.Point(165, 6);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(44, 25);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Basic_User_Group2;
+            this.pictureBox3.Location = new System.Drawing.Point(112, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(44, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GUI_DingDoong.Properties.Resources.Icons_Land_Vista_People_Office_Customer_Male_Light1;
+            this.pictureBox2.Location = new System.Drawing.Point(59, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(44, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI_DingDoong.Properties.Resources.Apathae_Chakram_2_Home1;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // FormThucDon
             // 
@@ -650,27 +556,21 @@ namespace GUI_DingDoong
             this.Load += new System.EventHandler(this.FormThucDon_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbThucDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbThucDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -701,16 +601,10 @@ namespace GUI_DingDoong
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btLuu;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

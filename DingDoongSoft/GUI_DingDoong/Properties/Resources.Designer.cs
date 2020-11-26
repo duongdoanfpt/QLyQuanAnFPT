@@ -93,6 +93,16 @@ namespace GUI_DingDoong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_3d1 {
+            get {
+                object obj = ResourceManager.GetObject("appbar.3d1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_add {
             get {
                 object obj = ResourceManager.GetObject("appbar.add", resourceCulture);
@@ -143,6 +153,16 @@ namespace GUI_DingDoong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_clipboard_variant2 {
+            get {
+                object obj = ResourceManager.GetObject("appbar.clipboard.variant2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_customerservice {
             get {
                 object obj = ResourceManager.GetObject("appbar.customerservice", resourceCulture);
@@ -166,6 +186,16 @@ namespace GUI_DingDoong.Properties {
         internal static System.Drawing.Bitmap appbar_door_enter {
             get {
                 object obj = ResourceManager.GetObject("appbar.door.enter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar_door1 {
+            get {
+                object obj = ResourceManager.GetObject("appbar.door1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +276,46 @@ namespace GUI_DingDoong.Properties {
         internal static System.Drawing.Bitmap appbar1 {
             get {
                 object obj = ResourceManager.GetObject("appbar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar2 {
+            get {
+                object obj = ResourceManager.GetObject("appbar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar3 {
+            get {
+                object obj = ResourceManager.GetObject("appbar3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar4 {
+            get {
+                object obj = ResourceManager.GetObject("appbar4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar5 {
+            get {
+                object obj = ResourceManager.GetObject("appbar5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
