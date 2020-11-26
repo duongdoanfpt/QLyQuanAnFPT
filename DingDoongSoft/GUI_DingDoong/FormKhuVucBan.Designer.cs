@@ -41,6 +41,7 @@ namespace GUI_DingDoong
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -50,7 +51,7 @@ namespace GUI_DingDoong
             this.lbViTriBan = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lbTenNV = new System.Windows.Forms.Label();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -86,9 +87,9 @@ namespace GUI_DingDoong
             this.panel9 = new System.Windows.Forms.Panel();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button17 = new System.Windows.Forms.Button();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvThucDon = new System.Windows.Forms.DataGridView();
+            this.MaTD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button14 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -105,9 +106,11 @@ namespace GUI_DingDoong
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbEmailNV = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbTenMon = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -119,7 +122,7 @@ namespace GUI_DingDoong
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).BeginInit();
             this.panel8.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -233,7 +236,8 @@ namespace GUI_DingDoong
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.ThanhTien});
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(403, 413);
@@ -253,6 +257,11 @@ namespace GUI_DingDoong
             // 
             this.Column3.HeaderText = "Giá";
             this.Column3.Name = "Column3";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
             // 
             // panel3
             // 
@@ -311,7 +320,7 @@ namespace GUI_DingDoong
             this.panel6.Controls.Add(this.lbViTriBan);
             this.panel6.Controls.Add(this.textBox7);
             this.panel6.Controls.Add(this.textBox8);
-            this.panel6.Controls.Add(this.label21);
+            this.panel6.Controls.Add(this.lbTenNV);
             this.panel6.Controls.Add(this.checkBox3);
             this.panel6.Controls.Add(this.textBox9);
             this.panel6.Controls.Add(this.label22);
@@ -381,15 +390,15 @@ namespace GUI_DingDoong
             this.textBox8.Size = new System.Drawing.Size(130, 20);
             this.textBox8.TabIndex = 8;
             // 
-            // label21
+            // lbTenNV
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(126, 12);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(79, 17);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Cao Tân Lộc";
+            this.lbTenNV.AutoSize = true;
+            this.lbTenNV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenNV.Location = new System.Drawing.Point(126, 12);
+            this.lbTenNV.Name = "lbTenNV";
+            this.lbTenNV.Size = new System.Drawing.Size(79, 17);
+            this.lbTenNV.TabIndex = 7;
+            this.lbTenNV.Text = "Cao Tân Lộc";
             // 
             // checkBox3
             // 
@@ -695,10 +704,11 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.lbTenMon);
+            this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.numericUpDown1);
             this.panel9.Controls.Add(this.button17);
-            this.panel9.Controls.Add(this.textBox12);
-            this.panel9.Controls.Add(this.dataGridView2);
+            this.panel9.Controls.Add(this.dgvThucDon);
             this.panel9.Controls.Add(this.comboBox1);
             this.panel9.Controls.Add(this.button14);
             this.panel9.Controls.Add(this.textBox11);
@@ -712,7 +722,7 @@ namespace GUI_DingDoong
             this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(4, 42);
+            this.numericUpDown1.Location = new System.Drawing.Point(4, 117);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(196, 26);
             this.numericUpDown1.TabIndex = 7;
@@ -721,41 +731,42 @@ namespace GUI_DingDoong
             // 
             this.button17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(206, 40);
+            this.button17.Location = new System.Drawing.Point(206, 116);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(85, 29);
             this.button17.TabIndex = 6;
             this.button17.Text = "Thêm";
             this.button17.UseVisualStyleBackColor = true;
             // 
-            // textBox12
+            // dgvThucDon
             // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(4, 4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(287, 29);
-            this.textBox12.TabIndex = 4;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4});
-            this.dataGridView2.Location = new System.Drawing.Point(3, 148);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(288, 472);
-            this.dataGridView2.TabIndex = 3;
+            this.dgvThucDon.BackgroundColor = System.Drawing.Color.White;
+            this.dgvThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThucDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaTD,
+            this.TenTD});
+            this.dgvThucDon.Location = new System.Drawing.Point(3, 221);
+            this.dgvThucDon.Name = "dgvThucDon";
+            this.dgvThucDon.Size = new System.Drawing.Size(288, 399);
+            this.dgvThucDon.TabIndex = 3;
+            this.dgvThucDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucDon_CellClick);
             // 
-            // Column4
+            // MaTD
             // 
-            this.Column4.HeaderText = "Tên món";
-            this.Column4.Name = "Column4";
+            this.MaTD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.MaTD.DataPropertyName = "MaTD";
+            this.MaTD.HeaderText = "  Mã ";
+            this.MaTD.Name = "MaTD";
+            this.MaTD.Width = 56;
+            // 
+            // TenTD
+            // 
+            this.TenTD.DataPropertyName = "TenTD";
+            this.TenTD.HeaderText = "Tên Thực Đơn";
+            this.TenTD.Name = "TenTD";
             // 
             // comboBox1
             // 
@@ -766,7 +777,7 @@ namespace GUI_DingDoong
             this.comboBox1.Items.AddRange(new object[] {
             "Thức ăn",
             "Đồ uống"});
-            this.comboBox1.Location = new System.Drawing.Point(2, 80);
+            this.comboBox1.Location = new System.Drawing.Point(-1, 151);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(289, 29);
             this.comboBox1.TabIndex = 2;
@@ -774,7 +785,7 @@ namespace GUI_DingDoong
             // button14
             // 
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button14.Location = new System.Drawing.Point(201, 118);
+            this.button14.Location = new System.Drawing.Point(198, 182);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(90, 26);
             this.button14.TabIndex = 1;
@@ -785,7 +796,7 @@ namespace GUI_DingDoong
             // 
             this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.Location = new System.Drawing.Point(3, 122);
+            this.textBox11.Location = new System.Drawing.Point(-1, 186);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(196, 20);
             this.textBox11.TabIndex = 0;
@@ -843,7 +854,7 @@ namespace GUI_DingDoong
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(88, 29);
             this.button13.TabIndex = 7;
-            this.button13.Text = ">>";
+            this.button13.Text = ">";
             this.button13.UseVisualStyleBackColor = true;
             // 
             // button12
@@ -855,7 +866,7 @@ namespace GUI_DingDoong
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(88, 29);
             this.button12.TabIndex = 6;
-            this.button12.Text = "<<";
+            this.button12.Text = "<";
             this.button12.UseVisualStyleBackColor = true;
             // 
             // button9
@@ -917,11 +928,11 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1036F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1045F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbEmailNV, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 1);
@@ -961,16 +972,16 @@ namespace GUI_DingDoong
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // label1
+            // lbEmailNV
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1139, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "email123@gmail.com";
+            this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbEmailNV.AutoSize = true;
+            this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmailNV.Location = new System.Drawing.Point(1116, 9);
+            this.lbEmailNV.Name = "lbEmailNV";
+            this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
+            this.lbEmailNV.TabIndex = 6;
+            this.lbEmailNV.Text = "duydtps11681@fpt.edu.vn";
             // 
             // pictureBox2
             // 
@@ -991,6 +1002,26 @@ namespace GUI_DingDoong
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 15);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Món đã chọn:";
+            // 
+            // lbTenMon
+            // 
+            this.lbTenMon.AutoSize = true;
+            this.lbTenMon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenMon.Location = new System.Drawing.Point(16, 40);
+            this.lbTenMon.Name = "lbTenMon";
+            this.lbTenMon.Size = new System.Drawing.Size(84, 21);
+            this.lbTenMon.TabIndex = 9;
+            this.lbTenMon.Text = "Chưa chọn";
             // 
             // FormKhuVucBan
             // 
@@ -1021,7 +1052,7 @@ namespace GUI_DingDoong
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).EndInit();
             this.panel8.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -1057,7 +1088,7 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Label lbViTriBan;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lbTenNV;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label22;
@@ -1082,9 +1113,6 @@ namespace GUI_DingDoong
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button6;
@@ -1099,10 +1127,8 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridView dgvThucDon;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flpkvBan;
         private System.Windows.Forms.Panel panel10;
@@ -1111,8 +1137,16 @@ namespace GUI_DingDoong
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbEmailNV;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.Label lbTenMon;
+        private System.Windows.Forms.Label label1;
     }
 }

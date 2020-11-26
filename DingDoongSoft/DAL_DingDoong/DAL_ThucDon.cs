@@ -43,5 +43,25 @@ namespace DAL_DingDoong
             }
             return false;
         }
+
+        public DataTable DanhSachThucDonBan()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_DanhSachTDBan";
+                DataTable dtThucDon = new DataTable();
+                dtThucDon.Load(cm.ExecuteReader());
+                return dtThucDon;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
     }
 }

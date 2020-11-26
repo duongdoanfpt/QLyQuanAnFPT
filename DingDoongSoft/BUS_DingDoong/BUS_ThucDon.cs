@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,11 @@ namespace BUS_DingDoong
         public bool insertThucDon(DTO_ThucDon td)
         {
             return dalThucDon.ThemThucDon(td);
+        }
+
+        public DataTable DanhSachThucDonBan()
+        {
+            return dalThucDon.DanhSachThucDonBan();
         }
     }
 }
