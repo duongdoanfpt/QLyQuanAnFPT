@@ -68,7 +68,7 @@ namespace DAL_DingDoong
                 SqlCommand cm = new SqlCommand();
                 cm.Connection = _conn;
                 cm.CommandType = CommandType.StoredProcedure;
-                cm.CommandText = "insertHDTemp";
+                cm.CommandText = "sp_insertHDTemp";
                 cm.Parameters.AddWithValue("MaHD", hd.MaHD);
                 cm.Parameters.AddWithValue("IdBan", hd.IdBan);
                 cm.Parameters.AddWithValue("TrangThai", hd.TrangThai);
@@ -152,6 +152,26 @@ namespace DAL_DingDoong
                 DataTable dtHD = new DataTable();
                 dtHD.Load(cm.ExecuteReader());
                 return dtHD;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public float TongTienHDTam(string MaHD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_TongtienHDTamKM";
+                cm.Parameters.AddWithValue("MaHD", MaHD);
+
+                return float.Parse(cm.ExecuteScalar().ToString());
+
             }
             finally
             {
