@@ -34,9 +34,7 @@ namespace BUS_DingDoong
                               {
                                   IdBan = int.Parse(dr[0].ToString()),
                                   TenBan = dr[1].ToString(),
-                                  TrangThai = int.Parse(dr[2].ToString()),
-                                  
-                                  
+                                  TrangThai = int.Parse(dr[2].ToString())
 
                               }).FirstOrDefault();
             return curBan;
@@ -45,14 +43,13 @@ namespace BUS_DingDoong
         public DTO_HoaDon curhd(DTO_Ban ban)
         {
             DTO_HoaDon hd = (from DataRow dr in dtHoaDonTam(ban).Rows
-                             where int.Parse(dr[1].ToString()) == ban.IdBan
+                             where int.Parse(dr[2].ToString()) == ban.IdBan
                              select new DTO_HoaDon
                              {
-                                 MaHD = dr[0].ToString(),
+                                 MaHD= dr[0].ToString(),
                                  IdBan = (int)dr[1],
-                                 TrangThai = (int)dr[2],
-                                 KhuyenMai = float.Parse(dr[4].ToString())
 
+                                TrangThai = (int)dr[2]
                              }).FirstOrDefault();
             return hd;
         }
@@ -79,11 +76,6 @@ namespace BUS_DingDoong
         public DataTable dtHDCTTam(string MaHD)
         {
             return dalBan.DanhSachHDCTTam(MaHD);
-        }
-
-        public float TongTienHDTamKM(DTO_HoaDon hd)
-        {
-            return dalBan.TongTienHDTam(hd.MaHD);
         }
     }
 }

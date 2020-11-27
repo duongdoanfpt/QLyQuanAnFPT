@@ -19,7 +19,7 @@ namespace GUI_DingDoong
         BUS_NhanVien busNV = new BUS_NhanVien();
         public static int IndexBan;
         public static DTO_ThucDon TD;
-        public static DTO_HoaDon hd;
+        DTO_HoaDon hd;
         
         string startupPath = Environment.CurrentDirectory;
         public IEnumerable<Control> GetAll(Control control, Type type)
@@ -126,8 +126,6 @@ namespace GUI_DingDoong
             DTO_NhanVien NV = busNV.curNV(lbEmailNV.Text);
             dgvHDCT.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvHDCT.RowHeadersVisible = false;
-            dgvThucDon.RowHeadersVisible = false;
             dgvThucDon.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             loadban();
             loadThucDonkvBan();
@@ -146,36 +144,26 @@ namespace GUI_DingDoong
             PictureBox image = (PictureBox)ptb.Parent.Controls[0];
             Label lbBan = (Label)ptb.Parent.Controls[1];
             lbViTriBan.Text = lbBan.Text;
-            
             DTO_Ban Ban = busBan.curBan(lbViTriBan.Text);
-            hd = busBan.curhd(Ban);
-           
             if(Ban.TrangThai == 1)
             {
                 DataTable curHd = busBan.dtHoaDonTam(Ban);
                 DataRow drhd = curHd.Rows[0];
                 lbStartTime.Visible = true;
-                lbEndTime.Visible = true;
                 DateTime StartHD = (DateTime)drhd[3];
                 lbMaHD.Text = drhd[0].ToString();
-                lbKhuyenMai.Text = hd.KhuyenMai.ToString()+"%";
-                lbTongTien.Text = busBan.TongTienHDTamKM(hd).ToString();
+                LoadCTHD();
                 lbStartTime.Text =  (StartHD.Hour < 10 ? "0" + StartHD.Hour.ToString() : StartHD.Hour.ToString()) + ":" + (StartHD.Minute < 10 ? "0" + StartHD.Minute.ToString() : StartHD.Minute.ToString()) + ":" + (StartHD.Second < 10 ? "0" + StartHD.Second.ToString() : StartHD.Second.ToString());
             }
             else
             {
                 lbStartTime.Visible = false;
                 lbEndTime.Visible = false;
-                lbMaHD.Text = "";
-                lbTongTien.Text = "0";
-                lbKhuyenMai.Text = "0%";
 
-            }
-            LoadCTHD();
+            }    
             
 
-
-
+            
             lbBan.BackColor = Color.Transparent;
             var Index = ptb.Parent.Parent.Controls.IndexOf(ptb.Parent);
             IndexBan = Index;
@@ -296,19 +284,13 @@ namespace GUI_DingDoong
             if (MessageBox.Show("Thêm " + TD.TenTD + " vào hoá đơn " + curCTHD.MaHD + "?", "Confirm",
                   MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-               
+                MessageBox.Show(curCTHD.MaHD);
+                MessageBox.Show(curCTHD.MaTD);
                 busBan.ThemCTHDTam(curCTHD);
                 LoadCTHD();
 
                 
             }
-            
-            lbTongTien.Text = busBan.TongTienHDTamKM(hd).ToString();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -36,9 +36,7 @@ namespace GUI_DingDoong
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lbTongTien = new System.Windows.Forms.Label();
-            this.lbKhuyenMai = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.dgvHDCT = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -202,9 +200,7 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.lbTongTien);
-            this.panel4.Controls.Add(this.lbKhuyenMai);
-            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.textBox10);
             this.panel4.Controls.Add(this.label27);
             this.panel4.Controls.Add(this.dgvHDCT);
             this.panel4.Location = new System.Drawing.Point(3, 200);
@@ -212,42 +208,15 @@ namespace GUI_DingDoong
             this.panel4.Size = new System.Drawing.Size(411, 428);
             this.panel4.TabIndex = 1;
             // 
-            // lbTongTien
+            // textBox10
             // 
-            this.lbTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbTongTien.AutoSize = true;
-            this.lbTongTien.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTongTien.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lbTongTien.Location = new System.Drawing.Point(248, 394);
-            this.lbTongTien.Name = "lbTongTien";
-            this.lbTongTien.Size = new System.Drawing.Size(25, 30);
-            this.lbTongTien.TabIndex = 7;
-            this.lbTongTien.Text = "0";
-            this.lbTongTien.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // lbKhuyenMai
-            // 
-            this.lbKhuyenMai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbKhuyenMai.AutoSize = true;
-            this.lbKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbKhuyenMai.ForeColor = System.Drawing.Color.Red;
-            this.lbKhuyenMai.Location = new System.Drawing.Point(248, 363);
-            this.lbKhuyenMai.Name = "lbKhuyenMai";
-            this.lbKhuyenMai.Size = new System.Drawing.Size(43, 30);
-            this.lbKhuyenMai.TabIndex = 6;
-            this.lbKhuyenMai.Text = "0%";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(100, 363);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 30);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Khuyến Mãi : ";
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(256, 389);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(150, 31);
+            this.textBox10.TabIndex = 3;
             // 
             // label27
             // 
@@ -255,11 +224,11 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(100, 393);
+            this.label27.Location = new System.Drawing.Point(132, 387);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(135, 30);
+            this.label27.Size = new System.Drawing.Size(122, 30);
             this.label27.TabIndex = 2;
-            this.label27.Text = "Thành Tiền : ";
+            this.label27.Text = "Tổng tiền : ";
             // 
             // dgvHDCT
             // 
@@ -267,8 +236,6 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvHDCT.BackgroundColor = System.Drawing.Color.White;
-            this.dgvHDCT.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvHDCT.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
             this.dgvHDCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHDCT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -277,66 +244,41 @@ namespace GUI_DingDoong
             this.ThanhTien});
             this.dgvHDCT.Location = new System.Drawing.Point(3, 3);
             this.dgvHDCT.Name = "dgvHDCT";
-<<<<<<< Updated upstream
             this.dgvHDCT.RowHeadersWidth = 51;
             this.dgvHDCT.Size = new System.Drawing.Size(403, 381);
-=======
-            this.dgvHDCT.ReadOnly = true;
-            this.dgvHDCT.Size = new System.Drawing.Size(403, 334);
->>>>>>> Stashed changes
             this.dgvHDCT.TabIndex = 1;
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "TenTD";
             this.Column1.HeaderText = "Món";
-<<<<<<< Updated upstream
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 125;
-=======
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
->>>>>>> Stashed changes
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "SoLuong";
             this.Column2.HeaderText = "Số lượng";
-<<<<<<< Updated upstream
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 125;
-=======
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
->>>>>>> Stashed changes
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "GiaBan";
             this.Column3.HeaderText = "Giá Bán";
-<<<<<<< Updated upstream
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 125;
-=======
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
->>>>>>> Stashed changes
             // 
             // ThanhTien
             // 
             this.ThanhTien.DataPropertyName = "ThanhTien";
             this.ThanhTien.HeaderText = "Thành Tiền";
-<<<<<<< Updated upstream
             this.ThanhTien.MinimumWidth = 6;
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.Width = 125;
-=======
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
->>>>>>> Stashed changes
             // 
             // panel3
             // 
@@ -1059,11 +1001,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-<<<<<<< Updated upstream
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1065F));
-=======
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1069F));
->>>>>>> Stashed changes
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
@@ -1112,11 +1050,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
             this.lbEmailNV.Location = new System.Drawing.Point(1136, 9);
-=======
-            this.lbEmailNV.Location = new System.Drawing.Point(1140, 9);
->>>>>>> Stashed changes
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
@@ -1194,6 +1128,7 @@ namespace GUI_DingDoong
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DataGridView dgvHDCT;
         private System.Windows.Forms.Panel panel7;
@@ -1274,8 +1209,5 @@ namespace GUI_DingDoong
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.Label lbTongTien;
-        private System.Windows.Forms.Label lbKhuyenMai;
-        private System.Windows.Forms.Label label4;
     }
 }
