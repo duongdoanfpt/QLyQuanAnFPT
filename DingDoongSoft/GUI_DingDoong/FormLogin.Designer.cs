@@ -58,6 +58,7 @@
             // 
             // pbLogo
             // 
+            this.pbLogo.AccessibleName = "pbLogo";
             this.pbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbLogo.BackgroundImage = global::GUI_DingDoong.Properties.Resources.logo;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -103,6 +104,8 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.AccessibleName = "txtEmail";
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(41, 250);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
@@ -111,6 +114,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.AccessibleName = "txtPassWord";
             this.txtPassword.Location = new System.Drawing.Point(41, 337);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
@@ -143,6 +147,7 @@
             // 
             // lblForgotPass
             // 
+            this.lblForgotPass.AccessibleName = "lblQuenMatKhau";
             this.lblForgotPass.AutoSize = true;
             this.lblForgotPass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotPass.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -154,6 +159,7 @@
             // 
             // btLogin
             // 
+            this.btLogin.AccessibleName = "btLogin";
             this.btLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLogin.Location = new System.Drawing.Point(91, 426);
             this.btLogin.Name = "btLogin";
@@ -161,9 +167,11 @@
             this.btLogin.TabIndex = 9;
             this.btLogin.Text = "Login";
             this.btLogin.UseVisualStyleBackColor = true;
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // btExit
             // 
+            this.btExit.AccessibleName = "btExit";
             this.btExit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btExit.Location = new System.Drawing.Point(221, 426);
             this.btExit.Name = "btExit";
@@ -190,6 +198,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đăng Nhập";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();

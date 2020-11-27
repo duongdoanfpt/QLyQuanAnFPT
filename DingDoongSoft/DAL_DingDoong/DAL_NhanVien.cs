@@ -5,12 +5,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO_DingDoong;
 
 namespace DAL_DingDoong
 {
     public class DAL_NhanVien:Dbconnect
     {
-        public DataTable getDanhSachNV()
+        public DataTable getDanhSachNV() //GET ALL NHANVIEN
         {
             try
             {
@@ -27,6 +28,34 @@ namespace DAL_DingDoong
             {
                 _conn.Close();
             }
+        }
+
+        // DANGNHAP
+        public bool NhanVienDangNhap(DTO_NhanVien nv)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_DangNhap";
+                cmd.Parameters.AddWithValue("email", nv.Email);
+                cmd.Parameters.AddWithValue("matKhau", nv.MatKhau);
+
+                if (Convert.ToInt16(cmd.ExecuteScalar()) > 0)
+                    return true;
+            }
+            catch (Exception)
+            {
+
+
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
         }
     }
 }

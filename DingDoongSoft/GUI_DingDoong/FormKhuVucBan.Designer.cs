@@ -39,6 +39,10 @@ namespace GUI_DingDoong
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.dgvHDCT = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -110,10 +114,6 @@ namespace GUI_DingDoong
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -244,8 +244,41 @@ namespace GUI_DingDoong
             this.ThanhTien});
             this.dgvHDCT.Location = new System.Drawing.Point(3, 3);
             this.dgvHDCT.Name = "dgvHDCT";
+            this.dgvHDCT.RowHeadersWidth = 51;
             this.dgvHDCT.Size = new System.Drawing.Size(403, 381);
             this.dgvHDCT.TabIndex = 1;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "TenTD";
+            this.Column1.HeaderText = "Món";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "SoLuong";
+            this.Column2.HeaderText = "Số lượng";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "GiaBan";
+            this.Column3.HeaderText = "Giá Bán";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.Width = 125;
             // 
             // panel3
             // 
@@ -761,7 +794,7 @@ namespace GUI_DingDoong
             this.nudSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudSoLuong.Location = new System.Drawing.Point(4, 117);
             this.nudSoLuong.Name = "nudSoLuong";
-            this.nudSoLuong.Size = new System.Drawing.Size(196, 26);
+            this.nudSoLuong.Size = new System.Drawing.Size(195, 26);
             this.nudSoLuong.TabIndex = 7;
             this.nudSoLuong.Value = new decimal(new int[] {
             1,
@@ -793,6 +826,7 @@ namespace GUI_DingDoong
             this.dgvThucDon.Location = new System.Drawing.Point(3, 221);
             this.dgvThucDon.Name = "dgvThucDon";
             this.dgvThucDon.ReadOnly = true;
+            this.dgvThucDon.RowHeadersWidth = 51;
             this.dgvThucDon.Size = new System.Drawing.Size(288, 399);
             this.dgvThucDon.TabIndex = 3;
             this.dgvThucDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucDon_CellDoubleClick);
@@ -801,8 +835,10 @@ namespace GUI_DingDoong
             // 
             this.TenTD.DataPropertyName = "TenTD";
             this.TenTD.HeaderText = "Tên Thực Đơn";
+            this.TenTD.MinimumWidth = 6;
             this.TenTD.Name = "TenTD";
             this.TenTD.ReadOnly = true;
+            this.TenTD.Width = 125;
             // 
             // comboBox1
             // 
@@ -965,7 +1001,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1060F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1065F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
@@ -1014,7 +1050,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmailNV.Location = new System.Drawing.Point(1131, 9);
+            this.lbEmailNV.Location = new System.Drawing.Point(1136, 9);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
@@ -1045,30 +1081,6 @@ namespace GUI_DingDoong
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "TenTD";
-            this.Column1.HeaderText = "Món";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "SoLuong";
-            this.Column2.HeaderText = "Số lượng";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "GiaBan";
-            this.Column3.HeaderText = "Giá Bán";
-            this.Column3.Name = "Column3";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
             // 
             // FormKhuVucBan
             // 

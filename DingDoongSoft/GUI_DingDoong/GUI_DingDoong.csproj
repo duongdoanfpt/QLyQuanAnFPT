@@ -304,5 +304,8 @@
   <ItemGroup>
     <None Include="Resources\appbar.door.enter1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.close.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

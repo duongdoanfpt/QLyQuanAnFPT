@@ -2,6 +2,7 @@
 using DTO_DingDoong;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,27 @@ namespace BUS_DingDoong
 
                   }).FirstOrDefault();
             return NV;
+
+        }
+
+        public bool NhanVienDangNhap(DTO_NhanVien nv)
+        {
+            return dALNhanVien.NhanVienDangNhap(nv);
+        }
+
+        //HamMaHoa
+        public string Encryption(string password)
+        {
+            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            byte[] encrypt;
+            UTF8Encoding encode = new UTF8Encoding();
+            encrypt = md5.ComputeHash(encode.GetBytes(password));
+            StringBuilder encryptdata = new StringBuilder();
+            for (int i = 0; i < encrypt.Length; i++)
+            {
+                encryptdata.Append(encrypt[i].ToString());
+            }
+            return encryptdata.ToString();
 
         }
 
