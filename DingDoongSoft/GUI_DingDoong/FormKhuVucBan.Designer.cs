@@ -277,66 +277,42 @@ namespace GUI_DingDoong
             this.ThanhTien});
             this.dgvHDCT.Location = new System.Drawing.Point(3, 3);
             this.dgvHDCT.Name = "dgvHDCT";
-<<<<<<< Updated upstream
-            this.dgvHDCT.RowHeadersWidth = 51;
-            this.dgvHDCT.Size = new System.Drawing.Size(403, 381);
-=======
             this.dgvHDCT.ReadOnly = true;
-            this.dgvHDCT.Size = new System.Drawing.Size(403, 334);
->>>>>>> Stashed changes
+            this.dgvHDCT.RowHeadersWidth = 51;
+            this.dgvHDCT.Size = new System.Drawing.Size(403, 340);
             this.dgvHDCT.TabIndex = 1;
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "TenTD";
             this.Column1.HeaderText = "Món";
-<<<<<<< Updated upstream
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-=======
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
->>>>>>> Stashed changes
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "SoLuong";
             this.Column2.HeaderText = "Số lượng";
-<<<<<<< Updated upstream
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-=======
-            this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
->>>>>>> Stashed changes
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "GiaBan";
             this.Column3.HeaderText = "Giá Bán";
-<<<<<<< Updated upstream
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-=======
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
->>>>>>> Stashed changes
             // 
             // ThanhTien
             // 
             this.ThanhTien.DataPropertyName = "ThanhTien";
             this.ThanhTien.HeaderText = "Thành Tiền";
-<<<<<<< Updated upstream
             this.ThanhTien.MinimumWidth = 6;
             this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.Width = 125;
-=======
-            this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
->>>>>>> Stashed changes
+            this.ThanhTien.Width = 125;
             // 
             // panel3
             // 
@@ -1059,11 +1035,8 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-<<<<<<< Updated upstream
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1065F));
-=======
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1068F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1069F));
->>>>>>> Stashed changes
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
@@ -1112,11 +1085,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
-            this.lbEmailNV.Location = new System.Drawing.Point(1136, 9);
-=======
-            this.lbEmailNV.Location = new System.Drawing.Point(1140, 9);
->>>>>>> Stashed changes
+            this.lbEmailNV.Location = new System.Drawing.Point(1139, 9);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
