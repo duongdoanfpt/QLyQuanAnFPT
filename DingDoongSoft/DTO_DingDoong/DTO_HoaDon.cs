@@ -97,12 +97,12 @@ namespace DTO_DingDoong
 
         public DTO_HoaDon(string MaHD, string MaNV, string SDT_KH, int MaBan, int TrangThai)
         {
-            this.MaHD = MaHD;
-            this.MaNV = MaNV;
-            this.SDT_KH = SDT_KH;
-            this.IdBan = MaBan;
-            this.TrangThai = TrangThai;
-            this.KhuyenMai = 0;
+            this._MaHD = MaHD;
+            this._MaNV = MaNV;
+            this._SDT = SDT_KH;
+            this._IdBan = MaBan;
+            this._TrangThai = TrangThai;
+            this._KhuyenMai = 0;
         }
 
         public DTO_HoaDon(string MaHD, int MaBan, int TrangThai)
