@@ -17,6 +17,11 @@ namespace GUI_DingDoong
         BUS_Ban busBan = new BUS_Ban();
         BUS_ThucDon busTD = new BUS_ThucDon();
         BUS_NhanVien busNV = new BUS_NhanVien();
+        public static int IndexBan;
+        public static DTO_ThucDon TD;
+        DTO_HoaDon hd;
+        
+        string startupPath = Environment.CurrentDirectory;
         public IEnumerable<Control> GetAll(Control control, Type type)
         {
             var controls = control.Controls.Cast<Control>();
@@ -36,6 +41,25 @@ namespace GUI_DingDoong
 
             }    
            
+        }
+        private void LoadCTHD()
+        {
+            //if(busBan.dtHDCTTam(lbMaHD.Text).Rows.Count>0)
+            //{
+                dgvHDCT.DataSource = busBan.dtHDCTTam(lbMaHD.Text);
+               
+            
+            //else
+            //{
+            //    dgvHDCT.DataSource = dt
+                
+                
+                
+
+              
+            //}
+           
+
         }
 
         
@@ -100,7 +124,7 @@ namespace GUI_DingDoong
         private void FormKhuVucBan_Load(object sender, EventArgs e)
         {
             DTO_NhanVien NV = busNV.curNV(lbEmailNV.Text);
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHDCT.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThucDon.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             loadban();
@@ -121,9 +145,28 @@ namespace GUI_DingDoong
             Label lbBan = (Label)ptb.Parent.Controls[1];
             lbViTriBan.Text = lbBan.Text;
             DTO_Ban Ban = busBan.curBan(lbViTriBan.Text);
+            if(Ban.TrangThai == 1)
+            {
+                DataTable curHd = busBan.dtHoaDonTam(Ban);
+                DataRow drhd = curHd.Rows[0];
+                lbStartTime.Visible = true;
+                DateTime StartHD = (DateTime)drhd[3];
+                lbMaHD.Text = drhd[0].ToString();
+                LoadCTHD();
+                lbStartTime.Text =  (StartHD.Hour < 10 ? "0" + StartHD.Hour.ToString() : StartHD.Hour.ToString()) + ":" + (StartHD.Minute < 10 ? "0" + StartHD.Minute.ToString() : StartHD.Minute.ToString()) + ":" + (StartHD.Second < 10 ? "0" + StartHD.Second.ToString() : StartHD.Second.ToString());
+            }
+            else
+            {
+                lbStartTime.Visible = false;
+                lbEndTime.Visible = false;
 
+            }    
+            
+
+            
             lbBan.BackColor = Color.Transparent;
             var Index = ptb.Parent.Parent.Controls.IndexOf(ptb.Parent);
+            IndexBan = Index;
             for (int i = 0; i < ptb.Parent.Parent.Controls.Count; i++)
             {
 
@@ -166,9 +209,10 @@ namespace GUI_DingDoong
                 if (dgvThucDon.CurrentRow.Index < dgvThucDon.Rows.Count - 1)
                 {
 
-                    DTO_ThucDon TD = busTD.curTD(dgvThucDon.CurrentRow.Cells[0].FormattedValue.ToString());
+                    TD = busTD.curTD(dgvThucDon.CurrentRow.Cells[0].FormattedValue.ToString());
 
                     lbTenMon.Text = TD.TenTD;
+                    btThem.Enabled = true;
                 }
             }
         }
@@ -180,12 +224,31 @@ namespace GUI_DingDoong
 
         private void btBatDau_Click(object sender, EventArgs e)
         {
-            lbStartTime.Visible = true;
-            lbStartTime.Text = DateTime.Now.ToString("h:mm:ss");
-            lbEndTime.Visible = true;
-            lbMaHD.Text = "HD" + DateTime.Now.ToString("ddMMyyyy_hhmmss");
-            btBatDau.Enabled = false;
-            //btBatDau.Click += timer1_Tick;
+            DTO_Ban Ban = busBan.curBan(lbViTriBan.Text);
+            
+           
+            if (MessageBox.Show("Mở bàn đã chọn?", "Confirm",
+                   MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                if (busBan.UpdateTrangThaiBan(Ban,1))
+                {
+
+                    lbStartTime.Visible = true;
+                    lbStartTime.Text = (DateTime.Now.Hour < 10 ? "0" + DateTime.Now.Hour.ToString() : DateTime.Now.Hour.ToString()) + ":" + (DateTime.Now.Minute < 10 ? "0" + DateTime.Now.Minute.ToString() : DateTime.Now.Minute.ToString()) + ":" + (DateTime.Now.Second < 10 ? "0" + DateTime.Now.Second.ToString() : DateTime.Now.Second.ToString());
+                    lbEndTime.Visible = true;
+                    lbMaHD.Text = "HD" + DateTime.Now.ToString("ddMMyyyy_") + (DateTime.Now.Hour < 10 ? "0" + DateTime.Now.Hour.ToString() : DateTime.Now.Hour.ToString()) + (DateTime.Now.Minute < 10 ? "0" + DateTime.Now.Minute.ToString() : DateTime.Now.Minute.ToString()) + (DateTime.Now.Second < 10 ? "0" + DateTime.Now.Second.ToString() : DateTime.Now.Second.ToString()); ;
+                    btBatDau.Enabled = false;
+                    (flpkvBan.Controls[IndexBan].Controls[0] as PictureBox).Image = Image.FromFile(startupPath + @"\image\banMo.ico");
+                    hd = new DTO_HoaDon(lbMaHD.Text, Ban.IdBan, 0);
+                    busBan.ThemHoaDonTam(hd);
+                }
+                else
+                {
+                    MessageBox.Show("Đã có lỗi xảy ra vui lòng kiểm tra lại");
+                }
+            }
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -212,6 +275,22 @@ namespace GUI_DingDoong
             }    
 
 
+        }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+            DTO_CTHD curCTHD = new DTO_CTHD(lbMaHD.Text, TD.MaTD, (int)nudSoLuong.Value, txtGhiChuhdct.Text);
+
+            if (MessageBox.Show("Thêm " + TD.TenTD + " vào hoá đơn " + curCTHD.MaHD + "?", "Confirm",
+                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MessageBox.Show(curCTHD.MaHD);
+                MessageBox.Show(curCTHD.MaTD);
+                busBan.ThemCTHDTam(curCTHD);
+                LoadCTHD();
+
+                
+            }
         }
     }
 }

@@ -104,6 +104,14 @@ namespace DTO_DingDoong
             this.TrangThai = TrangThai;
             this.KhuyenMai = 0;
         }
+
+        public DTO_HoaDon(string MaHD, int MaBan, int TrangThai)
+        {
+            this._MaHD = MaHD;
+            this._IdBan = MaBan;
+            this._TrangThai = TrangThai;
+
+        }
         public DTO_HoaDon()
         { }
 

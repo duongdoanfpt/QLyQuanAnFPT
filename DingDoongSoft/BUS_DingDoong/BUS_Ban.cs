@@ -26,18 +26,56 @@ namespace BUS_DingDoong
             return listBan;
         }
 
-        public DTO_Ban curBan (string ViTriBan)
+        public DTO_Ban curBan(string ViTriBan)
         {
             DTO_Ban curBan = (from DataRow dr in dtBan().Rows
-                                 where string.Compare(dr[1].ToString(), ViTriBan, true) == 0
-                                 select new DTO_Ban
-                                 {
-                                     IdBan = int.Parse(dr[0].ToString()),
-                                     TenBan = dr[1].ToString(),
-                                     TrangThai = int.Parse(dr[2].ToString())
+                              where string.Compare(dr[1].ToString(), ViTriBan, true) == 0
+                              select new DTO_Ban
+                              {
+                                  IdBan = int.Parse(dr[0].ToString()),
+                                  TenBan = dr[1].ToString(),
+                                  TrangThai = int.Parse(dr[2].ToString())
 
-                                 }).FirstOrDefault();
+                              }).FirstOrDefault();
             return curBan;
+        }
+
+        public DTO_HoaDon curhd(DTO_Ban ban)
+        {
+            DTO_HoaDon hd = (from DataRow dr in dtHoaDonTam(ban).Rows
+                             where int.Parse(dr[2].ToString()) == ban.IdBan
+                             select new DTO_HoaDon
+                             {
+                                 MaHD= dr[0].ToString(),
+                                 IdBan = (int)dr[1],
+
+                                TrangThai = (int)dr[2]
+                             }).FirstOrDefault();
+            return hd;
+        }
+
+        public bool UpdateTrangThaiBan(DTO_Ban ban, int TrangThai)
+        {
+            return dalBan.UpdateTrangThaiBan(ban.IdBan, TrangThai);
+        }
+
+        public bool ThemHoaDonTam(DTO_HoaDon hd)
+        {
+            return dalBan.ThemHoaDonTam(hd);
+        }
+
+        public DataTable dtHoaDonTam(DTO_Ban ban)
+        {
+            return dalBan.HoaDonTam(ban.IdBan);
+        }
+
+        public bool ThemCTHDTam (DTO_CTHD cthd)
+        {
+            return dalBan.ThemChiTietHoaDonTam(cthd);
+        }
+        public DataTable dtHDCTTam(string MaHD)
+        {
+            return dalBan.DanhSachHDCTTam(MaHD);
         }
     }
 }
