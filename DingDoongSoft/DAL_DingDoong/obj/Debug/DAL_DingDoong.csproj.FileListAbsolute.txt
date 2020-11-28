@@ -25,3 +25,12 @@ D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.cspro
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.csproj.CopyComplete
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.dll
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.pdb
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\bin\Debug\DAL_DingDoong.dll
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\bin\Debug\DAL_DingDoong.pdb
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\bin\Debug\DTO_DingDoong.dll
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\bin\Debug\DTO_DingDoong.pdb
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.csprojAssemblyReference.cache
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.csproj.CoreCompileInputs.cache
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.csproj.CopyComplete
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.dll
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.pdb

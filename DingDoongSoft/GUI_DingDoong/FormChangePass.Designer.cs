@@ -77,15 +77,17 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(34, 210);
+            this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(338, 20);
+            this.txtEmail.Size = new System.Drawing.Size(338, 31);
             this.txtEmail.TabIndex = 3;
             // 
             // txtOldPass
             // 
             this.txtOldPass.Location = new System.Drawing.Point(34, 278);
+            this.txtOldPass.Multiline = true;
             this.txtOldPass.Name = "txtOldPass";
-            this.txtOldPass.Size = new System.Drawing.Size(338, 20);
+            this.txtOldPass.Size = new System.Drawing.Size(338, 31);
             this.txtOldPass.TabIndex = 5;
             // 
             // lblOldPass
@@ -102,8 +104,9 @@
             // txtNewPass
             // 
             this.txtNewPass.Location = new System.Drawing.Point(34, 346);
+            this.txtNewPass.Multiline = true;
             this.txtNewPass.Name = "txtNewPass";
-            this.txtNewPass.Size = new System.Drawing.Size(338, 20);
+            this.txtNewPass.Size = new System.Drawing.Size(338, 31);
             this.txtNewPass.TabIndex = 7;
             // 
             // lblNewPass
@@ -120,8 +123,9 @@
             // txtNewPassAgain
             // 
             this.txtNewPassAgain.Location = new System.Drawing.Point(34, 414);
+            this.txtNewPassAgain.Multiline = true;
             this.txtNewPassAgain.Name = "txtNewPassAgain";
-            this.txtNewPassAgain.Size = new System.Drawing.Size(338, 20);
+            this.txtNewPassAgain.Size = new System.Drawing.Size(338, 31);
             this.txtNewPassAgain.TabIndex = 9;
             // 
             // lblNewPassA
@@ -138,7 +142,7 @@
             // btExit
             // 
             this.btExit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btExit.Location = new System.Drawing.Point(226, 458);
+            this.btExit.Location = new System.Drawing.Point(223, 474);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(98, 46);
             this.btExit.TabIndex = 12;
@@ -148,19 +152,20 @@
             // btSubmit
             // 
             this.btSubmit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSubmit.Location = new System.Drawing.Point(96, 458);
+            this.btSubmit.Location = new System.Drawing.Point(93, 474);
             this.btSubmit.Name = "btSubmit";
             this.btSubmit.Size = new System.Drawing.Size(98, 46);
             this.btSubmit.TabIndex = 11;
             this.btSubmit.Text = "Submit";
             this.btSubmit.UseVisualStyleBackColor = true;
+            this.btSubmit.Click += new System.EventHandler(this.btSubmit_Click);
             // 
             // FormChangePass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(414, 529);
+            this.ClientSize = new System.Drawing.Size(417, 552);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.btSubmit);
             this.Controls.Add(this.txtNewPassAgain);
@@ -175,6 +180,7 @@
             this.Controls.Add(this.pbLogo);
             this.Name = "FormChangePass";
             this.Text = "Đổi mật khẩu";
+            this.Load += new System.EventHandler(this.FormChangePass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
