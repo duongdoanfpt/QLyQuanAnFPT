@@ -22,11 +22,32 @@ namespace GUI_DingDoong
         private string imagePath;
         BUS_ThucDon busThucDon = new BUS_ThucDon();
 
+        //Disable textbox & button
+        public void Disable_Textbox_Button()
+        {
+            //Disable
+            txtTenMon.Enabled = false;
+            txtDonGia.Enabled = false;
+            txtMoTa.Enabled = false;
+            txtNhom.Enabled = false;
+            btLuu.Enabled = false;
+            btXoa.Enabled = false;
+            btCapNhat.Enabled = false;
+            btBoQua.Enabled = false;
+
+            //Set null
+            txtTenMon.Text = null;
+            txtDonGia.Text = null;
+            txtNhom.Text = null;
+            txtMoTa.Text = null;
+        }
+        
 
         private void FormThucDon_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = busThucDon.DanhSachThucDon_1();
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
+            DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            Disable_Textbox_Button();
         }
 
         //Change Value Image
@@ -67,29 +88,99 @@ namespace GUI_DingDoong
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-
-
             Image img = ptbThucDon.BackgroundImage;
             byte[] arr;
             ImageConverter converter = new ImageConverter();
             arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
             DTO_ThucDon curTD = new DTO_ThucDon(txtTenMon.Text, float.Parse(txtDonGia.Text), txtMoTa.Text, txtNhom.Text, arr);
             MessageBox.Show(curTD.Hinh.ToString());
-                
-                if (busThucDon.insertThucDon(curTD))
+
+            if (busThucDon.insertThucDon(curTD))
+            {
+                MessageBox.Show("Thêm món vào thực đơn thành công");
+                DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
+                DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+
+            }
+            else
+            {
+                MessageBox.Show("Thêm món vào thực đơn thất bại");
+
+            }
+        }
+        public void Enable_Textbox()
+        {
+            txtTenMon.Enabled = true;
+            txtDonGia.Enabled = true;
+            txtMoTa.Enabled = true;
+            txtNhom.Enabled = true;
+            btLuu.Enabled = true;
+            btXoa.Enabled = true;
+            btCapNhat.Enabled = true;
+            btBoQua.Enabled = true;
+        }
+        private void btThem_Click(object sender, EventArgs e)
+        {
+            Enable_Textbox();
+
+        }
+
+        private void btBoQua_Click(object sender, EventArgs e)
+        {
+            Disable_Textbox_Button();
+        }
+        private void LoadDanhSachThucDon(DataTable dt)
+        {
+            DgvThucDon.DataSource = dt;
+        }
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            string tenTD = txtTimKiem.Text;
+            DataTable ds = busThucDon.TimKiemThucDon(tenTD);
+            if (ds.Rows.Count > 0)
+            {
+                LoadDanhSachThucDon(ds);
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            txtTimKiem.Text = "Nhập tên món để tìm kiếm";
+
+        }
+
+        private void DgvThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(DgvThucDon.Rows.Count > 1)
+            {
+                if(DgvThucDon.CurrentRow.Index < DgvThucDon.Rows.Count - 1)
                 {
-                    MessageBox.Show("Thêm món vào thực đơn thành công");
+                    btOpenDialog.Enabled = true;
+                    btLuu.Enabled = true;
+                    btXoa.Enabled = true;
+                    btCapNhat.Enabled = true;
+                    btBoQua.Enabled = true;
+                    txtTenMon.Enabled = true;
+                    txtDonGia.Enabled = true;
+                    txtNhom.Enabled = true;
+                    txtMoTa.Enabled = true;
+                    txtTenMon.Focus();
+
+                    DTO_ThucDon td = busThucDon.curTD(DgvThucDon.CurrentRow.Cells["TenTD"].Value.ToString());
+                    txtTenMon.Text = td.TenTD;
+                    txtDonGia.Text = td.GiaBan.ToString();
+                    txtNhom.Text = td.Nhom;
+                    txtMoTa.Text = td.MoTa;
+
+                    
+                    MemoryStream mem = new MemoryStream(busThucDon.getHinhTD(td.MaTD));
+                    ptbThucDon.BackgroundImage = Image.FromStream(mem);
+                    ptbThucDon.BackgroundImageLayout = ImageLayout.Stretch;
+
 
                 }
-                else
-                {
-                    MessageBox.Show("Thêm món vào thực đơn thất bại");
-
-                }
-                
-                
-                
-                
             }
         }
     }
+}

@@ -39,6 +39,7 @@ namespace DAL_DingDoong
             return false;
         }
 
+
         public DataTable DanhSachThucDonBan()
         {
             try
@@ -57,6 +58,32 @@ namespace DAL_DingDoong
                 _conn.Close();
             }
         }
+        public byte[] GetHinhTD(string MaTD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "Sp_LayHinhHangHoa";
+                cmd.Parameters.AddWithValue("MaTD", MaTD);
+
+                var hinh = (byte[])cmd.ExecuteScalar();
+                return hinh;
+
+            }
+
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        
         public DataTable DanhSachThucDon()
         {
             try
@@ -76,6 +103,8 @@ namespace DAL_DingDoong
             }
         }
 
+
+        //Danh Sach Thuc Don FormThucDon
         public DataTable DanhSachThucDon_1()
         {
             try
@@ -95,7 +124,28 @@ namespace DAL_DingDoong
             }
         }
 
-        
+        //Tim kiem mon trong thuc don
+        public DataTable SearchThucDon(string tenThucDon)
+        { 
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "Sp_SearchTD";
+                cm.Connection = _conn;
+                cm.Parameters.AddWithValue("tenTD", tenThucDon);
+                DataTable dtThucDon = new DataTable();
+                dtThucDon.Load(cm.ExecuteReader());
+                return dtThucDon;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+
 
 
     }
