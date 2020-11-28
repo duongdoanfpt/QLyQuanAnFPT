@@ -49,7 +49,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.pbLogo, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(71, 28);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(71, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -73,7 +73,7 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(284, 223);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(284, 199);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -85,7 +85,7 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(152, 170);
+            this.lblLogin.Location = new System.Drawing.Point(151, 136);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(120, 50);
             this.lblLogin.TabIndex = 2;
@@ -96,7 +96,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblEmail.Location = new System.Drawing.Point(36, 211);
+            this.lblEmail.Location = new System.Drawing.Point(36, 187);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(84, 30);
             this.lblEmail.TabIndex = 3;
@@ -106,7 +106,7 @@
             // 
             this.txtEmail.AccessibleName = "txtEmail";
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(41, 250);
+            this.txtEmail.Location = new System.Drawing.Point(41, 226);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(345, 33);
@@ -115,7 +115,8 @@
             // txtPassword
             // 
             this.txtPassword.AccessibleName = "txtPassWord";
-            this.txtPassword.Location = new System.Drawing.Point(41, 337);
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtPassword.Location = new System.Drawing.Point(41, 309);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(345, 33);
@@ -126,7 +127,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblPassword.Location = new System.Drawing.Point(36, 298);
+            this.lblPassword.Location = new System.Drawing.Point(36, 270);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(123, 30);
             this.lblPassword.TabIndex = 6;
@@ -137,7 +138,7 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(284, 310);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(284, 282);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -149,19 +150,20 @@
             // 
             this.lblForgotPass.AccessibleName = "lblQuenMatKhau";
             this.lblForgotPass.AutoSize = true;
-            this.lblForgotPass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotPass.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblForgotPass.Location = new System.Drawing.Point(248, 373);
+            this.lblForgotPass.Location = new System.Drawing.Point(239, 359);
             this.lblForgotPass.Name = "lblForgotPass";
-            this.lblForgotPass.Size = new System.Drawing.Size(138, 20);
+            this.lblForgotPass.Size = new System.Drawing.Size(147, 21);
             this.lblForgotPass.TabIndex = 8;
             this.lblForgotPass.Text = "Forgot password ?";
+            this.lblForgotPass.Click += new System.EventHandler(this.lblForgotPass_Click);
             // 
             // btLogin
             // 
             this.btLogin.AccessibleName = "btLogin";
             this.btLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogin.Location = new System.Drawing.Point(91, 426);
+            this.btLogin.Location = new System.Drawing.Point(97, 418);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(98, 46);
             this.btLogin.TabIndex = 9;
@@ -173,7 +175,7 @@
             // 
             this.btExit.AccessibleName = "btExit";
             this.btExit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btExit.Location = new System.Drawing.Point(221, 426);
+            this.btExit.Location = new System.Drawing.Point(226, 418);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(98, 46);
             this.btExit.TabIndex = 10;
@@ -185,7 +187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(421, 498);
+            this.ClientSize = new System.Drawing.Size(421, 503);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.lblForgotPass);

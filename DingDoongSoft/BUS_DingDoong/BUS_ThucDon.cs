@@ -17,6 +17,11 @@ namespace BUS_DingDoong
             return dalThucDon.ThemThucDon(td);
         }
 
+        public byte[] getHinhTD(string MaTD)
+        {
+            return dalThucDon.GetHinhTD(MaTD);
+        }
+
         public DataTable DanhSachThucDonBan()
         {
             return dalThucDon.DanhSachThucDonBan();
@@ -40,11 +45,19 @@ namespace BUS_DingDoong
                                      MaTD = dr[0].ToString(),
                                      TenTD = dr[1].ToString(),
                                      GiaBan = float.Parse(dr[2].ToString()),
+
+                                     Nhom = dr[3].ToString(),
                                      MoTa = dr[4].ToString()
+                                     
 
                                  }).FirstOrDefault();
             return curTD;
 
+        }
+
+        public DataTable TimKiemThucDon(string tenTD)
+        {
+            return dalThucDon.SearchThucDon(tenTD);
         }
 
     }

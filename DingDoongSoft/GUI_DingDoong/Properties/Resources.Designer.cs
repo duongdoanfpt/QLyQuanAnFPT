@@ -133,6 +133,16 @@ namespace GUI_DingDoong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_chevron_down {
+            get {
+                object obj = ResourceManager.GetObject("appbar.chevron.down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_clipboard_variant_edit {
             get {
                 object obj = ResourceManager.GetObject("appbar.clipboard.variant.edit", resourceCulture);
