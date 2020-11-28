@@ -92,5 +92,20 @@ namespace GUI_DingDoong
             btCapNhat.Enabled = true;
             btXoa.Enabled = true;
         }
+
+        private void DgvKhach_Click(object sender, EventArgs e)
+        {
+            txtSDT.Text = dataGridView1.CurrentRow.Cells["SDT_KH"].Value.ToString();
+            txtTen.Text = dataGridView1.CurrentRow.Cells["TenKH"].Value.ToString();
+            txtEmail.Text = dataGridView1.CurrentRow.Cells["Email_KH"].Value.ToString();
+            txtSDT.Text = dataGridView1.CurrentRow.Cells["SDT_KH"].Value.ToString();
+
+            if (int.Parse(dataGridView1.CurrentRow.Cells["GioiTinh"].Value.ToString()) == 1)
+                rdNam.Checked = true;
+            else
+                rdNu.Checked = true;
+
+            dtpNgaySinh.Text = dataGridView1.CurrentRow.Cells["SDT_KH"].Value.ToString();
+        }
     }
 }
