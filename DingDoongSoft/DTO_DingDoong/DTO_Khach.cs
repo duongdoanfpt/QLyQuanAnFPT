@@ -9,8 +9,8 @@ namespace DTO_DingDoong
     public class DTO_Khach
     {
         private string _TenKH;
-        private int _SDT;
-        private string _NgaySinh;
+        private string _SDT;
+        private DateTime _NgaySinh;
         private string _Email;
         private int _GioiTinh;
 
@@ -25,7 +25,7 @@ namespace DTO_DingDoong
                 _TenKH = value;
             }
         }
-        public int SDT
+        public string SDT
         {
             get
             {
@@ -36,7 +36,7 @@ namespace DTO_DingDoong
                 _SDT = value;
             }
         }
-        public string NgaySinh
+        public DateTime NgaySinh
         {
             get
             {
@@ -70,7 +70,7 @@ namespace DTO_DingDoong
             }
         }
 
-        public DTO_Khach(string TenKH, int SDT, string NgaySinh, string Email, int GioiTinh)
+        public DTO_Khach(string TenKH, string SDT, DateTime NgaySinh, string Email, int GioiTinh)
         {
             this._TenKH = TenKH;
             this._SDT = SDT;
