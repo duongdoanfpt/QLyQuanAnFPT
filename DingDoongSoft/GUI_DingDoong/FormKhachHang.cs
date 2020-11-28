@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS_DingDoong;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace GUI_DingDoong
 {
     public partial class FormKhachHang : Form
     {
+        BUS_Khach busKhach = new BUS_Khach();
+
         public FormKhachHang()
         {
             InitializeComponent();
@@ -21,5 +24,7 @@ namespace GUI_DingDoong
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
+        
     }
 }
