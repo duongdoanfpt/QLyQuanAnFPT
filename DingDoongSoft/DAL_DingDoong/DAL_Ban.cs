@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO_DingDoong;
 
 
 namespace DAL_DingDoong
@@ -13,10 +14,10 @@ namespace DAL_DingDoong
     {
         public DataTable DanhSachBan()
         {
-            _conn.Open();
+            
             try
             {
-
+                _conn.Open();
                 SqlCommand cm = new SqlCommand();
                 cm.CommandType = CommandType.StoredProcedure;
                 cm.CommandText = "Sp_DanhSachBan";
@@ -28,6 +29,152 @@ namespace DAL_DingDoong
             finally
             {
 
+                _conn.Close();
+            }
+        }
+
+        public bool UpdateTrangThaiBan(int IdBan,int TrangThai)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_updateBan";
+                cm.Parameters.AddWithValue("IdBan", IdBan);
+                cm.Parameters.AddWithValue("TrangThai", TrangThai);
+                if (cm.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+
+            }
+
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
+
+
+        public bool ThemHoaDonTam(DTO_HoaDon hd)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_insertHDTemp";
+                cm.Parameters.AddWithValue("MaHD", hd.MaHD);
+                cm.Parameters.AddWithValue("IdBan", hd.IdBan);
+                cm.Parameters.AddWithValue("TrangThai", hd.TrangThai);
+                DateTime date = DateTime.Now;
+                cm.Parameters.AddWithValue("NgayBatDau", date);
+                if (cm.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+
+            }
+
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+
+        }
+
+        public bool ThemChiTietHoaDonTam(DTO_CTHD cthd)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_themCTHDTam";
+                cm.Parameters.AddWithValue("MaHD", cthd.MaHD);
+                cm.Parameters.AddWithValue("MaTD", cthd.MaTD);
+                cm.Parameters.AddWithValue("SoLuong", cthd.SoLuong);
+                cm.Parameters.AddWithValue("MoTa", cthd.GhiChu);
+                
+               
+                if (cm.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+
+            }
+
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+
+        }
+
+        public DataTable HoaDonTam(int idBan)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandText = "sp_laydanhsachHDtam";
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.Parameters.AddWithValue("IdBan", idBan);
+                cm.Connection = _conn;
+                DataTable dtHD = new DataTable();
+                dtHD.Load(cm.ExecuteReader());
+                return dtHD;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public DataTable DanhSachHDCTTam(string MaHD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandText = "sp_layDanhSachHDCTtam";
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.Parameters.AddWithValue("MaHD", MaHD);
+                cm.Connection = _conn;
+                DataTable dtHD = new DataTable();
+                dtHD.Load(cm.ExecuteReader());
+                return dtHD;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public float TongTienHDTam(string MaHD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_TongtienHDTamKM";
+                cm.Parameters.AddWithValue("MaHD", MaHD);
+
+                return float.Parse(cm.ExecuteScalar().ToString());
+
+            }
+            finally
+            {
                 _conn.Close();
             }
         }

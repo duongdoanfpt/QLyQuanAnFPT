@@ -20,3 +20,14 @@ D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\obj\Debug\BUS_DingDoong
 D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\obj\Debug\BUS_DingDoong.csproj.CopyComplete
 D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\obj\Debug\BUS_DingDoong.dll
 D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\obj\Debug\BUS_DingDoong.pdb
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\bin\Debug\BUS_DingDoong.dll
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\bin\Debug\BUS_DingDoong.pdb
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\bin\Debug\DAL_DingDoong.dll
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\bin\Debug\DTO_DingDoong.dll
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\bin\Debug\DAL_DingDoong.pdb
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\bin\Debug\DTO_DingDoong.pdb
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\obj\Debug\BUS_DingDoong.csprojAssemblyReference.cache
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\obj\Debug\BUS_DingDoong.csproj.CoreCompileInputs.cache
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\obj\Debug\BUS_DingDoong.csproj.CopyComplete
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\obj\Debug\BUS_DingDoong.dll
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\BUS_DingDoong\obj\Debug\BUS_DingDoong.pdb

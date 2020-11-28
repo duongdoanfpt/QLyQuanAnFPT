@@ -12,6 +12,11 @@ namespace DTO_DingDoong
         private string _MaTD;
         private int _SoLuong;
         private string _GhiChu;
+        private float _Gia;
+
+
+
+        
 
         public string MaHD
         {
@@ -56,6 +61,23 @@ namespace DTO_DingDoong
             {
                 _GhiChu = value;
             }
+        }
+
+        public float Gia
+        {
+            get
+            {
+                return _Gia;
+            }
+            set
+            {
+                _Gia = value;
+            }
+        }
+
+        public float ThanhTien ()
+        {
+            return (_Gia * _SoLuong);
         }
 
         public DTO_CTHD(string MaHD, string MaTD, int SoLuong, string GhiChu)
