@@ -3,6 +3,8 @@ using DTO_DingDoong;
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Net.Mail;
+using System.Net;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -54,6 +56,68 @@ namespace BUS_DingDoong
             }
             return encryptdata.ToString();
 
+        }
+
+        //Ham Send Mail
+        public void SendMail(string email, string matkhau)
+        {
+
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 25);
+
+            NetworkCredential cred = new NetworkCredential("bellben7777@gmail.com", "Baoduong666@@@@");
+            MailMessage Msg = new MailMessage();
+            Msg.From = new MailAddress("bellben7777@gmail.com");
+            Msg.To.Add(email);
+            Msg.Subject = "Bạn đã sử dụng chức năng quên mật khẩu";
+            Msg.Body = "Mật khẩu mới là " + matkhau;
+            client.Credentials = cred;
+            client.EnableSsl = true;
+            client.Send(Msg);
+
+
+        }
+
+        //Tao chuoi Ngau Nhien
+        public string RandomString(int size, bool lowerCase)
+        {
+            StringBuilder builder = new StringBuilder();
+            Random random = new Random();
+            char ch;
+            for (int i = 0; i < size; i++)
+            {
+                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
+                builder.Append(ch);
+            }
+            if (lowerCase)
+            {
+                return builder.ToString().ToLower();
+            }
+            return builder.ToString();
+        }
+
+        //Tao so ngau nhien
+        public int RandomNumber(int min, int max)
+        {
+            Random random = new Random();
+            return random.Next(min, max);
+        }
+
+        //Doi Mat Khau
+        public bool doiMatKhau(string email, string matKhauCu, string matKhauMoi)
+        {
+            return dALNhanVien.DoiMatKhau(email, matKhauCu, matKhauMoi);
+        }
+
+        // Quen Mat Khau
+        public bool NhanVienQuenMatKhau(string email)
+        {
+            return dALNhanVien.NhanVienQuenMatKhau(email);
+        }
+
+        //Tao Mat Khau Moi
+        public bool updateMK(DTO_NhanVien nv)
+        {
+            return dALNhanVien.TaoMatKhauMoi(nv);
         }
 
     }
