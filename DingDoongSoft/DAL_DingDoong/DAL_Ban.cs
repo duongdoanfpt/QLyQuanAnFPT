@@ -170,8 +170,12 @@ namespace DAL_DingDoong
                 cm.CommandText = "sp_TongtienHDTamKM";
                 cm.Parameters.AddWithValue("MaHD", MaHD);
 
-                return float.Parse(cm.ExecuteScalar().ToString());
+                return (cm.ExecuteScalar() is null ? 0 : float.Parse(cm.ExecuteScalar().ToString()));
 
+            }
+            catch(Exception e)
+            {
+                return 0;
             }
             finally
             {
