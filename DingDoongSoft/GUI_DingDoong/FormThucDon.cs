@@ -123,7 +123,6 @@ namespace GUI_DingDoong
         private void btThem_Click(object sender, EventArgs e)
         {
             Enable_Textbox();
-
         }
 
         private void btBoQua_Click(object sender, EventArgs e)
