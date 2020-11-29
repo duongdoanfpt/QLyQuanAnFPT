@@ -160,7 +160,6 @@ namespace GUI_DingDoong
                 lbMaHD.Text = drhd[0].ToString();
                 lbKhuyenMai.Text = hd.KhuyenMai.ToString()+"%";
                 lbTongTien.Text = busBan.TongTienHDTamKM(hd).ToString();
-                btKhuyenMai.Enabled = true;
                 lbStartTime.Text =  (StartHD.Hour < 10 ? "0" + StartHD.Hour.ToString() : StartHD.Hour.ToString()) + ":" + (StartHD.Minute < 10 ? "0" + StartHD.Minute.ToString() : StartHD.Minute.ToString()) + ":" + (StartHD.Second < 10 ? "0" + StartHD.Second.ToString() : StartHD.Second.ToString());
             }
             else
@@ -170,7 +169,6 @@ namespace GUI_DingDoong
                 lbMaHD.Text = "";
                 lbTongTien.Text = "0";
                 lbKhuyenMai.Text = "0%";
-                btKhuyenMai.Enabled = false;
 
             }
             LoadCTHD();
@@ -254,7 +252,6 @@ namespace GUI_DingDoong
                     lbMaHD.Text = "HD" + DateTime.Now.ToString("ddMMyyyy_") + (DateTime.Now.Hour < 10 ? "0" + DateTime.Now.Hour.ToString() : DateTime.Now.Hour.ToString()) + (DateTime.Now.Minute < 10 ? "0" + DateTime.Now.Minute.ToString() : DateTime.Now.Minute.ToString()) + (DateTime.Now.Second < 10 ? "0" + DateTime.Now.Second.ToString() : DateTime.Now.Second.ToString()); ;
                     btBatDau.Enabled = false;
                     (flpkvBan.Controls[IndexBan].Controls[0] as PictureBox).Image = Image.FromFile(startupPath + @"\image\banMo.ico");
-                    btKhuyenMai.Enabled = true;
                     hd = new DTO_HoaDon(lbMaHD.Text, Ban.IdBan, 0);
                     busBan.ThemHoaDonTam(hd);
                 }
@@ -312,12 +309,6 @@ namespace GUI_DingDoong
         private void label5_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btKhuyenMai_Click(object sender, EventArgs e)
-        {
-            FormKhuyenMaiMini frmKMMN = new FormKhuyenMaiMini();
-            frmKMMN.Show();
         }
     }
 }
