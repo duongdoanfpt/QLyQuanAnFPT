@@ -63,16 +63,6 @@ namespace GUI_DingDoong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _545f8547a7890_thumb900 {
-            get {
-                object obj = ResourceManager.GetObject("545f8547a7890_thumb900", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Apathae_Chakram_2_Home {
             get {
                 object obj = ResourceManager.GetObject("Apathae-Chakram-2-Home", resourceCulture);

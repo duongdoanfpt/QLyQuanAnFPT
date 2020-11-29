@@ -310,8 +310,5 @@
   <ItemGroup>
     <None Include="Resources\appbar.chevron.down.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\545f8547a7890_thumb900.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
