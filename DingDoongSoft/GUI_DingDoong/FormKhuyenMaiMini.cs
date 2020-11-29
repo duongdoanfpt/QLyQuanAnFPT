@@ -16,5 +16,10 @@ namespace GUI_DingDoong
         {
             InitializeComponent();
         }
+
+        private void FormKhuyenMaiMini_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
