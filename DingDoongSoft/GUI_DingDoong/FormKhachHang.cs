@@ -95,17 +95,19 @@ namespace GUI_DingDoong
 
         private void DgvKhach_Click(object sender, EventArgs e)
         {
-            txtSDT.Text = dataGridView1.CurrentRow.Cells["SDT_KH"].Value.ToString();
-            txtTen.Text = dataGridView1.CurrentRow.Cells["TenKH"].Value.ToString();
-            txtEmail.Text = dataGridView1.CurrentRow.Cells["Email_KH"].Value.ToString();
-            txtSDT.Text = dataGridView1.CurrentRow.Cells["SDT_KH"].Value.ToString();
+            DTO_Khach khach = busKhach.curKhach(dataGridView1.CurrentRow.Cells["SDT_KH"].Value.ToString());
+            
+            txtSDT.Text = khach.SDT ;
+            txtTen.Text = khach.TenKH;
+            txtEmail.Text = khach.Email;
+            
 
-            if (int.Parse(dataGridView1.CurrentRow.Cells["GioiTinh"].Value.ToString()) == 1)
+            if (khach.GioiTinh == 1)
                 rdNam.Checked = true;
             else
-                rdNu.Checked = true;
+               rdNu.Checked = true;
 
-            dtpNgaySinh.Text = dataGridView1.CurrentRow.Cells["SDT_KH"].Value.ToString();
+            dtpNgaySinh.Text = khach.NgaySinh.ToString();
         }
     }
 }

@@ -21,5 +21,20 @@ namespace BUS_DingDoong
         {
             return dalKhach.insertKhach(khach);
         }
+
+        public DTO_Khach curKhach(string SDT_KH)
+        {
+            DTO_Khach khach = (from DataRow dr in dalKhach.getKhach().Rows
+                               where string.Compare(dr[0].ToString(), SDT_KH, true) == 0
+                               select new DTO_Khach
+                               {
+                                   SDT = dr[0].ToString(),
+                                   TenKH = dr[1].ToString(),
+                                   Email = dr[2].ToString(),
+                                   GioiTinh = string.Compare(dr[3].ToString(), "Nam", true) == 0 ? 1 : 0,
+                                   NgaySinh = (DateTime)dr[4]
+                               }).FirstOrDefault();
+            return khach;
+        }
     }
 }
