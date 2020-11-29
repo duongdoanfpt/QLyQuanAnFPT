@@ -10,26 +10,13 @@ namespace DTO_DingDoong
 {
     public class DTO_KhuyenMai
     {
-
-        private string _MaKM;
+       
         private string _TenKM;
         private float _ChietKhau;
-        private DateTime _NgayBD;
-        private DateTime _NgayKT;
+        private string _NgayBD;
+        private string _NgayKT;
 
-        
-        public string MaKM
-        { 
-            get
-            {
-                return _MaKM;
-            }
-            set
-            {
-                _MaKM = value;
-            }
-        }
-
+     
         public string TenKM
         {
             get
@@ -52,7 +39,7 @@ namespace DTO_DingDoong
                 _ChietKhau = value;
             }
         }
-        public DateTime NgayBD
+        public string NgayBD
         {
             get
             {
@@ -63,7 +50,7 @@ namespace DTO_DingDoong
                 _NgayBD = value;
             }
         }
-        public DateTime NgayKT
+        public string NgayKT
         {
             get
             {
@@ -75,7 +62,7 @@ namespace DTO_DingDoong
             }
         }
 
-        public DTO_KhuyenMai( string TenKM, float ChietKhau, DateTime NgayBD, DateTime NgayKT)
+        public DTO_KhuyenMai( string TenKM, float ChietKhau, string NgayBD, string NgayKT)
         {
            
             this._TenKM = TenKM;
