@@ -60,5 +60,19 @@ namespace BUS_DingDoong
             return dalThucDon.SearchThucDon(tenTD);
         }
 
+        public bool XoaThucDon(string maTD)
+        {
+            return dalThucDon.XoaThucDon(maTD);
+        }
+
+        public bool CapNhatThucDon(string maTD,DTO_ThucDon td)
+        {
+            return dalThucDon.CapNhatThucDon(maTD,td);
+        }
+
+        public DataTable DanhSachThucDonAll()
+        {
+            return dalThucDon.DanhSachThucDonAll();
+        }
     }
 }
