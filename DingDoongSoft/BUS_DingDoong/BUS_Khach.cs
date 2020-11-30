@@ -36,14 +36,5 @@ namespace BUS_DingDoong
                                }).FirstOrDefault();
             return khach;
         }
-
-        public bool UpdateKhach(DTO_Khach khach)
-        {
-            return dalKhach.UpdateKhach(khach);
-        }
-        public DataTable SearchKhach(string sdt)
-        {
-            return dalKhach.SearchKhach(sdt);
-        }
     }
 }

@@ -12,8 +12,11 @@ using DTO_DingDoong;
 
 namespace GUI_DingDoong
 {
+    
     public partial class FormKhuVucBan : Form
     {
+        public static BindingSource bdsKhachHang = new BindingSource();
+        public static BindingSource bdsKhuyenMai = new BindingSource();
         BUS_Ban busBan = new BUS_Ban();
         BUS_ThucDon busTD = new BUS_ThucDon();
         BUS_NhanVien busNV = new BUS_NhanVien();
@@ -160,6 +163,7 @@ namespace GUI_DingDoong
                 lbMaHD.Text = drhd[0].ToString();
                 lbKhuyenMai.Text = hd.KhuyenMai.ToString()+"%";
                 lbTongTien.Text = busBan.TongTienHDTamKM(hd).ToString();
+                btKhuyenMai.Enabled = true;
                 lbStartTime.Text =  (StartHD.Hour < 10 ? "0" + StartHD.Hour.ToString() : StartHD.Hour.ToString()) + ":" + (StartHD.Minute < 10 ? "0" + StartHD.Minute.ToString() : StartHD.Minute.ToString()) + ":" + (StartHD.Second < 10 ? "0" + StartHD.Second.ToString() : StartHD.Second.ToString());
             }
             else
@@ -169,6 +173,7 @@ namespace GUI_DingDoong
                 lbMaHD.Text = "";
                 lbTongTien.Text = "0";
                 lbKhuyenMai.Text = "0%";
+                btKhuyenMai.Enabled = false;
 
             }
             LoadCTHD();
@@ -309,6 +314,12 @@ namespace GUI_DingDoong
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btKhuyenMai_Click(object sender, EventArgs e)
+        {
+            FormKhuyenMaiMini KM = new FormKhuyenMaiMini();
+            KM.Show();
         }
     }
 }
