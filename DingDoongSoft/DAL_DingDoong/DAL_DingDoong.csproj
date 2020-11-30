@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="DAL_Ban.cs" />
     <Compile Include="DAL_Khach.cs" />
+    <Compile Include="DAL_KhuyenMai.cs" />
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_ThucDon.cs" />
     <Compile Include="Dbconnect.cs" />
