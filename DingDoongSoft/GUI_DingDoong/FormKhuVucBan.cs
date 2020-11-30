@@ -12,8 +12,11 @@ using DTO_DingDoong;
 
 namespace GUI_DingDoong
 {
+    
     public partial class FormKhuVucBan : Form
     {
+        public static BindingSource bdsKhachHang = new BindingSource();
+        public static BindingSource bdsKhuyenMai = new BindingSource();
         BUS_Ban busBan = new BUS_Ban();
         BUS_ThucDon busTD = new BUS_ThucDon();
         BUS_NhanVien busNV = new BUS_NhanVien();
