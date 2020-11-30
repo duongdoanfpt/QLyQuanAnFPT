@@ -106,6 +106,7 @@ namespace GUI_DingDoong
             this.button1.TabIndex = 1;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
+           
             // 
             // button2
             // 

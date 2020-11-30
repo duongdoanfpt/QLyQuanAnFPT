@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL_DingDoong
 {
-    public class DAL_KhuyenMai:Dbconnect
+    public class DAL_KhuyenMai : Dbconnect
     {
         public DataTable GetDanhSachKM()
         {
