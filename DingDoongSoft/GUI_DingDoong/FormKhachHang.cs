@@ -102,12 +102,68 @@ namespace GUI_DingDoong
             txtEmail.Text = khach.Email;
             
 
-            if (khach.GioiTinh == 1)
+            if (khach.GioiTinh == 0)
                 rdNam.Checked = true;
             else
                rdNu.Checked = true;
 
             dtpNgaySinh.Text = khach.NgaySinh.ToString();
+        }
+
+        private void btCapNhat_Click(object sender, EventArgs e)
+        {
+            int gioitinh = 1;
+            if (rdNu.Checked == true)
+                gioitinh = 0;
+
+            DTO_Khach khach = new DTO_Khach(txtTen.Text, txtSDT.Text, dtpNgaySinh.Value, txtEmail.Text, gioitinh);
+            if (busKhach.UpdateKhach(khach))
+            {
+                MessageBox.Show("Sửa thành công");
+                LoadGridview_Khach();
+            }
+            else
+            {
+                MessageBox.Show("Sửa không thành công");
+
+            }
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = null;
+            txtTimKiem.BackColor = Color.White;
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            string sdt = txtTimKiem.Text;
+            DataTable dtkhach = busKhach.SearchKhach(sdt);
+            if (dtkhach.Rows.Count > 0)
+            {
+                dataGridView1.DataSource = dtkhach;
+                dataGridView1.Columns[0].HeaderText = "Số điện thoại";
+                dataGridView1.Columns[1].HeaderText = "Tên khách hàng";
+                dataGridView1.Columns[2].HeaderText = "Email";
+                dataGridView1.Columns[3].HeaderText = "Giới tính";
+                dataGridView1.Columns[4].HeaderText = "Ngày sinh";
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy khách hàng nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            ResetValues();
+        }
+
+        private void btBoQua_Click(object sender, EventArgs e)
+        {
+            txtTen.Text = null;
+            txtSDT.Text = null;
+            txtEmail.Text = null;
+            rdNam.Checked = false;
+            rdNu.Checked = false;
+            LoadGridview_Khach();
         }
     }
 }
