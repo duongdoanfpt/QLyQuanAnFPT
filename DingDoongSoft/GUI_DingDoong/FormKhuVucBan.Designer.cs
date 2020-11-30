@@ -1245,7 +1245,7 @@ namespace GUI_DingDoong
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.Label lbTongTien;
-        private System.Windows.Forms.Label lbKhuyenMai;
+        public System.Windows.Forms.Label lbKhuyenMai;
         private System.Windows.Forms.Label label4;
     }
 }

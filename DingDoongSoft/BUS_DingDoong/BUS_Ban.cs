@@ -85,5 +85,10 @@ namespace BUS_DingDoong
         {
             return dalBan.TongTienHDTam(hd.MaHD);
         }
+
+        public bool ThemKMToHd(string MaHD, float ChietKhau)
+        {
+            return dalBan.UpdateKMtoHD(MaHD, ChietKhau);
+        }
     }
 }

@@ -183,5 +183,33 @@ namespace DAL_DingDoong
             }
         }
 
+        public bool UpdateKMtoHD(string MaHD, float ChietKhau)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "Sp_themKMvaoHD";
+                cmd.Parameters.AddWithValue("MaHd", MaHD);
+                cmd.Parameters.AddWithValue("ChietKhau", ChietKhau);
+
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
+
     }
 }
