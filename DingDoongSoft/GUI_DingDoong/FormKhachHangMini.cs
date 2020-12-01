@@ -7,14 +7,81 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO_DingDoong;
+using BUS_DingDoong;
 
 namespace GUI_DingDoong
 {
     public partial class FormKhachHangMini : Form
     {
-        public FormKhachHangMini()
+       
+        int isOld = 0;
+        BUS_Khach busKH = new BUS_Khach();
+        BUS_Ban busBan = new BUS_Ban();
+        
+        public FormKhachHangMini(DTO_Khach KH,string SDT)
         {
             InitializeComponent();
+            
+            if(KH is null)
+            {
+                groupBox1.Enabled = true;
+                txtSDT.Text = SDT;
+                isOld = 0;
+            }
+            else
+            {
+                isOld = 1;
+                groupBox1.Enabled = false;
+                txtSDT.Text = KH.SDT;
+                txtEmail.Text = KH.Email;
+                txtTenKH.Text = KH.TenKH;
+                if (KH.GioiTinh == 1)
+                    rdbNam.Checked = true;
+                else
+                    rdbNu.Checked = true;
+
+                dtpNgS.Text = KH.NgaySinh.ToString();
+
+            }    
+        }
+
+        private void FormKhachHangMini_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(isOld == 1)
+            {
+                this.Close();
+            }
+            else
+            {
+                int gioitinh = 1;
+                if (rdbNu.Checked == true)
+                    gioitinh = 0;
+                DTO_Khach KhachHang = new DTO_Khach(txtTenKH.Text, txtSDT.Text, dtpNgS.Value.Date, txtEmail.Text, gioitinh);
+                if(busKH.insertKhach(KhachHang))
+                {
+                    FormKhuVucBan.hd.SDT_KH = KhachHang.SDT;
+                    busBan.UpdateKHvaoHDTam(FormKhuVucBan.hd.MaHD,KhachHang.SDT);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi vui lòng kiểm tra lại");
+                }    
+                
+
+            }    
+            
         }
     }
 }

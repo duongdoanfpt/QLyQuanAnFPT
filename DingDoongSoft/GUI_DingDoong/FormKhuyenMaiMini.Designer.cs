@@ -34,7 +34,7 @@ namespace GUI_DingDoong
             this.label2 = new System.Windows.Forms.Label();
             this.cbTenKM = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btOK = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -96,17 +96,17 @@ namespace GUI_DingDoong
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên khuyến mãi : ";
             // 
-            // button1
+            // btOK
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(233, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
-           
+            this.btOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btOK.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btOK.Location = new System.Drawing.Point(233, 129);
+            this.btOK.Name = "btOK";
+            this.btOK.Size = new System.Drawing.Size(75, 33);
+            this.btOK.TabIndex = 1;
+            this.btOK.Text = "OK";
+            this.btOK.UseVisualStyleBackColor = true;
+            this.btOK.Click += new System.EventHandler(this.btOK_Click);
             // 
             // button2
             // 
@@ -127,7 +127,7 @@ namespace GUI_DingDoong
             this.ClientSize = new System.Drawing.Size(401, 174);
             this.ControlBox = false;
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btOK);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormKhuyenMaiMini";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -146,7 +146,7 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbTenKM;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btOK;
         private System.Windows.Forms.Button button2;
     }
 }

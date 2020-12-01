@@ -18,7 +18,11 @@ namespace GUI_DingDoong
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormMain());
             //Application.Run(new FormLogin());
-            Application.Run(new FormThucDon());
+<<<<<<< HEAD
+            Application.Run(new FormNhanVien());
+=======
+            Application.Run(new FormKhachHang());
+>>>>>>> 872699f7ef0ffd326197f09a48f702f80df403fa
         }
     }
 }

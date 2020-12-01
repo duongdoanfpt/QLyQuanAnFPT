@@ -422,12 +422,13 @@ namespace GUI_DingDoong
             // 
             this.btThemKhach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btThemKhach.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThemKhach.Location = new System.Drawing.Point(283, 111);
+            this.btThemKhach.Location = new System.Drawing.Point(283, 112);
             this.btThemKhach.Name = "btThemKhach";
             this.btThemKhach.Size = new System.Drawing.Size(123, 38);
             this.btThemKhach.TabIndex = 13;
             this.btThemKhach.Text = "Thêm khách hàng";
             this.btThemKhach.UseVisualStyleBackColor = true;
+            this.btThemKhach.Click += new System.EventHandler(this.btThemKhach_Click);
             // 
             // btBatDau
             // 
@@ -937,6 +938,7 @@ namespace GUI_DingDoong
             this.btBill.TabIndex = 10;
             this.btBill.Text = "Xuất hóa đơn";
             this.btBill.UseVisualStyleBackColor = true;
+            this.btBill.Click += new System.EventHandler(this.btBill_Click);
             // 
             // btKhuyenMai
             // 
@@ -1036,7 +1038,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1071F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1074F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1069F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
@@ -1086,7 +1088,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmailNV.Location = new System.Drawing.Point(1142, 9);
+            this.lbEmailNV.Location = new System.Drawing.Point(1145, 9);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;

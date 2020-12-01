@@ -102,7 +102,7 @@ namespace GUI_DingDoong
             txtEmail.Text = khach.Email;
             
 
-            if (khach.GioiTinh == 0)
+            if (khach.GioiTinh == 1)
                 rdNam.Checked = true;
             else
                rdNu.Checked = true;

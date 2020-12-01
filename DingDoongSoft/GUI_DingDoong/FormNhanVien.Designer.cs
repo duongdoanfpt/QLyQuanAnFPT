@@ -45,12 +45,6 @@ namespace GUI_DingDoong
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbHinh = new System.Windows.Forms.PictureBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pbThongKe = new System.Windows.Forms.PictureBox();
             this.pbBan = new System.Windows.Forms.PictureBox();
@@ -265,47 +259,10 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNhanVien.BackgroundColor = System.Drawing.Color.White;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
             this.dgvNhanVien.Location = new System.Drawing.Point(5, 283);
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.Size = new System.Drawing.Size(1254, 394);
             this.dgvNhanVien.TabIndex = 6;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã nhân viên";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Họ tên";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Email";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Vai trò";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Địa chỉ";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Ngày vào làm";
-            this.Column6.Name = "Column6";
             // 
             // tableLayoutPanel1
             // 
@@ -318,7 +275,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1045F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1048F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
@@ -367,7 +324,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1148, 9);
+            this.lblUsers.Location = new System.Drawing.Point(1151, 9);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 6;
@@ -510,6 +467,7 @@ namespace GUI_DingDoong
             this.btBoQua.TabIndex = 9;
             this.btBoQua.Text = "Bỏ qua";
             this.btBoQua.UseVisualStyleBackColor = true;
+            this.btBoQua.Click += new System.EventHandler(this.btBoQua_Click);
             // 
             // btCapNhat
             // 
@@ -553,6 +511,7 @@ namespace GUI_DingDoong
             this.btLuu.TabIndex = 3;
             this.btLuu.Text = "Lưu";
             this.btLuu.UseVisualStyleBackColor = true;
+            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
             // 
             // btThem
             // 
@@ -567,6 +526,7 @@ namespace GUI_DingDoong
             this.btThem.TabIndex = 1;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // FormNhanVien
             // 
@@ -618,12 +578,6 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbHinh;
         private System.Windows.Forms.DataGridView dgvNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label lblVaiTro;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton rdQuanLy;
