@@ -75,9 +75,9 @@ namespace DTO_DingDoong
             }
         }
 
-        public DTO_KhuyenMai(string TenKM, float ChietKhau, DateTime NgayBD, DateTime NgayKT)
+        public DTO_KhuyenMai(string MaKM ,string TenKM, float ChietKhau, DateTime NgayBD, DateTime NgayKT)
         {
-
+            this.MaKM = MaKM;
             this._TenKM = TenKM;
             this._ChietKhau = ChietKhau;
             this._NgayBD = NgayBD;

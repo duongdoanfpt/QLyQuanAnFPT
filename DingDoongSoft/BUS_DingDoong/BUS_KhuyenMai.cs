@@ -13,6 +13,11 @@ namespace BUS_DingDoong
     {
         DAL_KhuyenMai dalKM = new DAL_KhuyenMai();
 
+        public DataTable GetDanhSachKM()
+        {
+            return dalKM.GetDanhSachKM();
+        }
+
         public DataTable GetDanhSachKMinTime(DateTime date)
         {
             return dalKM.GetDanhSachKMinTime(date);
@@ -31,6 +36,11 @@ namespace BUS_DingDoong
                                     ChietKhau = float.Parse(dr[4].ToString())
                                 }).FirstOrDefault();
             return km;
+        }
+
+        public bool insertKM(DTO_KhuyenMai km)
+        {
+            return dalKM.insertKM(km);
         }
     }
 }
