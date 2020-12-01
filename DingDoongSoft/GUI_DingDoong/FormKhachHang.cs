@@ -43,16 +43,16 @@ namespace GUI_DingDoong
             txtTen.Text = null;
             txtSDT.Text = null;
             txtEmail.Text = null;
-            txtTen.Enabled = false;
-            txtSDT.Enabled = false;
-            txtEmail.Enabled = false;
-            dtpNgaySinh.Enabled = false;
-            rdNam.Enabled = false;
-            rdNu.Enabled = false;
+            //txtTen.Enabled = false;
+            //txtSDT.Enabled = false;
+            //txtEmail.Enabled = false;
+            //dtpNgaySinh.Enabled = false;
+            //rdNam.Enabled = false;
+            //rdNu.Enabled = false;
             btLuu.Enabled = false;
-            btThem.Enabled = true;
-            btCapNhat.Enabled = false;
-            btXoa.Enabled = false;
+            //btThem.Enabled = true;
+            //btCapNhat.Enabled = false;
+            
         }
 
         private void btLuu_Click(object sender, EventArgs e)
