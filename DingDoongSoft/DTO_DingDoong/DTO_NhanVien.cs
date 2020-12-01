@@ -13,7 +13,7 @@ namespace DTO_DingDoong
         private string _TenNV;
         private string _Email;
         private string _DiaChi;
-        private string _NgayVL;
+        private DateTime _NgayVL;
         private int _Quyen;
         private int _TrangThai;
         private Byte[] _Hinh;
@@ -64,7 +64,7 @@ namespace DTO_DingDoong
                 _DiaChi = value;
             }
         }
-        public string NgayVL
+        public DateTime NgayVL
         {
             get
             {
@@ -120,7 +120,7 @@ namespace DTO_DingDoong
             }
         }
 
-        public DTO_NhanVien(string TenNV, string Email, string Diachi, string NgayVL, int Quyen, int TinhTrang, byte[] Hinh, string MatKhau)
+        public DTO_NhanVien(string TenNV, string Email, string Diachi, DateTime NgayVL, int Quyen, int TinhTrang, byte[] Hinh, string MatKhau)
         {
             
             this._TenNV = TenNV;
@@ -133,6 +133,15 @@ namespace DTO_DingDoong
             this._MatKhau = MatKhau;
         }
 
+        public DTO_NhanVien(string TenNV, string Email, string DiaChi, DateTime NgayVL, int Quyen, byte[] Hinh)
+        {
+            this._TenNV = TenNV;
+            this._Email = Email;
+            this._DiaChi = DiaChi;
+            this._NgayVL = NgayVL;
+            this._Quyen = Quyen;
+            this._Hinh = Hinh;
+        }
         public DTO_NhanVien()
         {
 

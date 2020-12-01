@@ -141,5 +141,32 @@ namespace DAL_DingDoong
             }
             return false;
         }
+
+        //Insert NhanVien
+        public bool insertNhanVien(DTO_NhanVien nv)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "Sp_InsertNhanVien";
+                cmd.Parameters.AddWithValue("email", nv.Email);
+                cmd.Parameters.AddWithValue("tennv", nv.TenNV);
+                cmd.Parameters.AddWithValue("diachi", nv.DiaChi);
+                cmd.Parameters.AddWithValue("vaitro", nv.Quyen);
+                cmd.Parameters.AddWithValue("NgayVL", nv.NgayVL);
+                cmd.Parameters.AddWithValue("Hinh", nv.Hinh);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
     }
 }
