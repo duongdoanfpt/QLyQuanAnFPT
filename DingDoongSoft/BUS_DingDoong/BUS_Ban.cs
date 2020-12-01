@@ -51,7 +51,9 @@ namespace BUS_DingDoong
                                  MaHD = dr[0].ToString(),
                                  IdBan = (int)dr[1],
                                  TrangThai = (int)dr[2],
-                                 KhuyenMai = float.Parse(dr[4].ToString())
+                                 KhuyenMai = float.Parse(dr[4].ToString()),
+                                 SDT_KH = dr[5].ToString()
+                                 
 
                              }).FirstOrDefault();
             return hd;
@@ -81,6 +83,23 @@ namespace BUS_DingDoong
             return dalBan.DanhSachHDCTTam(MaHD);
         }
 
+        public DataTable dtHDCTFinal(string MaHD)
+        {
+            return dalBan.LayHDCTFinal(MaHD);
+        }
+        public bool ThemHoaDonFinal(DTO_HoaDon HD)
+        {
+            return dalBan.ThemHoaDonFinal(HD);
+        }
+        public bool ThemHDFinalNoneKH(DTO_HoaDon HD)
+        {
+            return dalBan.ThemHoaDonFinalNoneKH(HD);
+        }
+
+        public bool ThemCTHDFinal(DTO_CTHD cthd)
+        {
+            return dalBan.ThemCTHDFinal(cthd);
+        }    
         public float TongTienHDTamKM(DTO_HoaDon hd)
         {
             return dalBan.TongTienHDTam(hd.MaHD);
@@ -90,5 +109,15 @@ namespace BUS_DingDoong
         {
             return dalBan.UpdateKMtoHD(MaHD, ChietKhau);
         }
+        public bool UpdateKHvaoHDTam(string MaHD, string SDT)
+        {
+            return dalBan.UpdateKHtoHD(MaHD, SDT);
+        }
+
+        public bool ClearTemp(string MaHD)
+        {
+            return dalBan.ClearTemp(MaHD);
+        }
+
     }
 }
