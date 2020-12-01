@@ -89,6 +89,99 @@ namespace DAL_DingDoong
 
         }
 
+        public bool ThemHoaDonFinal(DTO_HoaDon hd)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "Sp_ThemHD";
+                cm.Parameters.AddWithValue("MaHD", hd.MaHD);
+                cm.Parameters.AddWithValue("MaNV", hd.MaNV);
+                cm.Parameters.AddWithValue("sdtkh", hd.SDT_KH);
+                        
+                cm.Parameters.AddWithValue("IdBan",hd.IdBan);
+
+                cm.Parameters.AddWithValue("KhuyenMai", hd.KhuyenMai);
+                
+                if (cm.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+
+            }
+
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+
+        }
+
+        public bool ThemHoaDonFinalNoneKH(DTO_HoaDon hd)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "Sp_ThemHD";
+                cm.Parameters.AddWithValue("MaHD", hd.MaHD);
+                cm.Parameters.AddWithValue("MaNV", hd.MaNV);
+                cm.Parameters.AddWithValue("sdtkh", DBNull.Value);
+
+                cm.Parameters.AddWithValue("IdBan", hd.IdBan);
+
+                cm.Parameters.AddWithValue("KhuyenMai", hd.KhuyenMai);
+
+                if (cm.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+
+            }
+
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+
+        }
+
+        public bool ThemCTHDFinal(DTO_CTHD cthd)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_insertCTHD";
+                cm.Parameters.AddWithValue("MaHD", cthd.MaHD);
+                cm.Parameters.AddWithValue("MaTD", cthd.MaTD);
+                cm.Parameters.AddWithValue("SoLuong", cthd.SoLuong);
+                cm.Parameters.AddWithValue("MoTa", cthd.GhiChu);
+
+
+                if (cm.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+
+            }
+
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
         public bool ThemChiTietHoaDonTam(DTO_CTHD cthd)
         {
             try
@@ -159,6 +252,26 @@ namespace DAL_DingDoong
             }
         }
 
+        public DataTable LayHDCTFinal(string MaHD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandText = "sp_laydanhsachHDCTFinal";
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.Parameters.AddWithValue("MaHD", MaHD);
+                cm.Connection = _conn;
+                DataTable dtHD = new DataTable();
+                dtHD.Load(cm.ExecuteReader());
+                return dtHD;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
         public float TongTienHDTam(string MaHD)
         {
             try
@@ -194,6 +307,60 @@ namespace DAL_DingDoong
                 cmd.CommandText = "Sp_themKMvaoHD";
                 cmd.Parameters.AddWithValue("MaHd", MaHD);
                 cmd.Parameters.AddWithValue("ChietKhau", ChietKhau);
+
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
+        public bool UpdateKHtoHD(string MaHD, string SDTKH)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "Sp_updateKHtoHDtam";
+                cmd.Parameters.AddWithValue("MaHd", MaHD);
+                cmd.Parameters.AddWithValue("SDT_KH", SDTKH);
+
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
+        public bool ClearTemp(string MaHD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "clearTemp";
+                cmd.Parameters.AddWithValue("MaHD", MaHD);
+             
 
 
                 if (cmd.ExecuteNonQuery() > 0)

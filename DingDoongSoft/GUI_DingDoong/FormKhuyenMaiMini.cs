@@ -15,9 +15,13 @@ namespace GUI_DingDoong
     public partial class FormKhuyenMaiMini : Form
     {
         BUS_KhuyenMai busKM = new BUS_KhuyenMai();
-        public FormKhuyenMaiMini()
+        BUS_Ban busBan = new BUS_Ban();
+        DTO_KhuyenMai km;
+        string MaHD;
+        public FormKhuyenMaiMini(string MHD)
         {
             InitializeComponent();
+            MaHD = MHD;
             foreach (DataRow dr in busKM.GetDanhSachKMinTime(DateTime.Now).Rows)
             {
                 cbTenKM.Items.Add(dr[1].ToString());
@@ -32,9 +36,25 @@ namespace GUI_DingDoong
 
         private void cbKhuyenMai_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DTO_KhuyenMai km = busKM.curKM(cbTenKM.SelectedItem.ToString());
+            km = busKM.curKM(cbTenKM.SelectedItem.ToString());
 
             lbChietKhau.Text = km.ChietKhau.ToString() + "%";
+        }
+
+        
+        private void btOK_Click(object sender, EventArgs e)
+        {
+            if (busBan.ThemKMToHd(MaHD, km.ChietKhau))
+            {
+
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Đã có lỗi xảy ra vui lòng kiểm tra lại");
+            }
+
         }
     }
 }

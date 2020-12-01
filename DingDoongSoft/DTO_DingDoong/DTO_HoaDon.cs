@@ -85,14 +85,15 @@ namespace DTO_DingDoong
             }
         }
 
-        public DTO_HoaDon (string MaHD, string MaNV,string SDT_KH, int MaBan,int TrangThai,float KhuyenMai)
+        public DTO_HoaDon (string MaHD, string MaNV, int MaBan,float KhuyenMai, string SDT_KH = null)
         {
-            this.MaHD = MaHD;
-            this.MaNV = MaNV;
-            this.SDT_KH = SDT_KH;
-            this.IdBan = MaBan;
-            this.TrangThai = TrangThai;
-            this.KhuyenMai = KhuyenMai;
+            this._MaHD = MaHD;
+            this._MaNV = MaNV;
+            this._SDT = SDT_KH;
+            this._IdBan = MaBan;
+            this._TrangThai = TrangThai;
+            this._KhuyenMai = KhuyenMai;
+            
         }
 
         public DTO_HoaDon(string MaHD, string MaNV, string SDT_KH, int MaBan, int TrangThai)
