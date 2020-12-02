@@ -29,7 +29,10 @@ namespace BUS_DingDoong
                   {
                       MaNV = dr[0].ToString(),
                       TenNV = dr[2].ToString(),
-                      Email = dr[1].ToString()
+                      Email = dr[1].ToString(),
+                      DiaChi = dr[3].ToString(),
+                      Quyen = string.Compare(dr[4].ToString(), "Nhân viên", true) == 0 ? 1 : 0,
+                    
 
 
                   }).FirstOrDefault();
