@@ -150,3 +150,7 @@ F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormN
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormThongKe.resources
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormThucDon.resources
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.CopyComplete
+D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormGopBan.resources
+D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FromChuyenBan.resources
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormGopBan.resources
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FromChuyenBan.resources

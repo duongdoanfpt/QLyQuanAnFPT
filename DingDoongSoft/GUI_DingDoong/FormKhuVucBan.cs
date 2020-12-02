@@ -42,7 +42,8 @@ namespace GUI_DingDoong
             {
 
                 (bt as Button).Enabled = false;
-
+                (bt as Button).FlatStyle = FlatStyle.Standard;
+                bt.Paint += Bt_Paint;
 
 
             }
@@ -51,6 +52,16 @@ namespace GUI_DingDoong
 
 
 
+        }
+
+        private void Bt_Paint(object sender, PaintEventArgs e)
+        {
+          Button bt = sender as Button;
+          ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
         }
 
         private void SelectBan(int indexBan)
@@ -218,6 +229,11 @@ namespace GUI_DingDoong
 
 
             }
+        }
+
+        private void exportPDF()
+        {
+
         }
         public FormKhuVucBan()
         {
@@ -396,7 +412,7 @@ namespace GUI_DingDoong
 
         private void btBill_Click(object sender, EventArgs e)
         {
-            
+
             DTO_HoaDon HoaDonFinal = (from DataRow dr in busBan.dtHoaDonTam(busBan.curBan(lbViTriBan.Text)).Rows
                                       where string.Compare(dr[0].ToString(), hd.MaHD, true) == 0
                                       select new DTO_HoaDon(dr[0].ToString(), NV.MaNV, (int)dr[1], float.Parse(dr[4].ToString()), dr[5].ToString())).FirstOrDefault();
@@ -409,19 +425,19 @@ namespace GUI_DingDoong
             {
                 busBan.ThemHoaDonFinal(HoaDonFinal);
             }
-          
+
             foreach (DataRow dr in busBan.dtHDCTFinal(hd.MaHD).Rows)
             {
                 DTO_CTHD cthd = new DTO_CTHD(dr[0].ToString(), dr[1].ToString(), int.Parse(dr[2].ToString()), dr[3].ToString());
-                
+
                 DTO_Ban Ban = busBan.curBan(lbViTriBan.Text);
-                if(busBan.ThemCTHDFinal(cthd))
+                if (busBan.ThemCTHDFinal(cthd))
                 {
                     busBan.UpdateTrangThaiBan(Ban, 0);
                     (flpkvBan.Controls[IndexBan].Controls[0] as PictureBox).Image = Image.FromFile(startupPath + @"\image\banDong.png");
-                    
+
                 }
-               
+
 
             }
             busBan.ClearTemp(hd.MaHD);
