@@ -34,12 +34,17 @@ namespace BUS_DingDoong
                       Quyen = string.Compare(dr[4].ToString(), "Nhân viên", true) == 0 ? 1 : 0,
                       TrangThai = string.Compare(dr[5].ToString(), "Hoạt động", true) == 0 ? 1 : 0,
                       NgayVL = (DateTime)dr[6],
-                      Hinh = (byte[]).
+                      
 
 
                   }).FirstOrDefault();
             return NV;
 
+        }
+
+        public byte[] getHinhNV(string Email)
+        {
+            return dALNhanVien.GetHinhNV(Email);
         }
 
         public bool NhanVienDangNhap(DTO_NhanVien nv)

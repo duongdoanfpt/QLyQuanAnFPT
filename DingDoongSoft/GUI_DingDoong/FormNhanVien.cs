@@ -235,5 +235,45 @@ namespace GUI_DingDoong
         {
             Application.Exit();
         }
+
+        private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvNhanVien.Rows.Count > 1)
+            {
+                if (dgvNhanVien.CurrentRow.Index < dgvNhanVien.Rows.Count - 1)
+                {
+                    pbHinh.Enabled = true;
+                    btLuu.Enabled = true;
+                    btXoa.Enabled = true;
+                    btCapNhat.Enabled = true;
+                    btBoQua.Enabled = true;
+                    txtTenNhanVien.Enabled = true;
+                    txtEmail.Enabled = true;
+                    txtDiaChi.Enabled = true;
+                    dateTimeNVL.Enabled = true;
+                    rdNhanVien.Enabled = true;
+                    rdQuanLy.Enabled = true;
+
+                    DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
+                    txtEmail.Text = td.Email;
+                    txtTenNhanVien.Text = td.TenNV;
+                    txtDiaChi.Text = td.DiaChi;
+
+                    if (td.Quyen == 1)
+                        rdQuanLy.Checked = true;
+                    else
+                        rdNhanVien.Checked = true;
+
+                    dateTimeNVL.Text = td.NgayVL.ToString();
+
+
+                    MemoryStream mem = new MemoryStream(busnhanvien.getHinhNV(td.Email));
+                    pbHinh.BackgroundImage = Image.FromStream(mem);
+                    pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
+
+
+                }
+            }
+        }
     }
 }
