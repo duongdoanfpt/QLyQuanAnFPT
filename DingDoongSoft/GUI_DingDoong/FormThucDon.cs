@@ -23,6 +23,43 @@ namespace GUI_DingDoong
         BUS_ThucDon busThucDon = new BUS_ThucDon();
         string startupPath = Environment.CurrentDirectory;
 
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+        private void FrmLoad()
+        {
+            foreach (var bt in GetAll(this, typeof(Button)))
+            {
+
+
+                (bt as Button).Paint += Bt_Paint;
+
+                (bt as Button).FlatStyle = FlatStyle.Standard;
+               
+
+            }
+
+
+
+
+
+        }
+
+        private void Bt_Paint(object sender, PaintEventArgs e)
+        {
+            Button bt = sender as Button;
+            ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+        }
+
 
         //Disable textbox & button
         public void Disable_Textbox_Button()
@@ -47,6 +84,7 @@ namespace GUI_DingDoong
 
         private void FormThucDon_Load(object sender, EventArgs e)
         {
+            FrmLoad();
             DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
             DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Disable_Textbox_Button();

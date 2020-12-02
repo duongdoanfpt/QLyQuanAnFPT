@@ -32,7 +32,9 @@ namespace BUS_DingDoong
                       Email = dr[1].ToString(),
                       DiaChi = dr[3].ToString(),
                       Quyen = string.Compare(dr[4].ToString(), "Nhân viên", true) == 0 ? 1 : 0,
-                    
+                      TrangThai = string.Compare(dr[5].ToString(), "Hoạt động", true) == 0 ? 1 : 0,
+                      NgayVL = (DateTime)dr[6],
+                      Hinh = (byte[]).
 
 
                   }).FirstOrDefault();

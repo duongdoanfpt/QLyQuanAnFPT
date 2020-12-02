@@ -93,7 +93,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1075F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1084F));
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
             this.LayoutMenu.Controls.Add(this.KhachHang, 2, 0);
@@ -112,7 +112,7 @@ namespace GUI_DingDoong
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1178, 11);
+            this.label7.Location = new System.Drawing.Point(1187, 11);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(162, 21);
             this.label7.TabIndex = 6;
@@ -468,6 +468,7 @@ namespace GUI_DingDoong
             // btLuu
             // 
             this.btLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btLuu.BackColor = System.Drawing.Color.Transparent;
             this.btLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuu.Image = global::GUI_DingDoong.Properties.Resources.appbar4;
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -476,7 +477,7 @@ namespace GUI_DingDoong
             this.btLuu.Size = new System.Drawing.Size(109, 33);
             this.btLuu.TabIndex = 3;
             this.btLuu.Text = "Lưu";
-            this.btLuu.UseVisualStyleBackColor = true;
+            this.btLuu.UseVisualStyleBackColor = false;
             this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
             // 
             // btThem

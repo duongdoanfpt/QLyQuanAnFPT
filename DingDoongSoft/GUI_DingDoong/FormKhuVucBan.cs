@@ -42,7 +42,8 @@ namespace GUI_DingDoong
             {
 
                 (bt as Button).Enabled = false;
-
+                (bt as Button).FlatStyle = FlatStyle.Standard;
+                bt.Paint += Bt_Paint;
 
 
             }
@@ -51,6 +52,16 @@ namespace GUI_DingDoong
 
 
 
+        }
+
+        private void Bt_Paint(object sender, PaintEventArgs e)
+        {
+          Button bt = sender as Button;
+          ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
         }
 
         private void SelectBan(int indexBan)
@@ -218,6 +229,11 @@ namespace GUI_DingDoong
 
 
             }
+        }
+
+        private void exportPDF()
+        {
+
         }
         public FormKhuVucBan()
         {
