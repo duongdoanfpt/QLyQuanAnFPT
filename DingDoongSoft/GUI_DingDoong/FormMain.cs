@@ -29,12 +29,15 @@ namespace GUI_DingDoong
         private void pbAccounts_Click(object sender, EventArgs e)
         {
             FormChangePass formChangePass = new FormChangePass(lblEmailMain.Text);
-
-           
             this.Hide();
 
             formChangePass.Closed += (s, args) => this.Close();
             formChangePass.Show();
+        }
+
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
