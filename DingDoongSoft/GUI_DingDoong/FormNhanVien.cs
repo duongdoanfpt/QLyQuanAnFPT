@@ -191,16 +191,16 @@ namespace GUI_DingDoong
                     ImageConverter converter1 = new ImageConverter();
                     arr1 = (byte[])converter1.ConvertTo(setLogo, typeof(byte[]));
                     DTO_NhanVien curNV1 = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr1);
-                    MessageBox.Show(curNV1.NgayVL.ToString());
+                    
                     if (busnhanvien.inserNhanVien(curNV1))
                     {
-                        MessageBox.Show("Thêm món vào thực đơn thành công");
+                        MessageBox.Show("Thêm nhân viên thành công");
                         dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                         dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     }
                     else
                     {
-                        MessageBox.Show("Thêm món vào thực đơn thất bại");
+                        MessageBox.Show("Thêm nhân viên thất bại");
                     }
                 }
                 else
@@ -210,14 +210,14 @@ namespace GUI_DingDoong
                     ImageConverter converter = new ImageConverter();
                     arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
                     DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr);
-                    MessageBox.Show(curNV.NgayVL.ToString());
+                    
                     if (busnhanvien.inserNhanVien(curNV))
                     {
                         MessageBox.Show("Thêm món vào thực đơn thành công");
                         dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                         dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                        pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
-                        pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
+                        //pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
+                        //pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
 
 
                     }
@@ -267,7 +267,7 @@ namespace GUI_DingDoong
                     dateTimeNVL.Text = td.NgayVL.ToString();
 
 
-                    MemoryStream mem = new MemoryStream(busnhanvien.getHinhNV(td.Email));
+                    MemoryStream mem = new MemoryStream(busnhanvien.getHinhNV(td.Email)); 
                     pbHinh.BackgroundImage = Image.FromStream(mem);
                     pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
 
