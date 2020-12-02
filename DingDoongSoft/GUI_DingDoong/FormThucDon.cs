@@ -347,17 +347,7 @@ namespace GUI_DingDoong
             Home.Cursor = Cursors.Default;
         }
 
-        private void NhanVien_MouseEnter(object sender, EventArgs e)
-        {
-            NhanVien.SizeMode = PictureBoxSizeMode.CenterImage;
-            NhanVien.Cursor = Cursors.Hand;
-        }
-
-        private void NhanVien_MouseLeave(object sender, EventArgs e)
-        {
-            NhanVien.SizeMode = PictureBoxSizeMode.Zoom;
-            NhanVien.Cursor = Cursors.Default;
-        }
+        
 
         private void KhachHang_MouseEnter(object sender, EventArgs e)
         {
@@ -409,6 +399,42 @@ namespace GUI_DingDoong
                 DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             }
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+            
+            FormMain m = new FormMain();
+            m.Activate();
+            m.Show();
+        }
+
+        private void FormThucDon_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void NhanVien_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+            FormNhanVien n = new FormNhanVien();
+            n.Activate();
+            n.Show();
+        }
+
+        private void NhanVien_MouseEnter_1(object sender, EventArgs e)
+        {
+            NhanVien.SizeMode = PictureBoxSizeMode.CenterImage;
+            NhanVien.Cursor = Cursors.Hand;
+        }
+
+        private void NhanVien_MouseLeave(object sender, EventArgs e)
+        {
+            NhanVien.SizeMode = PictureBoxSizeMode.Zoom;
+            NhanVien.Cursor = Cursors.Default;
         }
     }
 }
