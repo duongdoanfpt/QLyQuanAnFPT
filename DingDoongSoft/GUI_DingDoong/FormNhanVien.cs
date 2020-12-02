@@ -230,5 +230,10 @@ namespace GUI_DingDoong
 
             }
         }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

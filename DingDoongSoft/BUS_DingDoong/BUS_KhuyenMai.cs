@@ -42,5 +42,17 @@ namespace BUS_DingDoong
         {
             return dalKM.insertKM(km);
         }
+        public bool DeleteKM(string makm)
+        {
+            return dalKM.DeleteKM(makm);
+        }
+        public bool UpdateKM(DTO_KhuyenMai km)
+        {
+            return dalKM.UpdateKM(km);
+        }
+        public DataTable SearchKM(string tenkm)
+        {
+            return dalKM.SearchKM(tenkm);
+        }
     }
 }
