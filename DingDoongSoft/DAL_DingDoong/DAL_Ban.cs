@@ -286,7 +286,7 @@ namespace DAL_DingDoong
                 return (cm.ExecuteScalar() is null ? 0 : float.Parse(cm.ExecuteScalar().ToString()));
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return 0;
             }
