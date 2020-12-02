@@ -59,6 +59,12 @@
     <Compile Include="FormForgot.Designer.cs">
       <DependentUpon>FormForgot.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGopBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGopBan.Designer.cs">
+      <DependentUpon>FormGopBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     <Compile Include="FormThucDon.Designer.cs">
       <DependentUpon>FormThucDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FromChuyenBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromChuyenBan.Designer.cs">
+      <DependentUpon>FromChuyenBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormChangePass.resx">
@@ -126,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormForgot.resx">
       <DependentUpon>FormForgot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGopBan.resx">
+      <DependentUpon>FormGopBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
@@ -156,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThucDon.resx">
       <DependentUpon>FormThucDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromChuyenBan.resx">
+      <DependentUpon>FromChuyenBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
