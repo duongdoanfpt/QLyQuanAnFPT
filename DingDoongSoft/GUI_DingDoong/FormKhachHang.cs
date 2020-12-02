@@ -43,16 +43,8 @@ namespace GUI_DingDoong
             txtTen.Text = null;
             txtSDT.Text = null;
             txtEmail.Text = null;
-            //txtTen.Enabled = false;
-            //txtSDT.Enabled = false;
-            //txtEmail.Enabled = false;
-            //dtpNgaySinh.Enabled = false;
-            //rdNam.Enabled = false;
-            //rdNu.Enabled = false;
-            btLuu.Enabled = false;
-            //btThem.Enabled = true;
-            //btCapNhat.Enabled = false;
             
+            btLuu.Enabled = false;
         }
 
         private void btLuu_Click(object sender, EventArgs e)
@@ -81,16 +73,8 @@ namespace GUI_DingDoong
             txtTen.Text = null;
             txtSDT.Text = null;
             txtEmail.Text = null;
-            txtTen.Enabled = true;
-            txtSDT.Enabled = true;
-            txtEmail.Enabled = true;
-            dtpNgaySinh.Enabled = true;
-            rdNam.Enabled = true;
-            rdNu.Enabled = true;
+            
             btLuu.Enabled = true;
-            btThem.Enabled = true;
-            btCapNhat.Enabled = true;
-            btXoa.Enabled = true;
         }
 
         private void DgvKhach_Click(object sender, EventArgs e)

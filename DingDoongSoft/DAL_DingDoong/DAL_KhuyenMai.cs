@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO_DingDoong;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -49,6 +50,35 @@ namespace DAL_DingDoong
             {
                 _conn.Close();
             }
+        }
+
+        public bool insertKM(DTO_KhuyenMai km)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "Sp_InsertKM";
+                cmd.Parameters.AddWithValue("@MaKM", km.MaKM);
+                cmd.Parameters.AddWithValue("@tenKM", km.TenKM);
+                cmd.Parameters.AddWithValue("@chietkhau", km.ChietKhau);
+                cmd.Parameters.AddWithValue("@startDate", km.NgayBD);
+                cmd.Parameters.AddWithValue("@endDate", km.NgayKT);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
         }
 
     }

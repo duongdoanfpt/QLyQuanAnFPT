@@ -123,5 +123,11 @@ namespace BUS_DingDoong
             return dALNhanVien.TaoMatKhauMoi(nv);
         }
 
+        //Insert NhanVien
+        public bool inserNhanVien(DTO_NhanVien nv)
+        {
+            return dALNhanVien.insertNhanVien(nv);
+        }
+
     }
 }
