@@ -184,48 +184,71 @@ namespace GUI_DingDoong
             
             else
             {
-                if (pbHinh.Image is null)
+                //if (pbHinh.Image is null)
+                //{
+                //    Image setLogo = Image.FromFile(startupPath + @"\image\logo.jpg");
+                //    byte[] arr1;
+                //    ImageConverter converter1 = new ImageConverter();
+                //    arr1 = (byte[])converter1.ConvertTo(setLogo, typeof(byte[]));
+                //    DTO_NhanVien curNV1 = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr1);
+
+                //    if (busnhanvien.inserNhanVien(curNV1))
+                //    {
+                //        MessageBox.Show("Thêm nhân viên thành công");
+                //        dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
+                //        dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Thêm nhân viên thất bại");
+                //    }
+                //}
+                //else
+                //{
+                //    Image img = pbHinh.BackgroundImage;
+                //    byte[] arr;
+                //    ImageConverter converter = new ImageConverter();
+                //    arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
+                //    DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr);
+
+                //    if (busnhanvien.inserNhanVien(curNV))
+                //    {
+                //        MessageBox.Show("Thêm món vào thực đơn thành công");
+                //        dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
+                //        dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                //        //pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
+                //        //pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
+
+
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Thêm món vào thực đơn thất bại");
+
+                //    }
+                //}
+
+
+                Image img = pbHinh.BackgroundImage;
+                byte[] arr;
+                ImageConverter converter = new ImageConverter();
+                arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
+                DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr);
+
+                if (busnhanvien.inserNhanVien(curNV))
                 {
-                    Image setLogo = Image.FromFile(startupPath + @"\image\logo.jpg");
-                    byte[] arr1;
-                    ImageConverter converter1 = new ImageConverter();
-                    arr1 = (byte[])converter1.ConvertTo(setLogo, typeof(byte[]));
-                    DTO_NhanVien curNV1 = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr1);
-                    
-                    if (busnhanvien.inserNhanVien(curNV1))
-                    {
-                        MessageBox.Show("Thêm nhân viên thành công");
-                        dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
-                        dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thêm nhân viên thất bại");
-                    }
+                    MessageBox.Show("Thêm món vào thực đơn thành công");
+                    dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
+                    dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    //pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
+                    //pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
+
+
                 }
                 else
                 {
-                    Image img = pbHinh.BackgroundImage;
-                    byte[] arr;
-                    ImageConverter converter = new ImageConverter();
-                    arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
-                    DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr);
-                    
-                    if (busnhanvien.inserNhanVien(curNV))
-                    {
-                        MessageBox.Show("Thêm món vào thực đơn thành công");
-                        dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
-                        dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                        //pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
-                        //pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
+                    MessageBox.Show("Thêm món vào thực đơn thất bại");
 
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thêm món vào thực đơn thất bại");
-
-                    }
                 }
 
             }
