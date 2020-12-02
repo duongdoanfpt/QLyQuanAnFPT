@@ -55,7 +55,7 @@ namespace GUI_DingDoong
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbhienThi = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button8 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -268,7 +268,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1039F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1045F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
@@ -317,7 +317,7 @@ namespace GUI_DingDoong
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1142, 8);
+            this.label7.Location = new System.Drawing.Point(1148, 8);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(162, 21);
             this.label7.TabIndex = 6;
@@ -355,7 +355,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel4.Controls.Add(this.btTimKiem, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtTimKiem, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label8, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.checkBox1, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.cbhienThi, 3, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 213);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
@@ -375,6 +375,7 @@ namespace GUI_DingDoong
             this.btTimKiem.TabIndex = 12;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -385,6 +386,7 @@ namespace GUI_DingDoong
             this.txtTimKiem.Size = new System.Drawing.Size(299, 33);
             this.txtTimKiem.TabIndex = 0;
             this.txtTimKiem.Text = "Nhập tên khuyến mãi để tìm kiếm";
+            this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
             // 
             // label8
             // 
@@ -397,16 +399,17 @@ namespace GUI_DingDoong
             this.label8.TabIndex = 13;
             this.label8.Text = "Hiển thị tất cả";
             // 
-            // checkBox1
+            // cbhienThi
             // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(1239, 27);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbhienThi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbhienThi.AutoSize = true;
+            this.cbhienThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbhienThi.Location = new System.Drawing.Point(1239, 27);
+            this.cbhienThi.Name = "cbhienThi";
+            this.cbhienThi.Size = new System.Drawing.Size(15, 14);
+            this.cbhienThi.TabIndex = 14;
+            this.cbhienThi.UseVisualStyleBackColor = true;
+            this.cbhienThi.CheckedChanged += new System.EventHandler(this.cbhienThi_CheckedChanged);
             // 
             // dataGridView1
             // 
@@ -483,6 +486,7 @@ namespace GUI_DingDoong
             this.btBoQua.TabIndex = 9;
             this.btBoQua.Text = "Bỏ qua";
             this.btBoQua.UseVisualStyleBackColor = true;
+            this.btBoQua.Click += new System.EventHandler(this.btBoQua_Click);
             // 
             // btCapNhat
             // 
@@ -498,6 +502,7 @@ namespace GUI_DingDoong
             this.btCapNhat.Text = "Cập nhật";
             this.btCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btCapNhat.UseVisualStyleBackColor = true;
+            this.btCapNhat.Click += new System.EventHandler(this.btCapNhat_Click);
             // 
             // btXoa
             // 
@@ -512,6 +517,7 @@ namespace GUI_DingDoong
             this.btXoa.TabIndex = 5;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btLuu
             // 
@@ -609,7 +615,7 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbhienThi;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;

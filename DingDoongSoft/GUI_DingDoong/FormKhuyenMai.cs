@@ -84,5 +84,83 @@ namespace GUI_DingDoong
             dtpNgBD.Text = km.NgayBD.ToString();
             dtpNgKT.Text = km.NgayKT.ToString();
         }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            string makm = txtMaKM.Text;
+            if (MessageBox.Show("Bạn có chắc muốn xóa dữ liệu", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (busKM.DeleteKM(makm))
+                {
+                    MessageBox.Show("Xóa dữ liệu thành công");
+                    ResetValues();
+                    LoadGridview_KM();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công");
+                }
+            }
+            else
+            {
+                ResetValues();
+            }
+        }
+
+        private void btCapNhat_Click(object sender, EventArgs e)
+        {
+            DTO_KhuyenMai km = new DTO_KhuyenMai(txtMaKM.Text, txtTenKM.Text, float.Parse(txtChietKhau.Text), dtpNgBD.Value, dtpNgKT.Value);
+            if (busKM.UpdateKM(km))
+            {
+                MessageBox.Show("Cập nhật thành công");
+                LoadGridview_KM();
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật không thành công");
+
+            }
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            string tenkm = txtTimKiem.Text;
+            DataTable dtKM = busKM.SearchKM(tenkm);
+            if (dtKM.Rows.Count > 0)
+            {
+                dataGridView1.DataSource = dtKM;
+                dataGridView1.Columns[0].HeaderText = "Mã khuyến mãi";
+                dataGridView1.Columns[1].HeaderText = "Tên khuyến mãi";
+                dataGridView1.Columns[2].HeaderText = "Ngày bắt đầu";
+                dataGridView1.Columns[3].HeaderText = "Ngày kết thúc";
+                dataGridView1.Columns[4].HeaderText = "Chiết khấu";
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy chương trình khuyến mãi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            ResetValues();
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = null;
+            txtTimKiem.BackColor = Color.White;
+        }
+
+        private void btBoQua_Click(object sender, EventArgs e)
+        {
+            txtMaKM.Text = null;
+            txtTenKM.Text = null;
+            txtChietKhau.Text = null;
+
+            LoadGridview_KM();
+        }
+
+        private void cbhienThi_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadGridview_KM();
+        }
     }
 }
