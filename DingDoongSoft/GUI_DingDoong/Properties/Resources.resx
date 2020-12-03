@@ -124,8 +124,8 @@
   <data name="appbar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.save1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="appbar.people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.people.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Chrisl21-Minecraft-Crafting-Table3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chrisl21-Minecraft-Crafting-Table3.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appbar.clipboard.variant1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.clipboard.variant.edit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,23 +136,17 @@
   <data name="appbar.book.perspective.help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.book.perspective.help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="appbar.door.enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.door.enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="appbar5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.delete1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appbar.close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Chrisl21-Minecraft-Crafting-Table3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chrisl21-Minecraft-Crafting-Table3.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="appbar.3d.x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.3d.x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Apathae-Chakram-2-Home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Apathae-Chakram-2-Home1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.tag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.tag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,11 +163,14 @@
   <data name="appbar.customerservice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.customerservice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="appbar.3d.x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.3d.x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Apathae-Chakram-2-Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Apathae-Chakram-2-Home.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Chrisl21-Minecraft-Crafting-Table2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chrisl21-Minecraft-Crafting-Table2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appbar.add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appbar.delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,11 +184,17 @@
   <data name="Chrisl21-Minecraft-Crafting-Table1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chrisl21-Minecraft-Crafting-Table1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="appbar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.add1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="appbar.food" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.food.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fasticon-Database-Table-edit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fasticon-Database-Table-edit1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1-17259_robber-clipart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1-17259_robber-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appbar.door1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.door.enter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,8 +220,8 @@
   <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\image\logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="appbar.add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="appbar.people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.people.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,8 +229,8 @@
   <data name="appbar.message" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.message.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="appbar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.add1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="appbar.tag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.tag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hopstarter-Sleek-Xp-Basic-User-Group1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hopstarter-Sleek-Xp-Basic-User-Group1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,8 +238,8 @@
   <data name="appbar.3d1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.3d.x1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Apathae-Chakram-2-Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Apathae-Chakram-2-Home.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="appbar.door.enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.door.enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appbar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.add2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,7 +247,7 @@
   <data name="Icons-Land-Vista-People-Office-Customer-Male-Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons-Land-Vista-People-Office-Customer-Male-Light.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1-17259_robber-clipart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1-17259_robber-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Flameia-Rabbit-Xp-Apple-menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Flameia-Rabbit-Xp-Apple-menu1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

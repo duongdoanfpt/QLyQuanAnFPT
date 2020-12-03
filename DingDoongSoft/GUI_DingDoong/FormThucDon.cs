@@ -86,6 +86,8 @@ namespace GUI_DingDoong
         {
             FrmLoad();
             DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
+            ptbMenuThucDon.Enabled = false;
+            ptbMenuThucDon.BorderStyle = BorderStyle.Fixed3D;
             DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Disable_Textbox_Button();
         }
@@ -403,12 +405,11 @@ namespace GUI_DingDoong
 
         private void Home_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            ShowInTaskbar = false;
-            
-            FormMain m = new FormMain();
-            m.Activate();
-            m.Show();
+            FormMain frmMain = new FormMain();
+            this.Hide();
+
+            frmMain.Closed += (s, args) => this.Close();
+            frmMain.Show();
         }
 
         private void FormThucDon_FormClosed(object sender, FormClosedEventArgs e)
@@ -418,11 +419,11 @@ namespace GUI_DingDoong
 
         private void NhanVien_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            ShowInTaskbar = false;
-            FormNhanVien n = new FormNhanVien();
-            n.Activate();
-            n.Show();
+            FormNhanVien nv = new FormNhanVien();
+            this.Hide();
+
+            nv.Closed += (s, args) => this.Close();
+            nv.Show();
         }
 
         private void NhanVien_MouseEnter_1(object sender, EventArgs e)
@@ -436,5 +437,46 @@ namespace GUI_DingDoong
             NhanVien.SizeMode = PictureBoxSizeMode.Zoom;
             NhanVien.Cursor = Cursors.Default;
         }
+
+        private void ptbMenuThucDon_MouseEnter(object sender, EventArgs e)
+        {
+            ptbMenuThucDon.SizeMode = PictureBoxSizeMode.CenterImage;
+            ptbMenuThucDon.Cursor = Cursors.Hand;
+        }
+
+        private void ptbMenuThucDon_MouseLeave(object sender, EventArgs e)
+        {
+            ptbMenuThucDon.SizeMode = PictureBoxSizeMode.Zoom;
+            ptbMenuThucDon.Cursor = Cursors.Default; 
+        }
+
+        private void KhachHang_Click(object sender, EventArgs e)
+        {
+            FormKhachHang kh = new FormKhachHang();
+            this.Hide();
+
+            kh.Closed += (s, args) => this.Close();
+            kh.Show();
+        }
+
+        private void Ban_Click(object sender, EventArgs e)
+        {
+            FormKhuVucBan kv = new FormKhuVucBan();
+            this.Hide();
+
+            kv.Closed += (s, args) => this.Close();
+            kv.Show();
+        }
+
+        private void ThongKe_Click(object sender, EventArgs e)
+        {
+            FormThongKe thongKe = new FormThongKe();
+            this.Hide();
+
+            thongKe.Closed += (s, args) => this.Close();
+            thongKe.Show();
+        }
+
+        
     }
 }
