@@ -344,5 +344,8 @@
   <ItemGroup>
     <None Include="Resources\1-17259_robber-clipart.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flameia-Rabbit-Xp-Apple-menu.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
