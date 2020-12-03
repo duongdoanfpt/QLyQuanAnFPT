@@ -168,5 +168,32 @@ namespace DAL_DingDoong
             }
             return false;
         }
+
+        //GET Hình NV
+        public byte[] GetHinhNV(string Email)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_gethinhNV";
+                cmd.Parameters.AddWithValue("email", Email);
+
+                var hinh = (byte[])cmd.ExecuteScalar();
+                return hinh;
+
+            }
+
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }

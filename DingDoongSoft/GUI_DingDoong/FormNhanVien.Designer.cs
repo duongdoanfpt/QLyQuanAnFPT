@@ -225,9 +225,11 @@ namespace GUI_DingDoong
             // 
             this.dateTimeNVL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimeNVL.CalendarFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeNVL.Location = new System.Drawing.Point(693, 60);
+            this.dateTimeNVL.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.dateTimeNVL.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeNVL.Location = new System.Drawing.Point(693, 54);
             this.dateTimeNVL.Name = "dateTimeNVL";
-            this.dateTimeNVL.Size = new System.Drawing.Size(328, 20);
+            this.dateTimeNVL.Size = new System.Drawing.Size(328, 33);
             this.dateTimeNVL.TabIndex = 10;
             // 
             // panel1
@@ -247,7 +249,7 @@ namespace GUI_DingDoong
             this.pbHinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbHinh.Location = new System.Drawing.Point(3, 3);
             this.pbHinh.Name = "pbHinh";
-            this.pbHinh.Size = new System.Drawing.Size(221, 136);
+            this.pbHinh.Size = new System.Drawing.Size(157, 139);
             this.pbHinh.TabIndex = 0;
             this.pbHinh.TabStop = false;
             this.pbHinh.Click += new System.EventHandler(this.pbHinh_Click);
@@ -263,6 +265,7 @@ namespace GUI_DingDoong
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.Size = new System.Drawing.Size(1254, 394);
             this.dgvNhanVien.TabIndex = 6;
+            this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
             // tableLayoutPanel1
             // 
@@ -275,7 +278,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1051F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1060F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
@@ -324,7 +327,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1154, 9);
+            this.lblUsers.Location = new System.Drawing.Point(1163, 9);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 6;
@@ -497,7 +500,6 @@ namespace GUI_DingDoong
             this.btXoa.TabIndex = 5;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
-           
             // 
             // btLuu
             // 
