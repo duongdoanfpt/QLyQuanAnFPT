@@ -12,7 +12,7 @@ namespace GUI_DingDoong.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -20,6 +20,18 @@ namespace GUI_DingDoong.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=D:\\PRO131\\QLYQUANANFPT\\DINGDOO" +
+            "NGSOFT\\GUI_DINGDOONG\\BIN\\DEBUG\\QLYQUANAN.MDF;Integrated Security=True")]
+        public string D__PRO131_QLYQUANANFPT_DINGDOONGSOFT_GUI_DINGDOONG_BIN_DEBUG_QLYQUANAN_MDFConnectionString {
+            get {
+                return ((string)(this["D__PRO131_QLYQUANANFPT_DINGDOONGSOFT_GUI_DINGDOONG_BIN_DEBUG_QLYQUANAN_MDFConnect" +
+                    "ionString"]));
             }
         }
     }
