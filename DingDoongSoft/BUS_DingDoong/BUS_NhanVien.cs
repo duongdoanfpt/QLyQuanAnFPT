@@ -52,6 +52,16 @@ namespace BUS_DingDoong
             return dALNhanVien.NhanVienDangNhap(nv);
         }
 
+        public bool XoaNhanVien(string email)
+        {
+            return dALNhanVien.XoaNhanVien(email);
+        }
+
+        public bool CapNhatNhanVien(string emailnhanvien, DTO_NhanVien td)
+        {
+            return dALNhanVien.CapNhatNhanVien(emailnhanvien, td);
+        }
+
         //HamMaHoa
         public string Encryption(string password)
         {

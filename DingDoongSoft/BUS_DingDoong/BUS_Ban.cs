@@ -16,7 +16,14 @@ namespace BUS_DingDoong
         {
             return dalBan.DanhSachBan();
         }
-
+        public DataTable dtHD(string MaHD)
+        {
+            return dalBan.rptHoaDon(MaHD);
+        }
+        public DataTable dtHDCT(string MaHD)
+        {
+            return dalBan.rptHoaDonChitiet(MaHD);
+        }
         public List<DTO_Ban> DanhSachBan(DataTable dsBan)
         {
             List<DTO_Ban> listBan = new List<DTO_Ban>();

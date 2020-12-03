@@ -58,6 +58,48 @@ namespace DAL_DingDoong
             return false;
         }
 
+        public DataTable rptHoaDon(string MaHD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "getHDinfo";
+                cm.Parameters.AddWithValue("MaHD", MaHD);
+                cm.Connection = _conn;
+                DataTable dtHD = new DataTable();
+                dtHD.Load(cm.ExecuteReader());
+                return dtHD;
+            }
+            finally
+            {
+
+                _conn.Close();
+            }
+        }
+
+        public DataTable rptHoaDonChitiet(string MaHD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "GetListTD";
+                cm.Parameters.AddWithValue("MaHD", MaHD);
+                cm.Connection = _conn;
+                DataTable dtHDCT = new DataTable();
+                dtHDCT.Load(cm.ExecuteReader());
+                return dtHDCT;
+            }
+            finally
+            {
+
+                _conn.Close();
+            }
+        }
+
 
 
         public bool ThemHoaDonTam(DTO_HoaDon hd)
