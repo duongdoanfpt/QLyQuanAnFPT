@@ -29,7 +29,12 @@ namespace BUS_DingDoong
                   {
                       MaNV = dr[0].ToString(),
                       TenNV = dr[2].ToString(),
-                      Email = dr[1].ToString()
+                      Email = dr[1].ToString(),
+                      DiaChi = dr[3].ToString(),
+                      Quyen = string.Compare(dr[4].ToString(), "Nhân viên", true) == 0 ? 1 : 0,
+                      TrangThai = string.Compare(dr[5].ToString(), "Hoạt động", true) == 0 ? 1 : 0,
+                      NgayVL = (DateTime)dr[6],
+                      
 
 
                   }).FirstOrDefault();
@@ -37,9 +42,24 @@ namespace BUS_DingDoong
 
         }
 
+        public byte[] getHinhNV(string Email)
+        {
+            return dALNhanVien.GetHinhNV(Email);
+        }
+
         public bool NhanVienDangNhap(DTO_NhanVien nv)
         {
             return dALNhanVien.NhanVienDangNhap(nv);
+        }
+
+        public bool XoaNhanVien(string email)
+        {
+            return dALNhanVien.XoaNhanVien(email);
+        }
+
+        public bool CapNhatNhanVien(string emailnhanvien, DTO_NhanVien td)
+        {
+            return dALNhanVien.CapNhatNhanVien(emailnhanvien, td);
         }
 
         //HamMaHoa

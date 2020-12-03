@@ -63,6 +63,16 @@ namespace GUI_DingDoong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1_17259_robber_clipart {
+            get {
+                object obj = ResourceManager.GetObject("1-17259_robber-clipart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Apathae_Chakram_2_Home {
             get {
                 object obj = ResourceManager.GetObject("Apathae-Chakram-2-Home", resourceCulture);
@@ -403,6 +413,16 @@ namespace GUI_DingDoong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Flameia_Rabbit_Xp_Apple_menu {
+            get {
+                object obj = ResourceManager.GetObject("Flameia-Rabbit-Xp-Apple-menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hopstarter_Sleek_Xp_Basic_User_Group {
             get {
                 object obj = ResourceManager.GetObject("Hopstarter-Sleek-Xp-Basic-User-Group", resourceCulture);
@@ -466,6 +486,16 @@ namespace GUI_DingDoong.Properties {
         internal static System.Drawing.Bitmap logo1 {
             get {
                 object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png {
+            get {
+                object obj = ResourceManager.GetObject("png", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

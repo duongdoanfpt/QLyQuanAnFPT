@@ -23,6 +23,39 @@ namespace GUI_DingDoong
         BUS_ThucDon busThucDon = new BUS_ThucDon();
         string startupPath = Environment.CurrentDirectory;
 
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+        private void FrmLoad()
+        {
+            foreach (var bt in GetAll(this, typeof(Button)))
+            {
+
+
+                (bt as Button).Paint += Bt_Paint;
+
+                (bt as Button).FlatStyle = FlatStyle.Standard;
+               
+
+            }
+
+        }
+
+        private void Bt_Paint(object sender, PaintEventArgs e)
+        {
+            Button bt = sender as Button;
+            ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+        }
+
 
         //Disable textbox & button
         public void Disable_Textbox_Button()
@@ -47,8 +80,12 @@ namespace GUI_DingDoong
 
         private void FormThucDon_Load(object sender, EventArgs e)
         {
+            FrmLoad();
             DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
             DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            pbThucDon.Enabled = false;
+            pbThucDon.BorderStyle = BorderStyle.Fixed3D;
+            
             Disable_Textbox_Button();
         }
 
@@ -102,26 +139,7 @@ namespace GUI_DingDoong
                 MessageBox.Show("Bạn chưa nhập nhóm", "Thông báo");
             }
             else
-            {   if(ptbThucDon.Image is null)
-                {
-                    Image setLogo = Image.FromFile(startupPath + @"\image\logo.jpg");
-                    byte[] arr1;
-                    ImageConverter converter1 = new ImageConverter();
-                    arr1 = (byte[])converter1.ConvertTo(setLogo, typeof(byte[]));
-                    DTO_ThucDon curTD1 = new DTO_ThucDon(txtTenMon.Text, float.Parse(txtDonGia.Text), txtMoTa.Text, txtNhom.Text, arr1);
-                    if (busThucDon.insertThucDon(curTD1))
-                    {
-                        MessageBox.Show("Thêm món vào thực đơn thành công");
-                        DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
-                        DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thêm món vào thực đơn thất bại");
-                    }
-                }
-                else
-                {
+            {   
                     Image img = ptbThucDon.BackgroundImage;
                     byte[] arr;
                     ImageConverter converter = new ImageConverter();
@@ -141,7 +159,6 @@ namespace GUI_DingDoong
                         MessageBox.Show("Thêm món vào thực đơn thất bại");
 
                     }
-                }
                 
             }
 
@@ -171,7 +188,8 @@ namespace GUI_DingDoong
         {
             Enable_Textbox();
             SetNull_Value();
-           
+            ptbThucDon.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
+            ptbThucDon.BackgroundImageLayout = ImageLayout.Stretch;
             txtTenMon.Focus();
 
         }
@@ -179,6 +197,8 @@ namespace GUI_DingDoong
         private void btBoQua_Click(object sender, EventArgs e)
         {
             Disable_Textbox_Button();
+            ptbThucDon.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
+            ptbThucDon.BackgroundImageLayout = ImageLayout.Stretch;
         }
         private void LoadDanhSachThucDon(DataTable dt)
         {
@@ -207,7 +227,6 @@ namespace GUI_DingDoong
                 if(DgvThucDon.CurrentRow.Index < DgvThucDon.Rows.Count - 1)
                 {
                     btOpenDialog.Enabled = true;
-                    btLuu.Enabled = true;
                     btXoa.Enabled = true;
                     btCapNhat.Enabled = true;
                     btBoQua.Enabled = true;
@@ -299,63 +318,53 @@ namespace GUI_DingDoong
 
         private void Home_MouseEnter(object sender, EventArgs e)
         {
-            Home.SizeMode = PictureBoxSizeMode.CenterImage;
-            Home.Cursor = Cursors.Hand;
+            pbHome.SizeMode = PictureBoxSizeMode.CenterImage;
+            pbHome.Cursor = Cursors.Hand;
         }
 
         private void Home_MouseLeave(object sender, EventArgs e)
         {
-            Home.SizeMode = PictureBoxSizeMode.Zoom;
-            Home.Cursor = Cursors.Default;
+            pbHome.SizeMode = PictureBoxSizeMode.Zoom;
+            pbHome.Cursor = Cursors.Default;
         }
 
-        private void NhanVien_MouseEnter(object sender, EventArgs e)
-        {
-            NhanVien.SizeMode = PictureBoxSizeMode.CenterImage;
-            NhanVien.Cursor = Cursors.Hand;
-        }
-
-        private void NhanVien_MouseLeave(object sender, EventArgs e)
-        {
-            NhanVien.SizeMode = PictureBoxSizeMode.Zoom;
-            NhanVien.Cursor = Cursors.Default;
-        }
+        
 
         private void KhachHang_MouseEnter(object sender, EventArgs e)
         {
-            KhachHang.SizeMode = PictureBoxSizeMode.CenterImage;
-            KhachHang.Cursor = Cursors.Hand;
+            pbKhachHang.SizeMode = PictureBoxSizeMode.CenterImage;
+            pbKhachHang.Cursor = Cursors.Hand;
         }
 
         private void KhachHang_MouseLeave(object sender, EventArgs e)
         {
-            KhachHang.SizeMode = PictureBoxSizeMode.Zoom;
-            KhachHang.Cursor = Cursors.Default;
+            pbKhachHang.SizeMode = PictureBoxSizeMode.Zoom;
+            pbKhachHang.Cursor = Cursors.Default;
         }
 
         private void Ban_MouseEnter(object sender, EventArgs e)
         {
-            Ban.SizeMode = PictureBoxSizeMode.CenterImage;
-            Ban.Cursor = Cursors.Hand;
+            pbBan.SizeMode = PictureBoxSizeMode.CenterImage;
+            pbBan.Cursor = Cursors.Hand;
         }
 
         private void Ban_MouseLeave(object sender, EventArgs e)
         {
-            Ban.SizeMode = PictureBoxSizeMode.Zoom;
-            Ban.Cursor = Cursors.Default;
+            pbBan.SizeMode = PictureBoxSizeMode.Zoom;
+            pbBan.Cursor = Cursors.Default;
         }
 
         private void ThongKe_MouseEnter(object sender, EventArgs e)
         {
-            ThongKe.SizeMode = PictureBoxSizeMode.CenterImage;
-            ThongKe.Cursor = Cursors.Hand;
+            pbThongKe.SizeMode = PictureBoxSizeMode.CenterImage;
+            pbThongKe.Cursor = Cursors.Hand;
             
         }
 
         private void ThongKe_MouseLeave(object sender, EventArgs e)
         {
-            ThongKe.SizeMode = PictureBoxSizeMode.Zoom;
-            ThongKe.Cursor = Cursors.Default;
+            pbThongKe.SizeMode = PictureBoxSizeMode.Zoom;
+            pbThongKe.Cursor = Cursors.Default;
         }
 
         private void CheckBoxDanhSach_CheckedChanged(object sender, EventArgs e)
@@ -371,6 +380,72 @@ namespace GUI_DingDoong
                 DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             }
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            FormMain main = new FormMain();
+            this.Hide();
+            main.Closed += (s, args) => this.Close();
+            main.Show();
+            
+        }
+
+        private void FormThucDon_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void NhanVien_Click(object sender, EventArgs e)
+        {
+            FormNhanVien nv = new FormNhanVien();
+            this.Hide();
+            nv.Closed += (s, args) => this.Close();
+            nv.Show();
+        }
+
+        private void NhanVien_MouseEnter_1(object sender, EventArgs e)
+        {
+            pbNhanVien.SizeMode = PictureBoxSizeMode.CenterImage;
+            pbNhanVien.Cursor = Cursors.Hand;
+        }
+
+        private void NhanVien_MouseLeave(object sender, EventArgs e)
+        {
+            pbNhanVien.SizeMode = PictureBoxSizeMode.Zoom;
+            pbNhanVien.Cursor = Cursors.Default;
+        }
+
+        private void KhachHang_Click(object sender, EventArgs e)
+        {
+            FormKhachHang kh = new FormKhachHang();
+            this.Hide();
+            kh.Closed += (s, args) => this.Close();
+            kh.Show();
+        }
+
+        private void Ban_Click(object sender, EventArgs e)
+        {
+            FormKhuVucBan ban = new FormKhuVucBan();
+            this.Hide();
+            ban.Closed += (s, args) => this.Close();
+            ban.Show();
+        }
+
+        private void ThongKe_Click(object sender, EventArgs e)
+        {
+            FormThongKe tk = new FormThongKe();
+            this.Hide();
+            tk.Closed += (s, args) => this.Close();
+            tk.Show();
+        }
+
+        private void pbThucDon_Click(object sender, EventArgs e)
+        {
+            FormThucDon td = new FormThucDon();
+            this.Hide();
+            td.Closed += (s, args) => this.Close();
+            td.Show();
         }
     }
 }

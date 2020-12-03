@@ -168,5 +168,93 @@ namespace DAL_DingDoong
             }
             return false;
         }
+
+        //GET Hình NV
+        public byte[] GetHinhNV(string Email)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_gethinhNV";
+                cmd.Parameters.AddWithValue("email", Email);
+
+                var hinh = (byte[])cmd.ExecuteScalar();
+                return hinh;
+
+            }
+
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        //Xoa nhan vien
+        public bool XoaNhanVien(string email)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "Sp_DeleteNhanVien";
+                cmd.Parameters.AddWithValue("email", email);
+
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+
+            }
+
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
+        //Cap nhat nhan vien
+        public bool CapNhatNhanVien(string emailnhanvien, DTO_NhanVien td)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "Sp_UpdateNhanVien";
+                cmd.Parameters.AddWithValue("email", emailnhanvien);
+                cmd.Parameters.AddWithValue("tenNv", td.TenNV);
+                cmd.Parameters.AddWithValue("diaChi", td.DiaChi);
+                cmd.Parameters.AddWithValue("vaiTro", td.Quyen);
+                cmd.Parameters.AddWithValue("tinhTrang", td.TrangThai);
+                cmd.Parameters.AddWithValue("NgayVaoLam", td.NgayVL);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
     }
 }

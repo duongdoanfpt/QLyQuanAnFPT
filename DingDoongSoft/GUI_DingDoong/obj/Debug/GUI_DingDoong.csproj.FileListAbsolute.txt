@@ -154,3 +154,11 @@ D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong
 D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FromChuyenBan.resources
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormGopBan.resources
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FromChuyenBan.resources
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\BouncyCastle.Crypto.dll
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\itextsharp.dll
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\itextsharp.xml
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormGopBan.resources
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FromChuyenBan.resources
+D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\BouncyCastle.Crypto.dll
+D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\itextsharp.dll
+D:\DINGDONGSOFT\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\itextsharp.xml
