@@ -269,7 +269,7 @@
             this.pnlHoTro.BackColor = System.Drawing.Color.Crimson;
             this.pnlHoTro.Controls.Add(this.lblHoTro);
             this.pnlHoTro.Controls.Add(this.pbHoTro);
-            this.pnlHoTro.Location = new System.Drawing.Point(524, 447);
+            this.pnlHoTro.Location = new System.Drawing.Point(508, 450);
             this.pnlHoTro.Name = "pnlHoTro";
             this.pnlHoTro.Size = new System.Drawing.Size(125, 125);
             this.pnlHoTro.TabIndex = 17;
@@ -302,7 +302,7 @@
             this.pnlHuongDan.BackColor = System.Drawing.Color.DeepPink;
             this.pnlHuongDan.Controls.Add(this.lblHuongDan);
             this.pnlHuongDan.Controls.Add(this.pbHuongDan);
-            this.pnlHuongDan.Location = new System.Drawing.Point(393, 447);
+            this.pnlHuongDan.Location = new System.Drawing.Point(377, 450);
             this.pnlHuongDan.Name = "pnlHuongDan";
             this.pnlHuongDan.Size = new System.Drawing.Size(125, 125);
             this.pnlHuongDan.TabIndex = 16;
@@ -335,7 +335,7 @@
             this.pnlKhuyenMai.BackColor = System.Drawing.Color.Green;
             this.pnlKhuyenMai.Controls.Add(this.lblKhuyenMai);
             this.pnlKhuyenMai.Controls.Add(this.pbKhuyenMai);
-            this.pnlKhuyenMai.Location = new System.Drawing.Point(524, 185);
+            this.pnlKhuyenMai.Location = new System.Drawing.Point(508, 188);
             this.pnlKhuyenMai.Name = "pnlKhuyenMai";
             this.pnlKhuyenMai.Size = new System.Drawing.Size(125, 125);
             this.pnlKhuyenMai.TabIndex = 15;
@@ -369,7 +369,7 @@
             this.pnlThongKe.BackColor = System.Drawing.Color.DarkMagenta;
             this.pnlThongKe.Controls.Add(this.pbThongKe);
             this.pnlThongKe.Controls.Add(this.lblThongKe);
-            this.pnlThongKe.Location = new System.Drawing.Point(393, 316);
+            this.pnlThongKe.Location = new System.Drawing.Point(377, 319);
             this.pnlThongKe.Name = "pnlThongKe";
             this.pnlThongKe.Size = new System.Drawing.Size(256, 125);
             this.pnlThongKe.TabIndex = 14;
@@ -402,7 +402,7 @@
             this.pnlMenu.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pnlMenu.Controls.Add(this.lblMenu);
             this.pnlMenu.Controls.Add(this.pbMenu);
-            this.pnlMenu.Location = new System.Drawing.Point(393, 185);
+            this.pnlMenu.Location = new System.Drawing.Point(377, 188);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(125, 125);
             this.pnlMenu.TabIndex = 13;
@@ -483,23 +483,23 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.lbDayofweek);
             this.panel1.Controls.Add(this.LbYear);
             this.panel1.Controls.Add(this.lbMonth);
             this.panel1.Controls.Add(this.lbDate);
             this.panel1.Controls.Add(this.lbTime);
-            this.panel1.Location = new System.Drawing.Point(656, 185);
+            this.panel1.Location = new System.Drawing.Point(702, 185);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(337, 384);
+            this.panel1.Size = new System.Drawing.Size(291, 384);
             this.panel1.TabIndex = 25;
             // 
             // lbDayofweek
             // 
             this.lbDayofweek.AutoSize = true;
             this.lbDayofweek.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDayofweek.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbDayofweek.Location = new System.Drawing.Point(187, 236);
+            this.lbDayofweek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbDayofweek.Location = new System.Drawing.Point(187, 237);
             this.lbDayofweek.Name = "lbDayofweek";
             this.lbDayofweek.Size = new System.Drawing.Size(143, 109);
             this.lbDayofweek.TabIndex = 4;
@@ -509,8 +509,8 @@
             // 
             this.LbYear.AutoSize = true;
             this.LbYear.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbYear.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LbYear.Location = new System.Drawing.Point(110, 296);
+            this.LbYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LbYear.Location = new System.Drawing.Point(97, 280);
             this.LbYear.Name = "LbYear";
             this.LbYear.Size = new System.Drawing.Size(71, 33);
             this.LbYear.TabIndex = 3;
@@ -520,8 +520,8 @@
             // 
             this.lbMonth.AutoSize = true;
             this.lbMonth.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMonth.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbMonth.Location = new System.Drawing.Point(108, 250);
+            this.lbMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbMonth.Location = new System.Drawing.Point(95, 234);
             this.lbMonth.Name = "lbMonth";
             this.lbMonth.Size = new System.Drawing.Size(94, 46);
             this.lbMonth.TabIndex = 2;
@@ -531,8 +531,8 @@
             // 
             this.lbDate.AutoSize = true;
             this.lbDate.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbDate.Location = new System.Drawing.Point(-1, 234);
+            this.lbDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbDate.Location = new System.Drawing.Point(-19, 209);
             this.lbDate.Name = "lbDate";
             this.lbDate.Size = new System.Drawing.Size(143, 109);
             this.lbDate.TabIndex = 1;
@@ -541,11 +541,11 @@
             // lbTime
             // 
             this.lbTime.AutoSize = true;
-            this.lbTime.Font = new System.Drawing.Font("Impact", 68F, System.Drawing.FontStyle.Bold);
-            this.lbTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbTime.Location = new System.Drawing.Point(-1, 66);
+            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 57F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbTime.Location = new System.Drawing.Point(17, 58);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(276, 112);
+            this.lbTime.Size = new System.Drawing.Size(260, 101);
             this.lbTime.TabIndex = 0;
             this.lbTime.Text = "label1";
             // 
