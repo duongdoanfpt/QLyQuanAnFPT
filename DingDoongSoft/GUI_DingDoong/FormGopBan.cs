@@ -21,11 +21,11 @@ namespace GUI_DingDoong
             InitializeComponent();
             OldBan = Ban;
         }
-        private void LoadBanMo()
+        private void LoadBanMo(string VitriBan)
         {
             foreach (DataRow dr in busBan.dtBan().Rows)
             {
-                if ((int)dr[2] == 1)
+                if ((int)dr[2] == 1 && string.Compare(dr[1].ToString(),VitriBan,true)!=0)
                 {
                     cbBan.Items.Add(dr[1].ToString());
                 }
@@ -36,7 +36,7 @@ namespace GUI_DingDoong
         private void FormGopBan_Load(object sender, EventArgs e)
         {
 
-            LoadBanMo();
+            LoadBanMo(OldBan.TenBan);
         }
 
         private void btOK_Click(object sender, EventArgs e)

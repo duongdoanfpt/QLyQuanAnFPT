@@ -93,6 +93,43 @@ namespace GUI_DingDoong
                 MessageBox.Show("Email Không tồn tại");
             }
         }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                DTO_NhanVien nv = new DTO_NhanVien();
+                nv.Email = txtEmail.Text;
+                nv.MatKhau = busnhanvien.Encryption(txtPassword.Text);
+
+                if (busnhanvien.NhanVienDangNhap(nv))
+                {
+
+                    MessageBox.Show("Đăng nhập thành công");
+                    emailGET = nv.Email;
+                    FormMain frmMain = new FormMain();
+                    this.Hide();
+
+                    frmMain.Closed += (s, args) => this.Close();
+                    frmMain.Show();
+                    //this.Close();
+                    //CheckDangNhap = 1;
+                    //Visible = false;
+                    //ShowInTaskbar = false;
+                    //FormMain frmMainN = new FormMain(CheckDangNhap);
+                    //frmMainN.Activate();
+                    //frmMainN.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu sai");
+                    txtEmail.Text = null;
+                    txtPassword.Text = null;
+                    txtEmail.Focus();
+                }
+            }    
+        }
     }
 }
 
