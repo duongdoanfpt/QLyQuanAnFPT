@@ -1043,7 +1043,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1083F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1086F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1069F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
@@ -1067,6 +1067,7 @@ namespace GUI_DingDoong
             this.pbThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbThongKe.TabIndex = 5;
             this.pbThongKe.TabStop = false;
+            this.pbThongKe.Click += new System.EventHandler(this.pbThongKe_Click);
             // 
             // pbBan
             // 
@@ -1077,6 +1078,7 @@ namespace GUI_DingDoong
             this.pbBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBan.TabIndex = 4;
             this.pbBan.TabStop = false;
+            this.pbBan.Click += new System.EventHandler(this.pbBan_Click);
             // 
             // pbKhachHang
             // 
@@ -1087,13 +1089,14 @@ namespace GUI_DingDoong
             this.pbKhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbKhachHang.TabIndex = 3;
             this.pbKhachHang.TabStop = false;
+            this.pbKhachHang.Click += new System.EventHandler(this.pbKhachHang_Click);
             // 
             // lbEmailNV
             // 
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmailNV.Location = new System.Drawing.Point(1154, 9);
+            this.lbEmailNV.Location = new System.Drawing.Point(1157, 9);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
@@ -1108,6 +1111,7 @@ namespace GUI_DingDoong
             this.pbNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbNhanVien.TabIndex = 2;
             this.pbNhanVien.TabStop = false;
+            this.pbNhanVien.Click += new System.EventHandler(this.pbNhanVien_Click);
             // 
             // pbHome
             // 
@@ -1118,6 +1122,7 @@ namespace GUI_DingDoong
             this.pbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbHome.TabIndex = 1;
             this.pbHome.TabStop = false;
+            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
             // 
             // timer1
             // 
