@@ -30,12 +30,12 @@ namespace GUI_DingDoong
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbThongKe = new System.Windows.Forms.PictureBox();
+            this.pbBan = new System.Windows.Forms.PictureBox();
+            this.pbKhachHang = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbNhanVien = new System.Windows.Forms.PictureBox();
+            this.pbHome = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -63,11 +63,11 @@ namespace GUI_DingDoong
             this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKhachHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -86,13 +86,13 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1120F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1123F));
+            this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pbNhanVien, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pbHome, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -100,66 +100,71 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1262, 37);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // pictureBox5
+            // pbThongKe
             // 
-            this.pictureBox5.Image = global::GUI_DingDoong.Properties.Resources.Fasticon_Database_Table_edit1;
-            this.pictureBox5.Location = new System.Drawing.Point(218, 6);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(44, 25);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
+            this.pbThongKe.Image = global::GUI_DingDoong.Properties.Resources.Fasticon_Database_Table_edit1;
+            this.pbThongKe.Location = new System.Drawing.Point(218, 6);
+            this.pbThongKe.Name = "pbThongKe";
+            this.pbThongKe.Size = new System.Drawing.Size(44, 25);
+            this.pbThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbThongKe.TabIndex = 5;
+            this.pbThongKe.TabStop = false;
+            this.pbThongKe.Click += new System.EventHandler(this.pbThongKe_Click);
             // 
-            // pictureBox4
+            // pbBan
             // 
-            this.pictureBox4.Image = global::GUI_DingDoong.Properties.Resources.Chrisl21_Minecraft_Crafting_Table2;
-            this.pictureBox4.Location = new System.Drawing.Point(165, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(44, 25);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.pbBan.Image = global::GUI_DingDoong.Properties.Resources.Chrisl21_Minecraft_Crafting_Table2;
+            this.pbBan.Location = new System.Drawing.Point(165, 6);
+            this.pbBan.Name = "pbBan";
+            this.pbBan.Size = new System.Drawing.Size(44, 25);
+            this.pbBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBan.TabIndex = 4;
+            this.pbBan.TabStop = false;
+            this.pbBan.Click += new System.EventHandler(this.pbBan_Click);
             // 
-            // pictureBox3
+            // pbKhachHang
             // 
-            this.pictureBox3.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Basic_User_Group2;
-            this.pictureBox3.Location = new System.Drawing.Point(112, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.pbKhachHang.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Basic_User_Group2;
+            this.pbKhachHang.Location = new System.Drawing.Point(112, 6);
+            this.pbKhachHang.Name = "pbKhachHang";
+            this.pbKhachHang.Size = new System.Drawing.Size(44, 25);
+            this.pbKhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbKhachHang.TabIndex = 3;
+            this.pbKhachHang.TabStop = false;
+            this.pbKhachHang.Click += new System.EventHandler(this.pbKhachHang_Click);
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1223, 8);
+            this.label7.Location = new System.Drawing.Point(1226, 8);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(162, 21);
             this.label7.TabIndex = 6;
             this.label7.Text = "email123@gmail.com";
             // 
-            // pictureBox2
+            // pbNhanVien
             // 
-            this.pictureBox2.Image = global::GUI_DingDoong.Properties.Resources.Icons_Land_Vista_People_Office_Customer_Male_Light1;
-            this.pictureBox2.Location = new System.Drawing.Point(59, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.pbNhanVien.Image = global::GUI_DingDoong.Properties.Resources.Icons_Land_Vista_People_Office_Customer_Male_Light1;
+            this.pbNhanVien.Location = new System.Drawing.Point(59, 6);
+            this.pbNhanVien.Name = "pbNhanVien";
+            this.pbNhanVien.Size = new System.Drawing.Size(44, 25);
+            this.pbNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbNhanVien.TabIndex = 2;
+            this.pbNhanVien.TabStop = false;
+            this.pbNhanVien.Click += new System.EventHandler(this.pbNhanVien_Click);
             // 
-            // pictureBox1
+            // pbHome
             // 
-            this.pictureBox1.Image = global::GUI_DingDoong.Properties.Resources.Apathae_Chakram_2_Home1;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pbHome.Image = global::GUI_DingDoong.Properties.Resources.Apathae_Chakram_2_Home1;
+            this.pbHome.Location = new System.Drawing.Point(6, 6);
+            this.pbHome.Name = "pbHome";
+            this.pbHome.Size = new System.Drawing.Size(44, 25);
+            this.pbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHome.TabIndex = 1;
+            this.pbHome.TabStop = false;
+            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
             // 
             // panel1
             // 
@@ -198,7 +203,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.06536F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.29785F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.dtpNgaySinh, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.rdNu, 6, 0);
@@ -225,9 +230,9 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(152, 53);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(151, 53);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(299, 20);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(298, 20);
             this.dtpNgaySinh.TabIndex = 11;
             // 
             // rdNu
@@ -236,7 +241,7 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rdNu.AutoSize = true;
             this.rdNu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdNu.Location = new System.Drawing.Point(1071, 3);
+            this.rdNu.Location = new System.Drawing.Point(1067, 3);
             this.rdNu.Name = "rdNu";
             this.rdNu.Size = new System.Drawing.Size(55, 44);
             this.rdNu.TabIndex = 10;
@@ -249,7 +254,7 @@ namespace GUI_DingDoong
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(890, 12);
+            this.label5.Location = new System.Drawing.Point(886, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 25);
             this.label5.TabIndex = 8;
@@ -259,9 +264,9 @@ namespace GUI_DingDoong
             // 
             this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(584, 8);
+            this.txtSDT.Location = new System.Drawing.Point(582, 8);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(292, 33);
+            this.txtSDT.Size = new System.Drawing.Size(291, 33);
             this.txtSDT.TabIndex = 5;
             // 
             // label3
@@ -269,7 +274,7 @@ namespace GUI_DingDoong
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(457, 0);
+            this.label3.Location = new System.Drawing.Point(455, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 50);
             this.label3.TabIndex = 4;
@@ -301,9 +306,9 @@ namespace GUI_DingDoong
             // 
             this.txtTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTen.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen.Location = new System.Drawing.Point(152, 8);
+            this.txtTen.Location = new System.Drawing.Point(151, 8);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(299, 33);
+            this.txtTen.Size = new System.Drawing.Size(298, 33);
             this.txtTen.TabIndex = 2;
             // 
             // label4
@@ -311,7 +316,7 @@ namespace GUI_DingDoong
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(457, 62);
+            this.label4.Location = new System.Drawing.Point(455, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 25);
             this.label4.TabIndex = 6;
@@ -321,9 +326,9 @@ namespace GUI_DingDoong
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(584, 58);
+            this.txtEmail.Location = new System.Drawing.Point(582, 58);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(292, 33);
+            this.txtEmail.Size = new System.Drawing.Size(291, 33);
             this.txtEmail.TabIndex = 7;
             // 
             // rdNam
@@ -332,7 +337,7 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rdNam.AutoSize = true;
             this.rdNam.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdNam.Location = new System.Drawing.Point(994, 3);
+            this.rdNam.Location = new System.Drawing.Point(990, 3);
             this.rdNam.Name = "rdNam";
             this.rdNam.Size = new System.Drawing.Size(70, 44);
             this.rdNam.TabIndex = 9;
@@ -537,11 +542,11 @@ namespace GUI_DingDoong
             this.Load += new System.EventHandler(this.FormKhachHang_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKhachHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -556,11 +561,11 @@ namespace GUI_DingDoong
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pbHome;
+        private System.Windows.Forms.PictureBox pbNhanVien;
+        private System.Windows.Forms.PictureBox pbKhachHang;
+        private System.Windows.Forms.PictureBox pbBan;
+        private System.Windows.Forms.PictureBox pbThongKe;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.RadioButton rdNu;
