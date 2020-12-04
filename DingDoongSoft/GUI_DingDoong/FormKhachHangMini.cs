@@ -60,6 +60,9 @@ namespace GUI_DingDoong
         {
             if(isOld == 1)
             {
+                MessageBox.Show(txtSDT.Text);
+                FormKhuVucBan.hd.SDT_KH = txtSDT.Text;
+                busBan.UpdateKHvaoHDTam(FormKhuVucBan.hd.MaHD, txtSDT.Text);
                 this.Close();
             }
             else
@@ -70,8 +73,9 @@ namespace GUI_DingDoong
                 DTO_Khach KhachHang = new DTO_Khach(txtTenKH.Text, txtSDT.Text, dtpNgS.Value.Date, txtEmail.Text, gioitinh);
                 if(busKH.insertKhach(KhachHang))
                 {
-                    FormKhuVucBan.hd.SDT_KH = KhachHang.SDT;
-                    busBan.UpdateKHvaoHDTam(FormKhuVucBan.hd.MaHD,KhachHang.SDT);
+                    MessageBox.Show(txtSDT.Text);
+                    FormKhuVucBan.hd.SDT_KH = txtSDT.Text;
+                    busBan.UpdateKHvaoHDTam(FormKhuVucBan.hd.MaHD,txtSDT.Text);
                     this.Close();
                 }
                 else

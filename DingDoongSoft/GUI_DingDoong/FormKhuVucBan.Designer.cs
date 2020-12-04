@@ -281,6 +281,7 @@ namespace GUI_DingDoong
             this.dgvHDCT.RowHeadersWidth = 51;
             this.dgvHDCT.Size = new System.Drawing.Size(403, 340);
             this.dgvHDCT.TabIndex = 1;
+            this.dgvHDCT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDCT_CellClick);
             // 
             // Column1
             // 
@@ -864,7 +865,7 @@ namespace GUI_DingDoong
             this.dgvThucDon.RowHeadersWidth = 51;
             this.dgvThucDon.Size = new System.Drawing.Size(288, 399);
             this.dgvThucDon.TabIndex = 3;
-            this.dgvThucDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucDon_CellDoubleClick);
+            this.dgvThucDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucDon_CellClick);
             // 
             // TenTD
             // 
@@ -965,6 +966,7 @@ namespace GUI_DingDoong
             this.btRemove1.TabIndex = 7;
             this.btRemove1.Text = ">";
             this.btRemove1.UseVisualStyleBackColor = true;
+            this.btRemove1.Click += new System.EventHandler(this.btRemove1_Click);
             // 
             // btAdd1
             // 
@@ -977,6 +979,7 @@ namespace GUI_DingDoong
             this.btAdd1.TabIndex = 6;
             this.btAdd1.Text = "<";
             this.btAdd1.UseVisualStyleBackColor = true;
+            this.btAdd1.Click += new System.EventHandler(this.btAdd1_Click);
             // 
             // btXoa
             // 
@@ -989,6 +992,7 @@ namespace GUI_DingDoong
             this.btXoa.TabIndex = 3;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btLamMoi
             // 
@@ -1013,7 +1017,7 @@ namespace GUI_DingDoong
             this.btGopBan.TabIndex = 1;
             this.btGopBan.Text = "Gộp bàn";
             this.btGopBan.UseVisualStyleBackColor = true;
-            this.btGopBan.Click += new System.EventHandler(this.button7_Click);
+            this.btGopBan.Click += new System.EventHandler(this.btGopBan_Click);
             // 
             // btChuyenBan
             // 
@@ -1026,6 +1030,7 @@ namespace GUI_DingDoong
             this.btChuyenBan.TabIndex = 0;
             this.btChuyenBan.Text = "Chuyển bàn";
             this.btChuyenBan.UseVisualStyleBackColor = true;
+            this.btChuyenBan.Click += new System.EventHandler(this.btChuyenBan_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -1038,7 +1043,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1074F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1080F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1069F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
@@ -1088,7 +1093,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmailNV.Location = new System.Drawing.Point(1145, 9);
+            this.lbEmailNV.Location = new System.Drawing.Point(1151, 9);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
