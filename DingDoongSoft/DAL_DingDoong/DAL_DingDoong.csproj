@@ -55,6 +55,7 @@
     <Compile Include="DAL_Khach.cs" />
     <Compile Include="DAL_KhuyenMai.cs" />
     <Compile Include="DAL_NhanVien.cs" />
+    <Compile Include="DAL_ThongKe.cs" />
     <Compile Include="DAL_ThucDon.cs" />
     <Compile Include="Dbconnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
