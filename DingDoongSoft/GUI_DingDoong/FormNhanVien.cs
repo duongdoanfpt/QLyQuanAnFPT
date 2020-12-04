@@ -128,6 +128,8 @@ namespace GUI_DingDoong
         private void btThem_Click(object sender, EventArgs e) //BtnThem
         {
             Enable_Textbox();
+            pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
+            pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
             SetNull_Value();
         }
 
@@ -237,7 +239,7 @@ namespace GUI_DingDoong
 
                 if (busnhanvien.inserNhanVien(curNV))
                 {
-                    MessageBox.Show("Thêm món vào thực đơn thành công");
+                    MessageBox.Show("Thêm nhân viên thành công");
                     dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                     dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     //pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
@@ -247,7 +249,7 @@ namespace GUI_DingDoong
                 }
                 else
                 {
-                    MessageBox.Show("Thêm món vào thực đơn thất bại");
+                    MessageBox.Show("Thêm nhân viên thất bại");
 
                 }
 
@@ -281,6 +283,7 @@ namespace GUI_DingDoong
                     txtEmail.Text = td.Email;
                     txtTenNhanVien.Text = td.TenNV;
                     txtDiaChi.Text = td.DiaChi;
+                    
 
                     if (td.Quyen == 1)
                         rdQuanLy.Checked = true;
@@ -289,14 +292,89 @@ namespace GUI_DingDoong
 
                     dateTimeNVL.Text = td.NgayVL.ToString();
 
-
-                    MemoryStream mem = new MemoryStream(busnhanvien.getHinhNV(td.Email)); 
+                    MessageBox.Show(td.MaNV);
+                    MemoryStream mem = new MemoryStream(busnhanvien.getHinhNV(td.MaNV)); 
                     pbHinh.BackgroundImage = Image.FromStream(mem);
                     pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
 
 
                 }
             }
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
+            if (busnhanvien.XoaNhanVien(td.Email))
+            {
+                MessageBox.Show("Xóa nhân viên thành công", "Thông báo");
+                dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
+                dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            }
+            else
+            {
+                MessageBox.Show("Xóa nhân viên thất bại", "Thông báo");
+            }
+        }
+
+        private void btCapNhat_Click(object sender, EventArgs e)
+        {
+            int vaitro = 0;
+            if (rdQuanLy.Checked)
+            {
+                vaitro = 1;
+            }
+
+            if (txtEmail.Text.Trim().Length == 0) //Check Email Null
+            {
+                MessageBox.Show("Bạn phải nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.Focus();
+                return;
+            }
+            else if (!Isvaild(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Email bạn nhập sai, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtTenNhanVien.Text) || string.IsNullOrWhiteSpace(txtTenNhanVien.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập tên nhân viên", "Thông báo");
+            }
+            else if (string.IsNullOrEmpty(txtDiaChi.Text) || string.IsNullOrWhiteSpace(txtDiaChi.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập đơn giá", "Thông báo");
+            }
+
+            else
+            {
+
+                Image img = pbHinh.BackgroundImage;
+                byte[] arr;
+                ImageConverter converter = new ImageConverter();
+                arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
+                DTO_NhanVien td =  busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
+                DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr);
+                curNV.TrangThai = 1;
+                MessageBox.Show(td.MaNV + curNV.TenNV + curNV.Email+ curNV.DiaChi+ curNV.NgayVL+vaitro+ arr);
+
+                if (busnhanvien.CapNhatNhanVien(td.MaNV, curNV))
+                {
+                    MessageBox.Show("Cập nhật thành công");
+                    dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
+                    dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật thất bại");
+
+                }
+            }
+
         }
     }
 }

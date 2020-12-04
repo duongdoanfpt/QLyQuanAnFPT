@@ -42,14 +42,24 @@ namespace BUS_DingDoong
 
         }
 
-        public byte[] getHinhNV(string Email)
+        public byte[] getHinhNV(string manv)
         {
-            return dALNhanVien.GetHinhNV(Email);
+            return dALNhanVien.GetHinhNV(manv);
         }
 
         public bool NhanVienDangNhap(DTO_NhanVien nv)
         {
             return dALNhanVien.NhanVienDangNhap(nv);
+        }
+
+        public bool XoaNhanVien(string email)
+        {
+            return dALNhanVien.XoaNhanVien(email);
+        }
+
+        public bool CapNhatNhanVien(string MaNV, DTO_NhanVien td)
+        {
+            return dALNhanVien.CapNhatNhanVien(MaNV, td);
         }
 
         //HamMaHoa
