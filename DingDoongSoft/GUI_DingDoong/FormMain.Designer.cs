@@ -58,13 +58,12 @@
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pbMenu = new System.Windows.Forms.PictureBox();
             this.lblMenu = new System.Windows.Forms.Label();
-            this.lblMainTitle = new System.Windows.Forms.Label();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblEmailMain = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAccounts)).BeginInit();
             this.pnlCaiDat.SuspendLayout();
@@ -88,6 +87,7 @@
             this.pnlLogo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAccounts
@@ -95,7 +95,7 @@
             this.pnlAccounts.BackColor = System.Drawing.Color.Purple;
             this.pnlAccounts.Controls.Add(this.lblAccounts);
             this.pnlAccounts.Controls.Add(this.pbAccounts);
-            this.pnlAccounts.Location = new System.Drawing.Point(179, 409);
+            this.pnlAccounts.Location = new System.Drawing.Point(179, 447);
             this.pnlAccounts.Name = "pnlAccounts";
             this.pnlAccounts.Size = new System.Drawing.Size(125, 125);
             this.pnlAccounts.TabIndex = 12;
@@ -129,7 +129,7 @@
             this.pnlCaiDat.BackColor = System.Drawing.Color.DarkOrange;
             this.pnlCaiDat.Controls.Add(this.pbCaiDat);
             this.pnlCaiDat.Controls.Add(this.lblCaiDat);
-            this.pnlCaiDat.Location = new System.Drawing.Point(48, 409);
+            this.pnlCaiDat.Location = new System.Drawing.Point(48, 447);
             this.pnlCaiDat.Name = "pnlCaiDat";
             this.pnlCaiDat.Size = new System.Drawing.Size(125, 125);
             this.pnlCaiDat.TabIndex = 11;
@@ -161,7 +161,7 @@
             this.pnlKhachHang.BackColor = System.Drawing.Color.Red;
             this.pnlKhachHang.Controls.Add(this.pbKhachHang);
             this.pnlKhachHang.Controls.Add(this.lblKhachHang);
-            this.pnlKhachHang.Location = new System.Drawing.Point(179, 147);
+            this.pnlKhachHang.Location = new System.Drawing.Point(179, 185);
             this.pnlKhachHang.Name = "pnlKhachHang";
             this.pnlKhachHang.Size = new System.Drawing.Size(125, 125);
             this.pnlKhachHang.TabIndex = 10;
@@ -193,7 +193,7 @@
             this.pnlQuanLyBan.BackColor = System.Drawing.Color.Blue;
             this.pnlQuanLyBan.Controls.Add(this.pbQuanLyBan);
             this.pnlQuanLyBan.Controls.Add(this.lblQuanLyBan);
-            this.pnlQuanLyBan.Location = new System.Drawing.Point(48, 278);
+            this.pnlQuanLyBan.Location = new System.Drawing.Point(48, 316);
             this.pnlQuanLyBan.Name = "pnlQuanLyBan";
             this.pnlQuanLyBan.Size = new System.Drawing.Size(256, 125);
             this.pnlQuanLyBan.TabIndex = 9;
@@ -225,7 +225,7 @@
             this.pnlNhanVien.BackColor = System.Drawing.Color.Crimson;
             this.pnlNhanVien.Controls.Add(this.lblNhanVien);
             this.pnlNhanVien.Controls.Add(this.pbNhanVien);
-            this.pnlNhanVien.Location = new System.Drawing.Point(48, 147);
+            this.pnlNhanVien.Location = new System.Drawing.Point(48, 185);
             this.pnlNhanVien.Name = "pnlNhanVien";
             this.pnlNhanVien.Size = new System.Drawing.Size(125, 125);
             this.pnlNhanVien.TabIndex = 8;
@@ -257,7 +257,7 @@
             this.pnlHoTro.BackColor = System.Drawing.Color.Crimson;
             this.pnlHoTro.Controls.Add(this.pbHoTro);
             this.pnlHoTro.Controls.Add(this.lblHoTro);
-            this.pnlHoTro.Location = new System.Drawing.Point(524, 409);
+            this.pnlHoTro.Location = new System.Drawing.Point(524, 447);
             this.pnlHoTro.Name = "pnlHoTro";
             this.pnlHoTro.Size = new System.Drawing.Size(125, 125);
             this.pnlHoTro.TabIndex = 17;
@@ -289,7 +289,7 @@
             this.pnlHuongDan.BackColor = System.Drawing.Color.DeepPink;
             this.pnlHuongDan.Controls.Add(this.pbHuongDan);
             this.pnlHuongDan.Controls.Add(this.lblHuongDan);
-            this.pnlHuongDan.Location = new System.Drawing.Point(393, 409);
+            this.pnlHuongDan.Location = new System.Drawing.Point(393, 447);
             this.pnlHuongDan.Name = "pnlHuongDan";
             this.pnlHuongDan.Size = new System.Drawing.Size(125, 125);
             this.pnlHuongDan.TabIndex = 16;
@@ -321,7 +321,7 @@
             this.pnlKhuyenMai.BackColor = System.Drawing.Color.Green;
             this.pnlKhuyenMai.Controls.Add(this.pbKhuyenMai);
             this.pnlKhuyenMai.Controls.Add(this.lblKhuyenMai);
-            this.pnlKhuyenMai.Location = new System.Drawing.Point(524, 147);
+            this.pnlKhuyenMai.Location = new System.Drawing.Point(524, 185);
             this.pnlKhuyenMai.Name = "pnlKhuyenMai";
             this.pnlKhuyenMai.Size = new System.Drawing.Size(125, 125);
             this.pnlKhuyenMai.TabIndex = 15;
@@ -353,7 +353,7 @@
             this.pnlThongKe.BackColor = System.Drawing.Color.DarkMagenta;
             this.pnlThongKe.Controls.Add(this.pbThongKe);
             this.pnlThongKe.Controls.Add(this.lblThongKe);
-            this.pnlThongKe.Location = new System.Drawing.Point(393, 278);
+            this.pnlThongKe.Location = new System.Drawing.Point(393, 316);
             this.pnlThongKe.Name = "pnlThongKe";
             this.pnlThongKe.Size = new System.Drawing.Size(256, 125);
             this.pnlThongKe.TabIndex = 14;
@@ -385,7 +385,7 @@
             this.pnlMenu.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pnlMenu.Controls.Add(this.pbMenu);
             this.pnlMenu.Controls.Add(this.lblMenu);
-            this.pnlMenu.Location = new System.Drawing.Point(393, 147);
+            this.pnlMenu.Location = new System.Drawing.Point(393, 185);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(125, 125);
             this.pnlMenu.TabIndex = 13;
@@ -412,22 +412,11 @@
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "Quản lý Menu";
             // 
-            // lblMainTitle
-            // 
-            this.lblMainTitle.AutoSize = true;
-            this.lblMainTitle.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMainTitle.ForeColor = System.Drawing.Color.Khaki;
-            this.lblMainTitle.Location = new System.Drawing.Point(47, 26);
-            this.lblMainTitle.Name = "lblMainTitle";
-            this.lblMainTitle.Size = new System.Drawing.Size(288, 47);
-            this.lblMainTitle.TabIndex = 5;
-            this.lblMainTitle.Text = "DingDoong Soft";
-            // 
             // pnlLogo
             // 
             this.pnlLogo.BackColor = System.Drawing.Color.Red;
             this.pnlLogo.Controls.Add(this.lblLogo);
-            this.pnlLogo.Location = new System.Drawing.Point(725, 409);
+            this.pnlLogo.Location = new System.Drawing.Point(725, 447);
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(256, 125);
             this.pnlLogo.TabIndex = 18;
@@ -443,24 +432,13 @@
             this.lblLogo.TabIndex = 2;
             this.lblLogo.Text = "DINGDOONG LOGO";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(50, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(564, 30);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Chào mừng bạn đến DingDoong - Phần mềm quản lý quán ăn";
-            // 
             // lblEmailMain
             // 
             this.lblEmailMain.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEmailMain.AutoSize = true;
             this.lblEmailMain.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailMain.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblEmailMain.Location = new System.Drawing.Point(403, 5);
+            this.lblEmailMain.Location = new System.Drawing.Point(356, 5);
             this.lblEmailMain.Name = "lblEmailMain";
             this.lblEmailMain.Size = new System.Drawing.Size(166, 25);
             this.lblEmailMain.TabIndex = 21;
@@ -473,11 +451,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.372549F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblEmailMain, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(393, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(444, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(612, 35);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(561, 35);
             this.tableLayoutPanel1.TabIndex = 22;
             // 
             // pictureBox1
@@ -487,12 +465,20 @@
             this.pictureBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.pictureBox1.BackgroundImage = global::GUI_DingDoong.Properties.Resources.appbar_chevron_down;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(575, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(528, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 29);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 29);
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.btThoat_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(55, 27);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(308, 120);
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
             // 
             // FormMain
             // 
@@ -501,10 +487,9 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(1005, 613);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlLogo);
-            this.Controls.Add(this.lblMainTitle);
             this.Controls.Add(this.pnlHoTro);
             this.Controls.Add(this.pnlHuongDan);
             this.Controls.Add(this.pnlKhuyenMai);
@@ -557,8 +542,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -594,13 +579,12 @@
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.PictureBox pbMenu;
         private System.Windows.Forms.Label lblMenu;
-        private System.Windows.Forms.Label lblMainTitle;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label lblLogo;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblEmailMain;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
