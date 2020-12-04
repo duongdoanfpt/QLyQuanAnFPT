@@ -295,7 +295,7 @@ namespace GUI_DingDoong
                         rdNhanVien.Checked = true;
 
                     dateTimeNVL.Text = td.NgayVL.ToString();
-
+                    MessageBox.Show(td.MaNV);
                     
                     MemoryStream mem = new MemoryStream(busnhanvien.getHinhNV(td.MaNV)); 
                     pbHinh.BackgroundImage = Image.FromStream(mem);
