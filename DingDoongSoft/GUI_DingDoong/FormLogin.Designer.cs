@@ -49,22 +49,22 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.pbLogo, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(71, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(66, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(281, 121);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(311, 140);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pbLogo
             // 
             this.pbLogo.AccessibleName = "pbLogo";
             this.pbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbLogo.BackgroundImage = global::GUI_DingDoong.Properties.Resources.logo;
+            this.pbLogo.BackgroundImage = global::GUI_DingDoong.Properties.Resources._2c4d299dffa30efd57b2_removebg;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLogo.Location = new System.Drawing.Point(65, 8);
+            this.pbLogo.Location = new System.Drawing.Point(66, 6);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(150, 105);
+            this.pbLogo.Size = new System.Drawing.Size(179, 127);
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
@@ -85,11 +85,11 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(151, 136);
+            this.lblLogin.Location = new System.Drawing.Point(106, 137);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(120, 50);
+            this.lblLogin.Size = new System.Drawing.Size(218, 50);
             this.lblLogin.TabIndex = 2;
-            this.lblLogin.Text = "Login";
+            this.lblLogin.Text = "Đăng Nhập";
             // 
             // lblEmail
             // 
@@ -154,9 +154,9 @@
             this.lblForgotPass.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblForgotPass.Location = new System.Drawing.Point(239, 359);
             this.lblForgotPass.Name = "lblForgotPass";
-            this.lblForgotPass.Size = new System.Drawing.Size(147, 21);
+            this.lblForgotPass.Size = new System.Drawing.Size(138, 21);
             this.lblForgotPass.TabIndex = 8;
-            this.lblForgotPass.Text = "Forgot password ?";
+            this.lblForgotPass.Text = "Quên mật khẩu ?";
             this.lblForgotPass.Click += new System.EventHandler(this.lblForgotPass_Click);
             // 
             // btLogin
