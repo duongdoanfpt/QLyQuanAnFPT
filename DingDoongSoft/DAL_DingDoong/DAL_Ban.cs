@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DTO_DingDoong;
 
 
@@ -25,6 +26,27 @@ namespace DAL_DingDoong
                 DataTable dtBan = new DataTable();
                 dtBan.Load(cm.ExecuteReader());
                 return dtBan;
+            }
+            finally
+            {
+
+                _conn.Close();
+            }
+        }
+        public DataTable CTHDtheoMaHD(string MaHD)
+        {
+
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "CTHDTheoMaHD";
+                cm.Parameters.AddWithValue("MaHD", MaHD);
+                cm.Connection = _conn;
+                DataTable dtcthd = new DataTable();
+                dtcthd.Load(cm.ExecuteReader());
+                return dtcthd;
             }
             finally
             {
@@ -274,6 +296,29 @@ namespace DAL_DingDoong
             }
         }
 
+        public DataTable CTHD (string MaHD, string MaTD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandText = "getCTHD";
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.Parameters.AddWithValue("MaHD", MaHD);
+                cm.Parameters.AddWithValue("MaTD", MaTD);
+                cm.Connection = _conn;
+                DataTable dtHDCT = new DataTable();
+                dtHDCT.Load(cm.ExecuteReader());
+                return dtHDCT;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+
+
         public DataTable DanhSachHDCTTam(string MaHD)
         {
             try
@@ -322,7 +367,7 @@ namespace DAL_DingDoong
                 SqlCommand cm = new SqlCommand();
                 cm.Connection = _conn;
                 cm.CommandType = CommandType.StoredProcedure;
-                cm.CommandText = "sp_TongtienHDTamKM";
+                cm.CommandText = "sp_TongtienHDTam";
                 cm.Parameters.AddWithValue("MaHD", MaHD);
 
                 return (cm.ExecuteScalar() is null ? 0 : float.Parse(cm.ExecuteScalar().ToString()));
@@ -365,6 +410,36 @@ namespace DAL_DingDoong
             return false;
         }
 
+        public bool deleteSoLuong(string MaHD, string MaTD,int Soluong)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "TruSoLuongHDCT";
+                cmd.Parameters.AddWithValue("MaHD", MaHD);
+                cmd.Parameters.AddWithValue("MaTD",MaTD);
+                cmd.Parameters.AddWithValue("SoLuong", Soluong);
+
+                
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
         public bool UpdateKHtoHD(string MaHD, string SDTKH)
         {
             try
@@ -381,10 +456,7 @@ namespace DAL_DingDoong
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+           
             finally
             {
                 _conn.Close();
@@ -403,6 +475,63 @@ namespace DAL_DingDoong
                 cmd.CommandText = "clearTemp";
                 cmd.Parameters.AddWithValue("MaHD", MaHD);
              
+
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+        public bool Chuyenban(int idBanOld, int idBanNew,string MaHD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "ChuyenBan";
+                cmd.Parameters.AddWithValue("MaHD", MaHD);
+                cmd.Parameters.AddWithValue("IDBanold", idBanOld);
+                cmd.Parameters.AddWithValue("idBanNew", idBanNew);
+
+
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
+        public bool updateBan(int idBan, int TrangThai)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_updateBan";
+                cmd.Parameters.AddWithValue("IdBan", idBan);
+                cmd.Parameters.AddWithValue("trangthai", TrangThai);
+               
+
 
 
                 if (cmd.ExecuteNonQuery() > 0)

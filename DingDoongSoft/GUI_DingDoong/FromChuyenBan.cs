@@ -8,19 +8,52 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO_DingDoong;
+using BUS_DingDoong;
 
 namespace GUI_DingDoong
 {
-    public partial class FromChuyenBan : Form
+    
+    public partial class FormChuyenBan : Form
     {
-        public FromChuyenBan()
+        BUS_Ban busBan = new BUS_Ban();
+        DTO_Ban BanOld;
+        DTO_Ban BanNew;
+        string MaHoaDon;
+        public FormChuyenBan(DTO_Ban Ban,string MaHD)
         {
             InitializeComponent();
+            lbOld.Text = Ban.TenBan;
+            BanOld = Ban;
+            MaHoaDon = MaHD;
+
+
+
         }
 
+        private void LoadBanDong()
+        {
+            foreach(DataRow dr in busBan.dtBan().Rows)
+            {
+                if((int)dr[2] == 0)
+                {
+                    cbBan.Items.Add(dr[1].ToString());
+                }    
 
-       
+            }
+            cbBan.SelectedIndex = 0;
+        }
 
-      
+        private void FromChuyenBan_Load(object sender, EventArgs e)
+        {
+            LoadBanDong();
+        }
+
+        private void btOK_Click(object sender, EventArgs e)
+        {
+            BanNew = busBan.curBan(cbBan.Text);
+            busBan.ChuyenBan(BanOld.IdBan, BanNew.IdBan, MaHoaDon);
+            this.Close();
+        }
     }
 }
