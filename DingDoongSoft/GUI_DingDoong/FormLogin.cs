@@ -22,7 +22,7 @@ namespace GUI_DingDoong
             txtEmail.Text = "duydtps11681@fpt.edu.vn";
         }
 
-        public static string emailGET;
+        public static DTO_NhanVien  NvMain;
 
         BUS_NhanVien busnhanvien = new BUS_NhanVien();
         private void btLogin_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace GUI_DingDoong
             {
                 
                 MessageBox.Show("Đăng nhập thành công");
-                emailGET = nv.Email;
+                NvMain = busNhanVien.curNV(nv.Email);
                 FormMain frmMain = new FormMain();
                 this.Hide();
 
@@ -112,7 +112,7 @@ namespace GUI_DingDoong
                 {
 
                     MessageBox.Show("Đăng nhập thành công");
-                    emailGET = nv.Email;
+                    NvMain = busNhanVien.curNV(nv.Email);
                     FormMain frmMain = new FormMain();
                     this.Hide();
 

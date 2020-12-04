@@ -14,16 +14,28 @@ namespace GUI_DingDoong
     {
         public static int session = 0;
         public static int profile = 0;
+        public static int quyen;
+
         public FormMain()
         {
             InitializeComponent();
             this.CenterToScreen();
-            lblEmailMain.Text = FormLogin.emailGET;
+            lblEmailMain.Text = FormLogin.NvMain.Email;
+            quyen = FormLogin.NvMain.Quyen;
+
         }
 
         private void btThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void phanquyen()
+        {
+            pbNhanVien.Enabled = false;
+            pnlNhanVien.BackColor = Color.Gray;
+        
+            pbMenu.Enabled = false;
+            pbThongKe.Enabled = false;
         }
 
         private void pbAccounts_Click(object sender, EventArgs e)
@@ -115,6 +127,11 @@ namespace GUI_DingDoong
             lbMonth.Text = DateTime.Now.ToString("MMM");
             LbYear.Text = DateTime.Now.ToString("yyyy");
             lbDayofweek.Text = DateTime.Now.ToString("ddd");
+            if(quyen == 0)
+            {
+                MessageBox.Show(FormLogin.NvMain.Quyen.ToString());
+                phanquyen();
+            }    
         }
     }
 }
