@@ -477,6 +477,9 @@ namespace GUI_DingDoong
             thongKe.Show();
         }
 
-        
+        private void ptbMenuThucDon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
