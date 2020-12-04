@@ -28,66 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlAccounts = new System.Windows.Forms.Panel();
             this.lblAccounts = new System.Windows.Forms.Label();
+            this.pbAccounts = new System.Windows.Forms.PictureBox();
             this.pnlCaiDat = new System.Windows.Forms.Panel();
             this.lblCaiDat = new System.Windows.Forms.Label();
+            this.pbCaiDat = new System.Windows.Forms.PictureBox();
             this.pnlKhachHang = new System.Windows.Forms.Panel();
             this.lblKhachHang = new System.Windows.Forms.Label();
+            this.pbKhachHang = new System.Windows.Forms.PictureBox();
             this.pnlQuanLyBan = new System.Windows.Forms.Panel();
+            this.pbQuanLyBan = new System.Windows.Forms.PictureBox();
             this.lblQuanLyBan = new System.Windows.Forms.Label();
             this.pnlNhanVien = new System.Windows.Forms.Panel();
             this.lblNhanVien = new System.Windows.Forms.Label();
+            this.pbNhanVien = new System.Windows.Forms.PictureBox();
             this.pnlHoTro = new System.Windows.Forms.Panel();
             this.lblHoTro = new System.Windows.Forms.Label();
+            this.pbHoTro = new System.Windows.Forms.PictureBox();
             this.pnlHuongDan = new System.Windows.Forms.Panel();
             this.lblHuongDan = new System.Windows.Forms.Label();
+            this.pbHuongDan = new System.Windows.Forms.PictureBox();
             this.pnlKhuyenMai = new System.Windows.Forms.Panel();
             this.lblKhuyenMai = new System.Windows.Forms.Label();
+            this.pbKhuyenMai = new System.Windows.Forms.PictureBox();
             this.pnlThongKe = new System.Windows.Forms.Panel();
+            this.pbThongKe = new System.Windows.Forms.PictureBox();
             this.lblThongKe = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblMenu = new System.Windows.Forms.Label();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.lblLogo = new System.Windows.Forms.Label();
+            this.pbMenu = new System.Windows.Forms.PictureBox();
             this.lblEmailMain = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbHoTro = new System.Windows.Forms.PictureBox();
-            this.pbHuongDan = new System.Windows.Forms.PictureBox();
-            this.pbKhuyenMai = new System.Windows.Forms.PictureBox();
-            this.pbThongKe = new System.Windows.Forms.PictureBox();
-            this.pbMenu = new System.Windows.Forms.PictureBox();
-            this.pbAccounts = new System.Windows.Forms.PictureBox();
-            this.pbCaiDat = new System.Windows.Forms.PictureBox();
-            this.pbKhachHang = new System.Windows.Forms.PictureBox();
-            this.pbQuanLyBan = new System.Windows.Forms.PictureBox();
-            this.pbNhanVien = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbDayofweek = new System.Windows.Forms.Label();
+            this.LbYear = new System.Windows.Forms.Label();
+            this.lbMonth = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
+            this.lbTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlAccounts.SuspendLayout();
-            this.pnlCaiDat.SuspendLayout();
-            this.pnlKhachHang.SuspendLayout();
-            this.pnlQuanLyBan.SuspendLayout();
-            this.pnlNhanVien.SuspendLayout();
-            this.pnlHoTro.SuspendLayout();
-            this.pnlHuongDan.SuspendLayout();
-            this.pnlKhuyenMai.SuspendLayout();
-            this.pnlThongKe.SuspendLayout();
-            this.pnlMenu.SuspendLayout();
-            this.pnlLogo.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHoTro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHuongDan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbKhuyenMai)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAccounts)).BeginInit();
+            this.pnlCaiDat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaiDat)).BeginInit();
+            this.pnlKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbKhachHang)).BeginInit();
+            this.pnlQuanLyBan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuanLyBan)).BeginInit();
+            this.pnlNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
+            this.pnlHoTro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHoTro)).BeginInit();
+            this.pnlHuongDan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHuongDan)).BeginInit();
+            this.pnlKhuyenMai.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKhuyenMai)).BeginInit();
+            this.pnlThongKe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).BeginInit();
+            this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAccounts
@@ -112,11 +118,23 @@
             this.lblAccounts.TabIndex = 0;
             this.lblAccounts.Text = "Đổi Mật Khẩu";
             // 
+            // pbAccounts
+            // 
+            this.pbAccounts.BackColor = System.Drawing.Color.Transparent;
+            this.pbAccounts.Image = global::GUI_DingDoong.Properties.Resources.appbar_customerservice;
+            this.pbAccounts.Location = new System.Drawing.Point(0, 0);
+            this.pbAccounts.Name = "pbAccounts";
+            this.pbAccounts.Size = new System.Drawing.Size(125, 125);
+            this.pbAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbAccounts.TabIndex = 2;
+            this.pbAccounts.TabStop = false;
+            this.pbAccounts.Click += new System.EventHandler(this.pbAccounts_Click);
+            // 
             // pnlCaiDat
             // 
             this.pnlCaiDat.BackColor = System.Drawing.Color.DarkOrange;
-            this.pnlCaiDat.Controls.Add(this.pbCaiDat);
             this.pnlCaiDat.Controls.Add(this.lblCaiDat);
+            this.pnlCaiDat.Controls.Add(this.pbCaiDat);
             this.pnlCaiDat.Location = new System.Drawing.Point(48, 447);
             this.pnlCaiDat.Name = "pnlCaiDat";
             this.pnlCaiDat.Size = new System.Drawing.Size(125, 125);
@@ -134,11 +152,22 @@
             this.lblCaiDat.TabIndex = 0;
             this.lblCaiDat.Text = "Cài đặt";
             // 
+            // pbCaiDat
+            // 
+            this.pbCaiDat.BackColor = System.Drawing.Color.Transparent;
+            this.pbCaiDat.Image = global::GUI_DingDoong.Properties.Resources.appbar_settings;
+            this.pbCaiDat.Location = new System.Drawing.Point(0, 0);
+            this.pbCaiDat.Name = "pbCaiDat";
+            this.pbCaiDat.Size = new System.Drawing.Size(125, 126);
+            this.pbCaiDat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbCaiDat.TabIndex = 2;
+            this.pbCaiDat.TabStop = false;
+            // 
             // pnlKhachHang
             // 
             this.pnlKhachHang.BackColor = System.Drawing.Color.Red;
-            this.pnlKhachHang.Controls.Add(this.pbKhachHang);
             this.pnlKhachHang.Controls.Add(this.lblKhachHang);
+            this.pnlKhachHang.Controls.Add(this.pbKhachHang);
             this.pnlKhachHang.Location = new System.Drawing.Point(179, 185);
             this.pnlKhachHang.Name = "pnlKhachHang";
             this.pnlKhachHang.Size = new System.Drawing.Size(125, 125);
@@ -150,11 +179,23 @@
             this.lblKhachHang.BackColor = System.Drawing.Color.Transparent;
             this.lblKhachHang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKhachHang.ForeColor = System.Drawing.Color.White;
-            this.lblKhachHang.Location = new System.Drawing.Point(3, 103);
+            this.lblKhachHang.Location = new System.Drawing.Point(0, 103);
             this.lblKhachHang.Name = "lblKhachHang";
             this.lblKhachHang.Size = new System.Drawing.Size(83, 19);
             this.lblKhachHang.TabIndex = 0;
             this.lblKhachHang.Text = "Khách Hàng";
+            // 
+            // pbKhachHang
+            // 
+            this.pbKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.pbKhachHang.Image = global::GUI_DingDoong.Properties.Resources.appbar_user;
+            this.pbKhachHang.Location = new System.Drawing.Point(0, 0);
+            this.pbKhachHang.Name = "pbKhachHang";
+            this.pbKhachHang.Size = new System.Drawing.Size(125, 125);
+            this.pbKhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbKhachHang.TabIndex = 2;
+            this.pbKhachHang.TabStop = false;
+            this.pbKhachHang.Click += new System.EventHandler(this.pbKhachHang_Click);
             // 
             // pnlQuanLyBan
             // 
@@ -165,6 +206,17 @@
             this.pnlQuanLyBan.Name = "pnlQuanLyBan";
             this.pnlQuanLyBan.Size = new System.Drawing.Size(256, 125);
             this.pnlQuanLyBan.TabIndex = 9;
+            // 
+            // pbQuanLyBan
+            // 
+            this.pbQuanLyBan.BackColor = System.Drawing.Color.Transparent;
+            this.pbQuanLyBan.BackgroundImage = global::GUI_DingDoong.Properties.Resources.appbar_clipboard_variant_edit;
+            this.pbQuanLyBan.Location = new System.Drawing.Point(90, 24);
+            this.pbQuanLyBan.Name = "pbQuanLyBan";
+            this.pbQuanLyBan.Size = new System.Drawing.Size(76, 76);
+            this.pbQuanLyBan.TabIndex = 4;
+            this.pbQuanLyBan.TabStop = false;
+            this.pbQuanLyBan.Click += new System.EventHandler(this.pbQuanLyBan_Click);
             // 
             // lblQuanLyBan
             // 
@@ -200,12 +252,24 @@
             this.lblNhanVien.TabIndex = 0;
             this.lblNhanVien.Text = "Nhân Viên";
             // 
+            // pbNhanVien
+            // 
+            this.pbNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.pbNhanVien.Image = global::GUI_DingDoong.Properties.Resources.appbar_people;
+            this.pbNhanVien.Location = new System.Drawing.Point(0, 0);
+            this.pbNhanVien.Name = "pbNhanVien";
+            this.pbNhanVien.Size = new System.Drawing.Size(125, 128);
+            this.pbNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbNhanVien.TabIndex = 3;
+            this.pbNhanVien.TabStop = false;
+            this.pbNhanVien.Click += new System.EventHandler(this.pbNhanVien_Click);
+            // 
             // pnlHoTro
             // 
             this.pnlHoTro.BackColor = System.Drawing.Color.Crimson;
-            this.pnlHoTro.Controls.Add(this.pbHoTro);
             this.pnlHoTro.Controls.Add(this.lblHoTro);
-            this.pnlHoTro.Location = new System.Drawing.Point(524, 447);
+            this.pnlHoTro.Controls.Add(this.pbHoTro);
+            this.pnlHoTro.Location = new System.Drawing.Point(508, 450);
             this.pnlHoTro.Name = "pnlHoTro";
             this.pnlHoTro.Size = new System.Drawing.Size(125, 125);
             this.pnlHoTro.TabIndex = 17;
@@ -222,12 +286,23 @@
             this.lblHoTro.TabIndex = 0;
             this.lblHoTro.Text = "Hỗ trợ từ xa";
             // 
+            // pbHoTro
+            // 
+            this.pbHoTro.BackColor = System.Drawing.Color.Transparent;
+            this.pbHoTro.Image = global::GUI_DingDoong.Properties.Resources.appbar_message;
+            this.pbHoTro.Location = new System.Drawing.Point(0, 0);
+            this.pbHoTro.Name = "pbHoTro";
+            this.pbHoTro.Size = new System.Drawing.Size(125, 125);
+            this.pbHoTro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbHoTro.TabIndex = 2;
+            this.pbHoTro.TabStop = false;
+            // 
             // pnlHuongDan
             // 
             this.pnlHuongDan.BackColor = System.Drawing.Color.DeepPink;
-            this.pnlHuongDan.Controls.Add(this.pbHuongDan);
             this.pnlHuongDan.Controls.Add(this.lblHuongDan);
-            this.pnlHuongDan.Location = new System.Drawing.Point(393, 447);
+            this.pnlHuongDan.Controls.Add(this.pbHuongDan);
+            this.pnlHuongDan.Location = new System.Drawing.Point(377, 450);
             this.pnlHuongDan.Name = "pnlHuongDan";
             this.pnlHuongDan.Size = new System.Drawing.Size(125, 125);
             this.pnlHuongDan.TabIndex = 16;
@@ -244,12 +319,23 @@
             this.lblHuongDan.TabIndex = 0;
             this.lblHuongDan.Text = "Hướng dẫn";
             // 
+            // pbHuongDan
+            // 
+            this.pbHuongDan.BackColor = System.Drawing.Color.Transparent;
+            this.pbHuongDan.Image = global::GUI_DingDoong.Properties.Resources.appbar_book_perspective_help;
+            this.pbHuongDan.Location = new System.Drawing.Point(0, 0);
+            this.pbHuongDan.Name = "pbHuongDan";
+            this.pbHuongDan.Size = new System.Drawing.Size(125, 125);
+            this.pbHuongDan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbHuongDan.TabIndex = 2;
+            this.pbHuongDan.TabStop = false;
+            // 
             // pnlKhuyenMai
             // 
             this.pnlKhuyenMai.BackColor = System.Drawing.Color.Green;
-            this.pnlKhuyenMai.Controls.Add(this.pbKhuyenMai);
             this.pnlKhuyenMai.Controls.Add(this.lblKhuyenMai);
-            this.pnlKhuyenMai.Location = new System.Drawing.Point(524, 185);
+            this.pnlKhuyenMai.Controls.Add(this.pbKhuyenMai);
+            this.pnlKhuyenMai.Location = new System.Drawing.Point(508, 188);
             this.pnlKhuyenMai.Name = "pnlKhuyenMai";
             this.pnlKhuyenMai.Size = new System.Drawing.Size(125, 125);
             this.pnlKhuyenMai.TabIndex = 15;
@@ -260,21 +346,44 @@
             this.lblKhuyenMai.BackColor = System.Drawing.Color.Transparent;
             this.lblKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKhuyenMai.ForeColor = System.Drawing.Color.White;
-            this.lblKhuyenMai.Location = new System.Drawing.Point(3, 103);
+            this.lblKhuyenMai.Location = new System.Drawing.Point(-4, 103);
             this.lblKhuyenMai.Name = "lblKhuyenMai";
             this.lblKhuyenMai.Size = new System.Drawing.Size(86, 19);
             this.lblKhuyenMai.TabIndex = 0;
             this.lblKhuyenMai.Text = " Khuyến Mãi";
+            // 
+            // pbKhuyenMai
+            // 
+            this.pbKhuyenMai.BackColor = System.Drawing.Color.Transparent;
+            this.pbKhuyenMai.Image = global::GUI_DingDoong.Properties.Resources.appbar_tag;
+            this.pbKhuyenMai.Location = new System.Drawing.Point(0, 0);
+            this.pbKhuyenMai.Name = "pbKhuyenMai";
+            this.pbKhuyenMai.Size = new System.Drawing.Size(125, 125);
+            this.pbKhuyenMai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbKhuyenMai.TabIndex = 2;
+            this.pbKhuyenMai.TabStop = false;
+            this.pbKhuyenMai.Click += new System.EventHandler(this.pbKhuyenMai_Click);
             // 
             // pnlThongKe
             // 
             this.pnlThongKe.BackColor = System.Drawing.Color.DarkMagenta;
             this.pnlThongKe.Controls.Add(this.pbThongKe);
             this.pnlThongKe.Controls.Add(this.lblThongKe);
-            this.pnlThongKe.Location = new System.Drawing.Point(393, 316);
+            this.pnlThongKe.Location = new System.Drawing.Point(377, 319);
             this.pnlThongKe.Name = "pnlThongKe";
             this.pnlThongKe.Size = new System.Drawing.Size(256, 125);
             this.pnlThongKe.TabIndex = 14;
+            // 
+            // pbThongKe
+            // 
+            this.pbThongKe.BackColor = System.Drawing.Color.Transparent;
+            this.pbThongKe.Image = global::GUI_DingDoong.Properties.Resources.appbar_book_hardcover_open_writing;
+            this.pbThongKe.Location = new System.Drawing.Point(90, 24);
+            this.pbThongKe.Name = "pbThongKe";
+            this.pbThongKe.Size = new System.Drawing.Size(76, 76);
+            this.pbThongKe.TabIndex = 2;
+            this.pbThongKe.TabStop = false;
+            this.pbThongKe.Click += new System.EventHandler(this.pbThongKe_Click);
             // 
             // lblThongKe
             // 
@@ -291,9 +400,9 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.pnlMenu.Controls.Add(this.pbMenu);
             this.pnlMenu.Controls.Add(this.lblMenu);
-            this.pnlMenu.Location = new System.Drawing.Point(393, 185);
+            this.pnlMenu.Controls.Add(this.pbMenu);
+            this.pnlMenu.Location = new System.Drawing.Point(377, 188);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(125, 125);
             this.pnlMenu.TabIndex = 13;
@@ -304,38 +413,30 @@
             this.lblMenu.BackColor = System.Drawing.Color.Transparent;
             this.lblMenu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMenu.ForeColor = System.Drawing.Color.White;
-            this.lblMenu.Location = new System.Drawing.Point(3, 103);
+            this.lblMenu.Location = new System.Drawing.Point(-4, 103);
             this.lblMenu.Name = "lblMenu";
             this.lblMenu.Size = new System.Drawing.Size(97, 19);
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "Quản lý Menu";
             // 
-            // pnlLogo
+            // pbMenu
             // 
-            this.pnlLogo.BackColor = System.Drawing.Color.Red;
-            this.pnlLogo.Controls.Add(this.lblLogo);
-            this.pnlLogo.Location = new System.Drawing.Point(725, 447);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(256, 125);
-            this.pnlLogo.TabIndex = 18;
-            // 
-            // lblLogo
-            // 
-            this.lblLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblLogo.AutoSize = true;
-            this.lblLogo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(23, 46);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(209, 30);
-            this.lblLogo.TabIndex = 2;
-            this.lblLogo.Text = "DINGDOONG LOGO";
+            this.pbMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pbMenu.Image = global::GUI_DingDoong.Properties.Resources.appbar_food;
+            this.pbMenu.Location = new System.Drawing.Point(0, 0);
+            this.pbMenu.Name = "pbMenu";
+            this.pbMenu.Size = new System.Drawing.Size(125, 125);
+            this.pbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMenu.TabIndex = 2;
+            this.pbMenu.TabStop = false;
+            this.pbMenu.Click += new System.EventHandler(this.pbMenu_Click);
             // 
             // lblEmailMain
             // 
             this.lblEmailMain.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEmailMain.AutoSize = true;
             this.lblEmailMain.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailMain.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblEmailMain.ForeColor = System.Drawing.Color.Yellow;
             this.lblEmailMain.Location = new System.Drawing.Point(356, 5);
             this.lblEmailMain.Name = "lblEmailMain";
             this.lblEmailMain.Size = new System.Drawing.Size(166, 25);
@@ -356,16 +457,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(561, 35);
             this.tableLayoutPanel1.TabIndex = 22;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::GUI_DingDoong.Properties.Resources._2c4d299dffa30efd57b2_removebg;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(21, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(308, 177);
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.AccessibleName = "btThoat";
@@ -380,107 +471,89 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.btThoat_Click);
             // 
-            // pbHoTro
+            // pictureBox2
             // 
-            this.pbHoTro.BackColor = System.Drawing.Color.Transparent;
-            this.pbHoTro.Image = global::GUI_DingDoong.Properties.Resources.appbar_message;
-            this.pbHoTro.Location = new System.Drawing.Point(24, 24);
-            this.pbHoTro.Name = "pbHoTro";
-            this.pbHoTro.Size = new System.Drawing.Size(76, 76);
-            this.pbHoTro.TabIndex = 2;
-            this.pbHoTro.TabStop = false;
+            this.pictureBox2.BackgroundImage = global::GUI_DingDoong.Properties.Resources._2c4d299dffa30efd57b2_removebg;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(308, 177);
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
             // 
-            // pbHuongDan
+            // panel1
             // 
-            this.pbHuongDan.BackColor = System.Drawing.Color.Transparent;
-            this.pbHuongDan.Image = global::GUI_DingDoong.Properties.Resources.appbar_book_perspective_help;
-            this.pbHuongDan.Location = new System.Drawing.Point(24, 24);
-            this.pbHuongDan.Name = "pbHuongDan";
-            this.pbHuongDan.Size = new System.Drawing.Size(76, 76);
-            this.pbHuongDan.TabIndex = 2;
-            this.pbHuongDan.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.lbDayofweek);
+            this.panel1.Controls.Add(this.LbYear);
+            this.panel1.Controls.Add(this.lbMonth);
+            this.panel1.Controls.Add(this.lbDate);
+            this.panel1.Controls.Add(this.lbTime);
+            this.panel1.Location = new System.Drawing.Point(702, 185);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(291, 384);
+            this.panel1.TabIndex = 25;
             // 
-            // pbKhuyenMai
+            // lbDayofweek
             // 
-            this.pbKhuyenMai.BackColor = System.Drawing.Color.Transparent;
-            this.pbKhuyenMai.Image = global::GUI_DingDoong.Properties.Resources.appbar_tag;
-            this.pbKhuyenMai.Location = new System.Drawing.Point(24, 24);
-            this.pbKhuyenMai.Name = "pbKhuyenMai";
-            this.pbKhuyenMai.Size = new System.Drawing.Size(76, 76);
-            this.pbKhuyenMai.TabIndex = 2;
-            this.pbKhuyenMai.TabStop = false;
+            this.lbDayofweek.AutoSize = true;
+            this.lbDayofweek.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDayofweek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbDayofweek.Location = new System.Drawing.Point(187, 237);
+            this.lbDayofweek.Name = "lbDayofweek";
+            this.lbDayofweek.Size = new System.Drawing.Size(143, 109);
+            this.lbDayofweek.TabIndex = 4;
+            this.lbDayofweek.Text = "21";
             // 
-            // pbThongKe
+            // LbYear
             // 
-            this.pbThongKe.BackColor = System.Drawing.Color.Transparent;
-            this.pbThongKe.Image = global::GUI_DingDoong.Properties.Resources.appbar_book_hardcover_open_writing;
-            this.pbThongKe.Location = new System.Drawing.Point(90, 24);
-            this.pbThongKe.Name = "pbThongKe";
-            this.pbThongKe.Size = new System.Drawing.Size(76, 76);
-            this.pbThongKe.TabIndex = 2;
-            this.pbThongKe.TabStop = false;
+            this.LbYear.AutoSize = true;
+            this.LbYear.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LbYear.Location = new System.Drawing.Point(97, 280);
+            this.LbYear.Name = "LbYear";
+            this.LbYear.Size = new System.Drawing.Size(71, 33);
+            this.LbYear.TabIndex = 3;
+            this.LbYear.Text = "2020";
             // 
-            // pbMenu
+            // lbMonth
             // 
-            this.pbMenu.BackColor = System.Drawing.Color.Transparent;
-            this.pbMenu.Image = global::GUI_DingDoong.Properties.Resources.appbar_food;
-            this.pbMenu.Location = new System.Drawing.Point(24, 24);
-            this.pbMenu.Name = "pbMenu";
-            this.pbMenu.Size = new System.Drawing.Size(76, 76);
-            this.pbMenu.TabIndex = 2;
-            this.pbMenu.TabStop = false;
+            this.lbMonth.AutoSize = true;
+            this.lbMonth.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbMonth.Location = new System.Drawing.Point(95, 234);
+            this.lbMonth.Name = "lbMonth";
+            this.lbMonth.Size = new System.Drawing.Size(94, 46);
+            this.lbMonth.TabIndex = 2;
+            this.lbMonth.Text = "JAN";
             // 
-            // pbAccounts
+            // lbDate
             // 
-            this.pbAccounts.BackColor = System.Drawing.Color.Transparent;
-            this.pbAccounts.Image = global::GUI_DingDoong.Properties.Resources.appbar_customerservice;
-            this.pbAccounts.Location = new System.Drawing.Point(0, 0);
-            this.pbAccounts.Name = "pbAccounts";
-            this.pbAccounts.Size = new System.Drawing.Size(125, 125);
-            this.pbAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbAccounts.TabIndex = 2;
-            this.pbAccounts.TabStop = false;
-            this.pbAccounts.Click += new System.EventHandler(this.pbAccounts_Click);
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbDate.Location = new System.Drawing.Point(-19, 209);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(143, 109);
+            this.lbDate.TabIndex = 1;
+            this.lbDate.Text = "21";
             // 
-            // pbCaiDat
+            // lbTime
             // 
-            this.pbCaiDat.BackColor = System.Drawing.Color.Transparent;
-            this.pbCaiDat.Image = global::GUI_DingDoong.Properties.Resources.appbar_settings;
-            this.pbCaiDat.Location = new System.Drawing.Point(24, 24);
-            this.pbCaiDat.Name = "pbCaiDat";
-            this.pbCaiDat.Size = new System.Drawing.Size(76, 76);
-            this.pbCaiDat.TabIndex = 2;
-            this.pbCaiDat.TabStop = false;
+            this.lbTime.AutoSize = true;
+            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 57F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbTime.Location = new System.Drawing.Point(17, 58);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(260, 101);
+            this.lbTime.TabIndex = 0;
+            this.lbTime.Text = "label1";
             // 
-            // pbKhachHang
+            // timer1
             // 
-            this.pbKhachHang.BackColor = System.Drawing.Color.Transparent;
-            this.pbKhachHang.Image = global::GUI_DingDoong.Properties.Resources.appbar_user;
-            this.pbKhachHang.Location = new System.Drawing.Point(24, 24);
-            this.pbKhachHang.Name = "pbKhachHang";
-            this.pbKhachHang.Size = new System.Drawing.Size(76, 76);
-            this.pbKhachHang.TabIndex = 2;
-            this.pbKhachHang.TabStop = false;
-            // 
-            // pbQuanLyBan
-            // 
-            this.pbQuanLyBan.BackColor = System.Drawing.Color.Transparent;
-            this.pbQuanLyBan.BackgroundImage = global::GUI_DingDoong.Properties.Resources.appbar_clipboard_variant_edit;
-            this.pbQuanLyBan.Location = new System.Drawing.Point(90, 24);
-            this.pbQuanLyBan.Name = "pbQuanLyBan";
-            this.pbQuanLyBan.Size = new System.Drawing.Size(76, 76);
-            this.pbQuanLyBan.TabIndex = 4;
-            this.pbQuanLyBan.TabStop = false;
-            // 
-            // pbNhanVien
-            // 
-            this.pbNhanVien.BackColor = System.Drawing.Color.Transparent;
-            this.pbNhanVien.Image = global::GUI_DingDoong.Properties.Resources.appbar_people;
-            this.pbNhanVien.Location = new System.Drawing.Point(24, 24);
-            this.pbNhanVien.Name = "pbNhanVien";
-            this.pbNhanVien.Size = new System.Drawing.Size(76, 76);
-            this.pbNhanVien.TabIndex = 3;
-            this.pbNhanVien.TabStop = false;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormMain
             // 
@@ -489,9 +562,9 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(1005, 613);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.pnlHoTro);
             this.Controls.Add(this.pnlHuongDan);
             this.Controls.Add(this.pnlKhuyenMai);
@@ -509,42 +582,43 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ Thống Chính - DingDoong";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.pnlAccounts.ResumeLayout(false);
             this.pnlAccounts.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAccounts)).EndInit();
             this.pnlCaiDat.ResumeLayout(false);
             this.pnlCaiDat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCaiDat)).EndInit();
             this.pnlKhachHang.ResumeLayout(false);
             this.pnlKhachHang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKhachHang)).EndInit();
             this.pnlQuanLyBan.ResumeLayout(false);
             this.pnlQuanLyBan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuanLyBan)).EndInit();
             this.pnlNhanVien.ResumeLayout(false);
             this.pnlNhanVien.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).EndInit();
             this.pnlHoTro.ResumeLayout(false);
             this.pnlHoTro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHoTro)).EndInit();
             this.pnlHuongDan.ResumeLayout(false);
             this.pnlHuongDan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHuongDan)).EndInit();
             this.pnlKhuyenMai.ResumeLayout(false);
             this.pnlKhuyenMai.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKhuyenMai)).EndInit();
             this.pnlThongKe.ResumeLayout(false);
             this.pnlThongKe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
-            this.pnlLogo.ResumeLayout(false);
-            this.pnlLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHoTro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHuongDan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbKhuyenMai)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAccounts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCaiDat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbKhachHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQuanLyBan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -581,12 +655,17 @@
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.PictureBox pbMenu;
         private System.Windows.Forms.Label lblMenu;
-        private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblEmailMain;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbDayofweek;
+        private System.Windows.Forms.Label LbYear;
+        private System.Windows.Forms.Label lbMonth;
+        private System.Windows.Forms.Label lbDate;
+        private System.Windows.Forms.Label lbTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

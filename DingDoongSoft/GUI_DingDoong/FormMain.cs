@@ -39,5 +39,82 @@ namespace GUI_DingDoong
         {
             Application.Exit();
         }
+
+        private void pbNhanVien_Click(object sender, EventArgs e)
+        {
+            FormNhanVien nv = new FormNhanVien();
+            this.Hide();
+
+            nv.Closed += (s, args) => this.Close();
+            nv.Show();
+        }
+
+        private void pbKhachHang_Click(object sender, EventArgs e)
+        {
+            FormKhachHang kh = new FormKhachHang();
+            this.Hide();
+
+            kh.Closed += (s, args) => this.Close();
+            kh.Show();
+        }
+
+        private void pbQuanLyBan_Click(object sender, EventArgs e)
+        {
+            FormKhuVucBan kv = new FormKhuVucBan();
+            this.Hide();
+
+            kv.Closed += (s, args) => this.Close();
+            kv.Show();
+        }
+
+        private void pbMenu_Click(object sender, EventArgs e)
+        {
+            FormThucDon thucdon = new FormThucDon();
+            this.Hide();
+
+            thucdon.Closed += (s, args) => this.Close();
+            thucdon.Show();
+        }
+
+        private void pbKhuyenMai_Click(object sender, EventArgs e)
+        {
+            FormKhuyenMai khuyenmai = new FormKhuyenMai();
+            this.Hide();
+
+            khuyenmai.Closed += (s, args) => this.Close();
+            khuyenmai.Show();
+        }
+
+        private void pbThongKe_Click(object sender, EventArgs e)
+        {
+            FormThongKe thongKe = new FormThongKe();
+            this.Hide();
+
+            thongKe.Closed += (s, args) => this.Close();
+            thongKe.Show();
+        }
+
+        private void lblLogo_Click(object sender, EventArgs e)
+        {
+                    }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            lbTime.Text = (DateTime.Now.Hour < 10 ? "0" + DateTime.Now.Hour.ToString() : DateTime.Now.Hour.ToString()) + ":" + (DateTime.Now.Minute < 10 ? "0" + DateTime.Now.Minute.ToString() : DateTime.Now.Minute.ToString()) + ":" + (DateTime.Now.Second < 10 ? "0" + DateTime.Now.Second.ToString() : DateTime.Now.Second.ToString());
+            lbDate.Text = DateTime.Now.Day < 10 ? "0" + DateTime.Now.Day.ToString() : DateTime.Now.Day.ToString();
+            lbMonth.Text = DateTime.Now.ToString("MMM");
+            LbYear.Text = DateTime.Now.ToString("yyyy");
+            lbDayofweek.Text = DateTime.Now.ToString("ddd");
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            lbTime.Text = (DateTime.Now.Hour < 10 ? "0" + DateTime.Now.Hour.ToString() : DateTime.Now.Hour.ToString()) + ":" + (DateTime.Now.Minute < 10 ? "0" + DateTime.Now.Minute.ToString() : DateTime.Now.Minute.ToString()) + ":" + (DateTime.Now.Second < 10 ? "0" + DateTime.Now.Second.ToString() : DateTime.Now.Second.ToString());
+            lbDate.Text = DateTime.Now.Day < 10 ? "0" + DateTime.Now.Day.ToString() : DateTime.Now.Day.ToString();
+            lbMonth.Text = DateTime.Now.ToString("MMM");
+            LbYear.Text = DateTime.Now.ToString("yyyy");
+            lbDayofweek.Text = DateTime.Now.ToString("ddd");
+        }
     }
 }

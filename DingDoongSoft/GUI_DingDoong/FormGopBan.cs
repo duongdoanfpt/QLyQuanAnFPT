@@ -56,6 +56,7 @@ namespace GUI_DingDoong
 
             }
             busBan.UpdateTrangThaiBan(OldBan, 0);
+            busBan.ClearTemp(oldHD.MaHD);
 
             this.Close();
             
