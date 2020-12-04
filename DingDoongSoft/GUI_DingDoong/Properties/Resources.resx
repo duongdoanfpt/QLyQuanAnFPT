@@ -248,6 +248,6 @@
     <value>..\Resources\Icons-Land-Vista-People-Office-Customer-Male-Light.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Flameia-Rabbit-Xp-Apple-menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Flameia-Rabbit-Xp-Apple-menu.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\Flameia-Rabbit-Xp-Apple-menu1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

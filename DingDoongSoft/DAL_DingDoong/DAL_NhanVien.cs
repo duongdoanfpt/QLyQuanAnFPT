@@ -170,7 +170,7 @@ namespace DAL_DingDoong
         }
 
         //GET Hình NV
-        public byte[] GetHinhNV(string Email)
+        public byte[] GetHinhNV(string manv)
         {
             try
             {
@@ -179,7 +179,7 @@ namespace DAL_DingDoong
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "sp_gethinhNV";
-                cmd.Parameters.AddWithValue("email", Email);
+                cmd.Parameters.AddWithValue("manv", manv);
 
                 var hinh = (byte[])cmd.ExecuteScalar();
                 return hinh;
@@ -224,7 +224,7 @@ namespace DAL_DingDoong
         }
 
         //Cap nhat nhan vien
-        public bool CapNhatNhanVien(string emailnhanvien, DTO_NhanVien td)
+        public bool CapNhatNhanVien(string MaNV, DTO_NhanVien td)
         {
             try
             {
@@ -233,12 +233,14 @@ namespace DAL_DingDoong
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "Sp_UpdateNhanVien";
-                cmd.Parameters.AddWithValue("email", emailnhanvien);
+                cmd.Parameters.AddWithValue("MaNV", MaNV);
+                cmd.Parameters.AddWithValue("email", td.Email);
                 cmd.Parameters.AddWithValue("tenNv", td.TenNV);
                 cmd.Parameters.AddWithValue("diaChi", td.DiaChi);
                 cmd.Parameters.AddWithValue("vaiTro", td.Quyen);
                 cmd.Parameters.AddWithValue("tinhTrang", td.TrangThai);
                 cmd.Parameters.AddWithValue("NgayVaoLam", td.NgayVL);
+                cmd.Parameters.AddWithValue("Hinh", td.Hinh);
 
                 if (cmd.ExecuteNonQuery() > 0)
                 {
