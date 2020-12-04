@@ -233,5 +233,50 @@ namespace GUI_DingDoong
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
+
+        private void pbHome_Click_1(object sender, EventArgs e)
+        {
+            FormMain frmMain = new FormMain();
+            this.Hide();
+
+            frmMain.Closed += (s, args) => this.Close();
+            frmMain.Show();
+        }
+
+        private void pbNhanVien_Click_1(object sender, EventArgs e)
+        {
+            FormNhanVien nv = new FormNhanVien();
+            this.Hide();
+
+            nv.Closed += (s, args) => this.Close();
+            nv.Show();
+        }
+
+        private void pbKhachHang_Click_1(object sender, EventArgs e)
+        {
+            FormKhachHang kh = new FormKhachHang();
+            this.Hide();
+
+            kh.Closed += (s, args) => this.Close();
+            kh.Show();
+        }
+
+        private void pbBan_Click_1(object sender, EventArgs e)
+        {
+            FormKhuVucBan kv = new FormKhuVucBan();
+            this.Hide();
+
+            kv.Closed += (s, args) => this.Close();
+            kv.Show();
+        }
+
+        private void pbThongKe_Click_1(object sender, EventArgs e)
+        {
+            FormThongKe thongKe = new FormThongKe();
+            this.Hide();
+
+            thongKe.Closed += (s, args) => this.Close();
+            thongKe.Show();
+        }
     }
 }
