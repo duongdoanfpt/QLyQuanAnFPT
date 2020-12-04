@@ -32,11 +32,11 @@
             this.lblAccounts = new System.Windows.Forms.Label();
             this.pbAccounts = new System.Windows.Forms.PictureBox();
             this.pnlCaiDat = new System.Windows.Forms.Panel();
-            this.pbCaiDat = new System.Windows.Forms.PictureBox();
             this.lblCaiDat = new System.Windows.Forms.Label();
+            this.pbCaiDat = new System.Windows.Forms.PictureBox();
             this.pnlKhachHang = new System.Windows.Forms.Panel();
-            this.pbKhachHang = new System.Windows.Forms.PictureBox();
             this.lblKhachHang = new System.Windows.Forms.Label();
+            this.pbKhachHang = new System.Windows.Forms.PictureBox();
             this.pnlQuanLyBan = new System.Windows.Forms.Panel();
             this.pbQuanLyBan = new System.Windows.Forms.PictureBox();
             this.lblQuanLyBan = new System.Windows.Forms.Label();
@@ -44,20 +44,20 @@
             this.lblNhanVien = new System.Windows.Forms.Label();
             this.pbNhanVien = new System.Windows.Forms.PictureBox();
             this.pnlHoTro = new System.Windows.Forms.Panel();
-            this.pbHoTro = new System.Windows.Forms.PictureBox();
             this.lblHoTro = new System.Windows.Forms.Label();
+            this.pbHoTro = new System.Windows.Forms.PictureBox();
             this.pnlHuongDan = new System.Windows.Forms.Panel();
-            this.pbHuongDan = new System.Windows.Forms.PictureBox();
             this.lblHuongDan = new System.Windows.Forms.Label();
+            this.pbHuongDan = new System.Windows.Forms.PictureBox();
             this.pnlKhuyenMai = new System.Windows.Forms.Panel();
-            this.pbKhuyenMai = new System.Windows.Forms.PictureBox();
             this.lblKhuyenMai = new System.Windows.Forms.Label();
+            this.pbKhuyenMai = new System.Windows.Forms.PictureBox();
             this.pnlThongKe = new System.Windows.Forms.Panel();
             this.pbThongKe = new System.Windows.Forms.PictureBox();
             this.lblThongKe = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.pbMenu = new System.Windows.Forms.PictureBox();
             this.lblMenu = new System.Windows.Forms.Label();
+            this.pbMenu = new System.Windows.Forms.PictureBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
             this.lblEmailMain = new System.Windows.Forms.Label();
@@ -134,17 +134,6 @@
             this.pnlCaiDat.Size = new System.Drawing.Size(125, 125);
             this.pnlCaiDat.TabIndex = 11;
             // 
-            // pbCaiDat
-            // 
-            this.pbCaiDat.BackColor = System.Drawing.Color.Transparent;
-            this.pbCaiDat.Image = global::GUI_DingDoong.Properties.Resources.appbar_settings;
-            this.pbCaiDat.Location = new System.Drawing.Point(0, 0);
-            this.pbCaiDat.Name = "pbCaiDat";
-            this.pbCaiDat.Size = new System.Drawing.Size(125, 126);
-            this.pbCaiDat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbCaiDat.TabIndex = 2;
-            this.pbCaiDat.TabStop = false;
-            // 
             // lblCaiDat
             // 
             this.lblCaiDat.AutoSize = true;
@@ -157,6 +146,17 @@
             this.lblCaiDat.TabIndex = 0;
             this.lblCaiDat.Text = "Cài đặt";
             // 
+            // pbCaiDat
+            // 
+            this.pbCaiDat.BackColor = System.Drawing.Color.Transparent;
+            this.pbCaiDat.Image = global::GUI_DingDoong.Properties.Resources.appbar_settings;
+            this.pbCaiDat.Location = new System.Drawing.Point(0, 0);
+            this.pbCaiDat.Name = "pbCaiDat";
+            this.pbCaiDat.Size = new System.Drawing.Size(125, 126);
+            this.pbCaiDat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbCaiDat.TabIndex = 2;
+            this.pbCaiDat.TabStop = false;
+            // 
             // pnlKhachHang
             // 
             this.pnlKhachHang.BackColor = System.Drawing.Color.Red;
@@ -166,18 +166,6 @@
             this.pnlKhachHang.Name = "pnlKhachHang";
             this.pnlKhachHang.Size = new System.Drawing.Size(125, 125);
             this.pnlKhachHang.TabIndex = 10;
-            // 
-            // pbKhachHang
-            // 
-            this.pbKhachHang.BackColor = System.Drawing.Color.Transparent;
-            this.pbKhachHang.Image = global::GUI_DingDoong.Properties.Resources.appbar_user;
-            this.pbKhachHang.Location = new System.Drawing.Point(0, 0);
-            this.pbKhachHang.Name = "pbKhachHang";
-            this.pbKhachHang.Size = new System.Drawing.Size(125, 125);
-            this.pbKhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbKhachHang.TabIndex = 2;
-            this.pbKhachHang.TabStop = false;
-            this.pbKhachHang.Click += new System.EventHandler(this.pbKhachHang_Click);
             // 
             // lblKhachHang
             // 
@@ -190,6 +178,18 @@
             this.lblKhachHang.Size = new System.Drawing.Size(83, 19);
             this.lblKhachHang.TabIndex = 0;
             this.lblKhachHang.Text = "Khách Hàng";
+            // 
+            // pbKhachHang
+            // 
+            this.pbKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.pbKhachHang.Image = global::GUI_DingDoong.Properties.Resources.appbar_user;
+            this.pbKhachHang.Location = new System.Drawing.Point(0, 0);
+            this.pbKhachHang.Name = "pbKhachHang";
+            this.pbKhachHang.Size = new System.Drawing.Size(125, 125);
+            this.pbKhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbKhachHang.TabIndex = 2;
+            this.pbKhachHang.TabStop = false;
+            this.pbKhachHang.Click += new System.EventHandler(this.pbKhachHang_Click);
             // 
             // pnlQuanLyBan
             // 
@@ -268,17 +268,6 @@
             this.pnlHoTro.Size = new System.Drawing.Size(125, 125);
             this.pnlHoTro.TabIndex = 17;
             // 
-            // pbHoTro
-            // 
-            this.pbHoTro.BackColor = System.Drawing.Color.Transparent;
-            this.pbHoTro.Image = global::GUI_DingDoong.Properties.Resources.appbar_message;
-            this.pbHoTro.Location = new System.Drawing.Point(0, 0);
-            this.pbHoTro.Name = "pbHoTro";
-            this.pbHoTro.Size = new System.Drawing.Size(125, 125);
-            this.pbHoTro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbHoTro.TabIndex = 2;
-            this.pbHoTro.TabStop = false;
-            // 
             // lblHoTro
             // 
             this.lblHoTro.AutoSize = true;
@@ -291,6 +280,17 @@
             this.lblHoTro.TabIndex = 0;
             this.lblHoTro.Text = "Hỗ trợ từ xa";
             // 
+            // pbHoTro
+            // 
+            this.pbHoTro.BackColor = System.Drawing.Color.Transparent;
+            this.pbHoTro.Image = global::GUI_DingDoong.Properties.Resources.appbar_message;
+            this.pbHoTro.Location = new System.Drawing.Point(0, 0);
+            this.pbHoTro.Name = "pbHoTro";
+            this.pbHoTro.Size = new System.Drawing.Size(125, 125);
+            this.pbHoTro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbHoTro.TabIndex = 2;
+            this.pbHoTro.TabStop = false;
+            // 
             // pnlHuongDan
             // 
             this.pnlHuongDan.BackColor = System.Drawing.Color.DeepPink;
@@ -300,17 +300,6 @@
             this.pnlHuongDan.Name = "pnlHuongDan";
             this.pnlHuongDan.Size = new System.Drawing.Size(125, 125);
             this.pnlHuongDan.TabIndex = 16;
-            // 
-            // pbHuongDan
-            // 
-            this.pbHuongDan.BackColor = System.Drawing.Color.Transparent;
-            this.pbHuongDan.Image = global::GUI_DingDoong.Properties.Resources.appbar_book_perspective_help;
-            this.pbHuongDan.Location = new System.Drawing.Point(0, 0);
-            this.pbHuongDan.Name = "pbHuongDan";
-            this.pbHuongDan.Size = new System.Drawing.Size(125, 125);
-            this.pbHuongDan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbHuongDan.TabIndex = 2;
-            this.pbHuongDan.TabStop = false;
             // 
             // lblHuongDan
             // 
@@ -324,6 +313,17 @@
             this.lblHuongDan.TabIndex = 0;
             this.lblHuongDan.Text = "Hướng dẫn";
             // 
+            // pbHuongDan
+            // 
+            this.pbHuongDan.BackColor = System.Drawing.Color.Transparent;
+            this.pbHuongDan.Image = global::GUI_DingDoong.Properties.Resources.appbar_book_perspective_help;
+            this.pbHuongDan.Location = new System.Drawing.Point(0, 0);
+            this.pbHuongDan.Name = "pbHuongDan";
+            this.pbHuongDan.Size = new System.Drawing.Size(125, 125);
+            this.pbHuongDan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbHuongDan.TabIndex = 2;
+            this.pbHuongDan.TabStop = false;
+            // 
             // pnlKhuyenMai
             // 
             this.pnlKhuyenMai.BackColor = System.Drawing.Color.Green;
@@ -333,18 +333,6 @@
             this.pnlKhuyenMai.Name = "pnlKhuyenMai";
             this.pnlKhuyenMai.Size = new System.Drawing.Size(125, 125);
             this.pnlKhuyenMai.TabIndex = 15;
-            // 
-            // pbKhuyenMai
-            // 
-            this.pbKhuyenMai.BackColor = System.Drawing.Color.Transparent;
-            this.pbKhuyenMai.Image = global::GUI_DingDoong.Properties.Resources.appbar_tag;
-            this.pbKhuyenMai.Location = new System.Drawing.Point(0, 0);
-            this.pbKhuyenMai.Name = "pbKhuyenMai";
-            this.pbKhuyenMai.Size = new System.Drawing.Size(125, 125);
-            this.pbKhuyenMai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbKhuyenMai.TabIndex = 2;
-            this.pbKhuyenMai.TabStop = false;
-            this.pbKhuyenMai.Click += new System.EventHandler(this.pbKhuyenMai_Click);
             // 
             // lblKhuyenMai
             // 
@@ -357,6 +345,18 @@
             this.lblKhuyenMai.Size = new System.Drawing.Size(86, 19);
             this.lblKhuyenMai.TabIndex = 0;
             this.lblKhuyenMai.Text = " Khuyến Mãi";
+            // 
+            // pbKhuyenMai
+            // 
+            this.pbKhuyenMai.BackColor = System.Drawing.Color.Transparent;
+            this.pbKhuyenMai.Image = global::GUI_DingDoong.Properties.Resources.appbar_tag;
+            this.pbKhuyenMai.Location = new System.Drawing.Point(0, 0);
+            this.pbKhuyenMai.Name = "pbKhuyenMai";
+            this.pbKhuyenMai.Size = new System.Drawing.Size(125, 125);
+            this.pbKhuyenMai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbKhuyenMai.TabIndex = 2;
+            this.pbKhuyenMai.TabStop = false;
+            this.pbKhuyenMai.Click += new System.EventHandler(this.pbKhuyenMai_Click);
             // 
             // pnlThongKe
             // 
@@ -401,18 +401,6 @@
             this.pnlMenu.Size = new System.Drawing.Size(125, 125);
             this.pnlMenu.TabIndex = 13;
             // 
-            // pbMenu
-            // 
-            this.pbMenu.BackColor = System.Drawing.Color.Transparent;
-            this.pbMenu.Image = global::GUI_DingDoong.Properties.Resources.appbar_food;
-            this.pbMenu.Location = new System.Drawing.Point(0, 0);
-            this.pbMenu.Name = "pbMenu";
-            this.pbMenu.Size = new System.Drawing.Size(125, 125);
-            this.pbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbMenu.TabIndex = 2;
-            this.pbMenu.TabStop = false;
-            this.pbMenu.Click += new System.EventHandler(this.pbMenu_Click);
-            // 
             // lblMenu
             // 
             this.lblMenu.AutoSize = true;
@@ -424,6 +412,18 @@
             this.lblMenu.Size = new System.Drawing.Size(97, 19);
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "Quản lý Menu";
+            // 
+            // pbMenu
+            // 
+            this.pbMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pbMenu.Image = global::GUI_DingDoong.Properties.Resources.appbar_food;
+            this.pbMenu.Location = new System.Drawing.Point(0, 0);
+            this.pbMenu.Name = "pbMenu";
+            this.pbMenu.Size = new System.Drawing.Size(125, 125);
+            this.pbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMenu.TabIndex = 2;
+            this.pbMenu.TabStop = false;
+            this.pbMenu.Click += new System.EventHandler(this.pbMenu_Click);
             // 
             // pnlLogo
             // 
