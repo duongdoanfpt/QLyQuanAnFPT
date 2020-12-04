@@ -483,34 +483,34 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackColor = System.Drawing.Color.SlateBlue;
             this.panel1.Controls.Add(this.lbDayofweek);
             this.panel1.Controls.Add(this.LbYear);
             this.panel1.Controls.Add(this.lbMonth);
             this.panel1.Controls.Add(this.lbDate);
             this.panel1.Controls.Add(this.lbTime);
-            this.panel1.Location = new System.Drawing.Point(702, 185);
+            this.panel1.Location = new System.Drawing.Point(692, 188);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 384);
+            this.panel1.Size = new System.Drawing.Size(291, 390);
             this.panel1.TabIndex = 25;
             // 
             // lbDayofweek
             // 
             this.lbDayofweek.AutoSize = true;
-            this.lbDayofweek.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDayofweek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbDayofweek.Location = new System.Drawing.Point(187, 237);
+            this.lbDayofweek.Font = new System.Drawing.Font("Times New Roman", 68.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDayofweek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lbDayofweek.Location = new System.Drawing.Point(138, 222);
             this.lbDayofweek.Name = "lbDayofweek";
-            this.lbDayofweek.Size = new System.Drawing.Size(143, 109);
+            this.lbDayofweek.Size = new System.Drawing.Size(150, 103);
             this.lbDayofweek.TabIndex = 4;
-            this.lbDayofweek.Text = "21";
+            this.lbDayofweek.Text = "Fri";
             // 
             // LbYear
             // 
             this.LbYear.AutoSize = true;
             this.LbYear.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LbYear.Location = new System.Drawing.Point(97, 280);
+            this.LbYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.LbYear.Location = new System.Drawing.Point(79, 324);
             this.LbYear.Name = "LbYear";
             this.LbYear.Size = new System.Drawing.Size(71, 33);
             this.LbYear.TabIndex = 3;
@@ -520,8 +520,8 @@
             // 
             this.lbMonth.AutoSize = true;
             this.lbMonth.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbMonth.Location = new System.Drawing.Point(95, 234);
+            this.lbMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lbMonth.Location = new System.Drawing.Point(3, 314);
             this.lbMonth.Name = "lbMonth";
             this.lbMonth.Size = new System.Drawing.Size(94, 46);
             this.lbMonth.TabIndex = 2;
@@ -530,24 +530,24 @@
             // lbDate
             // 
             this.lbDate.AutoSize = true;
-            this.lbDate.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbDate.Location = new System.Drawing.Point(-19, 209);
+            this.lbDate.Font = new System.Drawing.Font("Times New Roman", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lbDate.Location = new System.Drawing.Point(-10, 204);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(143, 109);
+            this.lbDate.Size = new System.Drawing.Size(160, 121);
             this.lbDate.TabIndex = 1;
             this.lbDate.Text = "21";
             // 
             // lbTime
             // 
             this.lbTime.AutoSize = true;
-            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 57F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbTime.Location = new System.Drawing.Point(17, 58);
+            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lbTime.Location = new System.Drawing.Point(-21, 70);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(260, 101);
+            this.lbTime.Size = new System.Drawing.Size(334, 98);
             this.lbTime.TabIndex = 0;
-            this.lbTime.Text = "label1";
+            this.lbTime.Text = "14:33:00";
             // 
             // timer1
             // 
