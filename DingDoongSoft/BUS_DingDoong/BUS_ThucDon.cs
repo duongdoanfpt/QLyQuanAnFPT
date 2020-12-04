@@ -59,7 +59,10 @@ namespace BUS_DingDoong
         {
             return dalThucDon.SearchThucDon(tenTD);
         }
-
+        public DataTable dtsearchTDBan(string TenTD)
+        {
+            return dalThucDon.dtsearchTDBan(TenTD);
+        }
         public bool XoaThucDon(string maTD)
         {
             return dalThucDon.XoaThucDon(maTD);
@@ -73,6 +76,10 @@ namespace BUS_DingDoong
         public DataTable DanhSachThucDonAll()
         {
             return dalThucDon.DanhSachThucDonAll();
+        }
+        public DataTable dtsearchTDNhom(string Nhom)
+        {
+            return dalThucDon.dtsearchTDNhom(Nhom);
         }
     }
 }

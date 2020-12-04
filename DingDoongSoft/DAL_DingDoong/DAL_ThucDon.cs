@@ -83,7 +83,47 @@ namespace DAL_DingDoong
                 _conn.Close();
             }
         }
-        
+
+        public DataTable dtsearchTDBan(string TenTD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_searchTDBan";
+                cm.Parameters.AddWithValue("TenTd", TenTD);
+                DataTable dtThucDon = new DataTable();
+                dtThucDon.Load(cm.ExecuteReader());
+                return dtThucDon;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public DataTable dtsearchTDNhom(string Nhom)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_TDtheoNhom";
+                cm.Parameters.AddWithValue("Nhom", Nhom);
+                DataTable dtThucDon = new DataTable();
+                dtThucDon.Load(cm.ExecuteReader());
+                return dtThucDon;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
         public DataTable DanhSachThucDon()
         {
             try

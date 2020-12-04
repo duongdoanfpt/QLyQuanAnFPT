@@ -17,6 +17,7 @@ namespace GUI_DingDoong
 
     public partial class FormKhuVucBan : Form
     {
+        // Khởi tạo ban đầu
         public static BindingSource bdsKhachHang = new BindingSource();
         public static BindingSource bdsKhuyenMai = new BindingSource();
         BUS_Ban busBan = new BUS_Ban();
@@ -29,9 +30,10 @@ namespace GUI_DingDoong
         public static DTO_Khach KH;
         public static DTO_NhanVien NV;
         static int quyen = FormMain.quyen;
-
+        // 
 
         string startupPath = Environment.CurrentDirectory;
+        // Disable tất cả nút trên frm
         public IEnumerable<Control> GetAll(Control control, Type type)
         {
             var controls = control.Controls.Cast<Control>();
@@ -40,6 +42,19 @@ namespace GUI_DingDoong
                                       .Concat(controls)
                                       .Where(c => c.GetType() == type);
         }
+        // tạo sourch gợi ý cho textbox tim kiem
+        private AutoCompleteStringCollection GetAutoSourceFromTable(DataTable table)
+        {
+            AutoCompleteStringCollection autoSourceCollection = new AutoCompleteStringCollection();
+
+            foreach (DataRow row in table.Rows)
+            {
+                autoSourceCollection.Add(row[0].ToString()); 
+            }
+
+            return autoSourceCollection;
+        }
+
         private void FrmLoad()
         {
             foreach (var bt in GetAll(this, typeof(Button)))
@@ -58,16 +73,7 @@ namespace GUI_DingDoong
 
         }
 
-        private void Bt_Paint(object sender, PaintEventArgs e)
-        {
-          Button bt = sender as Button;
-          ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
-          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
-          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
-          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
-          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
-        }
-
+        // chọn một bàn ở vị trí indexBan
         private void SelectBan(int indexBan)
         {
             FlowLayoutPanel flp = (FlowLayoutPanel)flpkvBan.Controls[indexBan];
@@ -90,8 +96,9 @@ namespace GUI_DingDoong
                 dgvHDCT.Enabled = true;
                 btChuyenBan.Enabled = true;
                 btGopBan.Enabled = true;
-                
-                if(string.IsNullOrWhiteSpace(hd.SDT_KH))
+                btTimKiem.Enabled = true;
+
+                if (string.IsNullOrWhiteSpace(hd.SDT_KH))
                 {
                     ChkBKhachHang.Enabled = true;
                     btThemKhach.Enabled = false;
@@ -106,12 +113,12 @@ namespace GUI_DingDoong
                     btThemKhach.Enabled = false;
                     txtSDTKH.Enabled = false;
                     txtSDTKH.Text = hd.SDT_KH;
-                }    
+                }
 
                 lbKhuyenMai.Text = hd.KhuyenMai.ToString() + "%";
-                lbTongTien.Text = (busBan.TongTienHDTam(hd)-busBan.TongTienHDTam(hd)*hd.KhuyenMai/100).ToString();
+                lbTongTien.Text = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100).ToString();
                 btKhuyenMai.Enabled = true;
-                
+
                 lbStartTime.Text = (StartHD.Hour < 10 ? "0" + StartHD.Hour.ToString() : StartHD.Hour.ToString()) + ":" + (StartHD.Minute < 10 ? "0" + StartHD.Minute.ToString() : StartHD.Minute.ToString()) + ":" + (StartHD.Second < 10 ? "0" + StartHD.Second.ToString() : StartHD.Second.ToString());
             }
             else
@@ -127,7 +134,8 @@ namespace GUI_DingDoong
                 dgvHDCT.Enabled = false;
                 btChuyenBan.Enabled = false;
                 btGopBan.Enabled = false;
-                
+                btTimKiem.Enabled = false;
+
 
             }
             LoadCTHD();
@@ -164,6 +172,8 @@ namespace GUI_DingDoong
 
 
         }
+
+        //Hien cthd ở bàn đã chọn
         private void LoadCTHD()
         {
 
@@ -187,10 +197,12 @@ namespace GUI_DingDoong
 
 
         }
+
+        // Tạo báo cáo crystal khi xuất hoá đơn
         private void crtBaoCao()
         {
 
-            
+
             DataTable dtHDCT = busBan.dtHDCT(hd.MaHD);
             CrystalReport.crpBill cb = new CrystalReport.crpBill();
             TextObject txtnv = (TextObject)cb.ReportDefinition.Sections["Section1"].ReportObjects["txtTenNV"];
@@ -202,7 +214,7 @@ namespace GUI_DingDoong
             TextObject txtkh = (TextObject)cb.ReportDefinition.Sections["Section2"].ReportObjects["txtKH"];
             txtkh.Text = txtSDTKH.Text;
             TextObject txtkm = (TextObject)cb.ReportDefinition.Sections["Section4"].ReportObjects["TextKM"];
-            txtkm.Text = hd.KhuyenMai.ToString()+"%";
+            txtkm.Text = hd.KhuyenMai.ToString() + "%";
             TextObject txttongtien = (TextObject)cb.ReportDefinition.Sections["Section5"].ReportObjects["TxtTongTien"];
             txttongtien.Text = busBan.TongTienHDTam(hd).ToString();
             TextObject txtThanhTien = (TextObject)cb.ReportDefinition.Sections["Section5"].ReportObjects["txtThanhtien"];
@@ -210,24 +222,25 @@ namespace GUI_DingDoong
 
 
             cb.Database.Tables["CTHD"].SetDataSource(dtHDCT);
-           
+
             FrmBill frm = new FrmBill(cb);
             frm.Show();
         }
 
 
-
+        // load thưc đơn ở frmkhuvucBan
         private void loadThucDonkvBan()
         {
             dgvThucDon.DataSource = busTD.DanhSachThucDonBan();
 
         }
 
+        // lấy danh sách bàn và add toàn bộ bàn lên form
         private void loadban()
         {
             string startupPath = Environment.CurrentDirectory;
             flpkvBan.Controls.Clear();
-                
+
 
             foreach (DataRow dr in busBan.dtBan().Rows)
             {
@@ -264,20 +277,32 @@ namespace GUI_DingDoong
 
                 flpkvBan.Controls.Add(flp);
 
-                
+
                 ptb.Click += Ptb_Click;
 
 
             }
         }
 
-        private void exportPDF()
+        // làm nút 3d
+        private void Bt_Paint(object sender, PaintEventArgs e)
         {
-
+          Button bt = sender as Button;
+          ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
         }
-        public FormKhuVucBan()
+
+        
+       
+
+    
+        public FormKhuVucBan(int number)
         {
             InitializeComponent();
+            IndexBan = number;
         }
 
         private void FormKhuVucBan_Load(object sender, EventArgs e)
@@ -294,7 +319,14 @@ namespace GUI_DingDoong
             dgvHDCT.Enabled = false;
             dgvHDCT.ReadOnly = true;
             dgvThucDon.ReadOnly = true;
+            cbNhom.SelectedIndex = 0;
+            txtTenTD.AutoCompleteCustomSource = GetAutoSourceFromTable(busTD.DanhSachThucDonBan());
+            txtTenTD.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txtTenTD.AutoCompleteSource = AutoCompleteSource.CustomSource;
+           
+        
             FrmLoad();
+            btLamMoi.Enabled = true;
             loadThucDonkvBan();
             lbTenNV.Text = FormLogin.NvMain.TenNV;
             if (IndexBan < 0)
@@ -332,12 +364,7 @@ namespace GUI_DingDoong
 
 
         }
-
-        
-
-       
-
-        
+      
         private void btBatDau_Click(object sender, EventArgs e)
         {
             DTO_Ban Ban = busBan.curBan(lbViTriBan.Text);
@@ -362,6 +389,7 @@ namespace GUI_DingDoong
                     btChuyenBan.Enabled = true;
                     ChkBKhachHang.Enabled = true;
                     btGopBan.Enabled = true;
+                    btTimKiem.Enabled = true;
                 }
                 else
                 {
@@ -411,10 +439,7 @@ namespace GUI_DingDoong
             lbTongTien.Text = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100).ToString(); 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+       
         private void CloseFrm(object sender, FormClosedEventArgs e)
         {
 
@@ -474,6 +499,7 @@ namespace GUI_DingDoong
             }
             crtBaoCao();
             busBan.ClearTemp(hd.MaHD);
+            FormKhuVucBan_Load(sender, e);
         }
 
         private void dgvThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -616,7 +642,7 @@ namespace GUI_DingDoong
 
         private void pbBan_Click(object sender, EventArgs e)
         {
-            FormKhuVucBan kv = new FormKhuVucBan();
+            FormKhuVucBan kv = new FormKhuVucBan(-1);
             this.Hide();
 
             kv.Closed += (s, args) => this.Close();
@@ -630,6 +656,46 @@ namespace GUI_DingDoong
 
             thongKe.Closed += (s, args) => this.Close();
             thongKe.Show();
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            dgvThucDon.DataSource = busTD.dtsearchTDBan(txtTenTD.Text);
+        }
+
+        private void cbNhom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbNhom.SelectedIndex!=0)
+            {
+                dgvThucDon.DataSource = busTD.dtsearchTDNhom(cbNhom.Text);
+            }
+            else
+            {
+                dgvThucDon.DataSource = busTD.DanhSachThucDonBan();
+            }    
+        }
+
+        private void txtTenTD_KeyDown(object sender, KeyEventArgs e)
+        {if(e.KeyCode == Keys.Enter)
+            {
+                dgvThucDon.DataSource = busTD.dtsearchTDBan(txtTenTD.Text);
+            }    
+
+        }
+
+      
+
+        private void txtTenTD_Enter(object sender, EventArgs e)
+        {
+            txtTenTD.Text = null;
+        }
+
+        private void btLamMoi_Click(object sender, EventArgs e)
+        {
+
+            dgvThucDon.DataSource = busTD.DanhSachThucDonBan();
+            cbNhom.SelectedIndex = 0;
+            txtTenTD.Text = "Nhập tên món để tìm kiếm";
         }
     }
  }

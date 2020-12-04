@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_DingDoong;
 using BUS_DingDoong;
+using System.IO;
 
 namespace GUI_DingDoong
 {
@@ -19,12 +20,49 @@ namespace GUI_DingDoong
         {
             InitializeComponent();
             this.CenterToScreen();
-            txtEmail.Text = "duydtps11681@fpt.edu.vn";
+           
         }
 
         public static DTO_NhanVien  NvMain;
+        private void writeUserInfor(DTO_NhanVien nv)
+        {
 
-        BUS_NhanVien busnhanvien = new BUS_NhanVien();
+            try
+            {
+                string startupPath = Environment.CurrentDirectory;
+
+                string file = startupPath + @"\UserInfor.txt";
+
+                if (!File.Exists(file))
+                {
+                    using (var stream = File.Create(file))
+                    {
+
+                    }
+
+                }
+                FileInfo fileinfor = new FileInfo(file);
+                fileinfor.Attributes = FileAttributes.Normal;
+                using (StreamWriter sw = new StreamWriter(file, false))
+                {
+
+
+
+                    sw.Write(nv.Email);
+                }
+
+                fileinfor.Attributes = FileAttributes.Hidden;
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+
+            BUS_NhanVien busnhanvien = new BUS_NhanVien();
         private void btLogin_Click(object sender, EventArgs e)
         {
             DTO_NhanVien nv = new DTO_NhanVien();
@@ -36,6 +74,7 @@ namespace GUI_DingDoong
                 
                 MessageBox.Show("Đăng nhập thành công");
                 NvMain = busNhanVien.curNV(nv.Email);
+                if (chkbSave.Checked == true) writeUserInfor(nv);
                 FormMain frmMain = new FormMain();
                 this.Hide();
 
@@ -113,6 +152,7 @@ namespace GUI_DingDoong
 
                     MessageBox.Show("Đăng nhập thành công");
                     NvMain = busNhanVien.curNV(nv.Email);
+                    if (chkbSave.Checked == true) writeUserInfor(nv);
                     FormMain frmMain = new FormMain();
                     this.Hide();
 
@@ -135,6 +175,33 @@ namespace GUI_DingDoong
                     txtEmail.Focus();
                 }
             }    
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                string startupPath = Environment.CurrentDirectory;
+
+                string file = startupPath + @"\UserInfor.txt";
+
+                using (FileStream fsr = new FileStream(file, FileMode.Open, FileAccess.Read))
+                {
+                    using (StreamReader sr = new StreamReader(fsr))
+                    {
+                        txtEmail.Text = sr.ReadToEnd();
+
+                    }
+                }
+
+
+
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

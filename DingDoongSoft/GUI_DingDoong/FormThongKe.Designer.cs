@@ -38,20 +38,21 @@ namespace GUI_DingDoong
             this.Home = new System.Windows.Forms.PictureBox();
             this.ptbMenuThucDon = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.rdTDSL = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTongQuan = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.rdTDSL = new System.Windows.Forms.RadioButton();
             this.dtpkStartDate = new System.Windows.Forms.DateTimePicker();
             this.dtpkEndDate = new System.Windows.Forms.DateTimePicker();
             this.chkboxTime = new System.Windows.Forms.CheckBox();
             this.lbarrow = new System.Windows.Forms.Label();
             this.btThongKe = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.LayoutMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ban)).BeginInit();
@@ -75,7 +76,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 968F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 971F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -95,7 +96,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1115, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1118, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
@@ -189,19 +190,25 @@ namespace GUI_DingDoong
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // panel3
+            // rdTDSL
             // 
-            this.panel3.Location = new System.Drawing.Point(1, 362);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(202, 109);
-            this.panel3.TabIndex = 1;
+            this.rdTDSL.AutoSize = true;
+            this.rdTDSL.Location = new System.Drawing.Point(21, 43);
+            this.rdTDSL.Name = "rdTDSL";
+            this.rdTDSL.Size = new System.Drawing.Size(119, 17);
+            this.rdTDSL.TabIndex = 4;
+            this.rdTDSL.TabStop = true;
+            this.rdTDSL.Text = "Thực đơn bán chạy";
+            this.rdTDSL.UseVisualStyleBackColor = true;
+            this.rdTDSL.CheckedChanged += new System.EventHandler(this.rdTDSL_CheckedChanged);
             // 
-            // panel4
+            // label2
             // 
-            this.panel4.Location = new System.Drawing.Point(1, 488);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(202, 181);
-            this.panel4.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 0;
             // 
             // label1
             // 
@@ -215,13 +222,19 @@ namespace GUI_DingDoong
             this.label1.Text = "Thực Đơn";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // panel3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 0;
+            this.panel3.Location = new System.Drawing.Point(1, 362);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(202, 109);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(1, 488);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(202, 181);
+            this.panel4.TabIndex = 2;
             // 
             // panel1
             // 
@@ -250,18 +263,6 @@ namespace GUI_DingDoong
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 6;
-            // 
-            // rdTDSL
-            // 
-            this.rdTDSL.AutoSize = true;
-            this.rdTDSL.Location = new System.Drawing.Point(21, 43);
-            this.rdTDSL.Name = "rdTDSL";
-            this.rdTDSL.Size = new System.Drawing.Size(119, 17);
-            this.rdTDSL.TabIndex = 4;
-            this.rdTDSL.TabStop = true;
-            this.rdTDSL.Text = "Thực đơn bán chạy";
-            this.rdTDSL.UseVisualStyleBackColor = true;
-            this.rdTDSL.CheckedChanged += new System.EventHandler(this.rdTDSL_CheckedChanged);
             // 
             // dtpkStartDate
             // 
@@ -313,10 +314,20 @@ namespace GUI_DingDoong
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(209, 100);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1054, 569);
             this.flowLayoutPanel1.TabIndex = 12;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(903, 46);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Xuất file";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormThongKe
             // 
@@ -324,6 +335,7 @@ namespace GUI_DingDoong
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btThongKe);
             this.Controls.Add(this.lbarrow);
@@ -381,5 +393,6 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Label lbarrow;
         private System.Windows.Forms.Button btThongKe;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button1;
     }
 }
