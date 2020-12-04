@@ -73,6 +73,16 @@ namespace GUI_DingDoong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2c4d299dffa30efd57b2_removebg {
+            get {
+                object obj = ResourceManager.GetObject("2c4d299dffa30efd57b2-removebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Apathae_Chakram_2_Home {
             get {
                 object obj = ResourceManager.GetObject("Apathae-Chakram-2-Home", resourceCulture);
@@ -416,6 +426,26 @@ namespace GUI_DingDoong.Properties {
         internal static System.Drawing.Bitmap Flameia_Rabbit_Xp_Apple_menu {
             get {
                 object obj = ResourceManager.GetObject("Flameia-Rabbit-Xp-Apple-menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FullColor_1280x1024_72dpi {
+            get {
+                object obj = ResourceManager.GetObject("FullColor_1280x1024_72dpi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FullColor_1280x1024_72dpi__1_ {
+            get {
+                object obj = ResourceManager.GetObject("FullColor_1280x1024_72dpi (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
