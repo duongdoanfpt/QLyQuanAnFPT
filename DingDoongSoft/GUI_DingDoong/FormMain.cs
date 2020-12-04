@@ -39,5 +39,20 @@ namespace GUI_DingDoong
         {
             Application.Exit();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTime.Text = (DateTime.Now.Hour < 10 ? "0" + DateTime.Now.Hour.ToString() : DateTime.Now.Hour.ToString()) + ":" + (DateTime.Now.Minute < 10 ? "0" + DateTime.Now.Minute.ToString() : DateTime.Now.Minute.ToString()) + ":" + (DateTime.Now.Second < 10 ? "0" + DateTime.Now.Second.ToString() : DateTime.Now.Second.ToString());
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            lbTime.Text = (DateTime.Now.Hour < 10 ? "0" + DateTime.Now.Hour.ToString() : DateTime.Now.Hour.ToString()) + ":" + (DateTime.Now.Minute < 10 ? "0" + DateTime.Now.Minute.ToString() : DateTime.Now.Minute.ToString()) + ":" + (DateTime.Now.Second < 10 ? "0" + DateTime.Now.Second.ToString() : DateTime.Now.Second.ToString());
+            lbDate.Text = DateTime.Now.Day<10?"0"+DateTime.Now.Day.ToString():DateTime.Now.Day.ToString();
+            lbMonth.Text = DateTime.Now.ToString("MMM");
+            LbYear.Text = DateTime.Now.ToString("yyyy");
+            lbDayofweek.Text = DateTime.Now.ToString("ddd");
+            
+        }
     }
 }
