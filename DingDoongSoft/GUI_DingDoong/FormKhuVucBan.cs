@@ -587,5 +587,51 @@ namespace GUI_DingDoong
 
         }
 
+        private void pbHome_Click(object sender, EventArgs e)
+        {
+            FormMain frmMain = new FormMain();
+            this.Hide();
+
+            frmMain.Closed += (s, args) => this.Close();
+            frmMain.Show();
+        }
+
+        private void pbNhanVien_Click(object sender, EventArgs e)
+        {
+            FormNhanVien nv = new FormNhanVien();
+            this.Hide();
+
+            nv.Closed += (s, args) => this.Close();
+            nv.Show();
+        }
+
+        private void pbKhachHang_Click(object sender, EventArgs e)
+        {
+            ; FormKhachHang kh = new FormKhachHang();
+            this.Hide();
+
+            kh.Closed += (s, args) => this.Close();
+            kh.Show();
+        }
+
+        private void pbBan_Click(object sender, EventArgs e)
+        {
+            FormKhuVucBan kv = new FormKhuVucBan();
+            this.Hide();
+
+            kv.Closed += (s, args) => this.Close();
+            kv.Show();
+        }
+
+        private void pbThongKe_Click(object sender, EventArgs e)
+        {
+            FormThongKe thongKe = new FormThongKe();
+            this.Hide();
+
+            thongKe.Closed += (s, args) => this.Close();
+            thongKe.Show();
+        }
     }
-}
+ }
+ 
+

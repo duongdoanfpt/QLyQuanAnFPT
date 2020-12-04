@@ -19,6 +19,7 @@ namespace GUI_DingDoong
         public FormNhanVien()
         {
             InitializeComponent();
+            lblUsers.Text = FormLogin.NvMain.Email;
         }
         private string imagePath;
         string startupPath = Environment.CurrentDirectory;
@@ -416,11 +417,11 @@ namespace GUI_DingDoong
 
         private void pbNhanVien_Click(object sender, EventArgs e)
         {
-            FormNhanVien nv = new FormNhanVien();
-            this.Hide();
+            //FormNhanVien nv = new FormNhanVien();
+            //this.Hide();
 
-            nv.Closed += (s, args) => this.Close();
-            nv.Show();
+            //nv.Closed += (s, args) => this.Close();
+            //nv.Show();
         }
 
         private void pbKhachHang_Click(object sender, EventArgs e)
