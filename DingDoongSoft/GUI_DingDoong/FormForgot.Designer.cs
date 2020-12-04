@@ -73,6 +73,7 @@
             this.btExit.TabIndex = 14;
             this.btExit.Text = "Exit";
             this.btExit.UseVisualStyleBackColor = true;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // btSendMail
             // 
@@ -83,6 +84,7 @@
             this.btSendMail.TabIndex = 13;
             this.btSendMail.Text = "Send Mail";
             this.btSendMail.UseVisualStyleBackColor = true;
+            this.btSendMail.Click += new System.EventHandler(this.btSendMail_Click);
             // 
             // FormForgot
             // 
@@ -96,7 +98,7 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblForgot);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormForgot";
             this.Text = "Quên Mật Khẩu";
             this.ResumeLayout(false);

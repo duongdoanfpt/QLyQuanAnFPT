@@ -61,37 +61,43 @@ namespace GUI_DingDoong
 
         private void lblForgotPass_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text != "")
-            {
-                if (busNhanVien.NhanVienQuenMatKhau(txtEmail.Text))
-                {
-                    StringBuilder builder = new StringBuilder();
-                    builder.Append(busNhanVien.RandomString(4, true));
-                    builder.Append(busNhanVien.RandomNumber(1000, 9999));
-                    builder.Append(busNhanVien.RandomString(2, false));
-                    
+            //if (txtEmail.Text != "")
+            //{
+            //    if (busNhanVien.NhanVienQuenMatKhau(txtEmail.Text))
+            //    {
+            //        StringBuilder builder = new StringBuilder();
+            //        builder.Append(busNhanVien.RandomString(4, true));
+            //        builder.Append(busNhanVien.RandomNumber(1000, 9999));
+            //        builder.Append(busNhanVien.RandomString(2, false));
 
-                    DTO_NhanVien nv = new DTO_NhanVien();
-                    nv.Email = txtEmail.Text;
-                    nv.MatKhau = busNhanVien.Encryption(builder.ToString());
 
-                    if (busNhanVien.updateMK(nv))
-                    {
-                        MessageBox.Show("Thành công");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không thành công");
-                    }
-                    busNhanVien.SendMail(txtEmail.Text, builder.ToString());
-                    MessageBox.Show("Gửi thành công");
-                }
+            //        DTO_NhanVien nv = new DTO_NhanVien();
+            //        nv.Email = txtEmail.Text;
+            //        nv.MatKhau = busNhanVien.Encryption(builder.ToString());
 
-            }
-            else
-            {
-                MessageBox.Show("Email Không tồn tại");
-            }
+            //        if (busNhanVien.updateMK(nv))
+            //        {
+            //            MessageBox.Show("Thành công");
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Không thành công");
+            //        }
+            //        busNhanVien.SendMail(txtEmail.Text, builder.ToString());
+            //        MessageBox.Show("Gửi thành công");
+            //    }
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Email Không tồn tại");
+            //}
+
+            FormForgot frmForgot = new FormForgot();
+            this.Hide();
+
+            frmForgot.Closed += (s, args) => this.Close();
+            frmForgot.Show();
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
