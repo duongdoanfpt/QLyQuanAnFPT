@@ -201,5 +201,10 @@ namespace GUI_DingDoong
             thucdon.Closed += (s, args) => this.Close();
             thucdon.Show();
         }
+
+        private void lbThucDonBest_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
