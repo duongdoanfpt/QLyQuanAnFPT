@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlAccounts = new System.Windows.Forms.Panel();
             this.lblAccounts = new System.Windows.Forms.Label();
             this.pbAccounts = new System.Windows.Forms.PictureBox();
@@ -58,12 +59,17 @@
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblMenu = new System.Windows.Forms.Label();
             this.pbMenu = new System.Windows.Forms.PictureBox();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.lblLogo = new System.Windows.Forms.Label();
             this.lblEmailMain = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbDayofweek = new System.Windows.Forms.Label();
+            this.LbYear = new System.Windows.Forms.Label();
+            this.lbMonth = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
+            this.lbTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAccounts)).BeginInit();
             this.pnlCaiDat.SuspendLayout();
@@ -84,10 +90,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).BeginInit();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
-            this.pnlLogo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAccounts
@@ -263,7 +269,7 @@
             this.pnlHoTro.BackColor = System.Drawing.Color.Crimson;
             this.pnlHoTro.Controls.Add(this.lblHoTro);
             this.pnlHoTro.Controls.Add(this.pbHoTro);
-            this.pnlHoTro.Location = new System.Drawing.Point(524, 447);
+            this.pnlHoTro.Location = new System.Drawing.Point(508, 450);
             this.pnlHoTro.Name = "pnlHoTro";
             this.pnlHoTro.Size = new System.Drawing.Size(125, 125);
             this.pnlHoTro.TabIndex = 17;
@@ -296,7 +302,7 @@
             this.pnlHuongDan.BackColor = System.Drawing.Color.DeepPink;
             this.pnlHuongDan.Controls.Add(this.lblHuongDan);
             this.pnlHuongDan.Controls.Add(this.pbHuongDan);
-            this.pnlHuongDan.Location = new System.Drawing.Point(393, 447);
+            this.pnlHuongDan.Location = new System.Drawing.Point(377, 450);
             this.pnlHuongDan.Name = "pnlHuongDan";
             this.pnlHuongDan.Size = new System.Drawing.Size(125, 125);
             this.pnlHuongDan.TabIndex = 16;
@@ -329,7 +335,7 @@
             this.pnlKhuyenMai.BackColor = System.Drawing.Color.Green;
             this.pnlKhuyenMai.Controls.Add(this.lblKhuyenMai);
             this.pnlKhuyenMai.Controls.Add(this.pbKhuyenMai);
-            this.pnlKhuyenMai.Location = new System.Drawing.Point(524, 185);
+            this.pnlKhuyenMai.Location = new System.Drawing.Point(508, 188);
             this.pnlKhuyenMai.Name = "pnlKhuyenMai";
             this.pnlKhuyenMai.Size = new System.Drawing.Size(125, 125);
             this.pnlKhuyenMai.TabIndex = 15;
@@ -363,7 +369,7 @@
             this.pnlThongKe.BackColor = System.Drawing.Color.DarkMagenta;
             this.pnlThongKe.Controls.Add(this.pbThongKe);
             this.pnlThongKe.Controls.Add(this.lblThongKe);
-            this.pnlThongKe.Location = new System.Drawing.Point(393, 316);
+            this.pnlThongKe.Location = new System.Drawing.Point(377, 319);
             this.pnlThongKe.Name = "pnlThongKe";
             this.pnlThongKe.Size = new System.Drawing.Size(256, 125);
             this.pnlThongKe.TabIndex = 14;
@@ -396,7 +402,7 @@
             this.pnlMenu.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pnlMenu.Controls.Add(this.lblMenu);
             this.pnlMenu.Controls.Add(this.pbMenu);
-            this.pnlMenu.Location = new System.Drawing.Point(393, 185);
+            this.pnlMenu.Location = new System.Drawing.Point(377, 188);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(125, 125);
             this.pnlMenu.TabIndex = 13;
@@ -424,26 +430,6 @@
             this.pbMenu.TabIndex = 2;
             this.pbMenu.TabStop = false;
             this.pbMenu.Click += new System.EventHandler(this.pbMenu_Click);
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackColor = System.Drawing.Color.Red;
-            this.pnlLogo.Controls.Add(this.lblLogo);
-            this.pnlLogo.Location = new System.Drawing.Point(725, 447);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(256, 125);
-            this.pnlLogo.TabIndex = 18;
-            // 
-            // lblLogo
-            // 
-            this.lblLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblLogo.AutoSize = true;
-            this.lblLogo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(23, 46);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(209, 30);
-            this.lblLogo.TabIndex = 2;
-            this.lblLogo.Text = "DINGDOONG LOGO";
             // 
             // lblEmailMain
             // 
@@ -495,6 +481,80 @@
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.lbDayofweek);
+            this.panel1.Controls.Add(this.LbYear);
+            this.panel1.Controls.Add(this.lbMonth);
+            this.panel1.Controls.Add(this.lbDate);
+            this.panel1.Controls.Add(this.lbTime);
+            this.panel1.Location = new System.Drawing.Point(702, 185);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(291, 384);
+            this.panel1.TabIndex = 25;
+            // 
+            // lbDayofweek
+            // 
+            this.lbDayofweek.AutoSize = true;
+            this.lbDayofweek.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDayofweek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbDayofweek.Location = new System.Drawing.Point(187, 237);
+            this.lbDayofweek.Name = "lbDayofweek";
+            this.lbDayofweek.Size = new System.Drawing.Size(143, 109);
+            this.lbDayofweek.TabIndex = 4;
+            this.lbDayofweek.Text = "21";
+            // 
+            // LbYear
+            // 
+            this.LbYear.AutoSize = true;
+            this.LbYear.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LbYear.Location = new System.Drawing.Point(97, 280);
+            this.LbYear.Name = "LbYear";
+            this.LbYear.Size = new System.Drawing.Size(71, 33);
+            this.LbYear.TabIndex = 3;
+            this.LbYear.Text = "2020";
+            // 
+            // lbMonth
+            // 
+            this.lbMonth.AutoSize = true;
+            this.lbMonth.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbMonth.Location = new System.Drawing.Point(95, 234);
+            this.lbMonth.Name = "lbMonth";
+            this.lbMonth.Size = new System.Drawing.Size(94, 46);
+            this.lbMonth.TabIndex = 2;
+            this.lbMonth.Text = "JAN";
+            // 
+            // lbDate
+            // 
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbDate.Location = new System.Drawing.Point(-19, 209);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(143, 109);
+            this.lbDate.TabIndex = 1;
+            this.lbDate.Text = "21";
+            // 
+            // lbTime
+            // 
+            this.lbTime.AutoSize = true;
+            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 57F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbTime.Location = new System.Drawing.Point(17, 58);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(260, 101);
+            this.lbTime.TabIndex = 0;
+            this.lbTime.Text = "label1";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -502,9 +562,9 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(1005, 613);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.pnlHoTro);
             this.Controls.Add(this.pnlHuongDan);
             this.Controls.Add(this.pnlKhuyenMai);
@@ -522,6 +582,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ Thống Chính - DingDoong";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.pnlAccounts.ResumeLayout(false);
             this.pnlAccounts.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAccounts)).EndInit();
@@ -552,12 +613,12 @@
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).EndInit();
-            this.pnlLogo.ResumeLayout(false);
-            this.pnlLogo.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -594,12 +655,17 @@
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.PictureBox pbMenu;
         private System.Windows.Forms.Label lblMenu;
-        private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblEmailMain;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbDayofweek;
+        private System.Windows.Forms.Label LbYear;
+        private System.Windows.Forms.Label lbMonth;
+        private System.Windows.Forms.Label lbDate;
+        private System.Windows.Forms.Label lbTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
