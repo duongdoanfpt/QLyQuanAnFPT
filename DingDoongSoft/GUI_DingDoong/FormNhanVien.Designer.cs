@@ -278,7 +278,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1060F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1063F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
@@ -301,6 +301,7 @@ namespace GUI_DingDoong
             this.pbThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbThongKe.TabIndex = 5;
             this.pbThongKe.TabStop = false;
+            this.pbThongKe.Click += new System.EventHandler(this.pbThongKe_Click);
             // 
             // pbBan
             // 
@@ -311,6 +312,7 @@ namespace GUI_DingDoong
             this.pbBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBan.TabIndex = 4;
             this.pbBan.TabStop = false;
+            this.pbBan.Click += new System.EventHandler(this.pbBan_Click);
             // 
             // pbKhachHang
             // 
@@ -321,13 +323,14 @@ namespace GUI_DingDoong
             this.pbKhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbKhachHang.TabIndex = 3;
             this.pbKhachHang.TabStop = false;
+            this.pbKhachHang.Click += new System.EventHandler(this.pbKhachHang_Click);
             // 
             // lblUsers
             // 
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1163, 9);
+            this.lblUsers.Location = new System.Drawing.Point(1166, 9);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 6;
@@ -342,6 +345,7 @@ namespace GUI_DingDoong
             this.pbNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbNhanVien.TabIndex = 2;
             this.pbNhanVien.TabStop = false;
+            this.pbNhanVien.Click += new System.EventHandler(this.pbNhanVien_Click);
             // 
             // pbHome
             // 
@@ -352,6 +356,7 @@ namespace GUI_DingDoong
             this.pbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbHome.TabIndex = 1;
             this.pbHome.TabStop = false;
+            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -386,6 +391,7 @@ namespace GUI_DingDoong
             this.btTimKiem.TabIndex = 12;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -456,6 +462,7 @@ namespace GUI_DingDoong
             this.btThoat.TabIndex = 11;
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btBoQua
             // 
@@ -486,6 +493,7 @@ namespace GUI_DingDoong
             this.btCapNhat.Text = "Cập nhật";
             this.btCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btCapNhat.UseVisualStyleBackColor = true;
+            this.btCapNhat.Click += new System.EventHandler(this.btCapNhat_Click_1);
             // 
             // btXoa
             // 

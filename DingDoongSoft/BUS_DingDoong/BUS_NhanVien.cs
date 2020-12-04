@@ -62,6 +62,11 @@ namespace BUS_DingDoong
             return dALNhanVien.CapNhatNhanVien(MaNV, td);
         }
 
+        public DataTable TimKiemNhanVien(string tenNhanVien)
+        {
+            return dALNhanVien.SearchNhanVien(tenNhanVien);
+        }
+
         //HamMaHoa
         public string Encryption(string password)
         {

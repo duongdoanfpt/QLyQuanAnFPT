@@ -17,7 +17,6 @@ D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Debug\DTO_DingDoong.dll
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Debug\DTO_DingDoong.pdb
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\bin\Debug\DTO_DingDoong.dll
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\bin\Debug\DTO_DingDoong.pdb
-F:\POR131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Debug\DTO_DingDoong.csprojAssemblyReference.cache
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Debug\DTO_DingDoong.csproj.CoreCompileInputs.cache
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Debug\DTO_DingDoong.dll
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Debug\DTO_DingDoong.pdb

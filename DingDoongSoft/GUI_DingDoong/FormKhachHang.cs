@@ -43,6 +43,10 @@ namespace GUI_DingDoong
             txtTen.Text = null;
             txtSDT.Text = null;
             txtEmail.Text = null;
+            txtTen.Enabled = false;
+            txtSDT.Enabled = false;
+            txtEmail.Enabled = false;
+            dtpNgaySinh.Enabled = false;
             
             btLuu.Enabled = false;
         }
@@ -53,6 +57,8 @@ namespace GUI_DingDoong
             if (rdNu.Checked == true)
                 gioitinh = 0;
            
+
+
             DTO_Khach khach = new DTO_Khach(txtTen.Text, txtSDT.Text, dtpNgaySinh.Value, txtEmail.Text, gioitinh);
             if (busKhach.insertKhach(khach))
             {
@@ -73,7 +79,12 @@ namespace GUI_DingDoong
             txtTen.Text = null;
             txtSDT.Text = null;
             txtEmail.Text = null;
-            
+            txtTen.Enabled = true;
+            txtSDT.Enabled = true;
+            txtEmail.Enabled = true;
+            dtpNgaySinh.Enabled = true;
+            rdNam.Checked = false;
+            rdNu.Checked = false;
             btLuu.Enabled = true;
         }
 
@@ -145,8 +156,13 @@ namespace GUI_DingDoong
             txtTen.Text = null;
             txtSDT.Text = null;
             txtEmail.Text = null;
+            txtTen.Enabled = true;
+            txtSDT.Enabled = true;
+            txtEmail.Enabled = true;
+            dtpNgaySinh.Enabled = true;
             rdNam.Checked = false;
             rdNu.Checked = false;
+            btLuu.Enabled = true;
             LoadGridview_Khach();
         }
     }

@@ -26,11 +26,15 @@ namespace GUI_DingDoong
 
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
+            this.dgvNhanVien.GridColor = Color.Black;
+            this.dgvNhanVien.BorderStyle = BorderStyle.FixedSingle;
+
             dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
             pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
             LoadGridView_NV();
             Disable_Textbox_Button();
+            rdQuanLy.Checked = true;
         }
 
         private void LoadGridView_NV()
@@ -181,7 +185,7 @@ namespace GUI_DingDoong
             }
             else if (string.IsNullOrEmpty(txtDiaChi.Text) || string.IsNullOrWhiteSpace(txtDiaChi.Text))
             {
-                MessageBox.Show("Bạn chưa nhập đơn giá", "Thông báo");
+                MessageBox.Show("Bạn chưa nhập địa chỉ", "Thông báo");
             }
             
             else
@@ -292,7 +296,7 @@ namespace GUI_DingDoong
 
                     dateTimeNVL.Text = td.NgayVL.ToString();
 
-                    MessageBox.Show(td.MaNV);
+                    
                     MemoryStream mem = new MemoryStream(busnhanvien.getHinhNV(td.MaNV)); 
                     pbHinh.BackgroundImage = Image.FromStream(mem);
                     pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
@@ -318,7 +322,32 @@ namespace GUI_DingDoong
             }
         }
 
-        private void btCapNhat_Click(object sender, EventArgs e)
+       
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void LoadDanhSachNhanVien(DataTable dt)
+        {
+            dgvNhanVien.DataSource = dt;
+        }
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            string tenNhanVien = txtTimKiem.Text;
+            DataTable ds = busnhanvien.TimKiemNhanVien(tenNhanVien);
+            if (ds.Rows.Count > 0)
+            {
+                LoadDanhSachNhanVien(ds);
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            txtTimKiem.Text = "Nhập tên nhân viên để tìm kiếm";
+        }
+
+        private void btCapNhat_Click_1(object sender, EventArgs e)
         {
             int vaitro = 0;
             if (rdQuanLy.Checked)
@@ -355,10 +384,10 @@ namespace GUI_DingDoong
                 byte[] arr;
                 ImageConverter converter = new ImageConverter();
                 arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
-                DTO_NhanVien td =  busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
+                DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
                 DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr);
                 curNV.TrangThai = 1;
-                MessageBox.Show(td.MaNV + curNV.TenNV + curNV.Email+ curNV.DiaChi+ curNV.NgayVL+vaitro+ arr);
+                //MessageBox.Show(td.MaNV + curNV.TenNV + curNV.Email+ curNV.DiaChi+ curNV.NgayVL+vaitro+ arr);
 
                 if (busnhanvien.CapNhatNhanVien(td.MaNV, curNV))
                 {
@@ -374,7 +403,51 @@ namespace GUI_DingDoong
 
                 }
             }
+        }
 
+        private void pbHome_Click(object sender, EventArgs e)
+        {
+            FormMain frmMain = new FormMain();
+            this.Hide();
+
+            frmMain.Closed += (s, args) => this.Close();
+            frmMain.Show();
+        }
+
+        private void pbNhanVien_Click(object sender, EventArgs e)
+        {
+            FormNhanVien nv = new FormNhanVien();
+            this.Hide();
+
+            nv.Closed += (s, args) => this.Close();
+            nv.Show();
+        }
+
+        private void pbKhachHang_Click(object sender, EventArgs e)
+        {
+            FormKhachHang kh = new FormKhachHang();
+            this.Hide();
+
+            kh.Closed += (s, args) => this.Close();
+            kh.Show();
+        }
+
+        private void pbBan_Click(object sender, EventArgs e)
+        {
+            FormKhuVucBan kv = new FormKhuVucBan();
+            this.Hide();
+
+            kv.Closed += (s, args) => this.Close();
+            kv.Show();
+        }
+
+        private void pbThongKe_Click(object sender, EventArgs e)
+        {
+            FormThongKe thongKe = new FormThongKe();
+            this.Hide();
+
+            thongKe.Closed += (s, args) => this.Close();
+            thongKe.Show();
         }
     }
 }
