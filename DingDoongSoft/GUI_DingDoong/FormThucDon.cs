@@ -209,7 +209,7 @@ namespace GUI_DingDoong
         {
             Enable_Textbox();
             SetNull_Value();
-           
+            
             txtTenMon.Focus();
 
         }

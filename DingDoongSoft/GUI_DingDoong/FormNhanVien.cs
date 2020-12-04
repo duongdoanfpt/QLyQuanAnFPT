@@ -128,6 +128,8 @@ namespace GUI_DingDoong
         private void btThem_Click(object sender, EventArgs e) //BtnThem
         {
             Enable_Textbox();
+            pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
+            pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
             SetNull_Value();
         }
 
@@ -237,7 +239,7 @@ namespace GUI_DingDoong
 
                 if (busnhanvien.inserNhanVien(curNV))
                 {
-                    MessageBox.Show("Thêm món vào thực đơn thành công");
+                    MessageBox.Show("Thêm nhân viên thành công");
                     dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                     dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     //pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
@@ -247,7 +249,7 @@ namespace GUI_DingDoong
                 }
                 else
                 {
-                    MessageBox.Show("Thêm món vào thực đơn thất bại");
+                    MessageBox.Show("Thêm nhân viên thất bại");
 
                 }
 
@@ -281,6 +283,7 @@ namespace GUI_DingDoong
                     txtEmail.Text = td.Email;
                     txtTenNhanVien.Text = td.TenNV;
                     txtDiaChi.Text = td.DiaChi;
+                    
 
                     if (td.Quyen == 1)
                         rdQuanLy.Checked = true;
@@ -289,8 +292,8 @@ namespace GUI_DingDoong
 
                     dateTimeNVL.Text = td.NgayVL.ToString();
 
-
-                    MemoryStream mem = new MemoryStream(busnhanvien.getHinhNV(td.Email)); 
+                    MessageBox.Show(td.MaNV);
+                    MemoryStream mem = new MemoryStream(busnhanvien.getHinhNV(td.MaNV)); 
                     pbHinh.BackgroundImage = Image.FromStream(mem);
                     pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -348,15 +351,16 @@ namespace GUI_DingDoong
             else
             {
 
-                Image img = pbNhanVien.BackgroundImage;
+                Image img = pbHinh.BackgroundImage;
                 byte[] arr;
                 ImageConverter converter = new ImageConverter();
                 arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
                 DTO_NhanVien td =  busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
                 DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr);
                 curNV.TrangThai = 1;
+                MessageBox.Show(td.MaNV + curNV.TenNV + curNV.Email+ curNV.DiaChi+ curNV.NgayVL+vaitro+ arr);
 
-                if (busnhanvien.CapNhatNhanVien(td.Email, curNV))
+                if (busnhanvien.CapNhatNhanVien(td.MaNV, curNV))
                 {
                     MessageBox.Show("Cập nhật thành công");
                     dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
