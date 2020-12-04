@@ -16,7 +16,7 @@ namespace GUI_DingDoong
     public partial class FormKhuyenMai : Form
     {
         BUS_KhuyenMai busKM = new BUS_KhuyenMai();
-
+        
         public FormKhuyenMai()
         {
             InitializeComponent();
@@ -27,6 +27,7 @@ namespace GUI_DingDoong
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             LoadGridview_KM();
             ResetValues();
+            lblUser.Text = FormLogin.NvMain.Email;
         }
 
         private void LoadGridview_KM()

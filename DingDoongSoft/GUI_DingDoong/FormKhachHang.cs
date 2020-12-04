@@ -19,13 +19,35 @@ namespace GUI_DingDoong
         public FormKhachHang()
         {
             InitializeComponent();
+            FormMain.quyen = FormLogin.NvMain.Quyen;
         }
 
         private void FormKhachHang_Load(object sender, EventArgs e)
         {
+            lblUsers.Text = FormLogin.NvMain.Email;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             LoadGridview_Khach();
             ResetValues();
+
+            if (FormMain.quyen == 0)
+            {
+
+                phanquyen();
+            }
+        }
+
+        private void phanquyen()
+        {
+            pbNhanVien.Enabled = false;
+            pbNhanVien.BackColor = Color.Gray;
+            
+
+            pbKhachHang.Enabled = false;
+            pbKhachHang.BackColor = Color.Gray;
+
+            pbThongKe.Visible = false;
+
+
         }
 
         private void LoadGridview_Khach()

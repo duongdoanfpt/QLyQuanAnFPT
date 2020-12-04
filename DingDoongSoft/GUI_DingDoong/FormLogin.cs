@@ -19,7 +19,7 @@ namespace GUI_DingDoong
         {
             InitializeComponent();
             this.CenterToScreen();
-            txtEmail.Text = "duydtps11681@fpt.edu.vn";
+            txtEmail.Text = "caotanloc@gmail.com";
         }
 
         public static DTO_NhanVien  NvMain;

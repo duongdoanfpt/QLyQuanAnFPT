@@ -33,9 +33,21 @@ namespace GUI_DingDoong
         {
             pbNhanVien.Enabled = false;
             pnlNhanVien.BackColor = Color.Gray;
-        
+            pnlNhanVien.Enabled = false;
+
             pbMenu.Enabled = false;
+            pnlMenu.Enabled = false;
+            pnlMenu.BackColor = Color.Gray;
+
             pbThongKe.Enabled = false;
+            pnlThongKe.Enabled = false;
+            pnlThongKe.BackColor = Color.Gray;
+
+            pbKhuyenMai.Enabled = false;
+            pnlKhuyenMai.BackColor = Color.Gray;
+            pnlKhuyenMai.Enabled = false;
+
+
         }
 
         private void pbAccounts_Click(object sender, EventArgs e)
@@ -129,9 +141,27 @@ namespace GUI_DingDoong
             lbDayofweek.Text = DateTime.Now.ToString("ddd");
             if(quyen == 0)
             {
-                MessageBox.Show(FormLogin.NvMain.Quyen.ToString());
+                
                 phanquyen();
             }    
+        }
+
+        private void pnlThongKe_Click(object sender, EventArgs e)
+        {
+            FormThongKe thongKe = new FormThongKe();
+            this.Hide();
+
+            thongKe.Closed += (s, args) => this.Close();
+            thongKe.Show();
+        }
+
+        private void pnlQuanLyBan_Click(object sender, EventArgs e)
+        {
+            FormKhuVucBan kv = new FormKhuVucBan();
+            this.Hide();
+
+            kv.Closed += (s, args) => this.Close();
+            kv.Show();
         }
     }
 }

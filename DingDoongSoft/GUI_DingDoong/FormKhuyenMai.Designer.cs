@@ -48,7 +48,7 @@ namespace GUI_DingDoong
             this.pbThongKe = new System.Windows.Forms.PictureBox();
             this.pbBan = new System.Windows.Forms.PictureBox();
             this.pbKhachHang = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.pbNhanVien = new System.Windows.Forms.PictureBox();
             this.pbHome = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -269,11 +269,11 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1054F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1057F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblUser, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbNhanVien, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbHome, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 1);
@@ -316,16 +316,16 @@ namespace GUI_DingDoong
             this.pbKhachHang.TabStop = false;
             this.pbKhachHang.Click += new System.EventHandler(this.pbKhachHang_Click_1);
             // 
-            // label7
+            // lblUser
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1157, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(162, 21);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "email123@gmail.com";
+            this.lblUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(1160, 8);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(162, 21);
+            this.lblUser.TabIndex = 6;
+            this.lblUser.Text = "email123@gmail.com";
             // 
             // pbNhanVien
             // 
@@ -608,7 +608,7 @@ namespace GUI_DingDoong
         private System.Windows.Forms.PictureBox pbHome;
         private System.Windows.Forms.PictureBox pbBan;
         private System.Windows.Forms.PictureBox pbKhachHang;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;

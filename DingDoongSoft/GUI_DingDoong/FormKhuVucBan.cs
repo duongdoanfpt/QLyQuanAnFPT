@@ -28,6 +28,8 @@ namespace GUI_DingDoong
         public static DTO_HoaDon hd;
         public static DTO_Khach KH;
         public static DTO_NhanVien NV;
+        static int quyen = FormMain.quyen;
+
 
         string startupPath = Environment.CurrentDirectory;
         public IEnumerable<Control> GetAll(Control control, Type type)
@@ -198,7 +200,7 @@ namespace GUI_DingDoong
             TextObject txtvt = (TextObject)cb.ReportDefinition.Sections["Section2"].ReportObjects["txtViTri"];
             txtvt.Text = lbViTriBan.Text;
             TextObject txtkh = (TextObject)cb.ReportDefinition.Sections["Section2"].ReportObjects["txtKH"];
-            txtkh.Text = hd.SDT_KH;
+            txtkh.Text = txtSDTKH.Text;
             TextObject txtkm = (TextObject)cb.ReportDefinition.Sections["Section4"].ReportObjects["TextKM"];
             txtkm.Text = hd.KhuyenMai.ToString()+"%";
             TextObject txttongtien = (TextObject)cb.ReportDefinition.Sections["Section5"].ReportObjects["TxtTongTien"];
@@ -262,7 +264,7 @@ namespace GUI_DingDoong
 
                 flpkvBan.Controls.Add(flp);
 
-
+                
                 ptb.Click += Ptb_Click;
 
 
@@ -294,7 +296,7 @@ namespace GUI_DingDoong
             dgvThucDon.ReadOnly = true;
             FrmLoad();
             loadThucDonkvBan();
-            lbTenNV.Text = NV.TenNV;
+            lbTenNV.Text = FormLogin.NvMain.TenNV;
             if (IndexBan < 0)
             {
                 loadban();
@@ -306,7 +308,12 @@ namespace GUI_DingDoong
                 
             }
 
+            lbEmailNV.Text = FormLogin.NvMain.Email;
+            if (FormMain.quyen == 0)
+            {
 
+                phanquyen();
+            }
 
 
         }
@@ -567,5 +574,18 @@ namespace GUI_DingDoong
             frmgb.Show();
             frmgb.FormClosed += new FormClosedEventHandler(CloseFrm);
         }
+
+        // Phân Quyền
+        private void phanquyen()
+        {
+            pbNhanVien.Enabled = false;
+            pbNhanVien.BackColor = Color.Gray;
+
+
+            pbThongKe.Visible = false;
+
+
+        }
+
     }
 }
