@@ -26,6 +26,9 @@ namespace GUI_DingDoong
 
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
+            this.dgvNhanVien.GridColor = Color.Black;
+            this.dgvNhanVien.BorderStyle = BorderStyle.FixedSingle;
+
             dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
             pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
