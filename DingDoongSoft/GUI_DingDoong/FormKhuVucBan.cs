@@ -84,6 +84,10 @@ namespace GUI_DingDoong
                 lbEndTime.Visible = true;
                 DateTime StartHD = (DateTime)drhd[3];
                 lbMaHD.Text = drhd[0].ToString();
+                dgvThucDon.Enabled = true;
+                dgvHDCT.Enabled = true;
+                btChuyenBan.Enabled = true;
+                btGopBan.Enabled = true;
                 
                 if(string.IsNullOrWhiteSpace(hd.SDT_KH))
                 {
@@ -103,7 +107,7 @@ namespace GUI_DingDoong
                 }    
 
                 lbKhuyenMai.Text = hd.KhuyenMai.ToString() + "%";
-                lbTongTien.Text = busBan.TongTienHDTamKM(hd).ToString();
+                lbTongTien.Text = (busBan.TongTienHDTam(hd)-busBan.TongTienHDTam(hd)*hd.KhuyenMai/100).ToString();
                 btKhuyenMai.Enabled = true;
                 
                 lbStartTime.Text = (StartHD.Hour < 10 ? "0" + StartHD.Hour.ToString() : StartHD.Hour.ToString()) + ":" + (StartHD.Minute < 10 ? "0" + StartHD.Minute.ToString() : StartHD.Minute.ToString()) + ":" + (StartHD.Second < 10 ? "0" + StartHD.Second.ToString() : StartHD.Second.ToString());
@@ -117,6 +121,10 @@ namespace GUI_DingDoong
                 lbKhuyenMai.Text = "0%";
                 btKhuyenMai.Enabled = false;
                 ChkBKhachHang.Enabled = false;
+                dgvThucDon.Enabled = false;
+                dgvHDCT.Enabled = false;
+                btChuyenBan.Enabled = false;
+                btGopBan.Enabled = false;
                 
 
             }
@@ -192,9 +200,11 @@ namespace GUI_DingDoong
             TextObject txtkh = (TextObject)cb.ReportDefinition.Sections["Section2"].ReportObjects["txtKH"];
             txtkh.Text = hd.SDT_KH;
             TextObject txtkm = (TextObject)cb.ReportDefinition.Sections["Section4"].ReportObjects["TextKM"];
-            txtkm.Text = hd.KhuyenMai.ToString();
+            txtkm.Text = hd.KhuyenMai.ToString()+"%";
             TextObject txttongtien = (TextObject)cb.ReportDefinition.Sections["Section5"].ReportObjects["TxtTongTien"];
-           txttongtien.Text = busBan.TongTienHDTamKM(hd).ToString();
+            txttongtien.Text = busBan.TongTienHDTam(hd).ToString();
+            TextObject txtThanhTien = (TextObject)cb.ReportDefinition.Sections["Section5"].ReportObjects["txtThanhtien"];
+            txtThanhTien.Text = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100).ToString();
 
 
             cb.Database.Tables["CTHD"].SetDataSource(dtHDCT);
@@ -214,7 +224,8 @@ namespace GUI_DingDoong
         private void loadban()
         {
             string startupPath = Environment.CurrentDirectory;
-
+            flpkvBan.Controls.Clear();
+                
 
             foreach (DataRow dr in busBan.dtBan().Rows)
             {
@@ -277,6 +288,10 @@ namespace GUI_DingDoong
             dgvHDCT.RowHeadersVisible = false;
             dgvThucDon.RowHeadersVisible = false;
             dgvThucDon.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvThucDon.Enabled = false;
+            dgvHDCT.Enabled = false;
+            dgvHDCT.ReadOnly = true;
+            dgvThucDon.ReadOnly = true;
             FrmLoad();
             loadThucDonkvBan();
             lbTenNV.Text = NV.TenNV;
@@ -311,31 +326,11 @@ namespace GUI_DingDoong
 
         }
 
-        private void dgvThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+        
 
-        }
+       
 
-        private void dgvThucDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvThucDon.Rows.Count > 1)
-            {
-                if (dgvThucDon.CurrentRow.Index < dgvThucDon.Rows.Count - 1)
-                {
-
-                    TD = busTD.curTD(dgvThucDon.CurrentRow.Cells[0].FormattedValue.ToString());
-
-                    lbTenMon.Text = TD.TenTD;
-                    btThem.Enabled = true;
-                }
-            }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btBatDau_Click(object sender, EventArgs e)
         {
             DTO_Ban Ban = busBan.curBan(lbViTriBan.Text);
@@ -356,6 +351,10 @@ namespace GUI_DingDoong
                     (flpkvBan.Controls[IndexBan].Controls[0] as PictureBox).Image = Image.FromFile(startupPath + @"\image\banMo.ico");
                     hd = new DTO_HoaDon(lbMaHD.Text, Ban.IdBan, 0);
                     busBan.ThemHoaDonTam(hd);
+                    dgvThucDon.Enabled = true;
+                    btChuyenBan.Enabled = true;
+                    ChkBKhachHang.Enabled = true;
+                    btGopBan.Enabled = true;
                 }
                 else
                 {
@@ -395,17 +394,14 @@ namespace GUI_DingDoong
         {
             DTO_CTHD curCTHD = new DTO_CTHD(lbMaHD.Text, TD.MaTD, (int)nudSoLuong.Value, txtGhiChuhdct.Text);
 
-            if (MessageBox.Show("Thêm " + TD.TenTD + " vào hoá đơn " + curCTHD.MaHD + "?", "Confirm",
-                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-
+           
                 busBan.ThemCTHDTam(curCTHD);
                 LoadCTHD();
 
 
-            }
+            
 
-            lbTongTien.Text = busBan.TongTienHDTamKM(hd).ToString();
+            lbTongTien.Text = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100).ToString(); 
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -416,7 +412,9 @@ namespace GUI_DingDoong
         {
 
             this.Refresh();
+            loadban();
             FormKhuVucBan_Load(sender, e);
+           
 
 
 
@@ -440,35 +438,134 @@ namespace GUI_DingDoong
         private void btBill_Click(object sender, EventArgs e)
         {
 
-            //DTO_HoaDon HoaDonFinal = (from DataRow dr in busBan.dtHoaDonTam(busBan.curBan(lbViTriBan.Text)).Rows
-            //                          where string.Compare(dr[0].ToString(), hd.MaHD, true) == 0
-            //                          select new DTO_HoaDon(dr[0].ToString(), NV.MaNV, (int)dr[1], float.Parse(dr[4].ToString()), dr[5].ToString())).FirstOrDefault();
+            DTO_HoaDon HoaDonFinal = (from DataRow dr in busBan.dtHoaDonTam(busBan.curBan(lbViTriBan.Text)).Rows
+                                      where string.Compare(dr[0].ToString(), hd.MaHD, true) == 0
+                                      select new DTO_HoaDon(dr[0].ToString(), NV.MaNV, (int)dr[1], float.Parse(dr[4].ToString()), dr[5].ToString())).FirstOrDefault();
 
-            //if (string.IsNullOrWhiteSpace(HoaDonFinal.SDT_KH))
-            //{
-            //    busBan.ThemHDFinalNoneKH(HoaDonFinal);
-            //}
-            //else
-            //{
-            //    busBan.ThemHoaDonFinal(HoaDonFinal);
-            //}
+            if (string.IsNullOrWhiteSpace(HoaDonFinal.SDT_KH))
+            {
+                busBan.ThemHDFinalNoneKH(HoaDonFinal);
+            }
+            else
+            {
+                busBan.ThemHoaDonFinal(HoaDonFinal);
+            }
 
-            //foreach (DataRow dr in busBan.dtHDCTFinal(hd.MaHD).Rows)
-            //{
-            //    DTO_CTHD cthd = new DTO_CTHD(dr[0].ToString(), dr[1].ToString(), int.Parse(dr[2].ToString()), dr[3].ToString());
+            foreach (DataRow dr in busBan.dtHDCTFinal(hd.MaHD).Rows)
+            {
+                DTO_CTHD cthd = new DTO_CTHD(dr[0].ToString(), dr[1].ToString(), int.Parse(dr[2].ToString()), dr[3].ToString());
 
-            //    DTO_Ban Ban = busBan.curBan(lbViTriBan.Text);
-            //    if (busBan.ThemCTHDFinal(cthd))
-            //    {
-            //        busBan.UpdateTrangThaiBan(Ban, 0);
-            //        (flpkvBan.Controls[IndexBan].Controls[0] as PictureBox).Image = Image.FromFile(startupPath + @"\image\banDong.png");
+                DTO_Ban Ban = busBan.curBan(lbViTriBan.Text);
+                if (busBan.ThemCTHDFinal(cthd))
+                {
+                    busBan.UpdateTrangThaiBan(Ban, 0);
+                    (flpkvBan.Controls[IndexBan].Controls[0] as PictureBox).Image = Image.FromFile(startupPath + @"\image\banDong.png");
 
-            //    }
+                }
 
 
-            //}
+            }
             crtBaoCao();
-            //busBan.ClearTemp(hd.MaHD);
+            busBan.ClearTemp(hd.MaHD);
+        }
+
+        private void dgvThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvThucDon.Rows.Count > 1)
+            {
+                if (dgvThucDon.CurrentRow.Index < dgvThucDon.Rows.Count - 1)
+                {
+
+                    TD = busTD.curTD(dgvThucDon.CurrentRow.Cells[0].FormattedValue.ToString());
+
+                    lbTenMon.Text = TD.TenTD;
+                    btThem.Enabled = true;
+                    btAdd1.Enabled = true;
+                }
+            }
+        }
+
+        private void btAdd1_Click(object sender, EventArgs e)
+        {
+
+            DTO_CTHD curCTHD = new DTO_CTHD(lbMaHD.Text, TD.MaTD, 1, txtGhiChuhdct.Text);
+
+
+            busBan.ThemCTHDTam(curCTHD);
+            LoadCTHD();
+
+
+           
+
+            lbTongTien.Text = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100).ToString();
+        }
+
+        private void dgvHDCT_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btRemove1.Enabled = true;
+            btXoa.Enabled = true;
+           
+            
+            
+        }
+
+        private void btRemove1_Click(object sender, EventArgs e)
+        {
+
+            if (dgvHDCT.Rows.Count > 1)
+            {
+                DTO_ThucDon selectTD = busTD.curTD(dgvHDCT.CurrentRow.Cells[0].FormattedValue.ToString());
+
+                if (busBan.DeleteCTHDSoluong(lbMaHD.Text, selectTD.MaTD, 1))
+                {
+                    LoadCTHD();
+
+
+                }
+               
+            }
+            lbTongTien.Text = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100).ToString();
+
+
+
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvHDCT.Rows.Count > 1)
+            {
+                DTO_ThucDon selectTD = busTD.curTD(dgvHDCT.CurrentRow.Cells[0].FormattedValue.ToString());
+                DTO_CTHD curCTHD = busBan.curCTHD(lbMaHD.Text, selectTD.MaTD);
+                
+
+                if (busBan.DeleteCTHDSoluong(lbMaHD.Text, selectTD.MaTD, curCTHD.SoLuong))
+                {
+                    LoadCTHD();
+
+
+                }
+
+            }
+            lbTongTien.Text = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100).ToString();
+
+
+        }
+
+        private void btChuyenBan_Click(object sender, EventArgs e)
+        {
+            DTO_Ban curBan = busBan.curBan(lbViTriBan.Text);
+            FormChuyenBan frmcb = new FormChuyenBan(curBan,hd.MaHD);
+            frmcb.Show();
+            frmcb.FormClosed += new FormClosedEventHandler(CloseFrm);
+
+        }
+
+        private void btGopBan_Click(object sender, EventArgs e)
+        {
+            DTO_Ban curBan = busBan.curBan(lbViTriBan.Text);
+            FormGopBan frmgb = new FormGopBan(curBan);
+            frmgb.Show();
+            frmgb.FormClosed += new FormClosedEventHandler(CloseFrm);
         }
     }
 }

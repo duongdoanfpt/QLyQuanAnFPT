@@ -258,5 +258,26 @@ namespace DAL_DingDoong
             return false;
         }
 
+        //Tim kiem nhan vien
+        public DataTable SearchNhanVien(string tenNhanVien)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "Sp_SearchNhanVien";
+                cm.Connection = _conn;
+                cm.Parameters.AddWithValue("tenNv", tenNhanVien);
+                DataTable dtNhanVien = new DataTable();
+                dtNhanVien.Load(cm.ExecuteReader());
+                return dtNhanVien;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
     }
 }

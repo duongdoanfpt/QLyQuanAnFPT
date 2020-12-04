@@ -16,6 +16,10 @@ namespace BUS_DingDoong
         {
             return dalBan.DanhSachBan();
         }
+        public DataTable CTHDtheoMaHD(string MaHD)
+        {
+            return dalBan.CTHDtheoMaHD(MaHD);
+        }
         public DataTable dtHD(string MaHD)
         {
             return dalBan.rptHoaDon(MaHD);
@@ -66,6 +70,24 @@ namespace BUS_DingDoong
             return hd;
         }
 
+        public DTO_CTHD curCTHD(string MaHD,string MaTD)
+        {
+            DTO_CTHD cthd = (from DataRow dr in dalBan.CTHD(MaHD, MaTD).Rows
+                             select new DTO_CTHD
+                             {
+                                 MaHD = dr[0].ToString(),
+                                 MaTD = dr[1].ToString(),
+                                 SoLuong = (int)dr[2],
+                                 GhiChu = dr[3].ToString()
+                             }).FirstOrDefault();
+            return cthd;
+        }
+
+        public bool ChuyenBan(int idBanOld, int idBanNew, string MaHD)
+        {
+            return dalBan.Chuyenban(idBanOld, idBanNew, MaHD);
+        }
+
         public bool UpdateTrangThaiBan(DTO_Ban ban, int TrangThai)
         {
             return dalBan.UpdateTrangThaiBan(ban.IdBan, TrangThai);
@@ -107,7 +129,7 @@ namespace BUS_DingDoong
         {
             return dalBan.ThemCTHDFinal(cthd);
         }    
-        public float TongTienHDTamKM(DTO_HoaDon hd)
+        public float TongTienHDTam(DTO_HoaDon hd)
         {
             return dalBan.TongTienHDTam(hd.MaHD);
         }
@@ -121,9 +143,19 @@ namespace BUS_DingDoong
             return dalBan.UpdateKHtoHD(MaHD, SDT);
         }
 
+        public bool DeleteCTHDSoluong(string MaHD,string MaTD,int SoLuong)
+        {
+            return dalBan.deleteSoLuong(MaHD, MaTD, SoLuong);
+        }
+
         public bool ClearTemp(string MaHD)
         {
             return dalBan.ClearTemp(MaHD);
+        }
+
+        public bool updateBan(int IdBan,int TrangThai)
+        {
+            return updateBan(IdBan, TrangThai);
         }
 
     }
