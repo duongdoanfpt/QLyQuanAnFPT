@@ -90,6 +90,7 @@ namespace GUI_DingDoong
             ptbMenuThucDon.BorderStyle = BorderStyle.Fixed3D;
             DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Disable_Textbox_Button();
+            lblUsers.Text = FormLogin.NvMain.Email;
         }
 
         //Change Value Image

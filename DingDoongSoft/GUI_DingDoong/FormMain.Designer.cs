@@ -206,6 +206,7 @@
             this.pnlQuanLyBan.Name = "pnlQuanLyBan";
             this.pnlQuanLyBan.Size = new System.Drawing.Size(256, 125);
             this.pnlQuanLyBan.TabIndex = 9;
+            this.pnlQuanLyBan.Click += new System.EventHandler(this.pnlQuanLyBan_Click);
             // 
             // pbQuanLyBan
             // 
@@ -373,6 +374,7 @@
             this.pnlThongKe.Name = "pnlThongKe";
             this.pnlThongKe.Size = new System.Drawing.Size(256, 125);
             this.pnlThongKe.TabIndex = 14;
+            this.pnlThongKe.Click += new System.EventHandler(this.pnlThongKe_Click);
             // 
             // pbThongKe
             // 
