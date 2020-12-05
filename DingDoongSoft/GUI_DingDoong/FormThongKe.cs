@@ -151,175 +151,28 @@ namespace GUI_DingDoong
             thucdon.Show();
         }
 
-        private void lbThucDonBest_Click(object sender, EventArgs e)
-        {
-            //chkbTime.Enabled = true;
-            //if(chkbTime.Checked == true)
-            //{
-            //    DgvThongKe.DataSource = busTK.dtSLTD(tuNgayDate.Value, DenNgay.Value);
-            //}
-            //else
-            //{
-            //    DgvThongKe.DataSource = busTK.dtSLTD(null, null);
-            //}    
+        
 
-        }
-
-        private void DataThongKe_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void chlkbTime_CheckedChanged(object sender, EventArgs e)
-        {
-            //if(chkbTime.Checked == true)
-            //{
-            //    tuNgayDate.Enabled = true;
-            //    DenNgay.Enabled = true;
-            //}    
-            //else
-            //{
-            //    tuNgayDate.Enabled = false;
-            //    DenNgay.Enabled = false;
-            //}                
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
       
 
         private void FormThongKe_Load(object sender, EventArgs e)
         {
-            chkboxTime.Visible = false;
-            dtpkStartDate.Visible = false;
-            dtpkEndDate.Visible = false;
-            lbarrow.Visible = false;
-            btThongKe.Visible = false;
-            btThongKe.Enabled = false;
-            
-          
-          
-
+                  
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+        
 
-        }
+        
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        
 
-        }
+        
 
-        private void label3_Click_1(object sender, EventArgs e)
-        {
+        
+        
 
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if(chkboxTime.Checked == true)
-            {
-                dtpkStartDate.Enabled = true;
-                dtpkEndDate.Enabled = true;
-                btThongKe.Enabled = true;
-            }
-            else
-            {
-                dtpkStartDate.Enabled = false;
-                dtpkEndDate.Enabled = false;
-                btThongKe.Enabled = false;
-            }    
-
-        }
-
-        private void rdTDSL_CheckedChanged(object sender, EventArgs e)
-        {
-            if(rdTDSL.Checked == true)
-            {
-                tableLayoutPanel1.Controls.Clear();
-                chkboxTime.Visible = true;
-                dtpkStartDate.Visible = true;
-                dtpkEndDate.Visible = true;
-                lbarrow.Visible = true;
-                btThongKe.Visible = true;
-                DataGridView dgvThucDon = new DataGridView();
-                dgvThucDon.Width = 1050;
-                dgvThucDon.Height = 560;
-                dgvThucDon.BackgroundColor = Color.White;
-                dgvThucDon.DataSource = busTK.dtSLTD(null, null);
-                dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-                tableLayoutPanel1.Controls.Add(dgvThucDon);
-
-            }
-            else
-            {
-                chkboxTime.Visible = false;
-                dtpkStartDate.Visible = false;
-                dtpkEndDate.Visible = false;
-                lbarrow.Visible = false;
-                btThongKe.Visible = false;
-            }    
-        }
-
-        private void radioThucDonTheoNhom_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btThongKe_Click(object sender, EventArgs e)
-        {
-            tableLayoutPanel1.Controls.Clear();
-            
-            DataGridView dgvThucDon = new DataGridView();
-            dgvThucDon.Width = 1050;
-            dgvThucDon.Height = 560;
-            dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvThucDon.BackgroundColor = Color.White;
-            dgvThucDon.DataSource = busTK.dtSLTD(null, null);
-            tableLayoutPanel1.Controls.Add(dgvThucDon);
-        }
-
-        private void panelMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void ADDFLP(string Ten,string GiaTri)
-        {
-            FlowLayoutPanel flpDoanhThuNgay = new FlowLayoutPanel();
-
-            Label lbDoanhThuNgay = new Label();
-            Label DoanhThu = new Label();
-            lbDoanhThuNgay.Text = Ten;
-            
-            DoanhThu.Text = GiaTri;
-            flpDoanhThuNgay.Width = 500;
-            flpDoanhThuNgay.Height = 250;
-            flpDoanhThuNgay.BorderStyle = BorderStyle.Fixed3D;
-            flpDoanhThuNgay.FlowDirection = FlowDirection.TopDown;
-
-            flpDoanhThuNgay.Controls.Add(lbDoanhThuNgay);
-            flpDoanhThuNgay.Controls.Add(DoanhThu);
-            tableLayoutPanel1.Controls.Add(flpDoanhThuNgay);
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            tableLayoutPanel1.Controls.Clear();
-            ADDFLP("DOANH THU TRONG NGÀY", "1000000");
-           
-        }
+       
     }
 }
