@@ -263,6 +263,26 @@ namespace GUI_DingDoong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_navigate_next {
+            get {
+                object obj = ResourceManager.GetObject("appbar.navigate.next", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar_navigate1 {
+            get {
+                object obj = ResourceManager.GetObject("appbar.navigate1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_people {
             get {
                 object obj = ResourceManager.GetObject("appbar.people", resourceCulture);

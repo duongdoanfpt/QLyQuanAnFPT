@@ -404,5 +404,11 @@
   <ItemGroup>
     <None Include="Resources\2c4d299dffa30efd57b2-removebg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.navigate.next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.navigate.next1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
