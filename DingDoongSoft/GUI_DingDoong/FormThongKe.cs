@@ -159,20 +159,55 @@ namespace GUI_DingDoong
 
         private void FormThongKe_Load(object sender, EventArgs e)
         {
-                  
+            ThongKe.Enabled = false;
+            ThongKe.BorderStyle = BorderStyle.Fixed3D;
+            txtTuNgay.Visible = false;
+            txtDenNgay.Visible = false;
+            ptbNext.Visible = false;
+            ngayBatDau.Visible = false;
+            ngayKetThuc.Visible = false;
+            btnThongKe.Visible = false;
+
+        }
+        private void LoadNameThucDon(DataTable dt)
+        {
+            DgvData.DataSource = dt;
+            DgvData.Columns[0].HeaderText = "Tên món";
+            DgvData.Columns[1].HeaderText = "Số lượng";
+            
+        }
+        private void ThongKeSLThucDon_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbThucDon.Checked == true)
+            {
+                cbKhachHang.Checked = false;
+                cbDoanhThu.Checked = false;
+                DgvData.DataSource = busTK.dtSLTD(ngayBatDau.Value, ngayKetThuc.Value);
+                DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                LoadNameThucDon(busTK.dtSLTD(ngayBatDau.Value,ngayKetThuc.Value));
+
+            }
+            else
+            {
+                DgvData.DataSource = null;
+
+            }
         }
 
-        
-
-        
-
-        
-
-        
-
-        
-        
-
-       
+        private void cbBaoCaoDT_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbDoanhThu.Checked == true)
+            {
+                cbThucDon.Checked = false;
+                cbKhachHang.Checked = false;
+                DgvData.DataSource = busTK.doanhThuTheoTime(ngayBatDau.Value, ngayKetThuc.Value);
+                DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                
+            }
+            else
+            {
+                DgvData.DataSource = null;
+            }
+        }
     }
 }

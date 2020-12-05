@@ -37,37 +37,38 @@ namespace GUI_DingDoong
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbThucDon = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cbKhachHang = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.cbDoanhThu = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.DgvData = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ngayKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.txtDenNgay = new System.Windows.Forms.Label();
+            this.ngayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.txtTuNgay = new System.Windows.Forms.Label();
+            this.ptbNext = new System.Windows.Forms.PictureBox();
             this.ThongKe = new System.Windows.Forms.PictureBox();
             this.Ban = new System.Windows.Forms.PictureBox();
             this.KhachHang = new System.Windows.Forms.PictureBox();
             this.NhanVien = new System.Windows.Forms.PictureBox();
             this.Home = new System.Windows.Forms.PictureBox();
             this.ptbMenuThucDon = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnThongKe = new System.Windows.Forms.Button();
             this.LayoutMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -81,15 +82,15 @@ namespace GUI_DingDoong
             this.panel3.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvData)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ban)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMenuThucDon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // LayoutMenu
@@ -104,7 +105,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 986F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 998F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -124,7 +125,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1133, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1145, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
@@ -212,26 +213,27 @@ namespace GUI_DingDoong
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.454545F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.54546F));
-            this.tableLayoutPanel3.Controls.Add(this.checkBox1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.cbThucDon, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(27, 53);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(276, 44);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // checkBox1
+            // cbThucDon
             // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(8, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 38);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbThucDon.AutoSize = true;
+            this.cbThucDon.Location = new System.Drawing.Point(8, 3);
+            this.cbThucDon.Name = "cbThucDon";
+            this.cbThucDon.Size = new System.Drawing.Size(15, 38);
+            this.cbThucDon.TabIndex = 0;
+            this.cbThucDon.UseVisualStyleBackColor = true;
+            this.cbThucDon.CheckedChanged += new System.EventHandler(this.ThongKeSLThucDon_CheckedChanged);
             // 
             // label2
             // 
@@ -295,26 +297,26 @@ namespace GUI_DingDoong
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.958507F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.0415F));
-            this.tableLayoutPanel5.Controls.Add(this.checkBox2, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.cbKhachHang, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(27, 53);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(276, 44);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
-            // checkBox2
+            // cbKhachHang
             // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(9, 3);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 38);
-            this.checkBox2.TabIndex = 0;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbKhachHang.AutoSize = true;
+            this.cbKhachHang.Location = new System.Drawing.Point(9, 3);
+            this.cbKhachHang.Name = "cbKhachHang";
+            this.cbKhachHang.Size = new System.Drawing.Size(15, 38);
+            this.cbKhachHang.TabIndex = 0;
+            this.cbKhachHang.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -377,26 +379,27 @@ namespace GUI_DingDoong
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.37344F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.62656F));
-            this.tableLayoutPanel7.Controls.Add(this.checkBox3, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.cbDoanhThu, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.label6, 1, 0);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(27, 53);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(276, 44);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
-            // checkBox3
+            // cbDoanhThu
             // 
-            this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbDoanhThu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(10, 3);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 38);
-            this.checkBox3.TabIndex = 0;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbDoanhThu.AutoSize = true;
+            this.cbDoanhThu.Location = new System.Drawing.Point(10, 3);
+            this.cbDoanhThu.Name = "cbDoanhThu";
+            this.cbDoanhThu.Size = new System.Drawing.Size(15, 38);
+            this.cbDoanhThu.TabIndex = 0;
+            this.cbDoanhThu.UseVisualStyleBackColor = true;
+            this.cbDoanhThu.CheckedChanged += new System.EventHandler(this.cbBaoCaoDT_CheckedChanged);
             // 
             // label6
             // 
@@ -416,12 +419,46 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.DgvData);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Location = new System.Drawing.Point(323, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(935, 629);
             this.panel4.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(636, 592);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(296, 33);
+            this.textBox1.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(477, 595);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(166, 25);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Tổng doanh thu: ";
+            // 
+            // DgvData
+            // 
+            this.DgvData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvData.Location = new System.Drawing.Point(3, 53);
+            this.DgvData.Name = "DgvData";
+            this.DgvData.Size = new System.Drawing.Size(929, 533);
+            this.DgvData.TabIndex = 1;
             // 
             // panel5
             // 
@@ -429,64 +466,80 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.Green;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.btnThongKe);
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Controls.Add(this.dateTimePicker2);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.dateTimePicker1);
-            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.ptbNext);
+            this.panel5.Controls.Add(this.ngayKetThuc);
+            this.panel5.Controls.Add(this.txtDenNgay);
+            this.panel5.Controls.Add(this.ngayBatDau);
+            this.panel5.Controls.Add(this.txtTuNgay);
             this.panel5.Location = new System.Drawing.Point(1, 1);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(934, 49);
             this.panel5.TabIndex = 0;
             // 
-            // label7
+            // button1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 17);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Từ ngày : ";
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(839, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 27);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Xuất file...";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker1
+            // ngayKetThuc
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(68, 11);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(191, 25);
-            this.dateTimePicker1.TabIndex = 1;
+            this.ngayKetThuc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngayKetThuc.Location = new System.Drawing.Point(362, 11);
+            this.ngayKetThuc.Name = "ngayKetThuc";
+            this.ngayKetThuc.Size = new System.Drawing.Size(191, 25);
+            this.ngayKetThuc.TabIndex = 3;
             // 
-            // dateTimePicker2
+            // txtDenNgay
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(362, 11);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(191, 25);
-            this.dateTimePicker2.TabIndex = 3;
+            this.txtDenNgay.AutoSize = true;
+            this.txtDenNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDenNgay.ForeColor = System.Drawing.Color.White;
+            this.txtDenNgay.Location = new System.Drawing.Point(288, 14);
+            this.txtDenNgay.Name = "txtDenNgay";
+            this.txtDenNgay.Size = new System.Drawing.Size(73, 17);
+            this.txtDenNgay.TabIndex = 2;
+            this.txtDenNgay.Text = "Đến ngày :";
             // 
-            // label8
+            // ngayBatDau
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(288, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 17);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Đến ngày :";
+            this.ngayBatDau.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngayBatDau.Location = new System.Drawing.Point(68, 11);
+            this.ngayBatDau.Name = "ngayBatDau";
+            this.ngayBatDau.Size = new System.Drawing.Size(191, 25);
+            this.ngayBatDau.TabIndex = 1;
             // 
-            // pictureBox1
+            // txtTuNgay
             // 
-            this.pictureBox1.Image = global::GUI_DingDoong.Properties.Resources.appbar_navigate1;
-            this.pictureBox1.Location = new System.Drawing.Point(261, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.txtTuNgay.AutoSize = true;
+            this.txtTuNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTuNgay.ForeColor = System.Drawing.Color.White;
+            this.txtTuNgay.Location = new System.Drawing.Point(3, 14);
+            this.txtTuNgay.Name = "txtTuNgay";
+            this.txtTuNgay.Size = new System.Drawing.Size(68, 17);
+            this.txtTuNgay.TabIndex = 0;
+            this.txtTuNgay.Text = "Từ ngày : ";
+            // 
+            // ptbNext
+            // 
+            this.ptbNext.Image = global::GUI_DingDoong.Properties.Resources.appbar_navigate1;
+            this.ptbNext.Location = new System.Drawing.Point(261, 11);
+            this.ptbNext.Name = "ptbNext";
+            this.ptbNext.Size = new System.Drawing.Size(26, 25);
+            this.ptbNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbNext.TabIndex = 4;
+            this.ptbNext.TabStop = false;
             // 
             // ThongKe
             // 
@@ -565,54 +618,17 @@ namespace GUI_DingDoong
             this.ptbMenuThucDon.MouseEnter += new System.EventHandler(this.ptbMenuThucDon_MouseEnter);
             this.ptbMenuThucDon.MouseLeave += new System.EventHandler(this.ptbMenuThucDon_MouseLeave);
             // 
-            // button1
+            // btnThongKe
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(839, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 27);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Xuất file...";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(929, 533);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(477, 595);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 25);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Tổng doanh thu: ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(636, 592);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(296, 33);
-            this.textBox1.TabIndex = 3;
+            this.btnThongKe.BackColor = System.Drawing.Color.White;
+            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKe.Location = new System.Drawing.Point(559, 11);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(82, 25);
+            this.btnThongKe.TabIndex = 6;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.UseVisualStyleBackColor = false;
             // 
             // FormThongKe
             // 
@@ -648,16 +664,16 @@ namespace GUI_DingDoong
             this.tableLayoutPanel7.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvData)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ban)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMenuThucDon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -677,30 +693,31 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbThucDon;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox cbKhachHang;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox cbDoanhThu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker ngayKetThuc;
+        private System.Windows.Forms.Label txtDenNgay;
+        private System.Windows.Forms.DateTimePicker ngayBatDau;
+        private System.Windows.Forms.Label txtTuNgay;
+        private System.Windows.Forms.PictureBox ptbNext;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvData;
+        private System.Windows.Forms.Button btnThongKe;
     }
 }
