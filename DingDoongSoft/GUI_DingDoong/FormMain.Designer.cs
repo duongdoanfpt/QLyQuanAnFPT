@@ -207,6 +207,7 @@
             this.pnlQuanLyBan.Size = new System.Drawing.Size(256, 125);
             this.pnlQuanLyBan.TabIndex = 9;
             this.pnlQuanLyBan.Click += new System.EventHandler(this.pnlQuanLyBan_Click);
+            this.pnlQuanLyBan.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlQuanLyBan_Paint);
             // 
             // pbQuanLyBan
             // 
@@ -543,11 +544,11 @@
             // lbTime
             // 
             this.lbTime.AutoSize = true;
-            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 53.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbTime.Location = new System.Drawing.Point(-21, 70);
+            this.lbTime.Location = new System.Drawing.Point(-16, 70);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(334, 98);
+            this.lbTime.Size = new System.Drawing.Size(324, 94);
             this.lbTime.TabIndex = 0;
             this.lbTime.Text = "14:33:00";
             // 

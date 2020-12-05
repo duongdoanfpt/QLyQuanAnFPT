@@ -462,7 +462,7 @@ namespace GUI_DingDoong
 
         private void Ban_Click(object sender, EventArgs e)
         {
-            FormKhuVucBan kv = new FormKhuVucBan();
+            FormKhuVucBan kv = new FormKhuVucBan(-1);
             this.Hide();
 
             kv.Closed += (s, args) => this.Close();

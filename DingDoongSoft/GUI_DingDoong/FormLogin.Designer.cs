@@ -40,6 +40,7 @@
             this.lblForgotPass = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
+            this.chkbSave = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -119,6 +120,7 @@
             this.txtPassword.Location = new System.Drawing.Point(41, 309);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(345, 33);
             this.txtPassword.TabIndex = 7;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
@@ -183,6 +185,18 @@
             this.btExit.Text = "Exit";
             this.btExit.UseVisualStyleBackColor = true;
             // 
+            // chkbSave
+            // 
+            this.chkbSave.AutoSize = true;
+            this.chkbSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkbSave.ForeColor = System.Drawing.Color.DimGray;
+            this.chkbSave.Location = new System.Drawing.Point(41, 359);
+            this.chkbSave.Name = "chkbSave";
+            this.chkbSave.Size = new System.Drawing.Size(148, 21);
+            this.chkbSave.TabIndex = 13;
+            this.chkbSave.Text = "Ghi Nhớ Tài Khoản";
+            this.chkbSave.UseVisualStyleBackColor = true;
+            // 
             // FormLogin
             // 
             this.AcceptButton = this.btLogin;
@@ -190,6 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(421, 503);
+            this.Controls.Add(this.chkbSave);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.lblForgotPass);
@@ -204,6 +219,7 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
@@ -225,5 +241,6 @@
         private System.Windows.Forms.Label lblForgotPass;
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.Button btExit;
+        private System.Windows.Forms.CheckBox chkbSave;
     }
 }

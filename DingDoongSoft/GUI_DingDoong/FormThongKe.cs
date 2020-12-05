@@ -126,7 +126,7 @@ namespace GUI_DingDoong
 
         private void Ban_Click(object sender, EventArgs e)
         {
-            FormKhuVucBan kv = new FormKhuVucBan();
+            FormKhuVucBan kv = new FormKhuVucBan(-1);
             this.Hide();
 
             kv.Closed += (s, args) => this.Close();
@@ -247,7 +247,7 @@ namespace GUI_DingDoong
         {
             if(rdTDSL.Checked == true)
             {
-                flowLayoutPanel1.Controls.Clear();
+                tableLayoutPanel1.Controls.Clear();
                 chkboxTime.Visible = true;
                 dtpkStartDate.Visible = true;
                 dtpkEndDate.Visible = true;
@@ -256,10 +256,11 @@ namespace GUI_DingDoong
                 DataGridView dgvThucDon = new DataGridView();
                 dgvThucDon.Width = 1050;
                 dgvThucDon.Height = 560;
-                dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvThucDon.BackgroundColor = Color.White;
                 dgvThucDon.DataSource = busTK.dtSLTD(null, null);
-                flowLayoutPanel1.Controls.Add(dgvThucDon);
+                dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                tableLayoutPanel1.Controls.Add(dgvThucDon);
 
             }
             else
@@ -279,7 +280,7 @@ namespace GUI_DingDoong
 
         private void btThongKe_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
+            tableLayoutPanel1.Controls.Clear();
             
             DataGridView dgvThucDon = new DataGridView();
             dgvThucDon.Width = 1050;
@@ -287,17 +288,38 @@ namespace GUI_DingDoong
             dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThucDon.BackgroundColor = Color.White;
             dgvThucDon.DataSource = busTK.dtSLTD(null, null);
-            flowLayoutPanel1.Controls.Add(dgvThucDon);
+            tableLayoutPanel1.Controls.Add(dgvThucDon);
         }
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
 
         }
+        private void ADDFLP(string Ten,string GiaTri)
+        {
+            FlowLayoutPanel flpDoanhThuNgay = new FlowLayoutPanel();
+
+            Label lbDoanhThuNgay = new Label();
+            Label DoanhThu = new Label();
+            lbDoanhThuNgay.Text = Ten;
+            
+            DoanhThu.Text = GiaTri;
+            flpDoanhThuNgay.Width = 500;
+            flpDoanhThuNgay.Height = 250;
+            flpDoanhThuNgay.BorderStyle = BorderStyle.Fixed3D;
+            flpDoanhThuNgay.FlowDirection = FlowDirection.TopDown;
+
+            flpDoanhThuNgay.Controls.Add(lbDoanhThuNgay);
+            flpDoanhThuNgay.Controls.Add(DoanhThu);
+            tableLayoutPanel1.Controls.Add(flpDoanhThuNgay);
+
+        }
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            tableLayoutPanel1.Controls.Clear();
+            ADDFLP("DOANH THU TRONG NGÀY", "1000000");
+           
         }
     }
 }
