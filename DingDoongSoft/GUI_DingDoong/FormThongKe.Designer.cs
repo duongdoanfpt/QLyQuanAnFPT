@@ -51,8 +51,9 @@ namespace GUI_DingDoong
             this.chkboxTime = new System.Windows.Forms.CheckBox();
             this.lbarrow = new System.Windows.Forms.Label();
             this.btThongKe = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvThucDon = new System.Windows.Forms.DataGridView();
             this.LayoutMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ban)).BeginInit();
@@ -62,6 +63,8 @@ namespace GUI_DingDoong
             ((System.ComponentModel.ISupportInitialize)(this.ptbMenuThucDon)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).BeginInit();
             this.SuspendLayout();
             // 
             // LayoutMenu
@@ -76,7 +79,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 971F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 974F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -96,7 +99,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1118, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1121, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
@@ -217,23 +220,23 @@ namespace GUI_DingDoong
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 30);
+            this.label1.Size = new System.Drawing.Size(201, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thực Đơn";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(1, 362);
+            this.panel3.Location = new System.Drawing.Point(1, 274);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(202, 109);
             this.panel3.TabIndex = 1;
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(1, 488);
+            this.panel4.Location = new System.Drawing.Point(1, 389);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(202, 181);
+            this.panel4.Size = new System.Drawing.Size(202, 287);
             this.panel4.TabIndex = 2;
             // 
             // panel1
@@ -251,7 +254,7 @@ namespace GUI_DingDoong
             this.lbTongQuan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbTongQuan.Location = new System.Drawing.Point(1, 0);
             this.lbTongQuan.Name = "lbTongQuan";
-            this.lbTongQuan.Size = new System.Drawing.Size(193, 30);
+            this.lbTongQuan.Size = new System.Drawing.Size(201, 30);
             this.lbTongQuan.TabIndex = 3;
             this.lbTongQuan.Text = "Tổng Quan";
             this.lbTongQuan.Click += new System.EventHandler(this.label4_Click);
@@ -312,22 +315,40 @@ namespace GUI_DingDoong
             this.btThongKe.UseVisualStyleBackColor = true;
             this.btThongKe.Click += new System.EventHandler(this.btThongKe_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(209, 100);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1054, 569);
-            this.flowLayoutPanel1.TabIndex = 12;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(903, 46);
+            this.button1.Location = new System.Drawing.Point(1188, 47);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 13;
             this.button1.Text = "Xuất file";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.dgvThucDon, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(209, 76);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1054, 600);
+            this.tableLayoutPanel1.TabIndex = 14;
+            // 
+            // dgvThucDon
+            // 
+            this.dgvThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvThucDon.BackgroundColor = System.Drawing.Color.White;
+            this.dgvThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThucDon.Location = new System.Drawing.Point(3, 3);
+            this.dgvThucDon.Name = "dgvThucDon";
+            this.dgvThucDon.Size = new System.Drawing.Size(1048, 594);
+            this.dgvThucDon.TabIndex = 0;
             // 
             // FormThongKe
             // 
@@ -335,8 +356,8 @@ namespace GUI_DingDoong
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btThongKe);
             this.Controls.Add(this.lbarrow);
             this.Controls.Add(this.chkboxTime);
@@ -364,6 +385,8 @@ namespace GUI_DingDoong
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,7 +415,8 @@ namespace GUI_DingDoong
         private System.Windows.Forms.CheckBox chkboxTime;
         private System.Windows.Forms.Label lbarrow;
         private System.Windows.Forms.Button btThongKe;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView dgvThucDon;
     }
 }

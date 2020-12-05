@@ -247,7 +247,7 @@ namespace GUI_DingDoong
         {
             if(rdTDSL.Checked == true)
             {
-                flowLayoutPanel1.Controls.Clear();
+                tableLayoutPanel1.Controls.Clear();
                 chkboxTime.Visible = true;
                 dtpkStartDate.Visible = true;
                 dtpkEndDate.Visible = true;
@@ -256,10 +256,11 @@ namespace GUI_DingDoong
                 DataGridView dgvThucDon = new DataGridView();
                 dgvThucDon.Width = 1050;
                 dgvThucDon.Height = 560;
-                dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvThucDon.BackgroundColor = Color.White;
                 dgvThucDon.DataSource = busTK.dtSLTD(null, null);
-                flowLayoutPanel1.Controls.Add(dgvThucDon);
+                dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                tableLayoutPanel1.Controls.Add(dgvThucDon);
 
             }
             else
@@ -279,7 +280,7 @@ namespace GUI_DingDoong
 
         private void btThongKe_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
+            tableLayoutPanel1.Controls.Clear();
             
             DataGridView dgvThucDon = new DataGridView();
             dgvThucDon.Width = 1050;
@@ -287,7 +288,7 @@ namespace GUI_DingDoong
             dgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThucDon.BackgroundColor = Color.White;
             dgvThucDon.DataSource = busTK.dtSLTD(null, null);
-            flowLayoutPanel1.Controls.Add(dgvThucDon);
+            tableLayoutPanel1.Controls.Add(dgvThucDon);
         }
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
@@ -310,13 +311,13 @@ namespace GUI_DingDoong
 
             flpDoanhThuNgay.Controls.Add(lbDoanhThuNgay);
             flpDoanhThuNgay.Controls.Add(DoanhThu);
-            flowLayoutPanel1.Controls.Add(flpDoanhThuNgay);
+            tableLayoutPanel1.Controls.Add(flpDoanhThuNgay);
 
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
+            tableLayoutPanel1.Controls.Clear();
             ADDFLP("DOANH THU TRONG NGÀY", "1000000");
            
         }
