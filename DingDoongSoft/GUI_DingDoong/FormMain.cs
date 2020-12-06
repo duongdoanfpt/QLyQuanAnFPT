@@ -27,7 +27,7 @@ namespace GUI_DingDoong
 
         private void btThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
         private void phanquyen()
         {
