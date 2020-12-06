@@ -86,7 +86,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1132F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1135F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
@@ -138,7 +138,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1235, 8);
+            this.lblUsers.Location = new System.Drawing.Point(1238, 8);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 6;
@@ -203,7 +203,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.06536F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.29785F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.dtpNgaySinh, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.rdNu, 6, 0);
@@ -241,7 +241,7 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rdNu.AutoSize = true;
             this.rdNu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdNu.Location = new System.Drawing.Point(1060, 3);
+            this.rdNu.Location = new System.Drawing.Point(1058, 3);
             this.rdNu.Name = "rdNu";
             this.rdNu.Size = new System.Drawing.Size(55, 44);
             this.rdNu.TabIndex = 10;
@@ -254,7 +254,7 @@ namespace GUI_DingDoong
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(879, 12);
+            this.label5.Location = new System.Drawing.Point(877, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 25);
             this.label5.TabIndex = 8;
@@ -266,7 +266,7 @@ namespace GUI_DingDoong
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(577, 8);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(289, 33);
+            this.txtSDT.Size = new System.Drawing.Size(288, 33);
             this.txtSDT.TabIndex = 5;
             // 
             // label3
@@ -328,7 +328,7 @@ namespace GUI_DingDoong
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(577, 58);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(289, 33);
+            this.txtEmail.Size = new System.Drawing.Size(288, 33);
             this.txtEmail.TabIndex = 7;
             // 
             // rdNam
@@ -337,7 +337,7 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rdNam.AutoSize = true;
             this.rdNam.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdNam.Location = new System.Drawing.Point(983, 3);
+            this.rdNam.Location = new System.Drawing.Point(981, 3);
             this.rdNam.Name = "rdNam";
             this.rdNam.Size = new System.Drawing.Size(70, 44);
             this.rdNam.TabIndex = 9;
@@ -424,11 +424,11 @@ namespace GUI_DingDoong
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel5.Controls.Add(this.btThoat, 5, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btBoQua, 4, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btCapNhat, 3, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btXoa, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.btLuu, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btThem, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btCapNhat, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btXoa, 4, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btBoQua, 3, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(1, 145);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
@@ -457,7 +457,7 @@ namespace GUI_DingDoong
             this.btBoQua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBoQua.Image = global::GUI_DingDoong.Properties.Resources.appbar_3d1;
             this.btBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBoQua.Location = new System.Drawing.Point(890, 3);
+            this.btBoQua.Location = new System.Drawing.Point(680, 3);
             this.btBoQua.Name = "btBoQua";
             this.btBoQua.Size = new System.Drawing.Size(110, 36);
             this.btBoQua.TabIndex = 9;
@@ -472,7 +472,7 @@ namespace GUI_DingDoong
             this.btCapNhat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCapNhat.Image = global::GUI_DingDoong.Properties.Resources.appbar_clipboard_variant2;
             this.btCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCapNhat.Location = new System.Drawing.Point(678, 3);
+            this.btCapNhat.Location = new System.Drawing.Point(468, 3);
             this.btCapNhat.Name = "btCapNhat";
             this.btCapNhat.Size = new System.Drawing.Size(113, 36);
             this.btCapNhat.TabIndex = 7;
@@ -488,11 +488,11 @@ namespace GUI_DingDoong
             this.btXoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoa.Image = global::GUI_DingDoong.Properties.Resources.appbar5;
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(467, 3);
+            this.btXoa.Location = new System.Drawing.Point(887, 3);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(116, 36);
             this.btXoa.TabIndex = 5;
-            this.btXoa.Text = "Xóa";
+            this.btXoa.Text = "Gửi mail";
             this.btXoa.UseVisualStyleBackColor = true;
             // 
             // btLuu

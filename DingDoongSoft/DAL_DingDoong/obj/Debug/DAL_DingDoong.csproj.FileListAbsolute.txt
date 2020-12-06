@@ -119,3 +119,4 @@ D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_Din
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.csproj.CopyComplete
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.dll
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.pdb
+D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.csproj.ResolveComReference.cache

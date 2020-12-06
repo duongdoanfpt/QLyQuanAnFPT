@@ -62,7 +62,7 @@ namespace GUI_DingDoong
         }
 
 
-            BUS_NhanVien busnhanvien = new BUS_NhanVien();
+        BUS_NhanVien busnhanvien = new BUS_NhanVien();
         private void btLogin_Click(object sender, EventArgs e)
         {
             DTO_NhanVien nv = new DTO_NhanVien();

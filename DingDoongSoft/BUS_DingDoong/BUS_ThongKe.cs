@@ -16,9 +16,19 @@ namespace BUS_DingDoong
         {
             return dalThongke.ThongKeSLTD(NgayBD, NgayKT);
         }
-        public DataTable doanhThuTheoTime(Nullable<DateTime> NgayBD, Nullable<DateTime> NgayKT)
+        public DataTable doanhThuTheoTime(Nullable<DateTime> ngayBatDau, Nullable<DateTime> ngayKetThuc)
         {
-            return dalThongke.ThongKeTheoThoiGian(NgayBD, NgayKT);
+            return dalThongke.ThongKeTheoThoiGian(ngayBatDau, ngayKetThuc);
+        }
+
+        public DataTable doanhThuTrongThang()
+        {
+            return dalThongke.ThongKeTheoThang();
+        }
+
+        public DataTable doanhThuTheoNam()
+        {
+            return dalThongke.thongKeTheoNam();
         }
     }
 }
