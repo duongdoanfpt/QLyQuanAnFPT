@@ -117,12 +117,15 @@ namespace GUI_DingDoong
             txtSDT.Text = khach.SDT ;
             txtTen.Text = khach.TenKH;
             txtEmail.Text = khach.Email;
+            MessageBox.Show(khach.GioiTinh.ToString());
             
 
             if (khach.GioiTinh == 1)
                 rdNam.Checked = true;
             else
                rdNu.Checked = true;
+
+            MessageBox.Show(khach.Email);
 
             dtpNgaySinh.Text = khach.NgaySinh.ToString();
         }

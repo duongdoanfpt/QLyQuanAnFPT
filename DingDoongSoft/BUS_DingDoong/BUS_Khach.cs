@@ -30,7 +30,7 @@ namespace BUS_DingDoong
                                {
                                    SDT = dr[0].ToString(),
                                    TenKH = dr[1].ToString(),
-                                   Email = dr[2].ToString(),
+                                   Email = dr[3].ToString(),
                                    GioiTinh = string.Compare(dr[3].ToString(), "Nam", true) == 0 ? 1 : 0,
                                    NgaySinh = (DateTime)dr[4]
                                }).FirstOrDefault();
