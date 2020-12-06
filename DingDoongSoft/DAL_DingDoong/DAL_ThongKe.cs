@@ -41,5 +41,37 @@ namespace DAL_DingDoong
                 _conn.Close();
             }
         }
+
+        public DataTable ThongKeTheoThoiGian(Nullable<DateTime> NgayBatDau,Nullable<DateTime>  NgayKT)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "TongDoanhThuTime";
+                if(string.IsNullOrWhiteSpace(NgayBatDau.ToString())&&string.IsNullOrWhiteSpace(NgayKT.ToString()))
+                {
+                    cm.Parameters.AddWithValue("Strart", DBNull.Value);
+                    cm.Parameters.AddWithValue("End", DBNull.Value);
+
+                }
+                else
+                {
+                    cm.Parameters.AddWithValue("Strart", NgayBatDau);
+                    cm.Parameters.AddWithValue("End", NgayKT);
+                }
+                cm.Connection = _conn;
+                DataTable dtDoanhThuTheoTime = new DataTable();
+                dtDoanhThuTheoTime.Load(cm.ExecuteReader());
+                return dtDoanhThuTheoTime;
+
+
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }
