@@ -424,11 +424,11 @@ namespace GUI_DingDoong
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel5.Controls.Add(this.btThoat, 5, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btBoQua, 4, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btCapNhat, 3, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btXoa, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.btLuu, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btThem, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btCapNhat, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btXoa, 4, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btBoQua, 3, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(1, 145);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
@@ -457,7 +457,7 @@ namespace GUI_DingDoong
             this.btBoQua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBoQua.Image = global::GUI_DingDoong.Properties.Resources.appbar_3d1;
             this.btBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBoQua.Location = new System.Drawing.Point(890, 3);
+            this.btBoQua.Location = new System.Drawing.Point(680, 3);
             this.btBoQua.Name = "btBoQua";
             this.btBoQua.Size = new System.Drawing.Size(110, 36);
             this.btBoQua.TabIndex = 9;
@@ -472,7 +472,7 @@ namespace GUI_DingDoong
             this.btCapNhat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCapNhat.Image = global::GUI_DingDoong.Properties.Resources.appbar_clipboard_variant2;
             this.btCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCapNhat.Location = new System.Drawing.Point(678, 3);
+            this.btCapNhat.Location = new System.Drawing.Point(468, 3);
             this.btCapNhat.Name = "btCapNhat";
             this.btCapNhat.Size = new System.Drawing.Size(113, 36);
             this.btCapNhat.TabIndex = 7;
@@ -488,11 +488,11 @@ namespace GUI_DingDoong
             this.btXoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoa.Image = global::GUI_DingDoong.Properties.Resources.appbar5;
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(467, 3);
+            this.btXoa.Location = new System.Drawing.Point(887, 3);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(116, 36);
             this.btXoa.TabIndex = 5;
-            this.btXoa.Text = "Xóa";
+            this.btXoa.Text = "Gửi mail";
             this.btXoa.UseVisualStyleBackColor = true;
             // 
             // btLuu

@@ -333,3 +333,4 @@ D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_Din
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.CopyComplete
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.exe
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.pdb
+D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.ResolveComReference.cache

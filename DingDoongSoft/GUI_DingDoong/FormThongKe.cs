@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS_DingDoong;
 using DTO_DingDoong;
+using System.Data.Odbc;
+using Office_12 = Microsoft.Office.Core;
+using Excel_12 = Microsoft.Office.Interop.Excel;
 
 
 namespace GUI_DingDoong
@@ -167,6 +170,8 @@ namespace GUI_DingDoong
             ngayBatDau.Visible = false;
             ngayKetThuc.Visible = false;
             btnThongKe.Visible = false;
+            lblUsers.Text = FormLogin.NvMain.Email;
+
 
         }
         private void LoadNameThucDon(DataTable dt)
@@ -180,8 +185,11 @@ namespace GUI_DingDoong
         {
             if(cbThucDon.Checked == true)
             {
+                
                 cbKhachHang.Checked = false;
                 cbDoanhThu.Checked = false;
+                cbDTThang.Checked = false;
+                cbDTNam.Checked = false;
                 DgvData.DataSource = busTK.dtSLTD(ngayBatDau.Value, ngayKetThuc.Value);
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 LoadNameThucDon(busTK.dtSLTD(ngayBatDau.Value,ngayKetThuc.Value));
@@ -198,15 +206,147 @@ namespace GUI_DingDoong
         {
             if(cbDoanhThu.Checked == true)
             {
+                txtTuNgay.Visible = true;
+                txtDenNgay.Visible = true;
+                ptbNext.Visible = true;
+                ngayBatDau.Visible = true;
+                ngayKetThuc.Visible = true;
+                btnThongKe.Visible = true;
                 cbThucDon.Checked = false;
                 cbKhachHang.Checked = false;
-                DgvData.DataSource = busTK.doanhThuTheoTime(ngayBatDau.Value, ngayKetThuc.Value);
-                DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                cbDTThang.Checked = false;
+                cbDTNam.Checked = false;
+                
                 
             }
             else
             {
                 DgvData.DataSource = null;
+                txtTuNgay.Visible = false;
+                txtDenNgay.Visible = false;
+                ptbNext.Visible = false;
+                ngayBatDau.Visible = false;
+                ngayKetThuc.Visible = false;
+                btnThongKe.Visible = false;
+            }
+        }
+        
+        private void LoadNameThongKeTime(DataTable dt)
+        {
+            DgvData.DataSource = dt;
+            DgvData.Columns[0].HeaderText = "Doanh thu";
+        }
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            DgvData.DataSource = busTK.doanhThuTheoTime(ngayBatDau.Value, ngayKetThuc.Value);
+            DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            LoadNameThongKeTime(busTK.doanhThuTheoTime(ngayBatDau.Value, ngayKetThuc.Value));
+        }
+
+
+        private void LoadNameDTThang(DataTable dt) 
+        {
+            DgvData.DataSource = dt;
+            DgvData.Columns[0].HeaderText = "Doanh thu tháng";
+        }
+        private void cbDTThang_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbDTThang.Checked == true)
+            {
+                cbThucDon.Checked = false;
+                cbKhachHang.Checked = false;
+                cbDoanhThu.Checked = false;
+                cbDTNam.Checked = false;
+                DgvData.DataSource = busTK.doanhThuTrongThang();
+                DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                LoadNameDTThang(busTK.doanhThuTrongThang());
+            }
+            else
+            {
+                DgvData.DataSource = null;
+            }
+        }
+
+        private void cbDTNam_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbDTNam.Checked == true)
+            {
+                cbThucDon.Checked = false;
+                cbKhachHang.Checked = false;
+                cbDoanhThu.Checked = false;
+                cbDTThang.Checked = false;
+                DgvData.DataSource = busTK.doanhThuTheoNam();
+                DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            else
+            {
+                DgvData.DataSource = null;
+            }
+        }
+
+        //Xuat File Excel
+        public static void ExportDataGridView_Excel(DataGridView myData)
+        {
+            Excel_12.Application oExcel_12 = null; 
+            Excel_12.Workbook oBook = null; 
+            Excel_12.Sheets oSheetsColl = null; 
+            Excel_12.Worksheet oSheet = null; 
+            Excel_12.Range oRange = null; 
+
+            Object oMissing = System.Reflection.Missing.Value;
+
+
+            oExcel_12 = new Excel_12.Application();
+
+            oExcel_12.Visible = true;
+
+            oExcel_12.UserControl = true;
+
+            oBook = oExcel_12.Workbooks.Add(oMissing);
+            
+            oSheetsColl = oExcel_12.Worksheets;
+
+            oSheet = (Excel_12.Worksheet)oSheetsColl.get_Item("Sheet1");
+            oSheet.Name = "ThongKe";
+
+            for (int j = 0; j < myData.Columns.Count; j++)
+            {
+
+                oRange = (Excel_12.Range)oSheet.Cells[1, j + 1];
+
+                oRange.Value2 = myData.Columns[j].HeaderText;
+
+            }
+
+            for (int i = 0; i < myData.Rows.Count; i++)
+            {
+
+                for (int j = 0; j < myData.Columns.Count; j++)
+                {
+                    oRange = (Excel_12.Range)oSheet.Cells[i + 2, j + 1];
+
+                    oRange.Value2 = myData[j, i].Value;
+
+                }
+
+            }
+            oBook = null;
+            oExcel_12.Quit();
+            oExcel_12 = null;
+            GC.Collect();
+
+        }
+
+        private void btExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ExportDataGridView_Excel(DgvData);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString());
             }
         }
     }
