@@ -63,9 +63,9 @@
             this.pbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbLogo.BackgroundImage = global::GUI_DingDoong.Properties.Resources._2c4d299dffa30efd57b2_removebg;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLogo.Location = new System.Drawing.Point(66, 6);
+            this.pbLogo.Location = new System.Drawing.Point(75, 6);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(179, 127);
+            this.pbLogo.Size = new System.Drawing.Size(160, 127);
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
@@ -95,11 +95,11 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblEmail.Location = new System.Drawing.Point(36, 187);
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.Black;
+            this.lblEmail.Location = new System.Drawing.Point(36, 198);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(84, 30);
+            this.lblEmail.Size = new System.Drawing.Size(72, 25);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email : ";
             // 
@@ -128,11 +128,11 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblPassword.Location = new System.Drawing.Point(36, 270);
+            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.Black;
+            this.lblPassword.Location = new System.Drawing.Point(36, 281);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(123, 30);
+            this.lblPassword.Size = new System.Drawing.Size(105, 25);
             this.lblPassword.TabIndex = 6;
             this.lblPassword.Text = "Password : ";
             // 
@@ -154,13 +154,15 @@
             this.lblForgotPass.AccessibleName = "lblQuenMatKhau";
             this.lblForgotPass.AutoSize = true;
             this.lblForgotPass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForgotPass.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblForgotPass.Location = new System.Drawing.Point(239, 359);
+            this.lblForgotPass.ForeColor = System.Drawing.Color.Black;
+            this.lblForgotPass.Location = new System.Drawing.Point(248, 356);
             this.lblForgotPass.Name = "lblForgotPass";
             this.lblForgotPass.Size = new System.Drawing.Size(138, 21);
             this.lblForgotPass.TabIndex = 8;
             this.lblForgotPass.Text = "Quên mật khẩu ?";
             this.lblForgotPass.Click += new System.EventHandler(this.lblForgotPass_Click);
+            this.lblForgotPass.MouseEnter += new System.EventHandler(this.lblForgotPass_MouseEnter);
+            this.lblForgotPass.MouseLeave += new System.EventHandler(this.lblForgotPass_MouseLeave);
             // 
             // btLogin
             // 
@@ -190,7 +192,7 @@
             // 
             this.chkbSave.AutoSize = true;
             this.chkbSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkbSave.ForeColor = System.Drawing.Color.DimGray;
+            this.chkbSave.ForeColor = System.Drawing.Color.Black;
             this.chkbSave.Location = new System.Drawing.Point(41, 359);
             this.chkbSave.Name = "chkbSave";
             this.chkbSave.Size = new System.Drawing.Size(148, 21);
