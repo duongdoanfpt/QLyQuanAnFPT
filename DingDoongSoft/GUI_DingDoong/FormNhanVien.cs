@@ -19,7 +19,8 @@ namespace GUI_DingDoong
         public FormNhanVien()
         {
             InitializeComponent();
-            lblUsers.Text = FormLogin.NvMain.Email;
+            //lblUsers.Text = FormLogin.NvMain.Email;
+            lblUsers.Text = "duongdoan@gmail.com";
         }
         private string imagePath;
         string startupPath = Environment.CurrentDirectory;
