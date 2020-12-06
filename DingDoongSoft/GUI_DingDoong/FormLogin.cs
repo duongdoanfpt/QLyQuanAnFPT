@@ -203,6 +203,11 @@ namespace GUI_DingDoong
 
             }
         }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

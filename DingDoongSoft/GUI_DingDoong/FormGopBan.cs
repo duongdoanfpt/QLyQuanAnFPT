@@ -20,6 +20,7 @@ namespace GUI_DingDoong
         {
             InitializeComponent();
             OldBan = Ban;
+            lbTenBan.Text = Ban.TenBan;
         }
         private void LoadBanMo(string VitriBan)
         {
@@ -41,25 +42,34 @@ namespace GUI_DingDoong
 
         private void btOK_Click(object sender, EventArgs e)
         {
-            DTO_HoaDon oldHD = busBan.curhd(OldBan);
-            DTO_Ban NewBan = busBan.curBan(cbBan.Text);
-            DTO_HoaDon newHD = busBan.curhd(NewBan);
-
-            DataTable dtCTHDOld = busBan.CTHDtheoMaHD(oldHD.MaHD);
-            foreach (DataRow dr in dtCTHDOld.Rows)
+            if (MessageBox.Show("Gộp " + OldBan.TenBan + " vào " + cbBan.Text + "?", "Confirm",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                DTO_HoaDon oldHD = busBan.curhd(OldBan);
+                DTO_Ban NewBan = busBan.curBan(cbBan.Text);
+                DTO_HoaDon newHD = busBan.curhd(NewBan);
 
-                DTO_CTHD cthd = new DTO_CTHD(newHD.MaHD, dr[1].ToString(), (int)dr[2],dr[3].ToString());
-               
-                busBan.ThemCTHDTam(cthd).ToString();
-                busBan.DeleteCTHDSoluong(dr[0].ToString(), dr[1].ToString(), (int)dr[2]);
+                DataTable dtCTHDOld = busBan.CTHDtheoMaHD(oldHD.MaHD);
+                foreach (DataRow dr in dtCTHDOld.Rows)
+                {
 
+                    DTO_CTHD cthd = new DTO_CTHD(newHD.MaHD, dr[1].ToString(), (int)dr[2], dr[3].ToString());
+
+                    busBan.ThemCTHDTam(cthd).ToString();
+                    busBan.DeleteCTHDSoluong(dr[0].ToString(), dr[1].ToString(), (int)dr[2]);
+
+                }
+                busBan.UpdateTrangThaiBan(OldBan, 0);
+                busBan.ClearTemp(oldHD.MaHD);
+
+                this.Close();
             }
-            busBan.UpdateTrangThaiBan(OldBan, 0);
-            busBan.ClearTemp(oldHD.MaHD);
-
-            this.Close();
             
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

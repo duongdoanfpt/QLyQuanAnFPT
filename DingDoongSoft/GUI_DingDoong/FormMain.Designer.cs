@@ -70,6 +70,9 @@
             this.lbDate = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Infor = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.InforNV = new System.Windows.Forms.ToolStripMenuItem();
+            this.SignOut = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAccounts)).BeginInit();
             this.pnlCaiDat.SuspendLayout();
@@ -94,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            this.Infor.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAccounts
@@ -121,6 +125,7 @@
             // pbAccounts
             // 
             this.pbAccounts.BackColor = System.Drawing.Color.Transparent;
+            this.pbAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAccounts.Image = global::GUI_DingDoong.Properties.Resources.appbar_customerservice;
             this.pbAccounts.Location = new System.Drawing.Point(0, 0);
             this.pbAccounts.Name = "pbAccounts";
@@ -155,6 +160,7 @@
             // pbCaiDat
             // 
             this.pbCaiDat.BackColor = System.Drawing.Color.Transparent;
+            this.pbCaiDat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCaiDat.Image = global::GUI_DingDoong.Properties.Resources.appbar_settings;
             this.pbCaiDat.Location = new System.Drawing.Point(0, 0);
             this.pbCaiDat.Name = "pbCaiDat";
@@ -188,6 +194,7 @@
             // pbKhachHang
             // 
             this.pbKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.pbKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbKhachHang.Image = global::GUI_DingDoong.Properties.Resources.appbar_user;
             this.pbKhachHang.Location = new System.Drawing.Point(0, 0);
             this.pbKhachHang.Name = "pbKhachHang";
@@ -202,6 +209,7 @@
             this.pnlQuanLyBan.BackColor = System.Drawing.Color.Blue;
             this.pnlQuanLyBan.Controls.Add(this.pbQuanLyBan);
             this.pnlQuanLyBan.Controls.Add(this.lblQuanLyBan);
+            this.pnlQuanLyBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlQuanLyBan.Location = new System.Drawing.Point(48, 316);
             this.pnlQuanLyBan.Name = "pnlQuanLyBan";
             this.pnlQuanLyBan.Size = new System.Drawing.Size(256, 125);
@@ -257,6 +265,7 @@
             // pbNhanVien
             // 
             this.pbNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.pbNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbNhanVien.Image = global::GUI_DingDoong.Properties.Resources.appbar_people;
             this.pbNhanVien.Location = new System.Drawing.Point(0, 0);
             this.pbNhanVien.Name = "pbNhanVien";
@@ -291,6 +300,7 @@
             // pbHoTro
             // 
             this.pbHoTro.BackColor = System.Drawing.Color.Transparent;
+            this.pbHoTro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbHoTro.Image = global::GUI_DingDoong.Properties.Resources.appbar_message;
             this.pbHoTro.Location = new System.Drawing.Point(0, 0);
             this.pbHoTro.Name = "pbHoTro";
@@ -324,6 +334,7 @@
             // pbHuongDan
             // 
             this.pbHuongDan.BackColor = System.Drawing.Color.Transparent;
+            this.pbHuongDan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbHuongDan.Image = global::GUI_DingDoong.Properties.Resources.appbar_book_perspective_help;
             this.pbHuongDan.Location = new System.Drawing.Point(0, 0);
             this.pbHuongDan.Name = "pbHuongDan";
@@ -357,6 +368,7 @@
             // pbKhuyenMai
             // 
             this.pbKhuyenMai.BackColor = System.Drawing.Color.Transparent;
+            this.pbKhuyenMai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbKhuyenMai.Image = global::GUI_DingDoong.Properties.Resources.appbar_tag;
             this.pbKhuyenMai.Location = new System.Drawing.Point(0, 0);
             this.pbKhuyenMai.Name = "pbKhuyenMai";
@@ -371,6 +383,7 @@
             this.pnlThongKe.BackColor = System.Drawing.Color.DarkMagenta;
             this.pnlThongKe.Controls.Add(this.pbThongKe);
             this.pnlThongKe.Controls.Add(this.lblThongKe);
+            this.pnlThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlThongKe.Location = new System.Drawing.Point(377, 319);
             this.pnlThongKe.Name = "pnlThongKe";
             this.pnlThongKe.Size = new System.Drawing.Size(256, 125);
@@ -425,6 +438,7 @@
             // pbMenu
             // 
             this.pbMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pbMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMenu.Image = global::GUI_DingDoong.Properties.Resources.appbar_food;
             this.pbMenu.Location = new System.Drawing.Point(0, 0);
             this.pbMenu.Name = "pbMenu";
@@ -473,6 +487,7 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.btThoat_Click);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // pictureBox2
             // 
@@ -558,6 +573,30 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // Infor
+            // 
+            this.Infor.AllowDrop = true;
+            this.Infor.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.InforNV,
+            this.SignOut});
+            this.Infor.Name = "contextMenuStrip1";
+            this.Infor.Size = new System.Drawing.Size(181, 70);
+            this.Infor.Text = "Thông tin tài khoản";
+            // 
+            // InforNV
+            // 
+            this.InforNV.Name = "InforNV";
+            this.InforNV.Size = new System.Drawing.Size(180, 22);
+            this.InforNV.Text = "Thông tin nhân viên";
+            this.InforNV.Click += new System.EventHandler(this.InforNV_Click);
+            // 
+            // SignOut
+            // 
+            this.SignOut.Name = "SignOut";
+            this.SignOut.Size = new System.Drawing.Size(180, 22);
+            this.SignOut.Text = "Đăng Xuất";
+            this.SignOut.Click += new System.EventHandler(this.SignOut_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -622,6 +661,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.Infor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -669,6 +709,9 @@
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ContextMenuStrip Infor;
+        private System.Windows.Forms.ToolStripMenuItem InforNV;
+        private System.Windows.Forms.ToolStripMenuItem SignOut;
     }
 }
 

@@ -86,7 +86,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1132F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1135F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
@@ -138,7 +138,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1235, 8);
+            this.lblUsers.Location = new System.Drawing.Point(1238, 8);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 6;
@@ -203,7 +203,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.06536F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.29785F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.dtpNgaySinh, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.rdNu, 6, 0);
@@ -241,7 +241,7 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rdNu.AutoSize = true;
             this.rdNu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdNu.Location = new System.Drawing.Point(1060, 3);
+            this.rdNu.Location = new System.Drawing.Point(1058, 3);
             this.rdNu.Name = "rdNu";
             this.rdNu.Size = new System.Drawing.Size(55, 44);
             this.rdNu.TabIndex = 10;
@@ -254,7 +254,7 @@ namespace GUI_DingDoong
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(879, 12);
+            this.label5.Location = new System.Drawing.Point(877, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 25);
             this.label5.TabIndex = 8;
@@ -266,7 +266,7 @@ namespace GUI_DingDoong
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(577, 8);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(289, 33);
+            this.txtSDT.Size = new System.Drawing.Size(288, 33);
             this.txtSDT.TabIndex = 5;
             // 
             // label3
@@ -328,7 +328,7 @@ namespace GUI_DingDoong
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(577, 58);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(289, 33);
+            this.txtEmail.Size = new System.Drawing.Size(288, 33);
             this.txtEmail.TabIndex = 7;
             // 
             // rdNam
@@ -337,7 +337,7 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rdNam.AutoSize = true;
             this.rdNam.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdNam.Location = new System.Drawing.Point(983, 3);
+            this.rdNam.Location = new System.Drawing.Point(981, 3);
             this.rdNam.Name = "rdNam";
             this.rdNam.Size = new System.Drawing.Size(70, 44);
             this.rdNam.TabIndex = 9;

@@ -97,6 +97,7 @@ namespace GUI_DingDoong
                 btChuyenBan.Enabled = true;
                 btGopBan.Enabled = true;
                 btTimKiem.Enabled = true;
+                
 
                 if (string.IsNullOrWhiteSpace(hd.SDT_KH))
                 {
@@ -135,6 +136,8 @@ namespace GUI_DingDoong
                 btChuyenBan.Enabled = false;
                 btGopBan.Enabled = false;
                 btTimKiem.Enabled = false;
+                btAdd1.Enabled = false;
+                btRemove1.Enabled = false;
 
 
             }
@@ -251,6 +254,7 @@ namespace GUI_DingDoong
                 PictureBox ptb = new PictureBox();
                 ptb.Width = 60;
                 ptb.Height = 70;
+                ptb.Cursor = Cursors.Hand;
                 flp.Margin = new Padding(15, 15, 15, 15);
                 if (int.Parse(dr[2].ToString()) == 1)
                 {
@@ -279,9 +283,45 @@ namespace GUI_DingDoong
 
 
                 ptb.Click += Ptb_Click;
+                ptb.MouseDown += Ptb_MouseDown;
 
 
             }
+        }
+
+        private void Ptb_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                PictureBox ptb = sender as PictureBox;
+                var Index = ptb.Parent.Parent.Controls.IndexOf(ptb.Parent);
+                IndexBan = Index;
+
+                SelectBan(IndexBan);
+
+
+                menuBan.Show(ptb, 10, 50);
+                if (busBan.curBan(lbViTriBan.Text).TrangThai == 0)
+                {
+                    menuBan.Items[0].Enabled = true;
+                    menuBan.Items[1].Enabled = false;
+                    menuBan.Items[2].Enabled = false;
+                    menuBan.Items[3].Enabled = false;
+                }
+                else
+                {
+                    menuBan.Items[0].Enabled = false;
+                    menuBan.Items[1].Enabled = true;
+                    menuBan.Items[2].Enabled = true;
+                    menuBan.Items[3].Enabled = true;
+                } 
+                if(FormLogin.NvMain.Quyen ==0)
+                {
+                    menuBan.Items[3].Enabled = false;
+
+                }    
+            }    
+               
         }
 
         // làm nút 3d
@@ -358,6 +398,7 @@ namespace GUI_DingDoong
             IndexBan = Index;
 
             SelectBan(IndexBan);
+            
 
 
 
@@ -514,6 +555,7 @@ namespace GUI_DingDoong
                     lbTenMon.Text = TD.TenTD;
                     btThem.Enabled = true;
                     btAdd1.Enabled = true;
+                    btRemove1.Enabled = true;
                 }
             }
         }
@@ -696,6 +738,23 @@ namespace GUI_DingDoong
             dgvThucDon.DataSource = busTD.DanhSachThucDonBan();
             cbNhom.SelectedIndex = 0;
             txtTenTD.Text = "Nhập tên món để tìm kiếm";
+        }
+
+        private void cmsReset_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Reset dữ liệu bàn đã chọn?", "Confirm",
+                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                
+                if (busBan.ResetBan(lbViTriBan.Text, lbMaHD.Text)) 
+                {
+                    loadban();
+                }
+                else
+                {
+                    MessageBox.Show("Đã có lỗi xảy ra vui lòng kiểm tra lại");
+                }    
+            }
         }
     }
  }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +16,8 @@ namespace GUI_DingDoong
         public static int session = 0;
         public static int profile = 0;
         public static int quyen;
+        Thread th;
+
 
         public FormMain()
         {
@@ -25,9 +28,18 @@ namespace GUI_DingDoong
 
         }
 
+        public void opennewapp()
+        {
+           FormLogin login = new FormLogin();
+            
+
+            Application.Run(login);
+        }
+
         private void btThoat_Click(object sender, EventArgs e)
         {
-            
+
+          
         }
         private void phanquyen()
         {
@@ -167,6 +179,27 @@ namespace GUI_DingDoong
         private void pnlQuanLyBan_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Infor.Show(pictureBox1, -150, 25);
+            }
+        }
+
+        private void InforNV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            th = new Thread(opennewapp);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
         }
     }
 }
