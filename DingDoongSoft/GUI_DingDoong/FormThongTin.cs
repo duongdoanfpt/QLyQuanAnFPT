@@ -28,7 +28,7 @@ namespace GUI_DingDoong
             txtDiaChi1.Text = FormLogin.NvMain.DiaChi;
             txtHoten1.Text = FormLogin.NvMain.TenNV;
             //txtVaiTro1.Text = FormLogin.NvMain.Quyen.ToString();
-            dateNgayVl1.Text = FormLogin.NvMain.NgayVL.ToString();
+            dateNgayVl1.Text = FormLogin.NvMain.NgayVL.ToString("dd/MM/yyyy");
 
             if(FormLogin.NvMain.Quyen ==1)
             {

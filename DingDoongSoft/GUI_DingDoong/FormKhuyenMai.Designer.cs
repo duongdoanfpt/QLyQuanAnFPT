@@ -29,6 +29,7 @@ namespace GUI_DingDoong
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKhuyenMai));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtpNgKT = new System.Windows.Forms.DateTimePicker();
@@ -372,7 +373,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1262, 42);
             this.tableLayoutPanel5.TabIndex = 16;
             // 
@@ -478,7 +479,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1004F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1007F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -498,7 +499,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1151, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1154, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
@@ -592,6 +593,7 @@ namespace GUI_DingDoong
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormKhuyenMai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khuyến mãi";

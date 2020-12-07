@@ -59,8 +59,10 @@ namespace GUI_DingDoong
                     busBan.DeleteCTHDSoluong(dr[0].ToString(), dr[1].ToString(), (int)dr[2]);
 
                 }
+                FormKhuVucBan.IndexBan = NewBan.IdBan - 1;
                 busBan.UpdateTrangThaiBan(OldBan, 0);
                 busBan.ClearTemp(oldHD.MaHD);
+
 
                 this.Close();
             }

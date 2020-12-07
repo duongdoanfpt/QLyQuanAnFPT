@@ -24,6 +24,7 @@ namespace GUI_DingDoong
 
         private void FormKhachHang_Load(object sender, EventArgs e)
         {
+           
             pbKhachHang.Enabled = false;
             pbKhachHang.BorderStyle = BorderStyle.Fixed3D;
             lblUsers.Text = FormLogin.NvMain.Email;
@@ -119,7 +120,8 @@ namespace GUI_DingDoong
             txtSDT.Text = khach.SDT ;
             txtTen.Text = khach.TenKH;
             txtEmail.Text = khach.Email;
-            MessageBox.Show(khach.GioiTinh.ToString());
+           
+     
             
 
             if (khach.GioiTinh == 1)
@@ -127,7 +129,7 @@ namespace GUI_DingDoong
             else
                rdNu.Checked = true;
 
-            MessageBox.Show(khach.Email);
+        
 
             dtpNgaySinh.Text = khach.NgaySinh.ToString();
         }

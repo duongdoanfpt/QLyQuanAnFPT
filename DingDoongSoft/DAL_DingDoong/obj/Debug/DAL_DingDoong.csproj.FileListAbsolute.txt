@@ -121,3 +121,4 @@ D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_Din
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.pdb
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.csproj.ResolveComReference.cache
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.csproj.ResolveComReference.cache
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DAL_DingDoong\obj\Debug\DAL_DingDoong.csproj.ResolveComReference.cache

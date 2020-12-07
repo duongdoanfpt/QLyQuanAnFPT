@@ -55,6 +55,7 @@ namespace GUI_DingDoong
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 BanNew = busBan.curBan(cbBan.Text);
+                FormKhuVucBan.IndexBan = BanNew.IdBan - 1;
                 busBan.ChuyenBan(BanOld.IdBan, BanNew.IdBan, MaHoaDon);
                 this.Close();
             }

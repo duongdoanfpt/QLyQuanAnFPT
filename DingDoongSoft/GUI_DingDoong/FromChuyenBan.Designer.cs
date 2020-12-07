@@ -29,6 +29,7 @@ namespace GUI_DingDoong
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChuyenBan));
             this.label1 = new System.Windows.Forms.Label();
             this.cbBan = new System.Windows.Forms.ComboBox();
             this.btOK = new System.Windows.Forms.Button();
@@ -111,6 +112,7 @@ namespace GUI_DingDoong
             this.Controls.Add(this.btOK);
             this.Controls.Add(this.cbBan);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormChuyenBan";
             this.Text = "Chuyển bàn";
             this.Load += new System.EventHandler(this.FromChuyenBan_Load);

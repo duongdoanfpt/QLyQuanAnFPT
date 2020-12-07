@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.pnlAccounts = new System.Windows.Forms.Panel();
             this.lblAccounts = new System.Windows.Forms.Label();
             this.pbAccounts = new System.Windows.Forms.PictureBox();
@@ -572,11 +573,11 @@
             // LbYear
             // 
             this.LbYear.AutoSize = true;
-            this.LbYear.Font = new System.Drawing.Font("Algerian", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbYear.ForeColor = System.Drawing.Color.White;
             this.LbYear.Location = new System.Drawing.Point(147, 296);
             this.LbYear.Name = "LbYear";
-            this.LbYear.Size = new System.Drawing.Size(87, 32);
+            this.LbYear.Size = new System.Drawing.Size(83, 33);
             this.LbYear.TabIndex = 3;
             this.LbYear.Text = "2020";
             this.LbYear.MouseEnter += new System.EventHandler(this.LbYear_MouseEnter);
@@ -585,11 +586,11 @@
             // lbMonth
             // 
             this.lbMonth.AutoSize = true;
-            this.lbMonth.Font = new System.Drawing.Font("Algerian", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMonth.ForeColor = System.Drawing.Color.White;
             this.lbMonth.Location = new System.Drawing.Point(67, 294);
             this.lbMonth.Name = "lbMonth";
-            this.lbMonth.Size = new System.Drawing.Size(74, 35);
+            this.lbMonth.Size = new System.Drawing.Size(79, 37);
             this.lbMonth.TabIndex = 2;
             this.lbMonth.Text = "JAN";
             this.lbMonth.MouseEnter += new System.EventHandler(this.lbMonth_MouseEnter);
@@ -659,6 +660,7 @@
             this.Controls.Add(this.pnlNhanVien);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMain";

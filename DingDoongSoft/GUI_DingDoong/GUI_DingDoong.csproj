@@ -463,5 +463,8 @@
   <ItemGroup>
     <None Include="Resources\Flameia-Rabbit-Xp-Apple-menu3.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOPNG.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

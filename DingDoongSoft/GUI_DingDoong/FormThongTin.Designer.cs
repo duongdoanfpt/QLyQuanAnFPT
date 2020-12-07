@@ -29,6 +29,7 @@ namespace GUI_DingDoong
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThongTin));
             this.lblName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateNgayVl1 = new System.Windows.Forms.Label();
@@ -192,6 +193,7 @@ namespace GUI_DingDoong
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormThongTin";
             this.Text = "Thông tin tài khoản";
             this.Load += new System.EventHandler(this.FormThongTin_Load);

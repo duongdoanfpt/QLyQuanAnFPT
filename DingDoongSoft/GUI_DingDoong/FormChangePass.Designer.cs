@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChangePass));
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblChangePass = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -178,6 +179,7 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblChangePass);
             this.Controls.Add(this.pbLogo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormChangePass";
             this.Text = "Đổi mật khẩu";
             this.Load += new System.EventHandler(this.FormChangePass_Load);
