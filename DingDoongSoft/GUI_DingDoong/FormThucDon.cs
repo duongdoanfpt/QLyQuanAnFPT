@@ -210,7 +210,14 @@ namespace GUI_DingDoong
         }
         private void btThem_Click(object sender, EventArgs e)
         {
-            Enable_Textbox();
+            btXoa.Enabled = false;
+            btCapNhat.Enabled = false;
+            btLuu.Enabled = true;
+            btBoQua.Enabled = true;
+            txtTenMon.Enabled = true;
+            txtDonGia.Enabled = true;
+            txtMoTa.Enabled = true;
+            txtNhom.Enabled = true;
             SetNull_Value();
             
             txtTenMon.Focus();
@@ -281,6 +288,9 @@ namespace GUI_DingDoong
             {
                 MessageBox.Show("Xóa món thành công","Thông báo");
                 DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
+                DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                DgvThucDon.DataSource = busThucDon.DanhSachThucDonAll();
                 DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             }
