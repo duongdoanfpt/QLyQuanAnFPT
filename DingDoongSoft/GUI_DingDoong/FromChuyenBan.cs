@@ -51,9 +51,13 @@ namespace GUI_DingDoong
 
         private void btOK_Click(object sender, EventArgs e)
         {
-            BanNew = busBan.curBan(cbBan.Text);
-            busBan.ChuyenBan(BanOld.IdBan, BanNew.IdBan, MaHoaDon);
-            this.Close();
+            if (MessageBox.Show("Chuyển " + BanOld.TenBan + " sang " + cbBan.Text + "?", "Confirm",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                BanNew = busBan.curBan(cbBan.Text);
+                busBan.ChuyenBan(BanOld.IdBan, BanNew.IdBan, MaHoaDon);
+                this.Close();
+            }
         }
     }
 }

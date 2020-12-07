@@ -158,5 +158,10 @@ namespace BUS_DingDoong
             return updateBan(IdBan, TrangThai);
         }
 
+        public bool ResetBan(string ViTri,string MaHD)
+        {
+            return dalBan.ResetBan(ViTri,MaHD);
+        }
+
     }
 }

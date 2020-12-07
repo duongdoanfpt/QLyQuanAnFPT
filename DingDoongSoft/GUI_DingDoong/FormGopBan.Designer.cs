@@ -34,7 +34,7 @@ namespace GUI_DingDoong
             this.cbBan = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbTenBan = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btCancel
@@ -87,16 +87,17 @@ namespace GUI_DingDoong
             this.label2.TabIndex = 8;
             this.label2.Text = "Bàn đã chọn";
             // 
-            // label3
+            // lbTenBan
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(176, 125);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 25);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Bàn Đã Chọn";
+            this.lbTenBan.AutoSize = true;
+            this.lbTenBan.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenBan.ForeColor = System.Drawing.Color.Red;
+            this.lbTenBan.Location = new System.Drawing.Point(176, 125);
+            this.lbTenBan.Name = "lbTenBan";
+            this.lbTenBan.Size = new System.Drawing.Size(127, 25);
+            this.lbTenBan.TabIndex = 9;
+            this.lbTenBan.Text = "Bàn Đã Chọn";
+            this.lbTenBan.Click += new System.EventHandler(this.label3_Click);
             // 
             // FormGopBan
             // 
@@ -104,7 +105,7 @@ namespace GUI_DingDoong
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(415, 355);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbTenBan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btOK);
@@ -125,6 +126,6 @@ namespace GUI_DingDoong
         private System.Windows.Forms.ComboBox cbBan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbTenBan;
     }
 }

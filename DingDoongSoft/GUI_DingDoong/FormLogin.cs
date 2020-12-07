@@ -62,7 +62,7 @@ namespace GUI_DingDoong
         }
 
 
-            BUS_NhanVien busnhanvien = new BUS_NhanVien();
+        BUS_NhanVien busnhanvien = new BUS_NhanVien();
         private void btLogin_Click(object sender, EventArgs e)
         {
             DTO_NhanVien nv = new DTO_NhanVien();
@@ -202,6 +202,23 @@ namespace GUI_DingDoong
             {
 
             }
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblForgotPass_MouseEnter(object sender, EventArgs e)
+        {
+            lblForgotPass.Font = new Font(lblForgotPass.Font.Name, lblForgotPass.Font.SizeInPoints, FontStyle.Underline | FontStyle.Bold);
+
+        }
+
+        private void lblForgotPass_MouseLeave(object sender, EventArgs e)
+        {
+            lblForgotPass.Font = new Font(lblForgotPass.Font.Name, lblForgotPass.Font.SizeInPoints, FontStyle.Bold);
+
         }
     }
 }

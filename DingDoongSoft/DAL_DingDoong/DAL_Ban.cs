@@ -548,6 +548,34 @@ namespace DAL_DingDoong
             return false;
         }
 
+        public bool ResetBan(string ViTri, string MaHD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "resetBan";
+                cmd.Parameters.AddWithValue("TenBan", ViTri);
+
+                cmd.Parameters.AddWithValue("MaHD", MaHD);
+               
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
 
     }
 }
