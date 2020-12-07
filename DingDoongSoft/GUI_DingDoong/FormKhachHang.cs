@@ -135,8 +135,7 @@ namespace GUI_DingDoong
             txtSDT.Enabled = true;
             txtEmail.Enabled = true;
             dtpNgaySinh.Enabled = true;
-            rdNam.Checked = false;
-            rdNu.Checked = false;
+            
             btLuu.Enabled = true;
         }
 
@@ -147,18 +146,18 @@ namespace GUI_DingDoong
             txtSDT.Text = khach.SDT ;
             txtTen.Text = khach.TenKH;
             txtEmail.Text = khach.Email;
-           
-     
-            
 
             if (khach.GioiTinh == 1)
                 rdNam.Checked = true;
             else
                rdNu.Checked = true;
 
-        
-
             dtpNgaySinh.Text = khach.NgaySinh.ToString();
+
+            txtTen.Enabled = true;
+            txtSDT.Enabled = true;
+            txtEmail.Enabled = true;
+            dtpNgaySinh.Enabled = true;
         }
 
         private void btCapNhat_Click(object sender, EventArgs e)

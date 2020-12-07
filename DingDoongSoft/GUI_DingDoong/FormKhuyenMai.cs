@@ -148,6 +148,12 @@ namespace GUI_DingDoong
 
             dtpNgBD.Text = km.NgayBD.ToString();
             dtpNgKT.Text = km.NgayKT.ToString();
+
+            txtMaKM.Enabled = true;
+            txtTenKM.Enabled = true;
+            txtChietKhau.Enabled = true;
+            dtpNgBD.Enabled = true;
+            dtpNgKT.Enabled = true;
         }
 
         private void btXoa_Click(object sender, EventArgs e)
