@@ -291,6 +291,7 @@ namespace GUI_DingDoong
 
                     DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
                     txtEmail.Text = td.Email;
+                   
                     txtTenNhanVien.Text = td.TenNV;
                     txtDiaChi.Text = td.DiaChi;
                     
@@ -301,7 +302,7 @@ namespace GUI_DingDoong
                         rdNhanVien.Checked = true;
 
                     dateTimeNVL.Text = td.NgayVL.ToString();
-                    MessageBox.Show(td.MaNV);
+                    
                     
                     MemoryStream mem = new MemoryStream(busnhanvien.getHinhNV(td.MaNV)); 
                     pbHinh.BackgroundImage = Image.FromStream(mem);
@@ -580,6 +581,21 @@ namespace GUI_DingDoong
 
             td.Closed += (s, args) => this.Close();
             td.Show();
+        }
+
+        private void cbHienThiAll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbHienThiAll.Checked)
+            {
+                dgvNhanVien.DataSource = busnhanvien.DanhSachNhanVienAll();
+                dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            else
+            {
+                dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
+                dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            }
         }
     }
 }

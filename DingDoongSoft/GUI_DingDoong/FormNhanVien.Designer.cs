@@ -335,6 +335,7 @@ namespace GUI_DingDoong
             this.cbHienThiAll.Size = new System.Drawing.Size(15, 14);
             this.cbHienThiAll.TabIndex = 14;
             this.cbHienThiAll.UseVisualStyleBackColor = true;
+            this.cbHienThiAll.CheckedChanged += new System.EventHandler(this.cbHienThiAll_CheckedChanged);
             // 
             // tableLayoutPanel5
             // 
@@ -357,7 +358,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1262, 42);
             this.tableLayoutPanel5.TabIndex = 15;
             // 
@@ -420,6 +421,7 @@ namespace GUI_DingDoong
             this.btXoa.TabIndex = 5;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btLuu
             // 
@@ -463,7 +465,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1004F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1007F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -483,7 +485,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1151, 12);
+            this.lblUsers.Location = new System.Drawing.Point(1154, 12);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;

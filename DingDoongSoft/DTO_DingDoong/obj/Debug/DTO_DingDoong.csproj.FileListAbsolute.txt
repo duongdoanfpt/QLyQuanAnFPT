@@ -25,3 +25,4 @@ D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Debug\DTO_Din
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Debug\DTO_DingDoong.csproj.CoreCompileInputs.cache
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Debug\DTO_DingDoong.dll
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Debug\DTO_DingDoong.pdb
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Debug\DTO_DingDoong.csprojAssemblyReference.cache

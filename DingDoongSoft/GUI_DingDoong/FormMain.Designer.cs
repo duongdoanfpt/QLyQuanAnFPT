@@ -65,9 +65,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlDongHo = new System.Windows.Forms.Panel();
             this.lbDayofweek = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
             this.LbYear = new System.Windows.Forms.Label();
             this.lbMonth = new System.Windows.Forms.Label();
-            this.lbDate = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Infor = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -478,9 +478,9 @@
             // 
             this.lblEmailMain.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEmailMain.AutoSize = true;
-            this.lblEmailMain.BackColor = System.Drawing.Color.Cyan;
+            this.lblEmailMain.BackColor = System.Drawing.Color.MidnightBlue;
             this.lblEmailMain.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailMain.ForeColor = System.Drawing.Color.Black;
+            this.lblEmailMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblEmailMain.Location = new System.Drawing.Point(345, 5);
             this.lblEmailMain.Name = "lblEmailMain";
             this.lblEmailMain.Size = new System.Drawing.Size(174, 25);
@@ -513,7 +513,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(32, 27);
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.btThoat_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // pictureBox2
@@ -557,6 +556,19 @@
             this.lbDayofweek.MouseEnter += new System.EventHandler(this.lbDayofweek_MouseEnter);
             this.lbDayofweek.MouseLeave += new System.EventHandler(this.lbDayofweek_MouseLeave);
             // 
+            // lbDate
+            // 
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Segoe UI", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.ForeColor = System.Drawing.Color.White;
+            this.lbDate.Location = new System.Drawing.Point(-14, 159);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(184, 142);
+            this.lbDate.TabIndex = 1;
+            this.lbDate.Text = "21";
+            this.lbDate.MouseEnter += new System.EventHandler(this.lbDate_MouseEnter);
+            this.lbDate.MouseLeave += new System.EventHandler(this.lbDate_MouseLeave);
+            // 
             // LbYear
             // 
             this.LbYear.AutoSize = true;
@@ -582,19 +594,6 @@
             this.lbMonth.Text = "JAN";
             this.lbMonth.MouseEnter += new System.EventHandler(this.lbMonth_MouseEnter);
             this.lbMonth.MouseLeave += new System.EventHandler(this.lbMonth_MouseLeave);
-            // 
-            // lbDate
-            // 
-            this.lbDate.AutoSize = true;
-            this.lbDate.Font = new System.Drawing.Font("Segoe UI", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.ForeColor = System.Drawing.Color.White;
-            this.lbDate.Location = new System.Drawing.Point(-14, 159);
-            this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(184, 142);
-            this.lbDate.TabIndex = 1;
-            this.lbDate.Text = "21";
-            this.lbDate.MouseEnter += new System.EventHandler(this.lbDate_MouseEnter);
-            this.lbDate.MouseLeave += new System.EventHandler(this.lbDate_MouseLeave);
             // 
             // lbTime
             // 

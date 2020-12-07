@@ -23,7 +23,7 @@ namespace BUS_DingDoong
         public DTO_NhanVien curNV(string Email)
         {
             DTO_NhanVien NV = new DTO_NhanVien();
-            NV = (from DataRow dr in getDanhSachNV().Rows
+            NV = (from DataRow dr in DanhSachNhanVienAll().Rows
                   where string.Compare(dr[1].ToString(), Email, true) == 0
                   select new DTO_NhanVien
                   {
@@ -149,6 +149,11 @@ namespace BUS_DingDoong
         public bool inserNhanVien(DTO_NhanVien nv)
         {
             return dALNhanVien.insertNhanVien(nv);
+        }
+
+        public DataTable DanhSachNhanVienAll()
+        {
+            return dALNhanVien.DanhSachNhanVienAll();
         }
 
     }

@@ -35,12 +35,6 @@ namespace GUI_DingDoong
 
             Application.Run(login);
         }
-
-        private void btThoat_Click(object sender, EventArgs e)
-        {
-
-          
-        }
         private void phanquyen()
         {
             pbNhanVien.Enabled = false;
@@ -188,7 +182,9 @@ namespace GUI_DingDoong
 
         private void InforNV_Click(object sender, EventArgs e)
         {
-
+            FormThongTin frmThongTin = new FormThongTin();
+            frmThongTin.Activate();
+            frmThongTin.Show();
         }
 
         private void SignOut_Click(object sender, EventArgs e)
