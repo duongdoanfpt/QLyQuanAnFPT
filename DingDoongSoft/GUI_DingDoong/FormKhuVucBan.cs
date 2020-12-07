@@ -11,6 +11,7 @@ using BUS_DingDoong;
 using DTO_DingDoong;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
+using System.Text.RegularExpressions;
 
 namespace GUI_DingDoong
 {
@@ -55,6 +56,8 @@ namespace GUI_DingDoong
             return autoSourceCollection;
         }
 
+        
+
         private void bt3d()
         {
             foreach (var bt in GetAll(this, typeof(Button)))
@@ -78,6 +81,15 @@ namespace GUI_DingDoong
             SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
             SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
             SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+        }
+
+        // Check SDT Hợp  lệ
+        public bool isvailphone(string phone)
+        {
+            string strRegex = @"((09|03|07|08|05)+([0-9]{8})\b)";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(phone)) return true;
+            else return false;
         }
 
 
@@ -501,11 +513,33 @@ namespace GUI_DingDoong
 
         private void btThemKhach_Click(object sender, EventArgs e)
         {
-            KH = busKH.curKhach(txtSDTKH.Text);
-            FormKhachHangMini frmKHMN = new FormKhachHangMini(KH,txtSDTKH.Text);
-           
-            frmKHMN.Show();
-            frmKHMN.FormClosed += new FormClosedEventHandler(CloseFrm);
+            if (!string.IsNullOrWhiteSpace(txtSDTKH.Text))
+            {
+                if (!isvailphone(txtSDTKH.Text))
+                {
+                    errorSDTKH.SetError(txtSDTKH, "Số điện thoại không hợp lệ");
+                    MessageBox.Show("Định dạng số điện thoại không đúng");
+
+                }
+                else
+                {
+                    errorSDTKH.SetError(txtSDTKH, null);
+                    KH = busKH.curKhach(txtSDTKH.Text);
+                    FormKhachHangMini frmKHMN = new FormKhachHangMini(KH, txtSDTKH.Text);
+
+                    frmKHMN.Show();
+                    frmKHMN.FormClosed += new FormClosedEventHandler(CloseFrm);
+                }
+            }
+            else
+            {
+                KH = busKH.curKhach(txtSDTKH.Text);
+                FormKhachHangMini frmKHMN = new FormKhachHangMini(KH, txtSDTKH.Text);
+
+                frmKHMN.Show();
+                frmKHMN.FormClosed += new FormClosedEventHandler(CloseFrm);
+            }    
+            
         }
 
         private void btBill_Click(object sender, EventArgs e)
@@ -837,6 +871,8 @@ namespace GUI_DingDoong
             pbThucDon.Cursor = Cursors.Default;
             pbThucDon.SizeMode = PictureBoxSizeMode.CenterImage;
         }
+
+     
     }
  }
  

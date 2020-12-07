@@ -449,5 +449,12 @@ namespace GUI_DingDoong
             pnlDongHo.BorderStyle = BorderStyle.None;
 
         }
+
+        private void pbCaiDat_Click(object sender, EventArgs e)
+        {
+            FrmSetupBan frmSetting = new FrmSetupBan();
+            frmSetting.FormClosed += FormMain_Load;
+            frmSetting.Show();
+        }
     }
 }

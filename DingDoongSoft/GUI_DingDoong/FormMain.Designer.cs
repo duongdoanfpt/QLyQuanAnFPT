@@ -171,6 +171,7 @@
             this.pbCaiDat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbCaiDat.TabIndex = 2;
             this.pbCaiDat.TabStop = false;
+            this.pbCaiDat.Click += new System.EventHandler(this.pbCaiDat_Click);
             this.pbCaiDat.MouseEnter += new System.EventHandler(this.pbCaiDat_MouseEnter);
             this.pbCaiDat.MouseLeave += new System.EventHandler(this.pbCaiDat_MouseLeave);
             // 

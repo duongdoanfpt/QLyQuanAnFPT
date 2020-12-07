@@ -162,6 +162,10 @@ namespace BUS_DingDoong
         {
             return dalBan.ResetBan(ViTri,MaHD);
         }
+        public bool setUpBan(int SoLuong)
+        {
+            return dalBan.setUpBan(SoLuong);
+        }
 
     }
 }

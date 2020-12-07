@@ -123,6 +123,7 @@ namespace GUI_DingDoong
             this.pbHome = new System.Windows.Forms.PictureBox();
             this.pbNhanVien = new System.Windows.Forms.PictureBox();
             this.pbThucDon = new System.Windows.Forms.PictureBox();
+            this.errorSDTKH = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -144,6 +145,7 @@ namespace GUI_DingDoong
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThucDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSDTKH)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -494,6 +496,7 @@ namespace GUI_DingDoong
             this.txtSDTKH.Name = "txtSDTKH";
             this.txtSDTKH.Size = new System.Drawing.Size(173, 20);
             this.txtSDTKH.TabIndex = 5;
+           
             // 
             // label22
             // 
@@ -1101,7 +1104,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmailNV.Location = new System.Drawing.Point(1073, 12);
+            this.lbEmailNV.Location = new System.Drawing.Point(1079, 12);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
@@ -1119,7 +1122,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 945F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 951F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
@@ -1212,6 +1215,10 @@ namespace GUI_DingDoong
             this.pbThucDon.MouseEnter += new System.EventHandler(this.pbThucDon_MouseEnter);
             this.pbThucDon.MouseLeave += new System.EventHandler(this.pbThucDon_MouseLeave);
             // 
+            // errorSDTKH
+            // 
+            this.errorSDTKH.ContainerControl = this;
+            // 
             // FormKhuVucBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1253,6 +1260,7 @@ namespace GUI_DingDoong
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThucDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSDTKH)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1350,5 +1358,6 @@ namespace GUI_DingDoong
         private System.Windows.Forms.PictureBox pbThongKe;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pbThucDon;
+        private System.Windows.Forms.ErrorProvider errorSDTKH;
     }
 }

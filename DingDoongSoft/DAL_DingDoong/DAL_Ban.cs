@@ -373,8 +373,9 @@ namespace DAL_DingDoong
                 return (cm.ExecuteScalar() is null ? 0 : float.Parse(cm.ExecuteScalar().ToString()));
 
             }
-            catch (Exception e)
+            catch (Exception )
             {
+
                 return 0;
             }
             finally
@@ -576,6 +577,35 @@ namespace DAL_DingDoong
             return false;
         }
 
+        public bool setUpBan(int SoLuong)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "setupBan";
+                cmd.Parameters.AddWithValue("soLuong", SoLuong);
 
+               
+
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
     }
+
+
+    
 }
