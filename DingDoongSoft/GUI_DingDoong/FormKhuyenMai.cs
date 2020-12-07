@@ -22,12 +22,40 @@ namespace GUI_DingDoong
             InitializeComponent();
         }
 
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+        private void bt3d()
+        {
+            foreach (var bt in GetAll(this, typeof(Button)))
+            {
+                (bt as Button).Paint += Bt_Paint;
+                (bt as Button).FlatStyle = FlatStyle.Standard;
+            }
+        }
+
+        private void Bt_Paint(object sender, PaintEventArgs e)
+        {
+            Button bt = sender as Button;
+            ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+        }
+
         private void FormKhuyenMai_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             LoadGridview_KM();
             ResetValues();
             lblUsers.Text = FormLogin.NvMain.Email;
+            bt3d();
         }
 
         private void LoadGridview_KM()

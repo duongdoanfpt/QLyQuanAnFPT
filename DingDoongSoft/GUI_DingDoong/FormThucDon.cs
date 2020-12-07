@@ -31,23 +31,13 @@ namespace GUI_DingDoong
                                       .Concat(controls)
                                       .Where(c => c.GetType() == type);
         }
-        private void FrmLoad()
+        private void bt3d()
         {
             foreach (var bt in GetAll(this, typeof(Button)))
             {
-
-
                 (bt as Button).Paint += Bt_Paint;
-
                 (bt as Button).FlatStyle = FlatStyle.Standard;
-               
-
             }
-
-
-
-
-
         }
 
         private void Bt_Paint(object sender, PaintEventArgs e)
@@ -59,6 +49,7 @@ namespace GUI_DingDoong
             SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
             SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
         }
+
 
 
         //Disable textbox & button
@@ -84,7 +75,7 @@ namespace GUI_DingDoong
 
         private void FormThucDon_Load(object sender, EventArgs e)
         {
-            FrmLoad();
+            bt3d();
             DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
             ptbMenuThucDon.Enabled = false;
             ptbMenuThucDon.BorderStyle = BorderStyle.Fixed3D;

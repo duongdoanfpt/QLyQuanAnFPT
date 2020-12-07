@@ -26,6 +26,34 @@ namespace GUI_DingDoong
         string startupPath = Environment.CurrentDirectory;
         BUS_NhanVien busnhanvien = new BUS_NhanVien();
 
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+        private void bt3d()
+        {
+            foreach (var bt in GetAll(this, typeof(Button)))
+            {
+                (bt as Button).Paint += Bt_Paint;
+                (bt as Button).FlatStyle = FlatStyle.Standard;
+            }
+        }
+
+        private void Bt_Paint(object sender, PaintEventArgs e)
+        {
+            Button bt = sender as Button;
+            ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+        }
+
+
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
             this.dgvNhanVien.GridColor = Color.Black;
@@ -41,6 +69,7 @@ namespace GUI_DingDoong
 
             NhanVien.Enabled = false;
             NhanVien.BorderStyle = BorderStyle.Fixed3D;
+            bt3d();
         }
 
         private void LoadGridView_NV()

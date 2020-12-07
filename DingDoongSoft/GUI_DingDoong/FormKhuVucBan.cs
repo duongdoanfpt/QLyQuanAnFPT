@@ -55,7 +55,7 @@ namespace GUI_DingDoong
             return autoSourceCollection;
         }
 
-        private void FrmLoad()
+        private void bt3d()
         {
             foreach (var bt in GetAll(this, typeof(Button)))
             {
@@ -67,11 +67,19 @@ namespace GUI_DingDoong
 
             }
             ChkBKhachHang.Enabled = false;
-
-
-
-
         }
+
+        // làm nút 3d
+        private void Bt_Paint(object sender, PaintEventArgs e)
+        {
+            Button bt = sender as Button;
+            ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+        }
+
 
         // chọn một bàn ở vị trí indexBan
         private void SelectBan(int indexBan)
@@ -324,17 +332,7 @@ namespace GUI_DingDoong
                
         }
 
-        // làm nút 3d
-        private void Bt_Paint(object sender, PaintEventArgs e)
-        {
-          Button bt = sender as Button;
-          ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
-          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
-          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
-          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
-          SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
-        }
-
+       
         
        
 
@@ -366,7 +364,7 @@ namespace GUI_DingDoong
             pbBan.Enabled = false;
             pbBan.BorderStyle = BorderStyle.Fixed3D;
 
-            FrmLoad();
+            bt3d();
             btLamMoi.Enabled = true;
             loadThucDonkvBan();
             lbTenNV.Text = FormLogin.NvMain.TenNV;
