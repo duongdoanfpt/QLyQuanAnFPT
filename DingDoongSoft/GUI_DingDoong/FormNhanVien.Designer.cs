@@ -45,13 +45,6 @@ namespace GUI_DingDoong
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbHinh = new System.Windows.Forms.PictureBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pbThongKe = new System.Windows.Forms.PictureBox();
-            this.pbBan = new System.Windows.Forms.PictureBox();
-            this.pbKhachHang = new System.Windows.Forms.PictureBox();
-            this.lblUsers = new System.Windows.Forms.Label();
-            this.pbNhanVien = new System.Windows.Forms.PictureBox();
-            this.pbHome = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -64,19 +57,28 @@ namespace GUI_DingDoong
             this.btXoa = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
+            this.LayoutMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.lblUsers = new System.Windows.Forms.Label();
+            this.ThongKe = new System.Windows.Forms.PictureBox();
+            this.Ban = new System.Windows.Forms.PictureBox();
+            this.KhachHang = new System.Windows.Forms.PictureBox();
+            this.NhanVien = new System.Windows.Forms.PictureBox();
+            this.Home = new System.Windows.Forms.PictureBox();
+            this.ptbMenuThucDon = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbKhachHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.LayoutMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ban)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KhachHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMenuThucDon)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -96,13 +98,13 @@ namespace GUI_DingDoong
             this.tableLayoutPanel2.Controls.Add(this.lblDiaChi, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.dateTimeNVL, 3, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 43);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 46);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1024, 142);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1024, 139);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // lblVaiTro
@@ -110,7 +112,7 @@ namespace GUI_DingDoong
             this.lblVaiTro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVaiTro.AutoSize = true;
             this.lblVaiTro.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVaiTro.Location = new System.Drawing.Point(3, 105);
+            this.lblVaiTro.Location = new System.Drawing.Point(3, 103);
             this.lblVaiTro.Name = "lblVaiTro";
             this.lblVaiTro.Size = new System.Drawing.Size(187, 25);
             this.lblVaiTro.TabIndex = 9;
@@ -120,7 +122,7 @@ namespace GUI_DingDoong
             // 
             this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(693, 7);
+            this.txtDiaChi.Location = new System.Drawing.Point(693, 6);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(328, 33);
             this.txtDiaChi.TabIndex = 5;
@@ -130,7 +132,7 @@ namespace GUI_DingDoong
             this.lblTenNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTenNhanVien.AutoSize = true;
             this.lblTenNhanVien.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNhanVien.Location = new System.Drawing.Point(3, 11);
+            this.lblTenNhanVien.Location = new System.Drawing.Point(3, 10);
             this.lblTenNhanVien.Name = "lblTenNhanVien";
             this.lblTenNhanVien.Size = new System.Drawing.Size(187, 25);
             this.lblTenNhanVien.TabIndex = 0;
@@ -141,7 +143,7 @@ namespace GUI_DingDoong
             this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(3, 58);
+            this.lblEmail.Location = new System.Drawing.Point(3, 56);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(187, 25);
             this.lblEmail.TabIndex = 1;
@@ -151,7 +153,7 @@ namespace GUI_DingDoong
             // 
             this.txtTenNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTenNhanVien.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenNhanVien.Location = new System.Drawing.Point(196, 7);
+            this.txtTenNhanVien.Location = new System.Drawing.Point(196, 6);
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.Size = new System.Drawing.Size(319, 33);
             this.txtTenNhanVien.TabIndex = 2;
@@ -160,7 +162,7 @@ namespace GUI_DingDoong
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(196, 54);
+            this.txtEmail.Location = new System.Drawing.Point(196, 52);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(319, 33);
             this.txtEmail.TabIndex = 3;
@@ -170,7 +172,7 @@ namespace GUI_DingDoong
             this.lblNgayVaoLam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNgayVaoLam.AutoSize = true;
             this.lblNgayVaoLam.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayVaoLam.Location = new System.Drawing.Point(521, 58);
+            this.lblNgayVaoLam.Location = new System.Drawing.Point(521, 56);
             this.lblNgayVaoLam.Name = "lblNgayVaoLam";
             this.lblNgayVaoLam.Size = new System.Drawing.Size(166, 25);
             this.lblNgayVaoLam.TabIndex = 6;
@@ -181,7 +183,7 @@ namespace GUI_DingDoong
             this.lblDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDiaChi.AutoSize = true;
             this.lblDiaChi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaChi.Location = new System.Drawing.Point(521, 11);
+            this.lblDiaChi.Location = new System.Drawing.Point(521, 10);
             this.lblDiaChi.Name = "lblDiaChi";
             this.lblDiaChi.Size = new System.Drawing.Size(166, 25);
             this.lblDiaChi.TabIndex = 4;
@@ -191,9 +193,9 @@ namespace GUI_DingDoong
             // 
             this.panel2.Controls.Add(this.rdQuanLy);
             this.panel2.Controls.Add(this.rdNhanVien);
-            this.panel2.Location = new System.Drawing.Point(196, 97);
+            this.panel2.Location = new System.Drawing.Point(196, 95);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(319, 42);
+            this.panel2.Size = new System.Drawing.Size(319, 41);
             this.panel2.TabIndex = 8;
             // 
             // rdQuanLy
@@ -227,7 +229,7 @@ namespace GUI_DingDoong
             this.dateTimeNVL.CalendarFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNVL.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.dateTimeNVL.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeNVL.Location = new System.Drawing.Point(693, 54);
+            this.dateTimeNVL.Location = new System.Drawing.Point(693, 52);
             this.dateTimeNVL.Name = "dateTimeNVL";
             this.dateTimeNVL.Size = new System.Drawing.Size(328, 33);
             this.dateTimeNVL.TabIndex = 10;
@@ -266,97 +268,6 @@ namespace GUI_DingDoong
             this.dgvNhanVien.Size = new System.Drawing.Size(1254, 394);
             this.dgvNhanVien.TabIndex = 6;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1063F));
-            this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblUsers, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pbNhanVien, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pbHome, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1262, 40);
-            this.tableLayoutPanel1.TabIndex = 15;
-            // 
-            // pbThongKe
-            // 
-            this.pbThongKe.Image = global::GUI_DingDoong.Properties.Resources.Fasticon_Database_Table_edit1;
-            this.pbThongKe.Location = new System.Drawing.Point(218, 6);
-            this.pbThongKe.Name = "pbThongKe";
-            this.pbThongKe.Size = new System.Drawing.Size(44, 25);
-            this.pbThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbThongKe.TabIndex = 5;
-            this.pbThongKe.TabStop = false;
-            this.pbThongKe.Click += new System.EventHandler(this.pbThongKe_Click);
-            // 
-            // pbBan
-            // 
-            this.pbBan.Image = global::GUI_DingDoong.Properties.Resources.Chrisl21_Minecraft_Crafting_Table2;
-            this.pbBan.Location = new System.Drawing.Point(165, 6);
-            this.pbBan.Name = "pbBan";
-            this.pbBan.Size = new System.Drawing.Size(44, 25);
-            this.pbBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbBan.TabIndex = 4;
-            this.pbBan.TabStop = false;
-            this.pbBan.Click += new System.EventHandler(this.pbBan_Click);
-            // 
-            // pbKhachHang
-            // 
-            this.pbKhachHang.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Basic_User_Group2;
-            this.pbKhachHang.Location = new System.Drawing.Point(112, 6);
-            this.pbKhachHang.Name = "pbKhachHang";
-            this.pbKhachHang.Size = new System.Drawing.Size(44, 25);
-            this.pbKhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbKhachHang.TabIndex = 3;
-            this.pbKhachHang.TabStop = false;
-            this.pbKhachHang.Click += new System.EventHandler(this.pbKhachHang_Click);
-            // 
-            // lblUsers
-            // 
-            this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblUsers.AutoSize = true;
-            this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1166, 9);
-            this.lblUsers.Name = "lblUsers";
-            this.lblUsers.Size = new System.Drawing.Size(162, 21);
-            this.lblUsers.TabIndex = 6;
-            this.lblUsers.Text = "email123@gmail.com";
-            // 
-            // pbNhanVien
-            // 
-            this.pbNhanVien.Image = global::GUI_DingDoong.Properties.Resources.Icons_Land_Vista_People_Office_Customer_Male_Light1;
-            this.pbNhanVien.Location = new System.Drawing.Point(59, 6);
-            this.pbNhanVien.Name = "pbNhanVien";
-            this.pbNhanVien.Size = new System.Drawing.Size(44, 25);
-            this.pbNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbNhanVien.TabIndex = 2;
-            this.pbNhanVien.TabStop = false;
-            this.pbNhanVien.Click += new System.EventHandler(this.pbNhanVien_Click);
-            // 
-            // pbHome
-            // 
-            this.pbHome.Image = global::GUI_DingDoong.Properties.Resources.Apathae_Chakram_2_Home1;
-            this.pbHome.Location = new System.Drawing.Point(6, 6);
-            this.pbHome.Name = "pbHome";
-            this.pbHome.Size = new System.Drawing.Size(44, 25);
-            this.pbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbHome.TabIndex = 1;
-            this.pbHome.TabStop = false;
-            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -424,6 +335,7 @@ namespace GUI_DingDoong
             this.cbHienThiAll.Size = new System.Drawing.Size(15, 14);
             this.cbHienThiAll.TabIndex = 14;
             this.cbHienThiAll.UseVisualStyleBackColor = true;
+            this.cbHienThiAll.CheckedChanged += new System.EventHandler(this.cbHienThiAll_CheckedChanged);
             // 
             // tableLayoutPanel5
             // 
@@ -446,6 +358,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1262, 42);
             this.tableLayoutPanel5.TabIndex = 15;
             // 
@@ -508,6 +421,7 @@ namespace GUI_DingDoong
             this.btXoa.TabIndex = 5;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btLuu
             // 
@@ -539,15 +453,130 @@ namespace GUI_DingDoong
             this.btThem.UseVisualStyleBackColor = true;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
+            // LayoutMenu
+            // 
+            this.LayoutMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LayoutMenu.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.LayoutMenu.ColumnCount = 7;
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1007F));
+            this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
+            this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
+            this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
+            this.LayoutMenu.Controls.Add(this.KhachHang, 2, 0);
+            this.LayoutMenu.Controls.Add(this.NhanVien, 1, 0);
+            this.LayoutMenu.Controls.Add(this.Home, 0, 0);
+            this.LayoutMenu.Controls.Add(this.ptbMenuThucDon, 5, 0);
+            this.LayoutMenu.Location = new System.Drawing.Point(2, -1);
+            this.LayoutMenu.Name = "LayoutMenu";
+            this.LayoutMenu.RowCount = 1;
+            this.LayoutMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.LayoutMenu.Size = new System.Drawing.Size(1262, 45);
+            this.LayoutMenu.TabIndex = 12;
+            // 
+            // lblUsers
+            // 
+            this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblUsers.AutoSize = true;
+            this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsers.Location = new System.Drawing.Point(1154, 12);
+            this.lblUsers.Name = "lblUsers";
+            this.lblUsers.Size = new System.Drawing.Size(162, 21);
+            this.lblUsers.TabIndex = 7;
+            this.lblUsers.Text = "email123@gmail.com";
+            // 
+            // ThongKe
+            // 
+            this.ThongKe.Image = global::GUI_DingDoong.Properties.Resources.Fasticon_Database_Table_edit1;
+            this.ThongKe.Location = new System.Drawing.Point(218, 6);
+            this.ThongKe.Name = "ThongKe";
+            this.ThongKe.Size = new System.Drawing.Size(44, 31);
+            this.ThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ThongKe.TabIndex = 5;
+            this.ThongKe.TabStop = false;
+            this.ThongKe.Click += new System.EventHandler(this.ThongKe_Click);
+            this.ThongKe.MouseEnter += new System.EventHandler(this.ThongKe_MouseEnter);
+            this.ThongKe.MouseLeave += new System.EventHandler(this.ThongKe_MouseLeave);
+            // 
+            // Ban
+            // 
+            this.Ban.Image = global::GUI_DingDoong.Properties.Resources.Chrisl21_Minecraft_Crafting_Table2;
+            this.Ban.Location = new System.Drawing.Point(165, 6);
+            this.Ban.Name = "Ban";
+            this.Ban.Size = new System.Drawing.Size(44, 31);
+            this.Ban.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Ban.TabIndex = 4;
+            this.Ban.TabStop = false;
+            this.Ban.Click += new System.EventHandler(this.Ban_Click);
+            this.Ban.MouseEnter += new System.EventHandler(this.Ban_MouseEnter);
+            this.Ban.MouseLeave += new System.EventHandler(this.Ban_MouseLeave);
+            // 
+            // KhachHang
+            // 
+            this.KhachHang.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Basic_User_Group2;
+            this.KhachHang.Location = new System.Drawing.Point(112, 6);
+            this.KhachHang.Name = "KhachHang";
+            this.KhachHang.Size = new System.Drawing.Size(44, 31);
+            this.KhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.KhachHang.TabIndex = 3;
+            this.KhachHang.TabStop = false;
+            this.KhachHang.Click += new System.EventHandler(this.KhachHang_Click);
+            this.KhachHang.MouseEnter += new System.EventHandler(this.KhachHang_MouseEnter);
+            this.KhachHang.MouseLeave += new System.EventHandler(this.KhachHang_MouseLeave);
+            // 
+            // NhanVien
+            // 
+            this.NhanVien.Image = global::GUI_DingDoong.Properties.Resources.Icons_Land_Vista_People_Office_Customer_Male_Light1;
+            this.NhanVien.Location = new System.Drawing.Point(59, 6);
+            this.NhanVien.Name = "NhanVien";
+            this.NhanVien.Size = new System.Drawing.Size(44, 31);
+            this.NhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.NhanVien.TabIndex = 2;
+            this.NhanVien.TabStop = false;
+            this.NhanVien.Click += new System.EventHandler(this.NhanVien_Click);
+            this.NhanVien.MouseEnter += new System.EventHandler(this.NhanVien_MouseEnter);
+            this.NhanVien.MouseLeave += new System.EventHandler(this.NhanVien_MouseLeave);
+            // 
+            // Home
+            // 
+            this.Home.Image = global::GUI_DingDoong.Properties.Resources.Apathae_Chakram_2_Home1;
+            this.Home.Location = new System.Drawing.Point(6, 6);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(44, 31);
+            this.Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Home.TabIndex = 1;
+            this.Home.TabStop = false;
+            this.Home.Click += new System.EventHandler(this.Home_Click);
+            this.Home.MouseEnter += new System.EventHandler(this.Home_MouseEnter);
+            this.Home.MouseLeave += new System.EventHandler(this.Home_MouseLeave);
+            // 
+            // ptbMenuThucDon
+            // 
+            this.ptbMenuThucDon.Image = global::GUI_DingDoong.Properties.Resources.Flameia_Rabbit_Xp_Apple_menu;
+            this.ptbMenuThucDon.Location = new System.Drawing.Point(271, 6);
+            this.ptbMenuThucDon.Name = "ptbMenuThucDon";
+            this.ptbMenuThucDon.Size = new System.Drawing.Size(35, 31);
+            this.ptbMenuThucDon.TabIndex = 6;
+            this.ptbMenuThucDon.TabStop = false;
+            this.ptbMenuThucDon.Click += new System.EventHandler(this.ptbMenuThucDon_Click);
+            this.ptbMenuThucDon.MouseEnter += new System.EventHandler(this.ptbMenuThucDon_MouseEnter);
+            this.ptbMenuThucDon.MouseLeave += new System.EventHandler(this.ptbMenuThucDon_MouseLeave);
+            // 
             // FormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.LayoutMenu);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dgvNhanVien);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -564,16 +593,17 @@ namespace GUI_DingDoong
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbKhachHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
+            this.LayoutMenu.ResumeLayout(false);
+            this.LayoutMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ban)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KhachHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMenuThucDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -595,13 +625,6 @@ namespace GUI_DingDoong
         private System.Windows.Forms.RadioButton rdQuanLy;
         private System.Windows.Forms.RadioButton rdNhanVien;
         private System.Windows.Forms.DateTimePicker dateTimeNVL;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.PictureBox pbThongKe;
-        private System.Windows.Forms.PictureBox pbNhanVien;
-        private System.Windows.Forms.PictureBox pbHome;
-        private System.Windows.Forms.PictureBox pbBan;
-        private System.Windows.Forms.PictureBox pbKhachHang;
-        private System.Windows.Forms.Label lblUsers;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
@@ -614,5 +637,13 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btLuu;
         private System.Windows.Forms.Button btThem;
+        private System.Windows.Forms.TableLayoutPanel LayoutMenu;
+        private System.Windows.Forms.Label lblUsers;
+        private System.Windows.Forms.PictureBox ThongKe;
+        private System.Windows.Forms.PictureBox Ban;
+        private System.Windows.Forms.PictureBox KhachHang;
+        private System.Windows.Forms.PictureBox NhanVien;
+        private System.Windows.Forms.PictureBox Home;
+        private System.Windows.Forms.PictureBox ptbMenuThucDon;
     }
 }

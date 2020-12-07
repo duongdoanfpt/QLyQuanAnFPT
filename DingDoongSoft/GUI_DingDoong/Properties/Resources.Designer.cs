@@ -483,6 +483,26 @@ namespace GUI_DingDoong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Flameia_Rabbit_Xp_Apple_menu1 {
+            get {
+                object obj = ResourceManager.GetObject("Flameia-Rabbit-Xp-Apple-menu1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Flameia_Rabbit_Xp_Apple_menu2 {
+            get {
+                object obj = ResourceManager.GetObject("Flameia-Rabbit-Xp-Apple-menu2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FullColor_1280x1024_72dpi {
             get {
                 object obj = ResourceManager.GetObject("FullColor_1280x1024_72dpi", resourceCulture);

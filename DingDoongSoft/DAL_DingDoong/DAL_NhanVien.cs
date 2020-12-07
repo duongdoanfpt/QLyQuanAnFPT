@@ -30,6 +30,26 @@ namespace DAL_DingDoong
             }
         }
 
+        //Show All danh sách nhân viên
+        public DataTable DanhSachNhanVienAll()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "Sp_DanhSachAllNV";
+                DataTable dtNhanVienALL = new DataTable();
+                dtNhanVienALL.Load(cm.ExecuteReader());
+                return dtNhanVienALL;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
         // DANGNHAP
         public bool NhanVienDangNhap(DTO_NhanVien nv)
         {

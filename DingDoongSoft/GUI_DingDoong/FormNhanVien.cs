@@ -37,6 +37,10 @@ namespace GUI_DingDoong
             LoadGridView_NV();
             Disable_Textbox_Button();
             rdQuanLy.Checked = true;
+            lblUsers.Text = FormLogin.NvMain.Email;
+
+            NhanVien.Enabled = false;
+            NhanVien.BorderStyle = BorderStyle.Fixed3D;
         }
 
         private void LoadGridView_NV()
@@ -287,6 +291,7 @@ namespace GUI_DingDoong
 
                     DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
                     txtEmail.Text = td.Email;
+                   
                     txtTenNhanVien.Text = td.TenNV;
                     txtDiaChi.Text = td.DiaChi;
                     
@@ -297,7 +302,7 @@ namespace GUI_DingDoong
                         rdNhanVien.Checked = true;
 
                     dateTimeNVL.Text = td.NgayVL.ToString();
-                    MessageBox.Show(td.MaNV);
+                    
                     
                     MemoryStream mem = new MemoryStream(busnhanvien.getHinhNV(td.MaNV)); 
                     pbHinh.BackgroundImage = Image.FromStream(mem);
@@ -450,6 +455,147 @@ namespace GUI_DingDoong
 
             thongKe.Closed += (s, args) => this.Close();
             thongKe.Show();
+        }
+
+        private void Home_MouseEnter(object sender, EventArgs e)
+        {
+            Home.SizeMode = PictureBoxSizeMode.CenterImage;
+            Home.Cursor = Cursors.Hand;
+        }
+
+        private void Home_MouseLeave(object sender, EventArgs e)
+        {
+            Home.SizeMode = PictureBoxSizeMode.Zoom;
+            Home.Cursor = Cursors.Default;
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            FormMain main = new FormMain();
+            this.Hide();
+
+            main.Closed += (s, args) => this.Close();
+            main.Show();
+        }
+
+        private void NhanVien_MouseEnter(object sender, EventArgs e)
+        {
+            NhanVien.SizeMode = PictureBoxSizeMode.CenterImage;
+            NhanVien.Cursor = Cursors.Hand;
+        }
+
+        private void NhanVien_MouseLeave(object sender, EventArgs e)
+        {
+            NhanVien.SizeMode = PictureBoxSizeMode.Zoom;
+            NhanVien.Cursor = Cursors.Default;
+        }
+
+        private void NhanVien_Click(object sender, EventArgs e)
+        {
+            FormNhanVien nv = new FormNhanVien();
+            this.Hide();
+
+            nv.Closed += (s, args) => this.Close();
+            nv.Show();
+        }
+
+        private void KhachHang_MouseEnter(object sender, EventArgs e)
+        {
+            KhachHang.SizeMode = PictureBoxSizeMode.CenterImage;
+            KhachHang.Cursor = Cursors.Hand;
+        }
+
+        private void KhachHang_MouseLeave(object sender, EventArgs e)
+        {
+            KhachHang.SizeMode = PictureBoxSizeMode.Zoom;
+            KhachHang.Cursor = Cursors.Default;
+        }
+
+        private void KhachHang_Click(object sender, EventArgs e)
+        {
+            FormKhachHang kh = new FormKhachHang();
+            this.Hide();
+
+            kh.Closed += (s, args) => this.Close();
+            kh.Show();
+        }
+
+        private void Ban_MouseEnter(object sender, EventArgs e)
+        {
+            Ban.SizeMode = PictureBoxSizeMode.CenterImage;
+            Ban.Cursor = Cursors.Hand;
+        }
+
+        private void Ban_MouseLeave(object sender, EventArgs e)
+        {
+            Ban.SizeMode = PictureBoxSizeMode.Zoom;
+            Ban.Cursor = Cursors.Default;
+        }
+
+        private void Ban_Click(object sender, EventArgs e)
+        {
+            FormKhuVucBan ban = new FormKhuVucBan(-1);
+            this.Hide();
+
+            ban.Closed += (s, args) => this.Close();
+            ban.Show();
+        }
+
+        private void ThongKe_MouseEnter(object sender, EventArgs e)
+        {
+            ThongKe.SizeMode = PictureBoxSizeMode.CenterImage;
+            ThongKe.Cursor = Cursors.Hand;
+        }
+
+        private void ThongKe_MouseLeave(object sender, EventArgs e)
+        {
+            ThongKe.SizeMode = PictureBoxSizeMode.Zoom;
+            ThongKe.Cursor = Cursors.Default;
+        }
+
+        private void ThongKe_Click(object sender, EventArgs e)
+        {
+            FormThongKe tk = new FormThongKe();
+            this.Hide();
+
+            tk.Closed += (s, args) => this.Close();
+            tk.Show();
+        }
+
+        private void ptbMenuThucDon_MouseEnter(object sender, EventArgs e)
+        {
+            ptbMenuThucDon.SizeMode = PictureBoxSizeMode.CenterImage;
+            ptbMenuThucDon.Cursor = Cursors.Hand;
+        }
+
+        private void ptbMenuThucDon_MouseLeave(object sender, EventArgs e)
+        {
+            ptbMenuThucDon.SizeMode = PictureBoxSizeMode.Zoom;
+            ptbMenuThucDon.Cursor = Cursors.Default;
+        }
+
+        private void ptbMenuThucDon_Click(object sender, EventArgs e)
+        {
+            FormThucDon td = new FormThucDon();
+            this.Hide();
+
+            td.Closed += (s, args) => this.Close();
+            td.Show();
+        }
+
+        private void cbHienThiAll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbHienThiAll.Checked)
+            {
+                dgvNhanVien.DataSource = busnhanvien.DanhSachNhanVienAll();
+                dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            else
+            {
+                dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
+                dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            }
         }
     }
 }

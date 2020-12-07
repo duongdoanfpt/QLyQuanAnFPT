@@ -24,6 +24,8 @@ namespace GUI_DingDoong
 
         private void FormKhachHang_Load(object sender, EventArgs e)
         {
+            pbKhachHang.Enabled = false;
+            pbKhachHang.BorderStyle = BorderStyle.Fixed3D;
             lblUsers.Text = FormLogin.NvMain.Email;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             LoadGridview_Khach();
@@ -235,5 +237,91 @@ namespace GUI_DingDoong
             thongKe.Closed += (s, args) => this.Close();
             thongKe.Show();
         }
+
+  
+
+        private void pbThucDon_Click(object sender, EventArgs e)
+        {
+            FormThucDon td = new FormThucDon();
+            this.Hide();
+
+            td.Closed += (s, args) => this.Close();
+            td.Show();
+        }
+
+        private void pbHome_MouseEnter(object sender, EventArgs e)
+        {
+            pbHome.BorderStyle = BorderStyle.Fixed3D;
+            pbHome.Cursor = Cursors.Hand;
+        }
+
+        private void pbHome_MouseLeave(object sender, EventArgs e)
+        {
+            pbHome.BorderStyle = BorderStyle.None;
+            pbHome.Cursor = Cursors.Default;
+
+
+        }
+
+        private void pbNhanVien_MouseEnter(object sender, EventArgs e)
+        {
+            pbNhanVien.BorderStyle = BorderStyle.Fixed3D;
+            pbNhanVien.Cursor = Cursors.Hand;
+        }
+
+        private void pbNhanVien_MouseLeave(object sender, EventArgs e)
+        {
+            pbNhanVien.BorderStyle = BorderStyle.None;
+            pbNhanVien.Cursor = Cursors.Default;
+        }
+
+        private void pbKhachHang_MouseEnter(object sender, EventArgs e)
+        {
+            pbKhachHang.BorderStyle = BorderStyle.Fixed3D;
+            pbKhachHang.Cursor = Cursors.Hand;
+        }
+
+        private void pbKhachHang_MouseLeave(object sender, EventArgs e)
+        {
+            pbKhachHang.BorderStyle = BorderStyle.None;
+            pbKhachHang.Cursor = Cursors.Default;
+        }
+
+        private void pbBan_MouseEnter(object sender, EventArgs e)
+        {
+            pbBan.BorderStyle = BorderStyle.Fixed3D;
+            pbBan.Cursor = Cursors.Hand;
+        }
+
+        private void pbBan_MouseLeave(object sender, EventArgs e)
+        {
+            pbBan.BorderStyle = BorderStyle.None;
+            pbBan.Cursor = Cursors.Default;
+        }
+
+        private void pbThongKe_MouseEnter(object sender, EventArgs e)
+        {
+            pbThongKe.BorderStyle = BorderStyle.Fixed3D;
+            pbThongKe.Cursor = Cursors.Hand;
+        }
+
+        private void pbThongKe_MouseLeave(object sender, EventArgs e)
+        {
+            pbThongKe.BorderStyle = BorderStyle.None;
+            pbThongKe.Cursor = Cursors.Default;
+        }
+
+        private void pbThucDon_MouseEnter(object sender, EventArgs e)
+        {
+            pbThucDon.BorderStyle = BorderStyle.Fixed3D;
+            pbThucDon.Cursor = Cursors.Hand;
+        }
+
+        private void pbThucDon_MouseLeave(object sender, EventArgs e)
+        {
+            pbThucDon.BorderStyle = BorderStyle.None;
+            pbThucDon.Cursor = Cursors.Default;
+        }
     }
+    
 }

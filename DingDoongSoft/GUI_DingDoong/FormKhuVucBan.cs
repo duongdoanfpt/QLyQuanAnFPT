@@ -363,8 +363,9 @@ namespace GUI_DingDoong
             txtTenTD.AutoCompleteCustomSource = GetAutoSourceFromTable(busTD.DanhSachThucDonBan());
             txtTenTD.AutoCompleteMode = AutoCompleteMode.Suggest;
             txtTenTD.AutoCompleteSource = AutoCompleteSource.CustomSource;
-           
-        
+            pbBan.Enabled = false;
+            pbBan.BorderStyle = BorderStyle.Fixed3D;
+
             FrmLoad();
             btLamMoi.Enabled = true;
             loadThucDonkvBan();
@@ -386,6 +387,7 @@ namespace GUI_DingDoong
 
                 phanquyen();
             }
+            
 
 
         }
@@ -755,6 +757,87 @@ namespace GUI_DingDoong
                     MessageBox.Show("Đã có lỗi xảy ra vui lòng kiểm tra lại");
                 }    
             }
+        }
+
+        private void pbHome_MouseEnter(object sender, EventArgs e)
+        {
+            pbHome.Cursor = Cursors.Hand;
+            pbHome.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void pbHome_MouseLeave(object sender, EventArgs e)
+        {
+            pbHome.Cursor = Cursors.Default;
+            pbHome.SizeMode = PictureBoxSizeMode.CenterImage;
+        }
+
+        private void pbNhanVien_MouseEnter(object sender, EventArgs e)
+        {
+            pbNhanVien.Cursor = Cursors.Hand;
+            pbNhanVien.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void pbNhanVien_MouseLeave(object sender, EventArgs e)
+        {
+            pbNhanVien.Cursor = Cursors.Default;
+            pbNhanVien.SizeMode = PictureBoxSizeMode.CenterImage;
+        }
+
+        private void pbKhachHang_MouseEnter(object sender, EventArgs e)
+        {
+            pbKhachHang.Cursor = Cursors.Hand;
+            pbKhachHang.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void pbKhachHang_MouseLeave(object sender, EventArgs e)
+        {
+            pbKhachHang.Cursor = Cursors.Default;
+            pbKhachHang.SizeMode = PictureBoxSizeMode.CenterImage;
+        }
+
+        private void pbBan_MouseEnter(object sender, EventArgs e)
+        {
+            pbBan.Cursor = Cursors.Hand;
+            pbBan.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void pbBan_MouseLeave(object sender, EventArgs e)
+        {
+            pbBan.Cursor = Cursors.Default;
+            pbBan.SizeMode = PictureBoxSizeMode.CenterImage;
+        }
+
+        private void pbThongKe_MouseEnter(object sender, EventArgs e)
+        {
+            pbThongKe.Cursor = Cursors.Hand;
+            pbThongKe.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void pbThongKe_MouseLeave(object sender, EventArgs e)
+        {
+            pbThongKe.Cursor = Cursors.Default;
+            pbThongKe.SizeMode = PictureBoxSizeMode.CenterImage;
+        }
+
+        private void pbThucDon_Click(object sender, EventArgs e)
+        {
+            FormThucDon td = new FormThucDon();
+            this.Hide();
+
+            td.Closed += (s, args) => this.Close();
+            td.Show();
+        }
+
+        private void pbThucDon_MouseEnter(object sender, EventArgs e)
+        {
+            pbThucDon.Cursor = Cursors.Hand;
+            pbThucDon.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void pbThucDon_MouseLeave(object sender, EventArgs e)
+        {
+            pbThucDon.Cursor = Cursors.Default;
+            pbThucDon.SizeMode = PictureBoxSizeMode.CenterImage;
         }
     }
  }
