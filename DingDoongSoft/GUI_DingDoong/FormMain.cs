@@ -23,8 +23,9 @@ namespace GUI_DingDoong
         {
             InitializeComponent();
             this.CenterToScreen();
-            lblEmailMain.Text = FormLogin.NvMain.Email;
-            quyen = FormLogin.NvMain.Quyen;
+            //lblEmailMain.Text = FormLogin.NvMain.Email;
+            //quyen = FormLogin.NvMain.Quyen;
+            quyen = 1;
 
         }
 
@@ -197,30 +198,27 @@ namespace GUI_DingDoong
 
         private void pbNhanVien_MouseEnter(object sender, EventArgs e)
         {
-            pbNhanVien.Location = new Point(0, -6);
+            pnlNhanVien.Location = new Point(48,90);
             pbNhanVien.Cursor = Cursors.Hand;
-            pnlNhanVien.Location = new Point(48, 90);
 
         }
 
         private void pbNhanVien_MouseLeave(object sender, EventArgs e)
         {
-            pbNhanVien.Location = new Point(0, 0);
-            pbNhanVien.Cursor = Cursors.Default;
             pnlNhanVien.Location = new Point(48, 96);
+            pbNhanVien.Cursor = Cursors.Default;
+
 
         }
 
         private void pbKhachHang_MouseEnter(object sender, EventArgs e)
         {
-            pbKhachHang.Location = new Point(0, -6);
             pbKhachHang.Cursor = Cursors.Hand;
             pnlKhachHang.Location = new Point(179, 90);
         }
 
         private void pbKhachHang_MouseLeave(object sender, EventArgs e)
         {
-            pbKhachHang.Location = new Point(0, 0);
             pbKhachHang.Cursor = Cursors.Default;
             pnlKhachHang.Location = new Point(179, 96);
         }
@@ -228,54 +226,43 @@ namespace GUI_DingDoong
         private void pnlQuanLyBan_MouseEnter(object sender, EventArgs e)
         {
             pnlQuanLyBan.Location = new Point(54, 227);
-            pbQuanLyBan.Location = new Point(96,24);
             pnlQuanLyBan.Cursor = Cursors.Hand;
-            pbQuanLyBan.Cursor = Cursors.Hand;
 
         }
 
         private void pnlQuanLyBan_MouseLeave(object sender, EventArgs e)
         {
             pnlQuanLyBan.Location = new Point(48, 227);
-            pbQuanLyBan.Location = new Point(90, 24);
             pnlQuanLyBan.Cursor = Cursors.Default;
-            pbQuanLyBan.Cursor = Cursors.Default;
         }
 
         private void pbQuanLyBan_MouseEnter(object sender, EventArgs e)
         {
             pnlQuanLyBan.Location = new Point(54, 227);
-            pbQuanLyBan.Location = new Point(96, 24);
-            pnlQuanLyBan.Cursor = Cursors.Hand;
             pbQuanLyBan.Cursor = Cursors.Hand;
         }
 
         private void pbQuanLyBan_MouseLeave(object sender, EventArgs e)
         {
             pnlQuanLyBan.Location = new Point(48, 227);
-            pbQuanLyBan.Location = new Point(90, 24);
-            pnlQuanLyBan.Cursor = Cursors.Default;
             pbQuanLyBan.Cursor = Cursors.Default;
         }
 
         private void pbCaiDat_MouseEnter(object sender, EventArgs e)
         {
             pnlCaiDat.Location = new Point(48, 364);
-            pbCaiDat.Location = new Point(0, 6);
             pbCaiDat.Cursor = Cursors.Hand;
         }
 
         private void pbCaiDat_MouseLeave(object sender, EventArgs e)
         {
             pnlCaiDat.Location = new Point(48, 358);
-            pbCaiDat.Location = new Point(0, 0);
             pbCaiDat.Cursor = Cursors.Default;
         }
 
         private void pbAccounts_MouseEnter(object sender, EventArgs e)
         {
             pnlAccounts.Location = new Point(179, 364);
-            pbAccounts.Location = new Point(0, 6);
             pbAccounts.Cursor = Cursors.Hand;
             
         }
@@ -283,21 +270,18 @@ namespace GUI_DingDoong
         private void pbAccounts_MouseLeave(object sender, EventArgs e)
         {
             pnlAccounts.Location = new Point(179, 358);
-            pbAccounts.Location = new Point(0, 0);
             pbAccounts.Cursor = Cursors.Default;
         }
 
         private void pbMenu_MouseEnter(object sender, EventArgs e)
         {
             pnlMenu.Location = new Point(361, 93);
-            pbMenu.Location = new Point(0, -6);
             pbMenu.Cursor = Cursors.Hand;
         }
 
         private void pbMenu_MouseLeave(object sender, EventArgs e)
         {
             pnlMenu.Location = new Point(361, 99);
-            pbMenu.Location = new Point(0, 0);
             pbMenu.Cursor = Cursors.Default;
 
         }
@@ -305,14 +289,12 @@ namespace GUI_DingDoong
         private void pbKhuyenMai_MouseEnter(object sender, EventArgs e)
         {
             pnlKhuyenMai.Location = new Point(492, 93);
-            pbKhuyenMai.Location = new Point(0, -6);
             pbKhuyenMai.Cursor = Cursors.Hand;
         }
 
         private void pbKhuyenMai_MouseLeave(object sender, EventArgs e)
         {
             pnlKhuyenMai.Location = new Point(492, 99);
-            pbKhuyenMai.Location = new Point(0, 0);
             pbKhuyenMai.Cursor = Cursors.Default;
 
         }
@@ -320,61 +302,49 @@ namespace GUI_DingDoong
         private void pbThongKe_MouseEnter(object sender, EventArgs e)
         {
             pbThongKe.Cursor = Cursors.Hand;
-            pbThongKe.Location = new Point(96,24);
             pnlThongKe.Location = new Point(367, 230);
-            pnlThongKe.Cursor = Cursors.Hand;
         }
 
         private void pbThongKe_MouseLeave(object sender, EventArgs e)
         {
             pbThongKe.Cursor = Cursors.Default;
-            pbThongKe.Location = new Point(90, 24);
             pnlThongKe.Location = new Point(361, 230);
-            pnlThongKe.Cursor = Cursors.Default;
         }
 
         private void pnlThongKe_MouseEnter(object sender, EventArgs e)
         {
             pbThongKe.Cursor = Cursors.Hand;
-            pbThongKe.Location = new Point(96, 24);
             pnlThongKe.Location = new Point(367, 230);
-            pnlThongKe.Cursor = Cursors.Hand;
         }
 
         private void pnlThongKe_MouseLeave(object sender, EventArgs e)
         {
             pbThongKe.Cursor = Cursors.Default;
-            pbThongKe.Location = new Point(90, 24);
             pnlThongKe.Location = new Point(361, 230);
-            pnlThongKe.Cursor = Cursors.Default;
 
         }
 
         private void pbHuongDan_MouseEnter(object sender, EventArgs e)
         {
             pbHuongDan.Cursor = Cursors.Hand;
-            pbHuongDan.Location = new Point(0, 6);
             pnlHuongDan.Location = new Point(361, 367);
         }
 
         private void pbHuongDan_MouseLeave(object sender, EventArgs e)
         {
             pbHuongDan.Cursor = Cursors.Default;
-            pbHuongDan.Location = new Point(0, 0);
             pnlHuongDan.Location = new Point(361, 361);
         }
 
         private void pbHoTro_MouseEnter(object sender, EventArgs e)
         {
             pbHoTro.Cursor = Cursors.Hand;
-            pbHoTro.Location = new Point(0, 6);
             pnlHoTro.Location = new Point(492, 367);
         }
 
         private void pbHoTro_MouseLeave(object sender, EventArgs e)
         {
             pbHoTro.Cursor = Cursors.Default;
-            pbHoTro.Location = new Point(0, 0);
             pnlHoTro.Location = new Point(492, 361);
         }
 
