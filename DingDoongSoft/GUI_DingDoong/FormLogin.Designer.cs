@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.btLogin = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
             this.chkbSave = new System.Windows.Forms.CheckBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,18 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(311, 140);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.AccessibleName = "pbLogo";
+            this.pbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbLogo.BackgroundImage = global::GUI_DingDoong.Properties.Resources.LOGOPNG;
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbLogo.Location = new System.Drawing.Point(75, 6);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(160, 127);
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
             // 
             // tableLayoutPanel2
             // 
@@ -188,18 +200,6 @@
             this.chkbSave.TabIndex = 13;
             this.chkbSave.Text = "Ghi Nhớ Tài Khoản";
             this.chkbSave.UseVisualStyleBackColor = true;
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.AccessibleName = "pbLogo";
-            this.pbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbLogo.BackgroundImage = global::GUI_DingDoong.Properties.Resources.LOGOPNG;
-            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLogo.Location = new System.Drawing.Point(75, 6);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(160, 127);
-            this.pbLogo.TabIndex = 0;
-            this.pbLogo.TabStop = false;
             // 
             // FormLogin
             // 

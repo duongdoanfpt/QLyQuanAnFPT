@@ -16,6 +16,7 @@ namespace GUI_DingDoong
         public FormChangePass(string email)
         {
             InitializeComponent();
+            this.CenterToScreen();
             txtEmail.Text = email;
         }
        
@@ -76,8 +77,14 @@ namespace GUI_DingDoong
             {
                 FormMain.profile = 1; //Cập nhật pass thành công
                 FormMain.session = 0; //Đưa về tình trạng chưa đăng nhập
+                
                 MessageBox.Show("Cập nhật mật khẩu thành công, bạn cần phải đăng nhập lại");
-                this.Close();
+                FormLogin frmlogin = new FormLogin();
+                this.Hide();
+
+                frmlogin.Closed += (s, args) => this.Close();
+                frmlogin.Show();
+
             }
         }
     }
