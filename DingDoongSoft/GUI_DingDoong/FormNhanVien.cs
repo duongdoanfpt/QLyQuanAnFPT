@@ -361,7 +361,11 @@ namespace GUI_DingDoong
        
         private void btThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FormMain main = new FormMain();
+            this.Hide();
+
+            main.Closed += (s, args) => this.Close();
+            main.Show();
         }
 
         private void LoadDanhSachNhanVien(DataTable dt)
@@ -618,11 +622,27 @@ namespace GUI_DingDoong
             {
                 dgvNhanVien.DataSource = busnhanvien.DanhSachNhanVienAll();
                 dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvNhanVien.Columns[5].Visible = true;
+                dgvNhanVien.Columns[7].Visible = false;
+                foreach(DataGridViewRow dr in dgvNhanVien.Rows)
+                {
+                    if(!string.IsNullOrWhiteSpace(dr.Cells[5].FormattedValue.ToString()))
+                    {
+                        if (!(string.Compare(dr.Cells[5].Value.ToString(), "Hoạt động", true) == 0))
+                        {
+                            dr.DefaultCellStyle.BackColor = Color.Red;
+                            dr.DefaultCellStyle.ForeColor = Color.White;
+                        }
+                    }    
+                    
+                }    
+
             }
             else
             {
                 dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                 dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                
 
             }
         }

@@ -71,23 +71,44 @@ namespace GUI_DingDoong
 
             if (busnhanvien.NhanVienDangNhap(nv))
             {
-                
-                MessageBox.Show("Đăng nhập thành công");
                 NvMain = busNhanVien.curNV(nv.Email);
-                if (chkbSave.Checked == true) writeUserInfor(nv);
-                FormMain frmMain = new FormMain();
-                this.Hide();
+                if (NvMain.TrangThai == 1)
+                {
+                    MessageBox.Show("Đăng nhập thành công");
 
-                frmMain.Closed += (s, args) => this.Close();
-                frmMain.Show();
-                //this.Close();
-                //CheckDangNhap = 1;
-                //Visible = false;
-                //ShowInTaskbar = false;
-                //FormMain frmMainN = new FormMain(CheckDangNhap);
-                //frmMainN.Activate();
-                //frmMainN.Show();
+                    if (chkbSave.Checked == true) writeUserInfor(nv);
+                    if (NvMain.ChangePass == 1)
+                    {
+                        FormMain frmMain = new FormMain();
+                        this.Hide();
 
+                        frmMain.Closed += (s, args) => this.Close();
+                        frmMain.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn là nhân viên mới vui lòng đổi mật khẩu ở lần đầu đăng nhập");
+                        FormChangePass fdmk = new FormChangePass(nv.Email);
+
+                        fdmk.Closed += (s, args) => this.Close();
+                        fdmk.Show();
+
+
+                    }
+
+                    //this.Close();
+                    //CheckDangNhap = 1;
+                    //Visible = false;
+                    //ShowInTaskbar = false;
+                    //FormMain frmMainN = new FormMain(CheckDangNhap);
+                    //frmMainN.Activate();
+                    //frmMainN.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản này đã ngưng hoạt động vui lòng liên hệ quản lý");
+                }
             }
             else
             {

@@ -590,6 +590,7 @@ namespace GUI_DingDoong
                     btThem.Enabled = true;
                     btAdd1.Enabled = true;
                     btRemove1.Enabled = true;
+                    dgvHDCT.Enabled = true;
                 }
             }
         }

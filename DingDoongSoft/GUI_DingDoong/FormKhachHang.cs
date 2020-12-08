@@ -350,6 +350,15 @@ namespace GUI_DingDoong
             pbThucDon.BorderStyle = BorderStyle.None;
             pbThucDon.Cursor = Cursors.Default;
         }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            FormMain main = new FormMain();
+            this.Hide();
+
+            main.Closed += (s, args) => this.Close();
+            main.Show();
+        }
     }
     
 }

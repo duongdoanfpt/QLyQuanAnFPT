@@ -114,7 +114,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1004F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1007F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -134,7 +134,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1151, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1154, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
@@ -690,6 +690,7 @@ namespace GUI_DingDoong
             // ngayKetThuc
             // 
             this.ngayKetThuc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.ngayKetThuc.Location = new System.Drawing.Point(362, 11);
             this.ngayKetThuc.Name = "ngayKetThuc";
             this.ngayKetThuc.Size = new System.Drawing.Size(191, 25);
@@ -709,6 +710,7 @@ namespace GUI_DingDoong
             // ngayBatDau
             // 
             this.ngayBatDau.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.ngayBatDau.Location = new System.Drawing.Point(68, 11);
             this.ngayBatDau.Name = "ngayBatDau";
             this.ngayBatDau.Size = new System.Drawing.Size(191, 25);
