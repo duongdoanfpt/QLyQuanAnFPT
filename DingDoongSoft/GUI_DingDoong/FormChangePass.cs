@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS_DingDoong;
@@ -13,6 +14,7 @@ namespace GUI_DingDoong
 {
     public partial class FormChangePass : Form
     {
+        Thread th;
         public FormChangePass(string email)
         {
             InitializeComponent();
@@ -27,6 +29,13 @@ namespace GUI_DingDoong
             return controls.SelectMany(ctrl => GetAll(ctrl, type))
                                       .Concat(controls)
                                       .Where(c => c.GetType() == type);
+        }
+        public void opennewapp()
+        {
+            FormLogin login = new FormLogin();
+
+
+            Application.Run(login);
         }
         private void FrmLoad()
         {
@@ -75,17 +84,28 @@ namespace GUI_DingDoong
             string matkhaucu = busNhanVien.Encryption(txtOldPass.Text);
             if (busNhanVien.doiMatKhau(txtEmail.Text, matkhaucu, matkhaumoi))
             {
-                FormMain.profile = 1; //Cập nhật pass thành công
-                FormMain.session = 0; //Đưa về tình trạng chưa đăng nhập
-                
-                MessageBox.Show("Cập nhật mật khẩu thành công, bạn cần phải đăng nhập lại");
-                FormLogin frmlogin = new FormLogin();
-                this.Hide();
+                //FormMain.profile = 1; //Cập nhật pass thành công
+                //FormMain.session = 0; //Đưa về tình trạng chưa đăng nhập
 
-                frmlogin.Closed += (s, args) => this.Close();
-                frmlogin.Show();
+                MessageBox.Show("Cập nhật mật khẩu thành công, bạn cần phải đăng nhập lại");
+                //FormLogin frmlogin = new FormLogin();
+                //this.Hide();
+
+                //frmlogin.Closed += (s, args) => this.Close();
+                //frmlogin.Show();
+
+
+                this.Close();
+                th = new Thread(opennewapp);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
 
             }
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

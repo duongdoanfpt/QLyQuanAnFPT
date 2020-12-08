@@ -18,6 +18,7 @@ namespace DTO_DingDoong
         private int _TrangThai;
         private Byte[] _Hinh;
         private string _MatKhau;
+        private int _ChangePass;
 
         public string MaNV
         {
@@ -119,6 +120,18 @@ namespace DTO_DingDoong
                 _MatKhau = value;
             }
         }
+        public int ChangePass
+        {
+            get
+            {
+                return _ChangePass;
+            }
+            set
+            {
+                _ChangePass = value;
+            }
+        }
+
 
         public DTO_NhanVien(string TenNV, string Email, string Diachi, DateTime NgayVL, int Quyen, int TinhTrang, byte[] Hinh, string MatKhau)
         {

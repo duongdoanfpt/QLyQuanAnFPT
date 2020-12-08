@@ -34,6 +34,7 @@ namespace BUS_DingDoong
                       Quyen = string.Compare(dr[4].ToString(), "Nhân viên", true) == 0 ? 0 : 1,
                       TrangThai = string.Compare(dr[5].ToString(), "Hoạt động", true) == 0 ? 1 : 0,
                       NgayVL = (DateTime)dr[6],
+                      ChangePass = int.Parse(dr[7].ToString())
                       
 
 
