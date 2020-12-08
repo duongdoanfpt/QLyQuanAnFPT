@@ -475,5 +475,44 @@
   <ItemGroup>
     <None Include="Resources\LOGOPNG.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NhanVien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KhachHang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quanlyban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaiDat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoiMatKhau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuanlyMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KhuyenMai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThongKeDoanhThu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HuongDan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoTro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quanlyban1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanlybabb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quanlyban2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
