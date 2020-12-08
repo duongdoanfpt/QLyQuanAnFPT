@@ -361,7 +361,11 @@ namespace GUI_DingDoong
        
         private void btThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FormMain main = new FormMain();
+            this.Hide();
+
+            main.Closed += (s, args) => this.Close();
+            main.Show();
         }
 
         private void LoadDanhSachNhanVien(DataTable dt)

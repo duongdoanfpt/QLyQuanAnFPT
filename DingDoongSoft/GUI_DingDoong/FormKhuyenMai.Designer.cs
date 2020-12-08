@@ -127,6 +127,7 @@ namespace GUI_DingDoong
             this.dtpNgKT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpNgKT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgKT.Location = new System.Drawing.Point(0, 9);
             this.dtpNgKT.Name = "dtpNgKT";
             this.dtpNgKT.Size = new System.Drawing.Size(439, 20);
@@ -255,6 +256,7 @@ namespace GUI_DingDoong
             // 
             this.dtpNgBD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpNgBD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgBD.Location = new System.Drawing.Point(0, 8);
             this.dtpNgBD.Name = "dtpNgBD";
             this.dtpNgBD.Size = new System.Drawing.Size(428, 29);
@@ -333,6 +335,7 @@ namespace GUI_DingDoong
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(1, 260);
             this.dataGridView1.Name = "dataGridView1";
@@ -388,8 +391,9 @@ namespace GUI_DingDoong
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(106, 36);
             this.btThoat.TabIndex = 11;
-            this.btThoat.Text = "Thoát";
+            this.btThoat.Text = "Trở về";
             this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btBoQua
             // 
@@ -479,7 +483,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1007F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1010F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -499,7 +503,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1154, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1157, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;

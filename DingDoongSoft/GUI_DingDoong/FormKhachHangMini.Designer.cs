@@ -194,6 +194,7 @@ namespace GUI_DingDoong
             this.dtpNgS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpNgS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgS.Location = new System.Drawing.Point(131, 129);
             this.dtpNgS.Name = "dtpNgS";
             this.dtpNgS.Size = new System.Drawing.Size(306, 29);

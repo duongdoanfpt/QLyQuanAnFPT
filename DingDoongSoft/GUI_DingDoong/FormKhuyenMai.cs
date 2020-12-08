@@ -432,5 +432,14 @@ namespace GUI_DingDoong
             ptbMenuThucDon.SizeMode = PictureBoxSizeMode.Zoom;
             ptbMenuThucDon.Cursor = Cursors.Default;
         }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            FormMain main = new FormMain();
+            this.Hide();
+
+            main.Closed += (s, args) => this.Close();
+            main.Show();
+        }
     }
 }
