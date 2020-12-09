@@ -23,9 +23,9 @@ namespace GUI_DingDoong
         {
             InitializeComponent();
             this.CenterToScreen();
-            //lblEmailMain.Text = FormLogin.NvMain.Email;
-            //quyen = FormLogin.NvMain.Quyen;
-            quyen = 1;
+            lblEmailMain.Text = FormLogin.NvMain.Email;
+            quyen = FormLogin.NvMain.Quyen;
+          
 
         }
 

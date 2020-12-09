@@ -169,6 +169,7 @@ namespace DAL_DingDoong
                 cm.Parameters.AddWithValue("IdBan",hd.IdBan);
 
                 cm.Parameters.AddWithValue("KhuyenMai", hd.KhuyenMai);
+                cm.Parameters.AddWithValue("thanhtien", hd.ThanhTien);
                 
                 if (cm.ExecuteNonQuery() > 0)
                 {
@@ -201,6 +202,7 @@ namespace DAL_DingDoong
                 cm.Parameters.AddWithValue("IdBan", hd.IdBan);
 
                 cm.Parameters.AddWithValue("KhuyenMai", hd.KhuyenMai);
+                cm.Parameters.AddWithValue("thanhtien", hd.ThanhTien);
 
                 if (cm.ExecuteNonQuery() > 0)
                 {

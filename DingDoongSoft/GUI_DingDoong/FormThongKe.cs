@@ -190,9 +190,12 @@ namespace GUI_DingDoong
                 cbDoanhThu.Checked = false;
                 cbDTThang.Checked = false;
                 cbDTNam.Checked = false;
-                DgvData.DataSource = busTK.dtSLTD(ngayBatDau.Value, ngayKetThuc.Value);
+                ngayBatDau.Visible = true;
+                ngayKetThuc.Visible = true;
+                btnThongKe.Visible = true;
+                DgvData.DataSource = busTK.dtSLTD(null, null);
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                LoadNameThucDon(busTK.dtSLTD(ngayBatDau.Value,ngayKetThuc.Value));
+                LoadNameThucDon(busTK.dtSLTD(null,null));
 
             }
             else
@@ -348,6 +351,11 @@ namespace GUI_DingDoong
 
                 MessageBox.Show(ex.Message.ToString());
             }
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

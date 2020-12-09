@@ -14,6 +14,7 @@ namespace DTO_DingDoong
         private int _IdBan;
         private int _TrangThai;
         private float _KhuyenMai;
+        private float _ThanhTien;
         public string MaHD
         {
             get
@@ -82,6 +83,18 @@ namespace DTO_DingDoong
             set
             {
                 _KhuyenMai = value;
+            }
+        }
+
+        public float ThanhTien
+        {
+            get
+            {
+                return _ThanhTien;
+            }
+            set
+            {
+                _ThanhTien = value;
             }
         }
 

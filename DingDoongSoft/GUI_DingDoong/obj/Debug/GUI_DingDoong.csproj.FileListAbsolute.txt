@@ -158,12 +158,10 @@ D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\itextsharp.dll
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\itextsharp.xml
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormGopBan.resources
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\AxShockwaveFlashObjects.dll
-D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\BouncyCastle.Crypto.dll
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.ReportSource.dll
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.Shared.dll
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.Windows.Forms.dll
-D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\itextsharp.dll
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\ShockwaveFlashObjects.dll
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
@@ -178,7 +176,6 @@ D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.Re
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\stdole.dll
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\itextsharp.xml
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormGopBan.resources
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FrmBill.resources
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormChuyenBan.resources
