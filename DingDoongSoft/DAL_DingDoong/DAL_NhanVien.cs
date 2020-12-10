@@ -278,6 +278,35 @@ namespace DAL_DingDoong
             return false;
         }
 
+        //Cap nhat tinh trang nhân viên
+        public bool CapNhatTinhTrang(string MaNV)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "Sp_UpdateNV_Enable";
+                cmd.Parameters.AddWithValue("MaNV", MaNV);
+                
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
         //Tim kiem nhan vien
         public DataTable SearchNhanVien(string tenNhanVien)
         {

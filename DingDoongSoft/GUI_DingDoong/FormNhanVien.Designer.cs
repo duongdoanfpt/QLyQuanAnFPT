@@ -66,6 +66,9 @@ namespace GUI_DingDoong
             this.NhanVien = new System.Windows.Forms.PictureBox();
             this.Home = new System.Windows.Forms.PictureBox();
             this.ptbMenuThucDon = new System.Windows.Forms.PictureBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.lblTrangThai = new System.Windows.Forms.Label();
+            this.btTrangThai = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -99,12 +102,15 @@ namespace GUI_DingDoong
             this.tableLayoutPanel2.Controls.Add(this.lblDiaChi, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.dateTimeNVL, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblTrangThai, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btTrangThai, 3, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 46);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1024, 139);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
@@ -467,7 +473,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1016F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1019F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -487,7 +493,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1163, 12);
+            this.lblUsers.Location = new System.Drawing.Point(1166, 12);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
@@ -570,6 +576,45 @@ namespace GUI_DingDoong
             this.ptbMenuThucDon.MouseEnter += new System.EventHandler(this.ptbMenuThucDon_MouseEnter);
             this.ptbMenuThucDon.MouseLeave += new System.EventHandler(this.ptbMenuThucDon_MouseLeave);
             // 
+            // radioButton1
+            // 
+            this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.radioButton1.Location = new System.Drawing.Point(713, 402);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(119, 29);
+            this.radioButton1.TabIndex = 12;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Hoạt động";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // lblTrangThai
+            // 
+            this.lblTrangThai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTrangThai.AutoSize = true;
+            this.lblTrangThai.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblTrangThai.Location = new System.Drawing.Point(521, 103);
+            this.lblTrangThai.Name = "lblTrangThai";
+            this.lblTrangThai.Size = new System.Drawing.Size(166, 25);
+            this.lblTrangThai.TabIndex = 11;
+            this.lblTrangThai.Text = "Tình Trạng : ";
+            // 
+            // btTrangThai
+            // 
+            this.btTrangThai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btTrangThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTrangThai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTrangThai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTrangThai.Location = new System.Drawing.Point(693, 95);
+            this.btTrangThai.Name = "btTrangThai";
+            this.btTrangThai.Size = new System.Drawing.Size(170, 41);
+            this.btTrangThai.TabIndex = 12;
+            this.btTrangThai.Text = "Cho phép hoạt động";
+            this.btTrangThai.UseVisualStyleBackColor = true;
+            this.btTrangThai.Click += new System.EventHandler(this.btTrangThai_Click);
+            // 
             // FormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,6 +627,7 @@ namespace GUI_DingDoong
             this.Controls.Add(this.dgvNhanVien);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.radioButton1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -608,6 +654,7 @@ namespace GUI_DingDoong
             ((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMenuThucDon)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -648,5 +695,8 @@ namespace GUI_DingDoong
         private System.Windows.Forms.PictureBox NhanVien;
         private System.Windows.Forms.PictureBox Home;
         private System.Windows.Forms.PictureBox ptbMenuThucDon;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label lblTrangThai;
+        private System.Windows.Forms.Button btTrangThai;
     }
 }

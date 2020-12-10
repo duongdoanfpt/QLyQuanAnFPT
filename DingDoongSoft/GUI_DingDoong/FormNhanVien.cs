@@ -99,6 +99,8 @@ namespace GUI_DingDoong
             btXoa.Enabled = false;
             btCapNhat.Enabled = false;
             btBoQua.Enabled = false;
+            lblTrangThai.Visible = false;
+            btTrangThai.Visible = false;
 
             //Set null
             txtTenNhanVien.Text = null;
@@ -192,7 +194,18 @@ namespace GUI_DingDoong
                 return false;
             }
         }
+        // Check Email trùng
+        public bool checkemailTrung(string email, BUS_NhanVien busnhanvien)
+        {
+            DataTable getMail = busnhanvien.DanhSachNhanVienAll();
+            foreach (DataRow row in getMail.Rows)
+            {
+                if (string.Compare(email, row[1].ToString(), true) == 0)
+                    return true;
 
+            }
+            return false;
+        }
         private void btLuu_Click(object sender, EventArgs e)
         {
             int vaitro = 0;
@@ -213,8 +226,12 @@ namespace GUI_DingDoong
                 txtEmail.Focus();
                 return;
             }
+            else if (checkemailTrung(txtEmail.Text, busnhanvien))
+            {
+                MessageBox.Show("Email của bạn đã được sử dụng, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
-            if (string.IsNullOrEmpty(txtTenNhanVien.Text) || string.IsNullOrWhiteSpace(txtTenNhanVien.Text))
+            else if (string.IsNullOrEmpty(txtTenNhanVien.Text) || string.IsNullOrWhiteSpace(txtTenNhanVien.Text))
             {
                 MessageBox.Show("Bạn chưa nhập tên nhân viên", "Thông báo");
             }
@@ -318,6 +335,7 @@ namespace GUI_DingDoong
                     dateTimeNVL.Enabled = true;
                     rdNhanVien.Enabled = true;
                     rdQuanLy.Enabled = true;
+                    
 
                     DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
                     txtEmail.Text = td.Email;
@@ -330,6 +348,8 @@ namespace GUI_DingDoong
                         rdQuanLy.Checked = true;
                     else
                         rdNhanVien.Checked = true;
+
+                    
 
                     dateTimeNVL.Text = td.NgayVL.ToString();
                     
@@ -349,6 +369,7 @@ namespace GUI_DingDoong
             if (busnhanvien.XoaNhanVien(td.Email))
             {
                 MessageBox.Show("Xóa nhân viên thành công", "Thông báo");
+                
                 dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                 dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -396,6 +417,8 @@ namespace GUI_DingDoong
                 vaitro = 1;
             }
 
+           
+
             if (txtEmail.Text.Trim().Length == 0) //Check Email Null
             {
                 MessageBox.Show("Bạn phải nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -427,6 +450,7 @@ namespace GUI_DingDoong
                 arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
                 DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
                 DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr);
+                //DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, tinhTrang, arr);
                 curNV.TrangThai = 1;
                 //MessageBox.Show(td.MaNV + curNV.TenNV + curNV.Email+ curNV.DiaChi+ curNV.NgayVL+vaitro+ arr);
 
@@ -444,6 +468,33 @@ namespace GUI_DingDoong
 
                 }
             }
+        }
+
+        private void btTrangThai_Click(object sender, EventArgs e)
+        {
+            DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
+            if (MessageBox.Show("Bạn có chắc muốn cho nhân viên " + td.TenNV +" hoạt động ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (busnhanvien.CapNhatTinhTrangNhanVien(td.MaNV))
+                {
+                    MessageBox.Show("Cập nhật tình trạng thành công");
+                    cbHienThiAll.Checked = false;
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật tình trạng thất bại");
+
+                }
+            }
+            else
+            {
+                
+            }
+
+
+
+
         }
 
         private void pbHome_Click(object sender, EventArgs e)
@@ -621,6 +672,8 @@ namespace GUI_DingDoong
         {
             if (cbHienThiAll.Checked)
             {
+                lblTrangThai.Visible = true;
+                btTrangThai.Visible = true;
                 dgvNhanVien.DataSource = busnhanvien.DanhSachNhanVienAll();
                 dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvNhanVien.Columns[5].Visible = true;
@@ -641,6 +694,8 @@ namespace GUI_DingDoong
             }
             else
             {
+                lblTrangThai.Visible = false;
+                btTrangThai.Visible = false;
                 dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                 dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 
@@ -652,5 +707,7 @@ namespace GUI_DingDoong
         {
             txtTimKiem.Text = null;
         }
+
+       
     }
 }
