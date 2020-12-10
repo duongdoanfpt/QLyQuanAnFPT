@@ -548,7 +548,7 @@ namespace GUI_DingDoong
             DTO_HoaDon HoaDonFinal = (from DataRow dr in busBan.dtHoaDonTam(busBan.curBan(lbViTriBan.Text)).Rows
                                       where string.Compare(dr[0].ToString(), hd.MaHD, true) == 0
                                       select new DTO_HoaDon(dr[0].ToString(), NV.MaNV, (int)dr[1], float.Parse(dr[4].ToString()), dr[5].ToString())).FirstOrDefault();
-
+            HoaDonFinal.ThanhTien = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100);
             if (string.IsNullOrWhiteSpace(HoaDonFinal.SDT_KH))
             {
                 busBan.ThemHDFinalNoneKH(HoaDonFinal);
@@ -574,6 +574,7 @@ namespace GUI_DingDoong
             }
             crtBaoCao();
             busBan.ClearTemp(hd.MaHD);
+            txtSDTKH.Text = null;
             FormKhuVucBan_Load(sender, e);
         }
 
@@ -614,6 +615,7 @@ namespace GUI_DingDoong
         {
             btRemove1.Enabled = true;
             btXoa.Enabled = true;
+          
            
             
             
@@ -625,10 +627,43 @@ namespace GUI_DingDoong
             if (dgvHDCT.Rows.Count > 1)
             {
                 DTO_ThucDon selectTD = busTD.curTD(dgvHDCT.CurrentRow.Cells[0].FormattedValue.ToString());
-
+                int rowindex = dgvHDCT.CurrentRow.Index;
+               
+             
                 if (busBan.DeleteCTHDSoluong(lbMaHD.Text, selectTD.MaTD, 1))
                 {
-                    LoadCTHD();
+                    try
+                    {
+                        DTO_CTHD curCTHD = busBan.curCTHD(lbMaHD.Text, selectTD.MaTD);
+                        if(!(curCTHD is null))
+                        {
+                            dgvHDCT.ReadOnly = false;
+                            dgvHDCT.CurrentRow.Cells[1].Value = curCTHD.SoLuong;
+                            dgvHDCT.ReadOnly = true;
+                        }
+                        else
+                        {
+                            LoadCTHD();
+                            if (dgvHDCT.Rows.Count > 2)
+                            {
+                                dgvHDCT.Rows[rowindex - 1].Selected = true;
+                            }    
+                               
+                           
+                        }    
+                       
+                    }
+                    catch (Exception)
+                    {
+                        
+                    }
+                    finally
+                    {
+                       
+                    }
+                    
+                   
+
 
 
                 }
@@ -784,6 +819,21 @@ namespace GUI_DingDoong
                 if (busBan.ResetBan(lbViTriBan.Text, lbMaHD.Text)) 
                 {
                     loadban();
+                    lbStartTime.Visible = false;
+                    lbEndTime.Visible = false;
+                    lbMaHD.Text = "";
+                    lbTongTien.Text = "0";
+                    lbKhuyenMai.Text = "0%";
+                    btKhuyenMai.Enabled = false;
+                    ChkBKhachHang.Enabled = false;
+                    dgvThucDon.Enabled = false;
+                    dgvHDCT.Enabled = false;
+                    btChuyenBan.Enabled = false;
+                    btGopBan.Enabled = false;
+                    btTimKiem.Enabled = false;
+                    btAdd1.Enabled = false;
+                    btRemove1.Enabled = false;
+
                 }
                 else
                 {
