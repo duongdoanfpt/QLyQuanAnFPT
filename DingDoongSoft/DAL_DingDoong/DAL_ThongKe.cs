@@ -177,6 +177,26 @@ namespace DAL_DingDoong
                 _conn.Close();
             }
         }
+        public DataTable ThongkeHoaDonChitiet(string MaHD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "GetListTD";
+                cm.Parameters.AddWithValue("MaHD", MaHD);
+                cm.Connection = _conn;
+                DataTable dtHDCT = new DataTable();
+                dtHDCT.Load(cm.ExecuteReader());
+                return dtHDCT;
+            }
+            finally
+            {
+
+                _conn.Close();
+            }
+        }
 
     }
 }

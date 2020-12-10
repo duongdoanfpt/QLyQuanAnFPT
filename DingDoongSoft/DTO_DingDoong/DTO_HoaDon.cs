@@ -15,6 +15,7 @@ namespace DTO_DingDoong
         private int _TrangThai;
         private float _KhuyenMai;
         private float _ThanhTien;
+        private DateTime _NgayHD;
         public string MaHD
         {
             get
@@ -86,6 +87,18 @@ namespace DTO_DingDoong
             }
         }
 
+        public DateTime NgayHD
+        {
+            get
+            {
+                return _NgayHD;
+            }
+            set
+            {
+                _NgayHD = value;
+            }
+        }
+
         public float ThanhTien
         {
             get
@@ -98,7 +111,7 @@ namespace DTO_DingDoong
             }
         }
 
-        public DTO_HoaDon (string MaHD, string MaNV, int MaBan,float KhuyenMai, string SDT_KH = null)
+        public DTO_HoaDon(string MaHD, string MaNV, int MaBan, float KhuyenMai, string SDT_KH = null)
         {
             this._MaHD = MaHD;
             this._MaNV = MaNV;
@@ -106,7 +119,7 @@ namespace DTO_DingDoong
             this._IdBan = MaBan;
             this._TrangThai = TrangThai;
             this._KhuyenMai = KhuyenMai;
-            
+
         }
 
         public DTO_HoaDon(string MaHD, string MaNV, string SDT_KH, int MaBan, int TrangThai)
@@ -128,6 +141,5 @@ namespace DTO_DingDoong
         }
         public DTO_HoaDon()
         { }
-
     }
 }

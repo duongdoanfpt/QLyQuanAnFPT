@@ -56,6 +56,9 @@ namespace GUI_DingDoong
             this.cbKhachHang = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbHoaDon = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.cbDTNam = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -72,6 +75,7 @@ namespace GUI_DingDoong
             this.label9 = new System.Windows.Forms.Label();
             this.DgvData = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btHoaDon = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btExcel = new System.Windows.Forms.Button();
             this.ptbNext = new System.Windows.Forms.PictureBox();
@@ -79,10 +83,6 @@ namespace GUI_DingDoong
             this.txtDenNgay = new System.Windows.Forms.Label();
             this.ngayBatDau = new System.Windows.Forms.DateTimePicker();
             this.txtTuNgay = new System.Windows.Forms.Label();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbHoaDon = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btHoaDon = new System.Windows.Forms.Button();
             this.LayoutMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ban)).BeginInit();
@@ -100,6 +100,7 @@ namespace GUI_DingDoong
             this.panel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -108,7 +109,6 @@ namespace GUI_DingDoong
             ((System.ComponentModel.ISupportInitialize)(this.DgvData)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNext)).BeginInit();
-            this.tableLayoutPanel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // LayoutMenu
@@ -123,7 +123,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1016F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1019F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -143,7 +143,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1163, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1166, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
@@ -489,6 +489,46 @@ namespace GUI_DingDoong
             this.tableLayoutPanel6.Size = new System.Drawing.Size(306, 284);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel11.ColumnCount = 2;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.37344F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.62656F));
+            this.tableLayoutPanel11.Controls.Add(this.cbHoaDon, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.label11, 1, 0);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(27, 227);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 1;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(276, 54);
+            this.tableLayoutPanel11.TabIndex = 4;
+            // 
+            // cbHoaDon
+            // 
+            this.cbHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbHoaDon.AutoSize = true;
+            this.cbHoaDon.Location = new System.Drawing.Point(10, 3);
+            this.cbHoaDon.Name = "cbHoaDon";
+            this.cbHoaDon.Size = new System.Drawing.Size(15, 48);
+            this.cbHoaDon.TabIndex = 0;
+            this.cbHoaDon.UseVisualStyleBackColor = true;
+            this.cbHoaDon.CheckedChanged += new System.EventHandler(this.cbHoaDon_CheckedChanged);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(31, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(242, 21);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Thống kê theo hóa đơn";
+            // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -502,7 +542,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(276, 50);
             this.tableLayoutPanel9.TabIndex = 3;
             // 
@@ -567,7 +607,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(276, 50);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
@@ -607,7 +647,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(276, 50);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
@@ -681,6 +721,7 @@ namespace GUI_DingDoong
             this.DgvData.Name = "DgvData";
             this.DgvData.Size = new System.Drawing.Size(929, 533);
             this.DgvData.TabIndex = 1;
+            this.DgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvData_CellContentClick);
             // 
             // panel5
             // 
@@ -700,6 +741,21 @@ namespace GUI_DingDoong
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(934, 49);
             this.panel5.TabIndex = 0;
+            // 
+            // btHoaDon
+            // 
+            this.btHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btHoaDon.BackColor = System.Drawing.Color.White;
+            this.btHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHoaDon.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btHoaDon.Location = new System.Drawing.Point(724, 10);
+            this.btHoaDon.Name = "btHoaDon";
+            this.btHoaDon.Size = new System.Drawing.Size(109, 27);
+            this.btHoaDon.TabIndex = 7;
+            this.btHoaDon.Text = "Xem hóa đơn";
+            this.btHoaDon.UseVisualStyleBackColor = false;
             // 
             // btnThongKe
             // 
@@ -780,61 +836,6 @@ namespace GUI_DingDoong
             this.txtTuNgay.TabIndex = 0;
             this.txtTuNgay.Text = "Từ ngày : ";
             // 
-            // tableLayoutPanel11
-            // 
-            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel11.ColumnCount = 2;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.37344F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.62656F));
-            this.tableLayoutPanel11.Controls.Add(this.cbHoaDon, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.label11, 1, 0);
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(27, 227);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 1;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(276, 54);
-            this.tableLayoutPanel11.TabIndex = 4;
-            // 
-            // cbHoaDon
-            // 
-            this.cbHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbHoaDon.AutoSize = true;
-            this.cbHoaDon.Location = new System.Drawing.Point(10, 3);
-            this.cbHoaDon.Name = "cbHoaDon";
-            this.cbHoaDon.Size = new System.Drawing.Size(15, 48);
-            this.cbHoaDon.TabIndex = 0;
-            this.cbHoaDon.UseVisualStyleBackColor = true;
-            this.cbHoaDon.CheckedChanged += new System.EventHandler(this.cbHoaDon_CheckedChanged);
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(31, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(242, 21);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Thống kê theo hóa đơn";
-            // 
-            // btHoaDon
-            // 
-            this.btHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btHoaDon.BackColor = System.Drawing.Color.White;
-            this.btHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btHoaDon.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btHoaDon.Location = new System.Drawing.Point(724, 10);
-            this.btHoaDon.Name = "btHoaDon";
-            this.btHoaDon.Size = new System.Drawing.Size(109, 27);
-            this.btHoaDon.TabIndex = 7;
-            this.btHoaDon.Text = "Xem hóa đơn";
-            this.btHoaDon.UseVisualStyleBackColor = false;
-            // 
             // FormThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -872,6 +873,8 @@ namespace GUI_DingDoong
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -886,8 +889,6 @@ namespace GUI_DingDoong
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNext)).EndInit();
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.tableLayoutPanel11.PerformLayout();
             this.ResumeLayout(false);
 
         }

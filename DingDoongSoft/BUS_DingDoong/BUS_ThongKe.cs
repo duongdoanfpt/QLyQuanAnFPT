@@ -40,5 +40,30 @@ namespace BUS_DingDoong
         {
             return dalThongke.ThongKeHoaDon(ngayBatDau, ngayKetThuc);
         }
+        public DTO_HoaDon curHD(string MaHD)
+        {
+
+            return (from DataRow dr in thongKeHoaDon(null, null).Rows
+                    where string.Compare(dr[0].ToString(), MaHD, true) == 0
+                    select new DTO_HoaDon
+                    {
+                        MaHD = dr[0].ToString(),
+                        MaNV = dr[1].ToString(),
+                        IdBan = (int)dr[3],
+                        KhuyenMai = float.Parse(dr[6].ToString()),
+                        SDT_KH = dr[2].ToString(),
+                        NgayHD = (DateTime)dr[4],
+                        ThanhTien = float.Parse(dr[7].ToString())
+
+
+                    }).FirstOrDefault();
+
+        }
+
+        public DataTable ThongkeHoaDonChitiet(string MaHD)
+        {
+            return dalThongke.ThongkeHoaDonChitiet(MaHD);
+        }
+
     }
 }
