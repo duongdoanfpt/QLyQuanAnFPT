@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -103,13 +104,26 @@ namespace GUI_DingDoong
             btLuu.Enabled = false;
         }
 
+        public bool isvailphone(string phone)
+        {
+            string strRegex = @"((09|03|07|08|05)+([0-9]{8})\b)";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(phone)) return true;
+            else return false;
+        }
+
         private void btLuu_Click(object sender, EventArgs e)
         {
             int gioitinh = 1;
             if (rdNu.Checked == true)
                 gioitinh = 0;
-           
 
+            if (!isvailphone(txtSDT.Text))
+            {
+                MessageBox.Show("Định dạng số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtSDT.Focus();
+                return;
+            }
 
             DTO_Khach khach = new DTO_Khach(txtTen.Text, txtSDT.Text, dtpNgaySinh.Value, txtEmail.Text, gioitinh);
             if (busKhach.insertKhach(khach))
