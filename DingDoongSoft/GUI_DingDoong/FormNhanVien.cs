@@ -194,7 +194,18 @@ namespace GUI_DingDoong
                 return false;
             }
         }
+        // Check Email trùng
+        public bool checkemailTrung(string email, BUS_NhanVien busnhanvien)
+        {
+            DataTable getMail = busnhanvien.DanhSachNhanVienAll();
+            foreach (DataRow row in getMail.Rows)
+            {
+                if (string.Compare(email, row[1].ToString(), true) == 0)
+                    return true;
 
+            }
+            return false;
+        }
         private void btLuu_Click(object sender, EventArgs e)
         {
             int vaitro = 0;
@@ -215,8 +226,12 @@ namespace GUI_DingDoong
                 txtEmail.Focus();
                 return;
             }
+            else if (checkemailTrung(txtEmail.Text, busnhanvien))
+            {
+                MessageBox.Show("Email của bạn đã được sử dụng, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
-            if (string.IsNullOrEmpty(txtTenNhanVien.Text) || string.IsNullOrWhiteSpace(txtTenNhanVien.Text))
+            else if (string.IsNullOrEmpty(txtTenNhanVien.Text) || string.IsNullOrWhiteSpace(txtTenNhanVien.Text))
             {
                 MessageBox.Show("Bạn chưa nhập tên nhân viên", "Thông báo");
             }
@@ -458,33 +473,28 @@ namespace GUI_DingDoong
         private void btTrangThai_Click(object sender, EventArgs e)
         {
             DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
-            
-            if (busnhanvien.CapNhatTinhTrangNhanVien(td.MaNV))
+            if (MessageBox.Show("Bạn có chắc muốn cho nhân viên " + td.TenNV +" hoạt động ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show("Cập nhật tình trạng thành công");
-                cbHienThiAll.Checked = false;
-                //dgvNhanVien.DataSource = busnhanvien.DanhSachNhanVienAll();
-                //dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                //foreach (DataGridViewRow dr in dgvNhanVien.Rows)
-                //{
-                //    if (!string.IsNullOrWhiteSpace(dr.Cells[5].FormattedValue.ToString()))
-                //    {
-                //        if (!(string.Compare(dr.Cells[5].Value.ToString(), "Hoạt động", true) == 0))
-                //        {
-                //            dr.DefaultCellStyle.BackColor = Color.Red;
-                //            dr.DefaultCellStyle.ForeColor = Color.White;
-                //        }
-                //    }
+                if (busnhanvien.CapNhatTinhTrangNhanVien(td.MaNV))
+                {
+                    MessageBox.Show("Cập nhật tình trạng thành công");
+                    cbHienThiAll.Checked = false;
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật tình trạng thất bại");
 
-                //}
-
-
+                }
             }
             else
             {
-                MessageBox.Show("Cập nhật tình trạng thất bại");
-
+                
             }
+
+
+
+
         }
 
         private void pbHome_Click(object sender, EventArgs e)
