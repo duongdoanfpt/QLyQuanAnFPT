@@ -99,6 +99,8 @@ namespace GUI_DingDoong
             btXoa.Enabled = false;
             btCapNhat.Enabled = false;
             btBoQua.Enabled = false;
+            lblTrangThai.Visible = false;
+            btTrangThai.Visible = false;
 
             //Set null
             txtTenNhanVien.Text = null;
@@ -318,6 +320,7 @@ namespace GUI_DingDoong
                     dateTimeNVL.Enabled = true;
                     rdNhanVien.Enabled = true;
                     rdQuanLy.Enabled = true;
+                    
 
                     DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
                     txtEmail.Text = td.Email;
@@ -330,6 +333,8 @@ namespace GUI_DingDoong
                         rdQuanLy.Checked = true;
                     else
                         rdNhanVien.Checked = true;
+
+                    
 
                     dateTimeNVL.Text = td.NgayVL.ToString();
                     
@@ -349,6 +354,7 @@ namespace GUI_DingDoong
             if (busnhanvien.XoaNhanVien(td.Email))
             {
                 MessageBox.Show("Xóa nhân viên thành công", "Thông báo");
+                
                 dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                 dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -396,6 +402,8 @@ namespace GUI_DingDoong
                 vaitro = 1;
             }
 
+           
+
             if (txtEmail.Text.Trim().Length == 0) //Check Email Null
             {
                 MessageBox.Show("Bạn phải nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -427,6 +435,7 @@ namespace GUI_DingDoong
                 arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
                 DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
                 DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr);
+                //DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, tinhTrang, arr);
                 curNV.TrangThai = 1;
                 //MessageBox.Show(td.MaNV + curNV.TenNV + curNV.Email+ curNV.DiaChi+ curNV.NgayVL+vaitro+ arr);
 
@@ -443,6 +452,38 @@ namespace GUI_DingDoong
                     MessageBox.Show("Cập nhật thất bại");
 
                 }
+            }
+        }
+
+        private void btTrangThai_Click(object sender, EventArgs e)
+        {
+            DTO_NhanVien td = busnhanvien.curNV(dgvNhanVien.CurrentRow.Cells["Email_NV"].Value.ToString());
+            
+            if (busnhanvien.CapNhatTinhTrangNhanVien(td.MaNV))
+            {
+                MessageBox.Show("Cập nhật tình trạng thành công");
+                cbHienThiAll.Checked = false;
+                //dgvNhanVien.DataSource = busnhanvien.DanhSachNhanVienAll();
+                //dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                //foreach (DataGridViewRow dr in dgvNhanVien.Rows)
+                //{
+                //    if (!string.IsNullOrWhiteSpace(dr.Cells[5].FormattedValue.ToString()))
+                //    {
+                //        if (!(string.Compare(dr.Cells[5].Value.ToString(), "Hoạt động", true) == 0))
+                //        {
+                //            dr.DefaultCellStyle.BackColor = Color.Red;
+                //            dr.DefaultCellStyle.ForeColor = Color.White;
+                //        }
+                //    }
+
+                //}
+
+
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật tình trạng thất bại");
+
             }
         }
 
@@ -621,6 +662,8 @@ namespace GUI_DingDoong
         {
             if (cbHienThiAll.Checked)
             {
+                lblTrangThai.Visible = true;
+                btTrangThai.Visible = true;
                 dgvNhanVien.DataSource = busnhanvien.DanhSachNhanVienAll();
                 dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvNhanVien.Columns[5].Visible = true;
@@ -641,6 +684,8 @@ namespace GUI_DingDoong
             }
             else
             {
+                lblTrangThai.Visible = false;
+                btTrangThai.Visible = false;
                 dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                 dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 
@@ -652,5 +697,7 @@ namespace GUI_DingDoong
         {
             txtTimKiem.Text = null;
         }
+
+       
     }
 }

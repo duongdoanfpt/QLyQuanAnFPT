@@ -63,6 +63,11 @@ namespace BUS_DingDoong
             return dALNhanVien.CapNhatNhanVien(MaNV, td);
         }
 
+        public bool CapNhatTinhTrangNhanVien(string MaNV)
+        {
+            return dALNhanVien.CapNhatTinhTrang(MaNV);
+        }
+
         public DataTable TimKiemNhanVien(string tenNhanVien)
         {
             return dALNhanVien.SearchNhanVien(tenNhanVien);
