@@ -281,6 +281,7 @@ namespace GUI_DingDoong
                     MessageBox.Show("Thêm nhân viên thành công");
                     dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                     dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    Disable_Textbox_Button();
                     //pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
                     //pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -307,7 +308,7 @@ namespace GUI_DingDoong
                 if (dgvNhanVien.CurrentRow.Index < dgvNhanVien.Rows.Count - 1)
                 {
                     pbHinh.Enabled = true;
-                    btLuu.Enabled = true;
+                    btLuu.Enabled = false;
                     btXoa.Enabled = true;
                     btCapNhat.Enabled = true;
                     btBoQua.Enabled = true;
@@ -414,7 +415,7 @@ namespace GUI_DingDoong
             }
             else if (string.IsNullOrEmpty(txtDiaChi.Text) || string.IsNullOrWhiteSpace(txtDiaChi.Text))
             {
-                MessageBox.Show("Bạn chưa nhập đơn giá", "Thông báo");
+                MessageBox.Show("Bạn chưa địa chỉ", "Thông báo");
             }
 
             else
@@ -645,6 +646,11 @@ namespace GUI_DingDoong
                 
 
             }
+        }
+
+        private void txtTimKiem_MouseEnter(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = null;
         }
     }
 }

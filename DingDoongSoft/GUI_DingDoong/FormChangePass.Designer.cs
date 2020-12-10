@@ -77,6 +77,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtEmail.Location = new System.Drawing.Point(34, 210);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
@@ -85,9 +86,11 @@
             // 
             // txtOldPass
             // 
+            this.txtOldPass.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtOldPass.Location = new System.Drawing.Point(34, 278);
             this.txtOldPass.Multiline = true;
             this.txtOldPass.Name = "txtOldPass";
+            this.txtOldPass.PasswordChar = '*';
             this.txtOldPass.Size = new System.Drawing.Size(338, 31);
             this.txtOldPass.TabIndex = 5;
             // 
@@ -104,9 +107,11 @@
             // 
             // txtNewPass
             // 
+            this.txtNewPass.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNewPass.Location = new System.Drawing.Point(34, 346);
             this.txtNewPass.Multiline = true;
             this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.PasswordChar = '*';
             this.txtNewPass.Size = new System.Drawing.Size(338, 31);
             this.txtNewPass.TabIndex = 7;
             // 
@@ -123,9 +128,11 @@
             // 
             // txtNewPassAgain
             // 
+            this.txtNewPassAgain.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNewPassAgain.Location = new System.Drawing.Point(34, 414);
             this.txtNewPassAgain.Multiline = true;
             this.txtNewPassAgain.Name = "txtNewPassAgain";
+            this.txtNewPassAgain.PasswordChar = '*';
             this.txtNewPassAgain.Size = new System.Drawing.Size(338, 31);
             this.txtNewPassAgain.TabIndex = 9;
             // 

@@ -182,10 +182,12 @@ namespace GUI_DingDoong
             // 
             // flpkvBan
             // 
+            this.flpkvBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flpkvBan.AutoScroll = true;
             this.flpkvBan.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flpkvBan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flpkvBan.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flpkvBan.Location = new System.Drawing.Point(0, 34);
             this.flpkvBan.Name = "flpkvBan";
             this.flpkvBan.Size = new System.Drawing.Size(424, 589);
@@ -496,7 +498,6 @@ namespace GUI_DingDoong
             this.txtSDTKH.Name = "txtSDTKH";
             this.txtSDTKH.Size = new System.Drawing.Size(173, 20);
             this.txtSDTKH.TabIndex = 5;
-           
             // 
             // label22
             // 
@@ -1104,7 +1105,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmailNV.Location = new System.Drawing.Point(1079, 12);
+            this.lbEmailNV.Location = new System.Drawing.Point(1082, 12);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
@@ -1122,7 +1123,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 951F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 954F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);

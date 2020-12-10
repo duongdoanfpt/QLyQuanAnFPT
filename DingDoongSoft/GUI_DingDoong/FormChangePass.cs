@@ -73,34 +73,47 @@ namespace GUI_DingDoong
 
         private void btSubmit_Click(object sender, EventArgs e)
         {
-            if (txtOldPass.Text.Trim().Length == 0)
+            if (string.IsNullOrWhiteSpace(txtEmail.Text ) || string.IsNullOrWhiteSpace(txtOldPass.Text) || string.IsNullOrWhiteSpace(txtNewPass.Text))
             {
-                MessageBox.Show("Bạn phải nhập mật khẩu cũ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập đầy đủ dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtOldPass.Focus();
                 return;
             }
             BUS_NhanVien busNhanVien = new BUS_NhanVien();
             string matkhaumoi = busNhanVien.Encryption(txtNewPass.Text);
             string matkhaucu = busNhanVien.Encryption(txtOldPass.Text);
-            if (busNhanVien.doiMatKhau(txtEmail.Text, matkhaucu, matkhaumoi))
+
+            if (string.Compare(txtNewPass.Text,txtNewPassAgain.Text,false) ==0)
             {
-                //FormMain.profile = 1; //Cập nhật pass thành công
-                //FormMain.session = 0; //Đưa về tình trạng chưa đăng nhập
+                if (busNhanVien.doiMatKhau(txtEmail.Text, matkhaucu, matkhaumoi))
+                {
+                    //FormMain.profile = 1; //Cập nhật pass thành công
+                    //FormMain.session = 0; //Đưa về tình trạng chưa đăng nhập
 
-                MessageBox.Show("Cập nhật mật khẩu thành công, bạn cần phải đăng nhập lại");
-                //FormLogin frmlogin = new FormLogin();
-                //this.Hide();
+                    MessageBox.Show("Cập nhật mật khẩu thành công, bạn cần phải đăng nhập lại");
+                    //FormLogin frmlogin = new FormLogin();
+                    //this.Hide();
 
-                //frmlogin.Closed += (s, args) => this.Close();
-                //frmlogin.Show();
+                    //frmlogin.Closed += (s, args) => this.Close();
+                    //frmlogin.Show();
 
 
-                this.Close();
-                th = new Thread(opennewapp);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
+                    this.Close();
+                    th = new Thread(opennewapp);
+                    th.SetApartmentState(ApartmentState.STA);
+                    th.Start();
 
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật mật khẩu thất bại");
+                }
             }
+            else
+            {
+                MessageBox.Show("Xác nhận mật khẩu không đúng");
+            }
+            
         }
 
         private void btExit_Click(object sender, EventArgs e)
