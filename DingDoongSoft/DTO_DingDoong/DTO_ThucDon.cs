@@ -15,6 +15,19 @@ using System.Threading.Tasks;
             private string _MoTa;
             private string _Nhom;
             private byte[] _Hinh;
+            private int _TrangThai;
+
+            public int TrangThai
+            {
+                get
+                {
+                    return _TrangThai;
+                }
+                set
+                {
+                    _TrangThai = value;
+                }
+            }
 
             public string MaTD
             {

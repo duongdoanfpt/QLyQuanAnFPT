@@ -29,6 +29,7 @@ namespace GUI_DingDoong
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThucDon));
             this.LayoutMenu = new System.Windows.Forms.TableLayoutPanel();
             this.lblUsers = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@ namespace GUI_DingDoong
             this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.DgvThucDon = new System.Windows.Forms.DataGridView();
+            this.btEnable = new System.Windows.Forms.Button();
             this.MaTD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,7 +99,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 968F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 971F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -117,7 +119,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1115, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1118, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
@@ -292,17 +294,19 @@ namespace GUI_DingDoong
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.554974F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.34031F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.97382F));
-            this.tableLayoutPanel3.Controls.Add(this.txtMoTa, 0, 0);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.81159F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.18841F));
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel1, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtMoTa, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btEnable, 1, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(499, 44);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(760, 125);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(760, 166);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // txtMoTa
@@ -311,10 +315,10 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMoTa.Location = new System.Drawing.Point(75, 3);
+            this.txtMoTa.Location = new System.Drawing.Point(79, 3);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(453, 119);
+            this.txtMoTa.Size = new System.Drawing.Size(450, 118);
             this.txtMoTa.TabIndex = 3;
             // 
             // label3
@@ -323,7 +327,7 @@ namespace GUI_DingDoong
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 25);
+            this.label3.Size = new System.Drawing.Size(70, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Mô tả: ";
             // 
@@ -334,16 +338,16 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btOpenDialog);
             this.panel1.Controls.Add(this.ptbThucDon);
-            this.panel1.Location = new System.Drawing.Point(534, 3);
+            this.panel1.Location = new System.Drawing.Point(535, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 119);
+            this.panel1.Size = new System.Drawing.Size(222, 118);
             this.panel1.TabIndex = 4;
             // 
             // btOpenDialog
             // 
             this.btOpenDialog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btOpenDialog.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btOpenDialog.Location = new System.Drawing.Point(150, 93);
+            this.btOpenDialog.Location = new System.Drawing.Point(149, 92);
             this.btOpenDialog.Name = "btOpenDialog";
             this.btOpenDialog.Size = new System.Drawing.Size(70, 23);
             this.btOpenDialog.TabIndex = 1;
@@ -358,7 +362,7 @@ namespace GUI_DingDoong
             this.ptbThucDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbThucDon.Location = new System.Drawing.Point(3, 3);
             this.ptbThucDon.Name = "ptbThucDon";
-            this.ptbThucDon.Size = new System.Drawing.Size(141, 113);
+            this.ptbThucDon.Size = new System.Drawing.Size(141, 112);
             this.ptbThucDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbThucDon.TabIndex = 0;
             this.ptbThucDon.TabStop = false;
@@ -376,7 +380,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel4.Controls.Add(this.txtTimKiem, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label4, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.CheckBoxDanhSach, 3, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(1, 214);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(1, 253);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -405,6 +409,7 @@ namespace GUI_DingDoong
             this.txtTimKiem.Size = new System.Drawing.Size(286, 33);
             this.txtTimKiem.TabIndex = 0;
             this.txtTimKiem.Text = "Nhập tên món để tìm kiếm";
+            this.txtTimKiem.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTimKiem_MouseClick);
             // 
             // label4
             // 
@@ -446,7 +451,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel5.Controls.Add(this.btXoa, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.btLuu, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btThem, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(-1, 172);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(1, 211);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -551,11 +556,26 @@ namespace GUI_DingDoong
             this.GiaBan,
             this.Nhom,
             this.MoTa});
-            this.DgvThucDon.Location = new System.Drawing.Point(1, 261);
+            this.DgvThucDon.Location = new System.Drawing.Point(1, 297);
             this.DgvThucDon.Name = "DgvThucDon";
-            this.DgvThucDon.Size = new System.Drawing.Size(1262, 419);
+            this.DgvThucDon.Size = new System.Drawing.Size(1262, 383);
             this.DgvThucDon.TabIndex = 6;
             this.DgvThucDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvThucDon_CellClick);
+            // 
+            // btEnable
+            // 
+            this.btEnable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btEnable.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btEnable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEnable.ForeColor = System.Drawing.Color.Black;
+            this.btEnable.Location = new System.Drawing.Point(79, 127);
+            this.btEnable.Name = "btEnable";
+            this.btEnable.Size = new System.Drawing.Size(184, 36);
+            this.btEnable.TabIndex = 5;
+            this.btEnable.Text = "Cho phép hoạt động";
+            this.btEnable.UseVisualStyleBackColor = true;
+            this.btEnable.Click += new System.EventHandler(this.btEnable_Click);
             // 
             // MaTD
             // 
@@ -572,6 +592,9 @@ namespace GUI_DingDoong
             // GiaBan
             // 
             this.GiaBan.DataPropertyName = "GiaBan";
+            dataGridViewCellStyle1.Format = "#,###";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.GiaBan.DefaultCellStyle = dataGridViewCellStyle1;
             this.GiaBan.HeaderText = "Giá Bán";
             this.GiaBan.Name = "GiaBan";
             // 
@@ -662,12 +685,13 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox ptbThucDon;
         private System.Windows.Forms.Button btOpenDialog;
+        private System.Windows.Forms.PictureBox ptbMenuThucDon;
+        private System.Windows.Forms.Label lblUsers;
+        private System.Windows.Forms.Button btEnable;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTD;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTD;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nhom;
         private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
-        private System.Windows.Forms.PictureBox ptbMenuThucDon;
-        private System.Windows.Forms.Label lblUsers;
     }
 }

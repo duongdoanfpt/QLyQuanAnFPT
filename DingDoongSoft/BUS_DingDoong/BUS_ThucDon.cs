@@ -47,8 +47,10 @@ namespace BUS_DingDoong
                                      GiaBan = float.Parse(dr[2].ToString()),
 
                                      Nhom = dr[3].ToString(),
-                                     MoTa = dr[4].ToString()
-                                     
+                                     MoTa = dr[4].ToString(),
+                                     TrangThai = string.Compare(dr[5].ToString(),"Enable", true) == 0 ? 1 : 0
+
+
 
                                  }).FirstOrDefault();
             return curTD;
@@ -80,6 +82,10 @@ namespace BUS_DingDoong
         public DataTable dtsearchTDNhom(string Nhom)
         {
             return dalThucDon.dtsearchTDNhom(Nhom);
+        }
+        public bool CapNhatTrangThaiTD(string matd)
+        {
+            return dalThucDon.CapNhatTrangThai(matd);
         }
     }
 }

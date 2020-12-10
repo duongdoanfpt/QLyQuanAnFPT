@@ -30,5 +30,15 @@ namespace BUS_DingDoong
         {
             return dalThongke.thongKeTheoNam();
         }
+        public DataTable thongKeKhachHang(Nullable<DateTime> ngayBatDau, Nullable<DateTime> ngayKetThuc)
+        {
+            return dalThongke.ThongKeKhachHang(ngayBatDau, ngayKetThuc);
+        }
+
+
+        public DataTable thongKeHoaDon(Nullable<DateTime> ngayBatDau, Nullable<DateTime> ngayKetThuc)
+        {
+            return dalThongke.ThongKeHoaDon(ngayBatDau, ngayKetThuc);
+        }
     }
 }

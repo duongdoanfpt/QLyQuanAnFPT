@@ -162,6 +162,8 @@ namespace GUI_DingDoong
 
         private void FormThongKe_Load(object sender, EventArgs e)
         {
+            btHoaDon.Enabled = false;
+
             ThongKe.Enabled = false;
             ThongKe.BorderStyle = BorderStyle.Fixed3D;
             txtTuNgay.Visible = false;
@@ -185,7 +187,8 @@ namespace GUI_DingDoong
         {
             if(cbThucDon.Checked == true)
             {
-                
+                txtTuNgay.Visible = true;
+                txtDenNgay.Visible = true;
                 cbKhachHang.Checked = false;
                 cbDoanhThu.Checked = false;
                 cbDTThang.Checked = false;
@@ -201,6 +204,12 @@ namespace GUI_DingDoong
             else
             {
                 DgvData.DataSource = null;
+                txtTuNgay.Visible = false;
+                txtDenNgay.Visible = false;
+                ngayBatDau.Visible = false;
+                ngayKetThuc.Visible = false;
+                btnThongKe.Visible = false;
+
 
             }
         }
@@ -241,9 +250,58 @@ namespace GUI_DingDoong
         }
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            DgvData.DataSource = busTK.doanhThuTheoTime(ngayBatDau.Value, ngayKetThuc.Value);
-            DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            LoadNameThongKeTime(busTK.doanhThuTheoTime(ngayBatDau.Value, ngayKetThuc.Value));
+            if (cbThucDon.Checked)
+            {
+                if (cbThucDon.Checked == true)
+                {
+
+                    cbKhachHang.Checked = false;
+                    cbDoanhThu.Checked = false;
+                    cbDTThang.Checked = false;
+                    cbDTNam.Checked = false;
+                    ngayBatDau.Visible = true;
+                    ngayKetThuc.Visible = true;
+                    btnThongKe.Visible = true;
+                    DgvData.DataSource = busTK.dtSLTD(ngayBatDau.Value, ngayKetThuc.Value);
+                    DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    LoadNameThucDon(busTK.dtSLTD(ngayBatDau.Value, ngayKetThuc.Value));
+
+                }
+                else
+                {
+                    DgvData.DataSource = null;
+
+                }
+            }
+            else if(cbDoanhThu.Checked == true)
+            {
+                DgvData.DataSource = busTK.doanhThuTheoTime(ngayBatDau.Value, ngayKetThuc.Value);
+                DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                DgvData.Columns["Column1"].DefaultCellStyle.Format = "c";
+
+                LoadNameThongKeTime(busTK.doanhThuTheoTime(ngayBatDau.Value, ngayKetThuc.Value));
+
+                
+            }
+            else if(cbKhachHang.Checked == true)
+            {
+                DgvData.DataSource = busTK.thongKeKhachHang(ngayBatDau.Value, ngayKetThuc.Value);
+                DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                DgvData.Columns[0].HeaderText = "Tên khách hàng";
+                DgvData.Columns[1].HeaderText = "Số điện thoại";
+                DgvData.Columns[2].HeaderText = "Email";
+                DgvData.Columns[3].HeaderText = "Tổng tiền";
+
+                DgvData.Columns[3].DefaultCellStyle.Format = "c";
+
+            }
+            else if(cbHoaDon.Checked == true)
+            {
+                DgvData.DataSource = busTK.thongKeHoaDon(ngayBatDau.Value, ngayKetThuc.Value);
+                DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+
+
         }
 
 
@@ -262,6 +320,8 @@ namespace GUI_DingDoong
                 cbDTNam.Checked = false;
                 DgvData.DataSource = busTK.doanhThuTrongThang();
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                DgvData.Columns["Column1"].DefaultCellStyle.Format = "c";
+
                 LoadNameDTThang(busTK.doanhThuTrongThang());
             }
             else
@@ -279,7 +339,10 @@ namespace GUI_DingDoong
                 cbDoanhThu.Checked = false;
                 cbDTThang.Checked = false;
                 DgvData.DataSource = busTK.doanhThuTheoNam();
+                DgvData.Columns["Column1"].DefaultCellStyle.Format = "c";
+                DgvData.Columns[0].HeaderText = "Doanh thu năm";
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             }
             else
             {
@@ -356,6 +419,60 @@ namespace GUI_DingDoong
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void LoadNameKhachHang(DataTable dt)
+        {
+            DgvData.DataSource = dt;
+            DgvData.Columns[0].HeaderText = "Tên khách hàng";
+            DgvData.Columns[1].HeaderText = "Số điện thoại";
+            DgvData.Columns[2].HeaderText = "Email";
+            DgvData.Columns[3].HeaderText = "Tổng tiền";
+
+
+
+        }
+        private void cbKhachHang_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbKhachHang.Checked == true)
+            {
+                txtTuNgay.Visible = true;
+                txtDenNgay.Visible = true;
+                cbThucDon.Checked = false;
+                cbDoanhThu.Checked = false;
+                cbDTThang.Checked = false;
+                cbDTNam.Checked = false;
+                ngayBatDau.Visible = true;
+                ngayKetThuc.Visible = true;
+                btnThongKe.Visible = true;
+                DgvData.DataSource = busTK.thongKeKhachHang(null, null);
+                DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                LoadNameKhachHang(busTK.thongKeKhachHang(ngayBatDau.Value, ngayKetThuc.Value));
+
+            }
+            else
+            {
+                DgvData.DataSource = null;
+                txtTuNgay.Visible = false;
+                txtDenNgay.Visible = false;
+                ngayBatDau.Visible = false;
+                ngayKetThuc.Visible = false;
+                btnThongKe.Visible = false;
+
+
+            }
+        }
+
+        private void cbHoaDon_CheckedChanged(object sender, EventArgs e)
+        {
+            DgvData.DataSource = busTK.thongKeHoaDon(null,null);
+            DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            txtTuNgay.Visible = true;
+            txtDenNgay.Visible = true;
+            ngayBatDau.Visible = true;
+            ngayKetThuc.Visible = true;
+            btnThongKe.Visible = true;
+            btHoaDon.Enabled = true;
         }
     }
 }
