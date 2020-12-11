@@ -292,6 +292,7 @@ namespace GUI_DingDoong
                 ImageConverter converter = new ImageConverter();
                 arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
                 DTO_NhanVien curNV = new DTO_NhanVien(txtTenNhanVien.Text, txtEmail.Text, txtDiaChi.Text, (dateTimeNVL.Value).Date, vaitro, arr);
+                curNV.TrangThai = 1;
 
                 if (busnhanvien.inserNhanVien(curNV))
                 {
