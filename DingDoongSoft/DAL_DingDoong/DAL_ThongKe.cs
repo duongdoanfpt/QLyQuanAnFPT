@@ -198,5 +198,62 @@ namespace DAL_DingDoong
             }
         }
 
+        public DataTable SinhNhatKhachHang()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "SinhNhatKhachHang";
+                DataTable sinhNhat = new DataTable();
+                sinhNhat.Load(cm.ExecuteReader());
+                return sinhNhat;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public DataTable ThongKeTheoThang_Main()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_ThongkeHDThang";
+                DataTable hdThang = new DataTable();
+                hdThang.Load(cm.ExecuteReader());
+                return hdThang;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public DataTable ThongKeTheoNam_Main()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.Connection = _conn;
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_ThongkeHDNam";
+                DataTable hdNam = new DataTable();
+                hdNam.Load(cm.ExecuteReader());
+                return hdNam;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
     }
 }

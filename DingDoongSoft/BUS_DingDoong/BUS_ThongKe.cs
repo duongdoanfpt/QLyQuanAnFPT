@@ -65,5 +65,19 @@ namespace BUS_DingDoong
             return dalThongke.ThongkeHoaDonChitiet(MaHD);
         }
 
+        public DataTable sinhNhatKhachHang()
+        {
+            return dalThongke.SinhNhatKhachHang();
+        }
+
+        public DataTable doanhThuThang_Main()
+        {
+            return dalThongke.ThongKeTheoThang_Main();
+        }
+
+        public DataTable doanhThuNam_Main()
+        {
+            return dalThongke.ThongKeTheoNam_Main();
+        }
     }
 }
