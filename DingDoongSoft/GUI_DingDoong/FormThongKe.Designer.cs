@@ -721,7 +721,7 @@ namespace GUI_DingDoong
             this.DgvData.Name = "DgvData";
             this.DgvData.Size = new System.Drawing.Size(929, 533);
             this.DgvData.TabIndex = 1;
-            this.DgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvData_CellContentClick);
+       
             // 
             // panel5
             // 

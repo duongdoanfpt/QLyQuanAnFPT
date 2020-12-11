@@ -231,7 +231,7 @@ namespace DAL_DingDoong
                 cm.Parameters.AddWithValue("MaHD", cthd.MaHD);
                 cm.Parameters.AddWithValue("MaTD", cthd.MaTD);
                 cm.Parameters.AddWithValue("SoLuong", cthd.SoLuong);
-                cm.Parameters.AddWithValue("MoTa", cthd.GhiChu);
+                cm.Parameters.AddWithValue("MoTa", DBNull.Value);
 
 
                 if (cm.ExecuteNonQuery() > 0)
@@ -260,7 +260,7 @@ namespace DAL_DingDoong
                 cm.Parameters.AddWithValue("MaHD", cthd.MaHD);
                 cm.Parameters.AddWithValue("MaTD", cthd.MaTD);
                 cm.Parameters.AddWithValue("SoLuong", cthd.SoLuong);
-                cm.Parameters.AddWithValue("MoTa", cthd.GhiChu);
+                cm.Parameters.AddWithValue("MoTa", DBNull.Value);
                 
                
                 if (cm.ExecuteNonQuery() > 0)
@@ -404,7 +404,7 @@ namespace DAL_DingDoong
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                
             }
             finally
             {
@@ -433,7 +433,7 @@ namespace DAL_DingDoong
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                
             }
            
             finally
@@ -483,9 +483,9 @@ namespace DAL_DingDoong
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                Console.WriteLine(e.Message);
+              
             }
             finally
             {
@@ -511,9 +511,9 @@ namespace DAL_DingDoong
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                Console.WriteLine(e.Message);
+                
             }
             finally
             {
@@ -568,9 +568,9 @@ namespace DAL_DingDoong
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                Console.WriteLine(e.Message);
+                
             }
             finally
             {

@@ -47,11 +47,12 @@ namespace GUI_DingDoong
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtNhom = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtMoTa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btOpenDialog = new System.Windows.Forms.Button();
             this.ptbThucDon = new System.Windows.Forms.PictureBox();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
+            this.btEnable = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -65,7 +66,6 @@ namespace GUI_DingDoong
             this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.DgvThucDon = new System.Windows.Forms.DataGridView();
-            this.btEnable = new System.Windows.Forms.Button();
             this.MaTD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,7 +99,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 971F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 974F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -119,7 +119,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1118, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1121, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
@@ -284,7 +284,8 @@ namespace GUI_DingDoong
             "Khai vị",
             "Món chính",
             "Đồ uống",
-            "Tráng miệng"});
+            "Tráng miệng",
+            "Món ăn kèm"});
             this.txtNhom.Location = new System.Drawing.Point(166, 87);
             this.txtNhom.Name = "txtNhom";
             this.txtNhom.Size = new System.Drawing.Size(330, 33);
@@ -308,18 +309,6 @@ namespace GUI_DingDoong
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(760, 166);
             this.tableLayoutPanel3.TabIndex = 3;
-            // 
-            // txtMoTa
-            // 
-            this.txtMoTa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMoTa.Location = new System.Drawing.Point(79, 3);
-            this.txtMoTa.Multiline = true;
-            this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(450, 118);
-            this.txtMoTa.TabIndex = 3;
             // 
             // label3
             // 
@@ -366,6 +355,33 @@ namespace GUI_DingDoong
             this.ptbThucDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbThucDon.TabIndex = 0;
             this.ptbThucDon.TabStop = false;
+            // 
+            // txtMoTa
+            // 
+            this.txtMoTa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMoTa.Location = new System.Drawing.Point(79, 3);
+            this.txtMoTa.Multiline = true;
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(450, 118);
+            this.txtMoTa.TabIndex = 3;
+            // 
+            // btEnable
+            // 
+            this.btEnable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btEnable.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btEnable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEnable.ForeColor = System.Drawing.Color.Black;
+            this.btEnable.Location = new System.Drawing.Point(79, 127);
+            this.btEnable.Name = "btEnable";
+            this.btEnable.Size = new System.Drawing.Size(184, 36);
+            this.btEnable.TabIndex = 5;
+            this.btEnable.Text = "Cho phép hoạt động";
+            this.btEnable.UseVisualStyleBackColor = true;
+            this.btEnable.Click += new System.EventHandler(this.btEnable_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -561,21 +577,6 @@ namespace GUI_DingDoong
             this.DgvThucDon.Size = new System.Drawing.Size(1262, 383);
             this.DgvThucDon.TabIndex = 6;
             this.DgvThucDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvThucDon_CellClick);
-            // 
-            // btEnable
-            // 
-            this.btEnable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btEnable.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btEnable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEnable.ForeColor = System.Drawing.Color.Black;
-            this.btEnable.Location = new System.Drawing.Point(79, 127);
-            this.btEnable.Name = "btEnable";
-            this.btEnable.Size = new System.Drawing.Size(184, 36);
-            this.btEnable.TabIndex = 5;
-            this.btEnable.Text = "Cho phép hoạt động";
-            this.btEnable.UseVisualStyleBackColor = true;
-            this.btEnable.Click += new System.EventHandler(this.btEnable_Click);
             // 
             // MaTD
             // 

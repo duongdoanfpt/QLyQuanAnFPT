@@ -12,6 +12,9 @@ using DTO_DingDoong;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using System.Text.RegularExpressions;
+using CrystalDecisions.Windows.Forms;
+
+
 
 namespace GUI_DingDoong
 {
@@ -81,6 +84,15 @@ namespace GUI_DingDoong
             SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
             SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
             SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+        }
+        // ẩn button cell cuối hdct
+        public static void DataGridViewCellVisibility(DataGridViewCell cell, bool visible)
+        {
+            cell.Style = visible ?
+                  new DataGridViewCellStyle { Padding = new Padding(0, 0, 0, 0) } :
+                  new DataGridViewCellStyle { Padding = new Padding(cell.OwningColumn.Width, 0, 0, 0) };
+
+            cell.ReadOnly = !visible;
         }
 
         // Check SDT Hợp  lệ
@@ -206,6 +218,16 @@ namespace GUI_DingDoong
             {
                 btBill.Enabled = true;
                 btKhuyenMai.Enabled = true;
+                if (dgvHDCT.Columns["Delete"] is null)
+                {
+                    DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
+                    buttonColumn.Name = "Delete";
+                    buttonColumn.Text = "Xoá";
+                    buttonColumn.UseColumnTextForButtonValue = true;
+                    dgvHDCT.Columns.Add(buttonColumn);
+                   
+                }
+                DataGridViewCellVisibility(dgvHDCT.Rows[dgvHDCT.Rows.Count - 1].Cells["Delete"], false);
             }
             else
             {
@@ -245,6 +267,10 @@ namespace GUI_DingDoong
 
 
             cb.Database.Tables["CTHD"].SetDataSource(dtHDCT);
+            var path = startupPath + @"\HoaDon\" + lbMaHD.Text + ".pdf";
+           
+            cb.ExportToDisk(ExportFormatType.PortableDocFormat, path);
+
 
             FrmBill frm = new FrmBill(cb);
             frm.Show();
@@ -300,6 +326,8 @@ namespace GUI_DingDoong
                 flp.Controls.Add(lbBan);
 
                 flpkvBan.Controls.Add(flp);
+                lbBan.Click += LbBan_Click;
+                lbBan.MouseDown += LbBan_MouseDown;
 
 
                 ptb.Click += Ptb_Click;
@@ -307,6 +335,49 @@ namespace GUI_DingDoong
 
 
             }
+        }
+
+        private void LbBan_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                Label lb = sender as Label;
+                var Index = lb.Parent.Parent.Controls.IndexOf(lb.Parent);
+                IndexBan = Index;
+
+                SelectBan(IndexBan);
+
+
+                menuBan.Show(lb, 10, 20);
+                if (busBan.curBan(lbViTriBan.Text).TrangThai == 0)
+                {
+                    menuBan.Items[0].Enabled = true;
+                    menuBan.Items[1].Enabled = false;
+                    menuBan.Items[2].Enabled = false;
+                    menuBan.Items[3].Enabled = false;
+                }
+                else
+                {
+                    menuBan.Items[0].Enabled = false;
+                    menuBan.Items[1].Enabled = true;
+                    menuBan.Items[2].Enabled = true;
+                    menuBan.Items[3].Enabled = true;
+                }
+                if (FormLogin.NvMain.Quyen == 0)
+                {
+                    menuBan.Items[3].Enabled = false;
+
+                }
+            }
+        }
+
+        private void LbBan_Click(object sender, EventArgs e)
+        {
+            Label lb = sender as Label;
+            var Index = lb.Parent.Parent.Controls.IndexOf(lb.Parent);
+            IndexBan = Index;
+
+            SelectBan(IndexBan);
         }
 
         private void Ptb_MouseDown(object sender, MouseEventArgs e)
@@ -480,7 +551,7 @@ namespace GUI_DingDoong
 
         private void btThem_Click(object sender, EventArgs e)
         {
-            DTO_CTHD curCTHD = new DTO_CTHD(lbMaHD.Text, TD.MaTD, (int)nudSoLuong.Value, txtGhiChuhdct.Text);
+            DTO_CTHD curCTHD = new DTO_CTHD(lbMaHD.Text, TD.MaTD, (int)nudSoLuong.Value);
 
            
                 busBan.ThemCTHDTam(curCTHD);
@@ -560,7 +631,7 @@ namespace GUI_DingDoong
 
             foreach (DataRow dr in busBan.dtHDCTFinal(hd.MaHD).Rows)
             {
-                DTO_CTHD cthd = new DTO_CTHD(dr[0].ToString(), dr[1].ToString(), int.Parse(dr[2].ToString()), dr[3].ToString());
+                DTO_CTHD cthd = new DTO_CTHD(dr[0].ToString(), dr[1].ToString(), int.Parse(dr[2].ToString()));
 
                 DTO_Ban Ban = busBan.curBan(lbViTriBan.Text);
                 if (busBan.ThemCTHDFinal(cthd))
@@ -599,7 +670,7 @@ namespace GUI_DingDoong
         private void btAdd1_Click(object sender, EventArgs e)
         {
 
-            DTO_CTHD curCTHD = new DTO_CTHD(lbMaHD.Text, TD.MaTD, 1, txtGhiChuhdct.Text);
+            DTO_CTHD curCTHD = new DTO_CTHD(lbMaHD.Text, TD.MaTD, 1);
 
 
             busBan.ThemCTHDTam(curCTHD);
@@ -613,8 +684,9 @@ namespace GUI_DingDoong
 
         private void dgvHDCT_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            dgvHDCT.CurrentRow.Selected = true;
             btRemove1.Enabled = true;
-            btXoa.Enabled = true;
+           
           
            
             
@@ -626,10 +698,12 @@ namespace GUI_DingDoong
 
             if (dgvHDCT.Rows.Count > 1)
             {
-                DTO_ThucDon selectTD = busTD.curTD(dgvHDCT.CurrentRow.Cells[0].FormattedValue.ToString());
-                int rowindex = dgvHDCT.CurrentRow.Index;
-               
-             
+
+
+                dgvHDCT.CurrentRow.Selected = true;
+                int rowindex = dgvHDCT.SelectedRows[0].Index;
+
+                DTO_ThucDon selectTD = busTD.curTD(dgvHDCT.Rows[rowindex].Cells["Column1"].FormattedValue.ToString());
                 if (busBan.DeleteCTHDSoluong(lbMaHD.Text, selectTD.MaTD, 1))
                 {
                     try
@@ -638,16 +712,22 @@ namespace GUI_DingDoong
                         if(!(curCTHD is null))
                         {
                             dgvHDCT.ReadOnly = false;
-                            dgvHDCT.CurrentRow.Cells[1].Value = curCTHD.SoLuong;
+                            dgvHDCT.SelectedRows[0].Cells["Column2"].Value = curCTHD.SoLuong;
                             dgvHDCT.ReadOnly = true;
                         }
                         else
                         {
+                            
                             LoadCTHD();
-                            if (dgvHDCT.Rows.Count > 2)
+                            if(dgvHDCT.Rows.Count>1)
                             {
-                                dgvHDCT.Rows[rowindex - 1].Selected = true;
+                                dgvHDCT.CurrentRow.Selected = true;
+                                selectTD = busTD.curTD(dgvHDCT.SelectedRows[0].Cells[0].FormattedValue.ToString());
                             }    
+                            
+                            
+
+                              
                                
                            
                         }    
@@ -671,30 +751,11 @@ namespace GUI_DingDoong
             }
             lbTongTien.Text = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100).ToString();
 
-
-
-        }
-
-        private void btXoa_Click(object sender, EventArgs e)
-        {
-            if (dgvHDCT.Rows.Count > 1)
-            {
-                DTO_ThucDon selectTD = busTD.curTD(dgvHDCT.CurrentRow.Cells[0].FormattedValue.ToString());
-                DTO_CTHD curCTHD = busBan.curCTHD(lbMaHD.Text, selectTD.MaTD);
-                
-
-                if (busBan.DeleteCTHDSoluong(lbMaHD.Text, selectTD.MaTD, curCTHD.SoLuong))
-                {
-                    LoadCTHD();
-
-
-                }
-
-            }
-            lbTongTien.Text = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100).ToString();
-
+            DataGridViewCellVisibility(dgvHDCT.Rows[dgvHDCT.Rows.Count - 1].Cells["Delete"], false);
 
         }
+
+     
 
         private void btChuyenBan_Click(object sender, EventArgs e)
         {
@@ -923,7 +984,29 @@ namespace GUI_DingDoong
             pbThucDon.SizeMode = PictureBoxSizeMode.CenterImage;
         }
 
-     
+        private void dgvHDCT_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvHDCT.Columns["Delete"].Index && e.RowIndex >= 0 && e.RowIndex < dgvHDCT.Rows.Count - 1)
+            {
+
+                
+                    DTO_ThucDon selectTD = busTD.curTD(dgvHDCT.CurrentRow.Cells["Column1"].FormattedValue.ToString());
+                    DTO_CTHD curCTHD = busBan.curCTHD(lbMaHD.Text, selectTD.MaTD);
+
+
+                    if (busBan.DeleteCTHDSoluong(lbMaHD.Text, selectTD.MaTD, curCTHD.SoLuong))
+                    {
+                        LoadCTHD();
+
+
+                    }
+
+                
+                lbTongTien.Text = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100).ToString();
+                DataGridViewCellVisibility(dgvHDCT.Rows[dgvHDCT.Rows.Count - 1].Cells["Delete"], false);
+
+            }
+        }
     }
  }
  

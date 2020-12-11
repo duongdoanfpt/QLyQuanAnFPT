@@ -77,8 +77,7 @@ namespace BUS_DingDoong
                              {
                                  MaHD = dr[0].ToString(),
                                  MaTD = dr[1].ToString(),
-                                 SoLuong = (int)dr[2],
-                                 GhiChu = dr[3].ToString()
+                                 SoLuong = (int)dr[2]
                              }).FirstOrDefault();
             return cthd;
         }

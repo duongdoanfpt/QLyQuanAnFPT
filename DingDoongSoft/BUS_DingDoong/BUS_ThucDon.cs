@@ -39,7 +39,8 @@ namespace BUS_DingDoong
         public DTO_ThucDon curTD(string TenTD)
         {
             DTO_ThucDon curTD = (from DataRow dr in dalThucDon.DanhSachThucDonAll().Rows
-                                 where string.Compare(dr[1].ToString(), TenTD, true) == 0
+                                 //where string.Compare(dr[1].ToString(), TenTD, true) == 0
+                                 where TenTD.Contains(dr[1].ToString())
                                  select new DTO_ThucDon
                                  {
                                      MaTD = dr[0].ToString(),

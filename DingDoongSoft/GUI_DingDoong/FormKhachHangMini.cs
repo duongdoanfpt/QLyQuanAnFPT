@@ -60,7 +60,7 @@ namespace GUI_DingDoong
         {
             if(isOld == 1)
             {
-                MessageBox.Show(txtSDT.Text);
+             
                 FormKhuVucBan.hd.SDT_KH = txtSDT.Text;
                 busBan.UpdateKHvaoHDTam(FormKhuVucBan.hd.MaHD, txtSDT.Text);
                 this.Close();

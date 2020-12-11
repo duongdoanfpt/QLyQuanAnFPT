@@ -53,7 +53,7 @@ namespace GUI_DingDoong
                 foreach (DataRow dr in dtCTHDOld.Rows)
                 {
 
-                    DTO_CTHD cthd = new DTO_CTHD(newHD.MaHD, dr[1].ToString(), (int)dr[2], dr[3].ToString());
+                    DTO_CTHD cthd = new DTO_CTHD(newHD.MaHD, dr[1].ToString(), (int)dr[2]);
 
                     busBan.ThemCTHDTam(cthd).ToString();
                     busBan.DeleteCTHDSoluong(dr[0].ToString(), dr[1].ToString(), (int)dr[2]);

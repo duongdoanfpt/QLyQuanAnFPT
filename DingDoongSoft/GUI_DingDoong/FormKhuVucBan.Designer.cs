@@ -89,8 +89,6 @@ namespace GUI_DingDoong
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.txtGhiChuhdct = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.lbTenMon = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
@@ -105,7 +103,6 @@ namespace GUI_DingDoong
             this.btKhuyenMai = new System.Windows.Forms.Button();
             this.btRemove1 = new System.Windows.Forms.Button();
             this.btAdd1 = new System.Windows.Forms.Button();
-            this.btXoa = new System.Windows.Forms.Button();
             this.btLamMoi = new System.Windows.Forms.Button();
             this.btGopBan = new System.Windows.Forms.Button();
             this.btChuyenBan = new System.Windows.Forms.Button();
@@ -298,6 +295,7 @@ namespace GUI_DingDoong
             this.dgvHDCT.Size = new System.Drawing.Size(403, 332);
             this.dgvHDCT.TabIndex = 1;
             this.dgvHDCT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDCT_CellClick);
+            this.dgvHDCT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDCT_CellContentClick);
             // 
             // Column1
             // 
@@ -787,8 +785,6 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.txtGhiChuhdct);
-            this.panel9.Controls.Add(this.label2);
             this.panel9.Controls.Add(this.lbTenMon);
             this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.nudSoLuong);
@@ -802,28 +798,12 @@ namespace GUI_DingDoong
             this.panel9.Size = new System.Drawing.Size(296, 617);
             this.panel9.TabIndex = 1;
             // 
-            // txtGhiChuhdct
-            // 
-            this.txtGhiChuhdct.Location = new System.Drawing.Point(4, 79);
-            this.txtGhiChuhdct.Name = "txtGhiChuhdct";
-            this.txtGhiChuhdct.Size = new System.Drawing.Size(284, 20);
-            this.txtGhiChuhdct.TabIndex = 11;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Ghi chú";
-            // 
             // lbTenMon
             // 
             this.lbTenMon.AutoSize = true;
             this.lbTenMon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenMon.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lbTenMon.Location = new System.Drawing.Point(16, 22);
+            this.lbTenMon.Location = new System.Drawing.Point(3, 44);
             this.lbTenMon.Name = "lbTenMon";
             this.lbTenMon.Size = new System.Drawing.Size(84, 21);
             this.lbTenMon.TabIndex = 9;
@@ -903,7 +883,8 @@ namespace GUI_DingDoong
             "Khai vị",
             "Món chính",
             "Đồ uống",
-            "Tráng miệng"});
+            "Tráng miệng",
+            "Món ăn kèm"});
             this.cbNhom.Location = new System.Drawing.Point(-1, 151);
             this.cbNhom.Name = "cbNhom";
             this.cbNhom.Size = new System.Drawing.Size(289, 29);
@@ -942,7 +923,6 @@ namespace GUI_DingDoong
             this.panel8.Controls.Add(this.btKhuyenMai);
             this.panel8.Controls.Add(this.btRemove1);
             this.panel8.Controls.Add(this.btAdd1);
-            this.panel8.Controls.Add(this.btXoa);
             this.panel8.Controls.Add(this.btLamMoi);
             this.panel8.Controls.Add(this.btGopBan);
             this.panel8.Controls.Add(this.btChuyenBan);
@@ -1004,25 +984,12 @@ namespace GUI_DingDoong
             this.btAdd1.UseVisualStyleBackColor = true;
             this.btAdd1.Click += new System.EventHandler(this.btAdd1_Click);
             // 
-            // btXoa
-            // 
-            this.btXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btXoa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.Location = new System.Drawing.Point(3, 167);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(88, 29);
-            this.btXoa.TabIndex = 3;
-            this.btXoa.Text = "Xóa";
-            this.btXoa.UseVisualStyleBackColor = true;
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
-            // 
             // btLamMoi
             // 
             this.btLamMoi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btLamMoi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLamMoi.Location = new System.Drawing.Point(3, 132);
+            this.btLamMoi.Location = new System.Drawing.Point(3, 159);
             this.btLamMoi.Name = "btLamMoi";
             this.btLamMoi.Size = new System.Drawing.Size(88, 29);
             this.btLamMoi.TabIndex = 2;
@@ -1035,7 +1002,7 @@ namespace GUI_DingDoong
             this.btGopBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btGopBan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGopBan.Location = new System.Drawing.Point(3, 66);
+            this.btGopBan.Location = new System.Drawing.Point(3, 87);
             this.btGopBan.Name = "btGopBan";
             this.btGopBan.Size = new System.Drawing.Size(88, 60);
             this.btGopBan.TabIndex = 1;
@@ -1048,7 +1015,7 @@ namespace GUI_DingDoong
             this.btChuyenBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btChuyenBan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btChuyenBan.Location = new System.Drawing.Point(3, 3);
+            this.btChuyenBan.Location = new System.Drawing.Point(3, 18);
             this.btChuyenBan.Name = "btChuyenBan";
             this.btChuyenBan.Size = new System.Drawing.Size(88, 60);
             this.btChuyenBan.TabIndex = 0;
@@ -1105,7 +1072,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmailNV.Location = new System.Drawing.Point(1082, 12);
+            this.lbEmailNV.Location = new System.Drawing.Point(1091, 12);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
@@ -1123,7 +1090,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 954F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 963F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
@@ -1281,7 +1248,6 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Button btKhuyenMai;
         private System.Windows.Forms.Button btRemove1;
         private System.Windows.Forms.Button btAdd1;
-        private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.TextBox txtTenTD;
@@ -1337,8 +1303,6 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtGhiChuhdct;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

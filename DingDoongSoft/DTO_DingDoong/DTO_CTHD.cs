@@ -80,7 +80,7 @@ namespace DTO_DingDoong
             return (_Gia * _SoLuong);
         }
 
-        public DTO_CTHD(string MaHD, string MaTD, int SoLuong, string GhiChu)
+        public DTO_CTHD(string MaHD, string MaTD, int SoLuong)
         {
             this._MaHD = MaHD;
             this._MaTD = MaTD;
