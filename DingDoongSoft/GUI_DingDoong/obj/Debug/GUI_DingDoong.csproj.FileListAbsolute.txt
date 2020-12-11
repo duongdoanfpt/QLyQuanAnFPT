@@ -334,3 +334,5 @@ D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.cspro
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormThongTin.resources
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FrmSetupBan.resources
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FrmSetupBan.resources
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormGuiMail.resources
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormNoiDungMail.resources

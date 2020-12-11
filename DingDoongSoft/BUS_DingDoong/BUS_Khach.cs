@@ -2,6 +2,9 @@
 using DTO_DingDoong;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Net.Mail;
+using System.Net;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -17,6 +20,41 @@ namespace BUS_DingDoong
         {
             return dalKhach.getKhach();
         }
+
+        public DataTable getKhachMail()
+        {
+            return dalKhach.getKhachMail();
+        }
+
+        //Ham Send Mail
+        public bool SendMail(string email, MailMessage msg)
+        {
+            try
+            {
+                SmtpClient client = new SmtpClient("smtp.gmail.com", 25);
+
+                NetworkCredential cred = new NetworkCredential("duongdtbps11905@fpt.edu.vn", "Baoduong666@@@@");
+
+                msg.From = new MailAddress("duongdtbps11905@fpt.edu.vn");
+                msg.To.Add(email);
+                msg.Subject = "CHƯƠNG TRÌNH KHUYẾN MÃI - TRI ÂN KHÁCH HÀNG";
+                msg.Body = "aaa";
+                client.EnableSsl = true;
+                client.Send(msg);
+
+                return true;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+          
+            
+            
+
+        }
+
         public bool insertKhach(DTO_Khach khach)
         {
             return dalKhach.insertKhach(khach);

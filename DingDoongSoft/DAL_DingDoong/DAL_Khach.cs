@@ -30,6 +30,26 @@ namespace DAL_DingDoong
                 _conn.Close();
             }
         }
+
+        public DataTable getKhachMail()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SinhNhatKhachHang";
+                cmd.Connection = _conn;
+                DataTable dtKhach = new DataTable();
+                dtKhach.Load(cmd.ExecuteReader());
+                return dtKhach;
+            }
+
+            finally
+            {
+                _conn.Close();
+            }
+        }
         public bool insertKhach(DTO_Khach khach)
         {
             try
