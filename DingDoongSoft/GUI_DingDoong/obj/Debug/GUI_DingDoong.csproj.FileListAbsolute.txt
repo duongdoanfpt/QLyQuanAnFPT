@@ -179,12 +179,10 @@ D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormC
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FrmBill.resources
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormChuyenBan.resources
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\AxShockwaveFlashObjects.dll
-F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\BouncyCastle.Crypto.dll
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.ReportSource.dll
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.Shared.dll
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.Windows.Forms.dll
-F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\itextsharp.dll
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\ShockwaveFlashObjects.dll
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
@@ -199,7 +197,6 @@ F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.Re
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\stdole.dll
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\itextsharp.xml
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\AxShockwaveFlashObjects.dll
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\CrystalDecisions.ReportSource.dll
@@ -333,3 +330,8 @@ D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FrmSe
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FrmSetupBan.resources
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormThongTin.resources
 D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FrmSetupBan.resources
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.csproj.ResolveComReference.cache
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormThongTin.resources
+F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FrmSetupBan.resources
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormGuiMail.resources
+D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormNoiDungMail.resources

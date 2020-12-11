@@ -86,6 +86,12 @@
     <Compile Include="FormGopBan.Designer.cs">
       <DependentUpon>FormGopBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGuiMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGuiMail.Designer.cs">
+      <DependentUpon>FormGuiMail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,12 @@
     </Compile>
     <Compile Include="FormNhanVien.Designer.cs">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNoiDungMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNoiDungMail.Designer.cs">
+      <DependentUpon>FormNoiDungMail.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThongKe.cs">
       <SubType>Form</SubType>
@@ -185,6 +197,9 @@
     <EmbeddedResource Include="FormGopBan.resx">
       <DependentUpon>FormGopBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGuiMail.resx">
+      <DependentUpon>FormGuiMail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhanVien.resx">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNoiDungMail.resx">
+      <DependentUpon>FormNoiDungMail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>

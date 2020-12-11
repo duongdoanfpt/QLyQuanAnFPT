@@ -6,7 +6,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -103,12 +105,63 @@ namespace GUI_DingDoong
             btLuu.Enabled = false;
         }
 
+        public bool isvailphone(string phone)
+        {
+            string strRegex = @"((09|03|07|08|05)+([0-9]{8})\b)";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(phone)) return true;
+            else return false;
+        }
+        public bool Isvaild(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+                return true;
+
+            }
+            catch (FormatException)
+            {
+
+                return false;
+            }
+        }
+        public bool checksdt(string sdt, BUS_Khach busKhach)
+        {
+            DataTable getsdt = busKhach.getKhach();
+            foreach (DataRow row in getsdt.Rows)
+            {
+                if (string.Compare(sdt, row[0].ToString(), true) == 0)
+                    return true;
+
+            }
+            return false;
+        }
+
         private void btLuu_Click(object sender, EventArgs e)
         {
             int gioitinh = 1;
             if (rdNu.Checked == true)
                 gioitinh = 0;
-           
+
+            if (!isvailphone(txtSDT.Text))
+            {
+                MessageBox.Show("Định dạng số điện thoại không hợp lệ, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtSDT.Focus();
+                return;
+            }
+            else if (checksdt(txtSDT.Text, busKhach))
+            {
+                MessageBox.Show("Số điện thoại đã tồn tại, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            if (!Isvaild(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Định dạng email không hợp lệ, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.Focus();
+                return;
+            }
+            
 
 
             DTO_Khach khach = new DTO_Khach(txtTen.Text, txtSDT.Text, dtpNgaySinh.Value, txtEmail.Text, gioitinh);
