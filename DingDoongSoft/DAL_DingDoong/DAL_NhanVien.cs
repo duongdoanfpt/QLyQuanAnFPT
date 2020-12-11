@@ -176,9 +176,10 @@ namespace DAL_DingDoong
                 cmd.Parameters.AddWithValue("tennv", nv.TenNV);
                 cmd.Parameters.AddWithValue("diachi", nv.DiaChi);
                 cmd.Parameters.AddWithValue("vaitro", nv.Quyen);
-                cmd.Parameters.AddWithValue("NgayVaolam", nv.NgayVL);
+                cmd.Parameters.AddWithValue("NgayVaoLam", nv.NgayVL);
+                cmd.Parameters.AddWithValue("TinhTrang", nv.TrangThai);
                 cmd.Parameters.AddWithValue("Hinh", nv.Hinh);
-                cmd.Parameters.AddWithValue("tinhTrang", nv.TrangThai);
+
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
