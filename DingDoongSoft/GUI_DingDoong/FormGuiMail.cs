@@ -16,9 +16,33 @@ namespace GUI_DingDoong
 {
     public partial class FormGuiMail : Form
     {
-        public FormGuiMail()
+        List<DTO_Khach> LisMail;
+
+        public void SendMail(string email)
+        {
+
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 25);
+
+            NetworkCredential cred = new NetworkCredential("bellben7777@gmail.com", "Baoduong666@@@@");
+            MailMessage Msg = new MailMessage();
+            Msg.From = new MailAddress("bellben7777@gmail.com");
+            Msg.To.Add(email);
+            Msg.Subject = txtChuDe.Text;
+            Msg.Body =txtNoiDung.Text;
+            client.Credentials = cred;
+            client.EnableSsl = true;
+            client.Send(Msg);
+
+
+        }
+        public FormGuiMail(List<DTO_Khach> listKH)
         {
             InitializeComponent();
+            LisMail = listKH;
+            foreach (DTO_Khach kh in listKH)
+            {
+                SendMail(kh.Email);
+            }
         }
         BUS_Khach busKhach = new BUS_Khach();
         private void Load_KH()
@@ -28,8 +52,6 @@ namespace GUI_DingDoong
         }
         private void btGetMail_Click(object sender, EventArgs e)
         {
-            Load_KH();
-
 
 
         }
@@ -41,27 +63,15 @@ namespace GUI_DingDoong
 
         private void btGuiMail_Click(object sender, EventArgs e)
         {
-            MailMessage msg = new MailMessage();
-            msg.Body = FormNoiDungMail.noidungMail;
-            
-           
-            msg.Subject = "CHƯƠNG TRÌNH KHUYẾN MÃI - TRI ÂN KHÁCH HÀNG";
-            if (busKhach.SendMail(dgvKHMail.CurrentRow.Cells[2].FormattedValue.ToString(), msg))
+            foreach (DTO_Khach kh in LisMail)
             {
-                
-                MessageBox.Show("Gửi thành công");
-            }
-            else
-            {
-                MessageBox.Show("Gửi thất bại");
+                SendMail(kh.Email);
             }
         }
 
         private void btTaoND_Click(object sender, EventArgs e)
         {
-            FormNoiDungMail frmnoiDungMail = new FormNoiDungMail();
-            frmnoiDungMail.Activate();
-            frmnoiDungMail.Show();
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

@@ -13,7 +13,8 @@ using System.Data.Odbc;
 using Office_12 = Microsoft.Office.Core;
 using Excel_12 = Microsoft.Office.Interop.Excel;
 using CrystalDecisions.CrystalReports.Engine;
-
+using System.Net.Mail;
+using System.Net;
 
 namespace GUI_DingDoong
 {
@@ -30,7 +31,23 @@ namespace GUI_DingDoong
         BUS_NhanVien busNv = new BUS_NhanVien();
 
 
+        public void SendMail(string email)
+        {
 
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 25);
+
+            NetworkCredential cred = new NetworkCredential("bellben7777@gmail.com", "Baoduong666@@@@");
+            MailMessage Msg = new MailMessage();
+            Msg.From = new MailAddress("bellben7777@gmail.com");
+            Msg.To.Add(email);
+            Msg.Subject = "Chúc Mừng Sinh Nhật";
+            Msg.Body = "Chào bạn xin gửi bạn chương trình khuyến mãi nhân dịp chúc mừng sinh nhật bạn";
+            client.Credentials = cred;
+            client.EnableSsl = true;
+            client.Send(Msg);
+
+
+        }
         private void Home_MouseEnter(object sender, EventArgs e)
         {
             Home.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -670,11 +687,13 @@ namespace GUI_DingDoong
         {
             if(cbSinhNhat.Checked == true)
             {
+                btSendMail.Visible = true;
                 cbThucDon.Checked = false;
                 cbKhachHang.Checked = false;
                 cbDTThang.Checked = false;
                 cbDTNam.Checked = false;
                 cbHoaDon.Checked = false;
+                
                 DgvData.DataSource = busTK.sinhNhatKhachHang();
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 DgvData.Columns[0].HeaderText = "Số điện thoại";
@@ -686,11 +705,29 @@ namespace GUI_DingDoong
             }
             else
             {
+                btSendMail.Visible = false;
                 DgvData.DataSource = null;
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
 
             }
+        }
+
+        private void btSendMail_Click(object sender, EventArgs e)
+        {
+            List<DTO_Khach> listKH = (from DataRow dr in busTK.sinhNhatKhachHang().Rows
+                                      where !string.IsNullOrWhiteSpace(dr[2].ToString())
+                                      select new DTO_Khach
+                                      {
+                                          TenKH = dr[1].ToString(),
+                                          Email = dr[2].ToString(),
+                                          GioiTinh = string.Compare(dr[3].ToString(),"Nam",true)==0?1:0
+
+                                      }).ToList();
+            FormGuiMail fmail = new FormGuiMail(listKH);
+            fmail.Show();
+
+           
         }
     }
 }
