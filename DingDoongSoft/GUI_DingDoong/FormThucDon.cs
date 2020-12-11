@@ -76,6 +76,7 @@ namespace GUI_DingDoong
         private void FormThucDon_Load(object sender, EventArgs e)
         {
             bt3d();
+            btEnable.Enabled = false;
             DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
             ptbMenuThucDon.Enabled = false;
             ptbMenuThucDon.BorderStyle = BorderStyle.Fixed3D;
@@ -120,11 +121,29 @@ namespace GUI_DingDoong
             ChangeImage(ref imagePath);
         }
 
+
+        //CheckTrung
+        public bool CheckTrungTD(string tenMon, BUS_ThucDon td)
+        {
+            DataTable getTD = td.DanhSachThucDonAll();
+            foreach (DataRow row in getTD.Rows)
+            {
+                if (string.Compare(tenMon, row[1].ToString(), true) == 0)
+                    return true;
+
+            }
+            return false;
+        }
         private void btLuu_Click(object sender, EventArgs e)
         {
+            BUS_ThucDon td = new BUS_ThucDon();
             if (string.IsNullOrEmpty(txtTenMon.Text) || string.IsNullOrWhiteSpace(txtTenMon.Text))
             {
                 MessageBox.Show("Bạn chưa nhập tên món", "Thông báo");
+            }
+            else if (CheckTrungTD(txtTenMon.Text, td))
+            {
+                MessageBox.Show("Đã tồn tại");
             }
             else if (string.IsNullOrEmpty(txtDonGia.Text) || string.IsNullOrWhiteSpace(txtDonGia.Text))
             {
@@ -134,47 +153,27 @@ namespace GUI_DingDoong
                 MessageBox.Show("Bạn chưa nhập nhóm", "Thông báo");
             }
             else
-            {   if(ptbThucDon.Image is null)
+            {
+                Image img = ptbThucDon.BackgroundImage;
+                byte[] arr;
+                ImageConverter converter = new ImageConverter();
+                arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
+                DTO_ThucDon curTD = new DTO_ThucDon(txtTenMon.Text, float.Parse(txtDonGia.Text), txtMoTa.Text, txtNhom.Text, arr);
+
+                if (busThucDon.insertThucDon(curTD))
                 {
-                    Image setLogo = Image.FromFile(startupPath + @"\image\logo.jpg");
-                    byte[] arr1;
-                    ImageConverter converter1 = new ImageConverter();
-                    arr1 = (byte[])converter1.ConvertTo(setLogo, typeof(byte[]));
-                    DTO_ThucDon curTD1 = new DTO_ThucDon(txtTenMon.Text, float.Parse(txtDonGia.Text), txtMoTa.Text, txtNhom.Text, arr1);
-                    if (busThucDon.insertThucDon(curTD1))
-                    {
-                        MessageBox.Show("Thêm món vào thực đơn thành công");
-                        DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
-                        DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thêm món vào thực đơn thất bại");
-                    }
+                    MessageBox.Show("Thêm món vào thực đơn thành công");
+                    DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
+                    DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    Disable_Textbox_Button();
+
                 }
                 else
                 {
-                    Image img = ptbThucDon.BackgroundImage;
-                    byte[] arr;
-                    ImageConverter converter = new ImageConverter();
-                    arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
-                    DTO_ThucDon curTD = new DTO_ThucDon(txtTenMon.Text, float.Parse(txtDonGia.Text), txtMoTa.Text, txtNhom.Text, arr);
+                    MessageBox.Show("Thêm món vào thực đơn thất bại");
 
-                    if (busThucDon.insertThucDon(curTD))
-                    {
-                        MessageBox.Show("Thêm món vào thực đơn thành công");
-                        DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
-                        DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thêm món vào thực đơn thất bại");
-
-                    }
                 }
-                
+
             }
 
         }
@@ -246,7 +245,7 @@ namespace GUI_DingDoong
                 if(DgvThucDon.CurrentRow.Index < DgvThucDon.Rows.Count - 1)
                 {
                     btOpenDialog.Enabled = true;
-                    btLuu.Enabled = true;
+                    btLuu.Enabled = false;
                     btXoa.Enabled = true;
                     btCapNhat.Enabled = true;
                     btBoQua.Enabled = true;
@@ -262,10 +261,20 @@ namespace GUI_DingDoong
                     txtNhom.Text = td.Nhom;
                     txtMoTa.Text = td.MoTa;
 
-                    
                     MemoryStream mem = new MemoryStream(busThucDon.getHinhTD(td.MaTD));
                     ptbThucDon.BackgroundImage = Image.FromStream(mem);
                     ptbThucDon.BackgroundImageLayout = ImageLayout.Stretch;
+
+                    if(td.TrangThai == 1)
+                    {
+                        btEnable.Enabled = false;
+                    }
+                    else
+                    {
+                        btEnable.Enabled = true;
+                    }
+
+                    
 
 
                 }
@@ -275,61 +284,80 @@ namespace GUI_DingDoong
         private void btXoa_Click(object sender, EventArgs e)
         {
             DTO_ThucDon td = busThucDon.curTD(DgvThucDon.CurrentRow.Cells["TenTD"].Value.ToString());
-            if (busThucDon.XoaThucDon(td.MaTD))
+            DialogResult re = MessageBox.Show("Bạn có chắc chắn muốn xóa " + td.TenTD + " không ?","Xóa thực đơn", MessageBoxButtons.YesNo);
+            if(re == DialogResult.Yes)
             {
-                MessageBox.Show("Xóa món thành công","Thông báo");
-                DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
-                DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-                DgvThucDon.DataSource = busThucDon.DanhSachThucDonAll();
-                DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            }
-            else
-            {
-                MessageBox.Show("Xóa món thất bại", "Thông báo");
-            }
-        }
-
-        private void btCapNhat_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtTenMon.Text) || string.IsNullOrWhiteSpace(txtTenMon.Text))
-            {
-                MessageBox.Show("Bạn chưa nhập tên món", "Thông báo");
-            }
-            else if (string.IsNullOrEmpty(txtDonGia.Text) || string.IsNullOrWhiteSpace(txtDonGia.Text))
-            {
-                MessageBox.Show("Bạn chưa nhập đơn giá", "Thông báo");
-            }
-            else if (string.IsNullOrEmpty(txtNhom.Text) || string.IsNullOrWhiteSpace(txtNhom.Text))
-            {
-                MessageBox.Show("Bạn chưa nhập nhóm", "Thông báo");
-            }
-
-            else
-            {
-                
-                Image img = ptbThucDon.BackgroundImage;
-                byte[] arr;
-                ImageConverter converter = new ImageConverter();
-                arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
-                DTO_ThucDon td = busThucDon.curTD(DgvThucDon.CurrentRow.Cells["TenTD"].Value.ToString());
-                DTO_ThucDon curTD = new DTO_ThucDon(txtTenMon.Text, float.Parse(txtDonGia.Text), txtMoTa.Text, txtNhom.Text, arr);
-
-                if (busThucDon.CapNhatThucDon(td.MaTD, curTD))
+                if (busThucDon.XoaThucDon(td.MaTD))
                 {
-                    MessageBox.Show("Cập nhật thành công");
+                    MessageBox.Show("Xóa món thành công", "Thông báo");
                     DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
                     DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+                    CheckBoxDanhSach.Checked = false;
+
+                    Disable_Textbox_Button();
 
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật thất bại");
-
+                    MessageBox.Show("Xóa món thất bại", "Thông báo");
                 }
             }
+            else
+            {
+
+            }
+            
+        }
+
+        private void btCapNhat_Click(object sender, EventArgs e)
+        {
+            DialogResult re = MessageBox.Show("Bạn có chắc chắn muốn cập nhật không ?", "Cập nhật", MessageBoxButtons.YesNo);
+            if(re == DialogResult.Yes)
+            {
+                if (string.IsNullOrEmpty(txtTenMon.Text) || string.IsNullOrWhiteSpace(txtTenMon.Text))
+                {
+                    MessageBox.Show("Bạn chưa nhập tên món", "Thông báo");
+                }
+                else if (string.IsNullOrEmpty(txtDonGia.Text) || string.IsNullOrWhiteSpace(txtDonGia.Text))
+                {
+                    MessageBox.Show("Bạn chưa nhập đơn giá", "Thông báo");
+                }
+                else if (string.IsNullOrEmpty(txtNhom.Text) || string.IsNullOrWhiteSpace(txtNhom.Text))
+                {
+                    MessageBox.Show("Bạn chưa nhập nhóm", "Thông báo");
+                }
+
+                else
+                {
+
+                    Image img = ptbThucDon.BackgroundImage;
+                    byte[] arr;
+                    ImageConverter converter = new ImageConverter();
+                    arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
+                    DTO_ThucDon td = busThucDon.curTD(DgvThucDon.CurrentRow.Cells["TenTD"].Value.ToString());
+                    DTO_ThucDon curTD = new DTO_ThucDon(txtTenMon.Text, float.Parse(txtDonGia.Text), txtMoTa.Text, txtNhom.Text, arr);
+
+                    if (busThucDon.CapNhatThucDon(td.MaTD, curTD))
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                        DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
+                        DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại");
+
+                    }
+                }
+            }
+            else
+            {
+
+            }
+            
         }
 
         private void btThoat_Click(object sender, EventArgs e)
@@ -400,6 +428,18 @@ namespace GUI_DingDoong
             {
                 DgvThucDon.DataSource = busThucDon.DanhSachThucDonAll();
                 DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                foreach (DataGridViewRow dr in DgvThucDon.Rows)
+                {
+                    if (!string.IsNullOrWhiteSpace(dr.Cells[5].FormattedValue.ToString()))
+                    {
+                        if (!(string.Compare(dr.Cells[5].Value.ToString(), "Enable", true) == 0))
+                        {
+                            dr.DefaultCellStyle.BackColor = Color.Red;
+                            dr.DefaultCellStyle.ForeColor = Color.White;
+                        }
+                    }
+
+                }
             }
             else
             {
@@ -487,5 +527,52 @@ namespace GUI_DingDoong
         {
 
         }
+
+        
+
+        private void txtTimKiem_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtTimKiem.Text = null;
+
+        }
+
+        private void btEnable_Click(object sender, EventArgs e)
+        {
+            DTO_ThucDon td = busThucDon.curTD(DgvThucDon.CurrentRow.Cells["TenTD"].Value.ToString());
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn cập nhật trạng thái của thực đơn không?", "Cập nhật", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                if (busThucDon.CapNhatTrangThaiTD(td.MaTD))
+                {
+                    MessageBox.Show(td.TenTD + " đã được hoạt động lại");
+                    DgvThucDon.DataSource = busThucDon.DanhSachThucDonAll();
+                    foreach (DataGridViewRow dr in DgvThucDon.Rows)
+                    {
+                        if (!string.IsNullOrWhiteSpace(dr.Cells[5].FormattedValue.ToString()))
+                        {
+                            if (!(string.Compare(dr.Cells[5].Value.ToString(), "Enable", true) == 0))
+                            {
+                                dr.DefaultCellStyle.BackColor = Color.Red;
+                                dr.DefaultCellStyle.ForeColor = Color.White;
+                            }
+                        }
+
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật thất bại");
+                }
+            }
+            else 
+            {
+                
+            }
+            
+        }
+
+        
     }
 }

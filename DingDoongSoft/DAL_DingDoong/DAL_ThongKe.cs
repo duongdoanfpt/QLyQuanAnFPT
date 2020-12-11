@@ -111,5 +111,92 @@ namespace DAL_DingDoong
                 _conn.Close();
             }
         }
+
+        public DataTable ThongKeKhachHang(Nullable<DateTime> NgayBatDau, Nullable<DateTime> NgayKT)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "ChiTieuKh";
+                if (string.IsNullOrWhiteSpace(NgayBatDau.ToString()) && string.IsNullOrWhiteSpace(NgayKT.ToString()))
+                {
+                    cm.Parameters.AddWithValue("ngaybd", DBNull.Value);
+                    cm.Parameters.AddWithValue("ngaykt", DBNull.Value);
+
+                }
+                else
+                {
+                    cm.Parameters.AddWithValue("ngaybd", NgayBatDau);
+                    cm.Parameters.AddWithValue("ngaykt", NgayKT);
+                }
+                cm.Connection = _conn;
+                DataTable khData = new DataTable();
+                khData.Load(cm.ExecuteReader());
+                return khData;
+
+
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+
+        //Thong ke Hoa Don
+        public DataTable ThongKeHoaDon(Nullable<DateTime> NgayBatDau, Nullable<DateTime> NgayKT)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_ThongkeHD";
+                if (string.IsNullOrWhiteSpace(NgayBatDau.ToString()) && string.IsNullOrWhiteSpace(NgayKT.ToString()))
+                {
+                    cm.Parameters.AddWithValue("ngayBD", DBNull.Value);
+                    cm.Parameters.AddWithValue("ngayKT", DBNull.Value);
+
+                }
+                else
+                {
+                    cm.Parameters.AddWithValue("ngayBD", NgayBatDau);
+                    cm.Parameters.AddWithValue("ngayKT", NgayKT);
+                }
+                cm.Connection = _conn;
+                DataTable hdData = new DataTable();
+                hdData.Load(cm.ExecuteReader());
+                return hdData;
+
+
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        public DataTable ThongkeHoaDonChitiet(string MaHD)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "GetListTD";
+                cm.Parameters.AddWithValue("MaHD", MaHD);
+                cm.Connection = _conn;
+                DataTable dtHDCT = new DataTable();
+                dtHDCT.Load(cm.ExecuteReader());
+                return dtHDCT;
+            }
+            finally
+            {
+
+                _conn.Close();
+            }
+        }
+
     }
 }

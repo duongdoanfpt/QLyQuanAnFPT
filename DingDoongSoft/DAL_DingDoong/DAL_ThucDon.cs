@@ -263,6 +263,36 @@ namespace DAL_DingDoong
             }
         }
 
+        public bool CapNhatTrangThai(string maThucDon)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "Sp_UpdateTD_Enable";
+                cmd.Parameters.AddWithValue("maTD", maThucDon);
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
+
+        
+
+
 
     }
 }
