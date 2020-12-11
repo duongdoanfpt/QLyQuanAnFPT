@@ -153,6 +153,8 @@ namespace GUI_DingDoong
             else if (checksdt(txtSDT.Text, busKhach))
             {
                 MessageBox.Show("Số điện thoại đã tồn tại, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtSDT.Focus();
+                return;
             }
 
             if (!Isvaild(txtEmail.Text.Trim()))

@@ -93,6 +93,28 @@ namespace GUI_DingDoong
             dtpNgKT.Enabled = true;
             btLuu.Enabled = true;
         }
+        public bool checktkm(string tkm, BUS_KhuyenMai busKM)
+        {
+            DataTable gettkm = busKM.GetDanhSachKM();
+            foreach (DataRow row in gettkm.Rows)
+            {
+                if (string.Compare(tkm, row[1].ToString(), true) == 0)
+                    return true;
+
+            }
+            return false;
+        }
+        public bool checkmkm(string mkm, BUS_KhuyenMai busKM)
+        {
+            DataTable getmkm = busKM.GetDanhSachKM();
+            foreach (DataRow row in getmkm.Rows)
+            {
+                if (string.Compare(mkm, row[0].ToString(), true) == 0)
+                    return true;
+
+            }
+            return false;
+        }
 
         private void btLuu_Click(object sender, EventArgs e)
         {
@@ -105,25 +127,39 @@ namespace GUI_DingDoong
                 txtMaKM.Focus();
                 return;
             }
-            else if (txtTenKM.Text.Trim().Length == 0)
+            else if (checkmkm(txtMaKM.Text, busKM))
+            {
+                MessageBox.Show("Mã khuyến mãi đã tồn tại, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaKM.Focus();
+                return;
+            }
+
+            if (txtTenKM.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập tên khuyến mãi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtTenKM.Focus();
                 return;
             }
+            else if (checktkm(txtTenKM.Text, busKM))
+            {
+                MessageBox.Show("Tên khuyến mãi đã tồn tại, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenKM.Focus();
+                return;
+            }
+
             if (!isInt || float.Parse(txtChietKhau.Text) < 0)
             {
                 MessageBox.Show("Bạn phải nhập chiết khấu > 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtChietKhau.Focus();
                 return;
             }
-
             if (dtpNgBD.Value > dtpNgKT.Value)
             {
                 MessageBox.Show("Ngày bắt đầu phải nhỏ hơn ngày kết thúc", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dtpNgBD.Focus();
                 return;
             }
+            
 
             DTO_KhuyenMai km = new DTO_KhuyenMai(txtMaKM.Text ,txtTenKM.Text, float.Parse(txtChietKhau.Text), dtpNgBD.Value, dtpNgKT.Value);
             if (busKM.insertKM(km))
