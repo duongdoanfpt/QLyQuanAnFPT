@@ -61,9 +61,9 @@ namespace BUS_DingDoong
                              {
                                  MaHD = dr[0].ToString(),
                                  IdBan = (int)dr[1],
-                                 TrangThai = (int)dr[2],
-                                 KhuyenMai = float.Parse(dr[4].ToString()),
-                                 SDT_KH = dr[5].ToString()
+                                 
+                                 KhuyenMai = float.Parse(dr[3].ToString()),
+                                 SDT_KH = dr[4].ToString()
                                  
 
                              }).FirstOrDefault();

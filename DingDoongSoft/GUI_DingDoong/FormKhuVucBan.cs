@@ -122,7 +122,7 @@ namespace GUI_DingDoong
                 DataRow drhd = curHd.Rows[0];
                 lbStartTime.Visible = true;
                 lbEndTime.Visible = true;
-                DateTime StartHD = (DateTime)drhd[3];
+                DateTime StartHD = (DateTime)drhd[2];
                 lbMaHD.Text = drhd[0].ToString();
                 dgvThucDon.Enabled = true;
                 dgvHDCT.Enabled = true;
@@ -507,7 +507,7 @@ namespace GUI_DingDoong
                     lbMaHD.Text = "HD" + DateTime.Now.ToString("ddMMyyyy_") + (DateTime.Now.Hour < 10 ? "0" + DateTime.Now.Hour.ToString() : DateTime.Now.Hour.ToString()) + (DateTime.Now.Minute < 10 ? "0" + DateTime.Now.Minute.ToString() : DateTime.Now.Minute.ToString()) + (DateTime.Now.Second < 10 ? "0" + DateTime.Now.Second.ToString() : DateTime.Now.Second.ToString()); ;
                     btBatDau.Enabled = false;
                     (flpkvBan.Controls[IndexBan].Controls[0] as PictureBox).Image = Image.FromFile(startupPath + @"\image\banMo.ico");
-                    hd = new DTO_HoaDon(lbMaHD.Text, Ban.IdBan, 0);
+                    hd = new DTO_HoaDon(lbMaHD.Text, Ban.IdBan);
                     busBan.ThemHoaDonTam(hd);
                     dgvThucDon.Enabled = true;
                     btChuyenBan.Enabled = true;
@@ -618,7 +618,7 @@ namespace GUI_DingDoong
 
             DTO_HoaDon HoaDonFinal = (from DataRow dr in busBan.dtHoaDonTam(busBan.curBan(lbViTriBan.Text)).Rows
                                       where string.Compare(dr[0].ToString(), hd.MaHD, true) == 0
-                                      select new DTO_HoaDon(dr[0].ToString(), NV.MaNV, (int)dr[1], float.Parse(dr[4].ToString()), dr[5].ToString())).FirstOrDefault();
+                                      select new DTO_HoaDon(dr[0].ToString(), NV.MaNV, (int)dr[1], float.Parse(dr[3].ToString()), dr[4].ToString())).FirstOrDefault();
             HoaDonFinal.ThanhTien = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100);
             if (string.IsNullOrWhiteSpace(HoaDonFinal.SDT_KH))
             {
@@ -894,6 +894,7 @@ namespace GUI_DingDoong
                     btTimKiem.Enabled = false;
                     btAdd1.Enabled = false;
                     btRemove1.Enabled = false;
+                    btBill.Enabled = false;
 
                 }
                 else

@@ -544,6 +544,7 @@ namespace GUI_DingDoong
                 cbDTThang.Checked = false;
                 cbDTNam.Checked = false;
                 cbHoaDon.Checked = false;
+                cbSinhNhat.Checked = false;
                 ngayBatDau.Visible = true;
                 ngayKetThuc.Visible = true;
                 btnThongKe.Visible = true;
@@ -628,40 +629,40 @@ namespace GUI_DingDoong
         {
            if (e.ColumnIndex == DgvData.Columns["Detail"].Index && e.RowIndex >= 0 && e.RowIndex<DgvData.Rows.Count-1)
             {
-                DTO_HoaDon hd = busTK.curHD(DgvData.CurrentRow.Cells[0].FormattedValue.ToString());
-                string TenNV = (from DataRow dr in busNv.DanhSachNhanVienAll().Rows
-                                where string.Compare(dr[0].ToString(), hd.MaNV, true) == 0
-                                select dr[2].ToString()).FirstOrDefault();
+                //DTO_HoaDon hd = busTK.curHD(DgvData.CurrentRow.Cells[0].FormattedValue.ToString());
+                //string TenNV = (from DataRow dr in busNv.DanhSachNhanVienAll().Rows
+                //                where string.Compare(dr[0].ToString(), hd.MaNV, true) == 0
+                //                select dr[2].ToString()).FirstOrDefault();
 
-                string TenBan = (from DataRow dr in busBan.dtBan().Rows
-                                 where (int)dr[0] == hd.IdBan
-                                 select dr[1].ToString()).FirstOrDefault();
+                //string TenBan = (from DataRow dr in busBan.dtBan().Rows
+                //                 where (int)dr[0] == hd.IdBan
+                //                 select dr[1].ToString()).FirstOrDefault();
 
 
-                DataTable dtHDCT = busTK.ThongkeHoaDonChitiet(hd.MaHD);
-                CrystalReport.crpBill cb = new CrystalReport.crpBill();
-                TextObject txtnv = (TextObject)cb.ReportDefinition.Sections["Section1"].ReportObjects["txtTenNV"];
-                txtnv.Text = TenNV;
-                TextObject txthd = (TextObject)cb.ReportDefinition.Sections["Section2"].ReportObjects["txtMaHD"];
-                txthd.Text = hd.MaHD;
-                TextObject txtvt = (TextObject)cb.ReportDefinition.Sections["Section2"].ReportObjects["txtViTri"];
-                txtvt.Text = TenBan;
-                TextObject txtkh = (TextObject)cb.ReportDefinition.Sections["Section2"].ReportObjects["txtKH"];
-                txtkh.Text = hd.SDT_KH;
-                TextObject txtkm = (TextObject)cb.ReportDefinition.Sections["Section4"].ReportObjects["TextKM"];
-                txtkm.Text = hd.KhuyenMai.ToString() + "%";
-                TextObject txttongtien = (TextObject)cb.ReportDefinition.Sections["Section5"].ReportObjects["TxtTongTien"];
-                txttongtien.Text = (hd.ThanhTien * 100 / (100 - hd.KhuyenMai)).ToString();
-                TextObject txtThanhTien = (TextObject)cb.ReportDefinition.Sections["Section5"].ReportObjects["txtThanhtien"];
-                txtThanhTien.Text = hd.ThanhTien.ToString();
+                //DataTable dtHDCT = busTK.ThongkeHoaDonChitiet(hd.MaHD);
+                //CrystalReport.crpBill cb = new CrystalReport.crpBill();
+                //TextObject txtnv = (TextObject)cb.ReportDefinition.Sections["Section1"].ReportObjects["txtTenNV"];
+                //txtnv.Text = TenNV;
+                //TextObject txthd = (TextObject)cb.ReportDefinition.Sections["Section2"].ReportObjects["txtMaHD"];
+                //txthd.Text = hd.MaHD;
+                //TextObject txtvt = (TextObject)cb.ReportDefinition.Sections["Section2"].ReportObjects["txtViTri"];
+                //txtvt.Text = TenBan;
+                //TextObject txtkh = (TextObject)cb.ReportDefinition.Sections["Section2"].ReportObjects["txtKH"];
+                //txtkh.Text = hd.SDT_KH;
+                //TextObject txtkm = (TextObject)cb.ReportDefinition.Sections["Section4"].ReportObjects["TextKM"];
+                //txtkm.Text = hd.KhuyenMai.ToString() + "%";
+                //TextObject txttongtien = (TextObject)cb.ReportDefinition.Sections["Section5"].ReportObjects["TxtTongTien"];
+                //txttongtien.Text = (hd.ThanhTien * 100 / (100 - hd.KhuyenMai)).ToString();
+                //TextObject txtThanhTien = (TextObject)cb.ReportDefinition.Sections["Section5"].ReportObjects["txtThanhtien"];
+                //txtThanhTien.Text = hd.ThanhTien.ToString();
 
-                TextObject txtname = (TextObject)cb.ReportDefinition.Sections["Section1"].ReportObjects["TextName"];
-                txtname.Text = "CHI TIẾT HOÁ ĐƠN";
+                //TextObject txtname = (TextObject)cb.ReportDefinition.Sections["Section1"].ReportObjects["TextName"];
+                //txtname.Text = "CHI TIẾT HOÁ ĐƠN";
 
-                cb.Database.Tables["CTHD"].SetDataSource(dtHDCT);
+                //cb.Database.Tables["CTHD"].SetDataSource(dtHDCT);
 
-                FrmBill frm = new FrmBill(cb);
-                frm.Show();
+                //FrmBill frm = new FrmBill(cb);
+                //frm.Show();
             }    
         }
 
@@ -669,12 +670,18 @@ namespace GUI_DingDoong
         {
             if(cbSinhNhat.Checked == true)
             {
+                cbThucDon.Checked = false;
+                cbKhachHang.Checked = false;
+                cbDTThang.Checked = false;
+                cbDTNam.Checked = false;
+                cbHoaDon.Checked = false;
                 DgvData.DataSource = busTK.sinhNhatKhachHang();
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 DgvData.Columns[0].HeaderText = "Số điện thoại";
                 DgvData.Columns[1].HeaderText = "Tên khách hàng";
                 DgvData.Columns[2].HeaderText = "Email";
                 DgvData.Columns[3].HeaderText = "Giới tính";
+                
 
             }
             else

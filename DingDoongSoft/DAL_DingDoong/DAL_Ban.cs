@@ -135,7 +135,7 @@ namespace DAL_DingDoong
                 cm.CommandText = "sp_insertHDTemp";
                 cm.Parameters.AddWithValue("MaHD", hd.MaHD);
                 cm.Parameters.AddWithValue("IdBan", hd.IdBan);
-                cm.Parameters.AddWithValue("TrangThai", hd.TrangThai);
+          
                 DateTime date = DateTime.Now;
                 cm.Parameters.AddWithValue("NgayBatDau", date);
                 if (cm.ExecuteNonQuery() > 0)
