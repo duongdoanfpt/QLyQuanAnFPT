@@ -31,8 +31,6 @@ namespace GUI_DingDoong
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKhuyenMai));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dtpNgKT = new System.Windows.Forms.DateTimePicker();
             this.txtTenKM = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,8 +41,6 @@ namespace GUI_DingDoong
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.txtChietKhau = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dtpNgBD = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -52,24 +48,24 @@ namespace GUI_DingDoong
             this.cbhienThi = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.btThoat = new System.Windows.Forms.Button();
-            this.btBoQua = new System.Windows.Forms.Button();
-            this.btCapNhat = new System.Windows.Forms.Button();
-            this.btXoa = new System.Windows.Forms.Button();
-            this.btLuu = new System.Windows.Forms.Button();
-            this.btThem = new System.Windows.Forms.Button();
             this.LayoutMenu = new System.Windows.Forms.TableLayoutPanel();
             this.lblUsers = new System.Windows.Forms.Label();
+            this.dtpNgBD = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgKT = new System.Windows.Forms.DateTimePicker();
             this.ThongKe = new System.Windows.Forms.PictureBox();
             this.Ban = new System.Windows.Forms.PictureBox();
             this.KhachHang = new System.Windows.Forms.PictureBox();
             this.NhanVien = new System.Windows.Forms.PictureBox();
             this.Home = new System.Windows.Forms.PictureBox();
             this.ptbMenuThucDon = new System.Windows.Forms.PictureBox();
+            this.btThoat = new System.Windows.Forms.Button();
+            this.btBoQua = new System.Windows.Forms.Button();
+            this.btCapNhat = new System.Windows.Forms.Button();
+            this.btXoa = new System.Windows.Forms.Button();
+            this.btLuu = new System.Windows.Forms.Button();
+            this.btThem = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -91,7 +87,6 @@ namespace GUI_DingDoong
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.6095F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.06981F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.38412F));
-            this.tableLayoutPanel2.Controls.Add(this.panel3, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtTenKM, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
@@ -100,7 +95,8 @@ namespace GUI_DingDoong
             this.tableLayoutPanel2.Controls.Add(this.label4, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.label5, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dtpNgBD, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dtpNgKT, 3, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 43);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
@@ -109,28 +105,6 @@ namespace GUI_DingDoong
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1254, 128);
             this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.dtpNgKT);
-            this.panel3.Location = new System.Drawing.Point(812, 45);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(439, 36);
-            this.panel3.TabIndex = 11;
-            // 
-            // dtpNgKT
-            // 
-            this.dtpNgKT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpNgKT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgKT.Location = new System.Drawing.Point(0, 9);
-            this.dtpNgKT.Name = "dtpNgKT";
-            this.dtpNgKT.Size = new System.Drawing.Size(439, 20);
-            this.dtpNgKT.TabIndex = 0;
             // 
             // txtTenKM
             // 
@@ -240,27 +214,6 @@ namespace GUI_DingDoong
             this.txtChietKhau.TabIndex = 8;
             this.txtChietKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtChietKhau_KeyPress);
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dtpNgBD);
-            this.panel2.Location = new System.Drawing.Point(215, 45);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(428, 36);
-            this.panel2.TabIndex = 10;
-            // 
-            // dtpNgBD
-            // 
-            this.dtpNgBD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpNgBD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgBD.Location = new System.Drawing.Point(0, 8);
-            this.dtpNgBD.Name = "dtpNgBD";
-            this.dtpNgBD.Size = new System.Drawing.Size(428, 29);
-            this.dtpNgBD.TabIndex = 0;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -368,97 +321,6 @@ namespace GUI_DingDoong
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1262, 42);
             this.tableLayoutPanel5.TabIndex = 16;
             // 
-            // btThoat
-            // 
-            this.btThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btThoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoat.Image = global::GUI_DingDoong.Properties.Resources.appbar_door1;
-            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(1103, 3);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(106, 36);
-            this.btThoat.TabIndex = 11;
-            this.btThoat.Text = "Trở về";
-            this.btThoat.UseVisualStyleBackColor = true;
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
-            // btBoQua
-            // 
-            this.btBoQua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btBoQua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBoQua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBoQua.Image = global::GUI_DingDoong.Properties.Resources.appbar_3d1;
-            this.btBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBoQua.Location = new System.Drawing.Point(890, 3);
-            this.btBoQua.Name = "btBoQua";
-            this.btBoQua.Size = new System.Drawing.Size(110, 36);
-            this.btBoQua.TabIndex = 9;
-            this.btBoQua.Text = "Bỏ qua";
-            this.btBoQua.UseVisualStyleBackColor = true;
-            this.btBoQua.Click += new System.EventHandler(this.btBoQua_Click);
-            // 
-            // btCapNhat
-            // 
-            this.btCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCapNhat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCapNhat.Image = global::GUI_DingDoong.Properties.Resources.appbar_clipboard_variant2;
-            this.btCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCapNhat.Location = new System.Drawing.Point(678, 3);
-            this.btCapNhat.Name = "btCapNhat";
-            this.btCapNhat.Size = new System.Drawing.Size(113, 36);
-            this.btCapNhat.TabIndex = 7;
-            this.btCapNhat.Text = "Cập nhật";
-            this.btCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btCapNhat.UseVisualStyleBackColor = true;
-            this.btCapNhat.Click += new System.EventHandler(this.btCapNhat_Click);
-            // 
-            // btXoa
-            // 
-            this.btXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btXoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.Image = global::GUI_DingDoong.Properties.Resources.appbar5;
-            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(467, 3);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(116, 36);
-            this.btXoa.TabIndex = 5;
-            this.btXoa.Text = "Xóa";
-            this.btXoa.UseVisualStyleBackColor = true;
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
-            // 
-            // btLuu
-            // 
-            this.btLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLuu.Image = global::GUI_DingDoong.Properties.Resources.appbar4;
-            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLuu.Location = new System.Drawing.Point(260, 3);
-            this.btLuu.Name = "btLuu";
-            this.btLuu.Size = new System.Drawing.Size(109, 36);
-            this.btLuu.TabIndex = 3;
-            this.btLuu.Text = "Lưu";
-            this.btLuu.UseVisualStyleBackColor = true;
-            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
-            // 
-            // btThem
-            // 
-            this.btThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThem.Image = global::GUI_DingDoong.Properties.Resources.appbar3;
-            this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThem.Location = new System.Drawing.Point(54, 3);
-            this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(102, 36);
-            this.btThem.TabIndex = 1;
-            this.btThem.Text = "Thêm";
-            this.btThem.UseVisualStyleBackColor = true;
-            this.btThem.Click += new System.EventHandler(this.btThem_Click);
-            // 
             // LayoutMenu
             // 
             this.LayoutMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -471,7 +333,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1013F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1031F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -491,11 +353,32 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1160, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1178, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
             this.lblUsers.Text = "email123@gmail.com";
+            // 
+            // dtpNgBD
+            // 
+            this.dtpNgBD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpNgBD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgBD.Location = new System.Drawing.Point(215, 48);
+            this.dtpNgBD.Name = "dtpNgBD";
+            this.dtpNgBD.Size = new System.Drawing.Size(428, 29);
+            this.dtpNgBD.TabIndex = 12;
+            // 
+            // dtpNgKT
+            // 
+            this.dtpNgKT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpNgKT.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgKT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgKT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgKT.Location = new System.Drawing.Point(812, 48);
+            this.dtpNgKT.Name = "dtpNgKT";
+            this.dtpNgKT.Size = new System.Drawing.Size(439, 29);
+            this.dtpNgKT.TabIndex = 13;
             // 
             // ThongKe
             // 
@@ -573,6 +456,97 @@ namespace GUI_DingDoong
             this.ptbMenuThucDon.MouseEnter += new System.EventHandler(this.ptbMenuThucDon_MouseEnter);
             this.ptbMenuThucDon.MouseLeave += new System.EventHandler(this.ptbMenuThucDon_MouseLeave);
             // 
+            // btThoat
+            // 
+            this.btThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThoat.Image = global::GUI_DingDoong.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout2;
+            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThoat.Location = new System.Drawing.Point(1103, 3);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(106, 36);
+            this.btThoat.TabIndex = 11;
+            this.btThoat.Text = "Trở về";
+            this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
+            // 
+            // btBoQua
+            // 
+            this.btBoQua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btBoQua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBoQua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBoQua.Image = global::GUI_DingDoong.Properties.Resources.Oxygen_Icons_12;
+            this.btBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btBoQua.Location = new System.Drawing.Point(890, 3);
+            this.btBoQua.Name = "btBoQua";
+            this.btBoQua.Size = new System.Drawing.Size(110, 36);
+            this.btBoQua.TabIndex = 9;
+            this.btBoQua.Text = "Bỏ qua";
+            this.btBoQua.UseVisualStyleBackColor = true;
+            this.btBoQua.Click += new System.EventHandler(this.btBoQua_Click);
+            // 
+            // btCapNhat
+            // 
+            this.btCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCapNhat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCapNhat.Image = global::GUI_DingDoong.Properties.Resources.Oxygen_Icons2;
+            this.btCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btCapNhat.Location = new System.Drawing.Point(678, 3);
+            this.btCapNhat.Name = "btCapNhat";
+            this.btCapNhat.Size = new System.Drawing.Size(113, 36);
+            this.btCapNhat.TabIndex = 7;
+            this.btCapNhat.Text = "Cập nhật";
+            this.btCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btCapNhat.UseVisualStyleBackColor = true;
+            this.btCapNhat.Click += new System.EventHandler(this.btCapNhat_Click);
+            // 
+            // btXoa
+            // 
+            this.btXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btXoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Software_Windows_Close_Program2;
+            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXoa.Location = new System.Drawing.Point(467, 3);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(116, 36);
+            this.btXoa.TabIndex = 5;
+            this.btXoa.Text = "Xóa";
+            this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
+            // 
+            // btLuu
+            // 
+            this.btLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLuu.Image = global::GUI_DingDoong.Properties.Resources.Custom_Icon_Design_Pretty_Office_7_Save2;
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.Location = new System.Drawing.Point(260, 3);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(109, 36);
+            this.btLuu.TabIndex = 3;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.UseVisualStyleBackColor = true;
+            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
+            // 
+            // btThem
+            // 
+            this.btThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThem.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Soft_Scraps_Button_Add__1___1_2;
+            this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThem.Location = new System.Drawing.Point(54, 3);
+            this.btThem.Name = "btThem";
+            this.btThem.Size = new System.Drawing.Size(102, 36);
+            this.btThem.TabIndex = 1;
+            this.btThem.Text = "Thêm";
+            this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
+            // 
             // FormKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,10 +566,8 @@ namespace GUI_DingDoong
             this.Load += new System.EventHandler(this.FormKhuyenMai_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -625,10 +597,6 @@ namespace GUI_DingDoong
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtChietKhau;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DateTimePicker dtpNgKT;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dtpNgBD;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
@@ -650,5 +618,7 @@ namespace GUI_DingDoong
         private System.Windows.Forms.PictureBox NhanVien;
         private System.Windows.Forms.PictureBox Home;
         private System.Windows.Forms.PictureBox ptbMenuThucDon;
+        private System.Windows.Forms.DateTimePicker dtpNgBD;
+        private System.Windows.Forms.DateTimePicker dtpNgKT;
     }
 }

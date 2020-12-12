@@ -114,13 +114,13 @@ namespace GUI_DingDoong
             this.cmsReset = new System.Windows.Forms.ToolStripMenuItem();
             this.lbEmailNV = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.errorSDTKH = new System.Windows.Forms.ErrorProvider(this.components);
             this.pbThongKe = new System.Windows.Forms.PictureBox();
             this.pbBan = new System.Windows.Forms.PictureBox();
             this.pbKhachHang = new System.Windows.Forms.PictureBox();
             this.pbHome = new System.Windows.Forms.PictureBox();
             this.pbNhanVien = new System.Windows.Forms.PictureBox();
             this.pbThucDon = new System.Windows.Forms.PictureBox();
-            this.errorSDTKH = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -136,13 +136,13 @@ namespace GUI_DingDoong
             this.panel8.SuspendLayout();
             this.menuBan.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSDTKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThucDon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorSDTKH)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -185,9 +185,9 @@ namespace GUI_DingDoong
             this.flpkvBan.AutoScroll = true;
             this.flpkvBan.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flpkvBan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flpkvBan.Location = new System.Drawing.Point(0, 34);
+            this.flpkvBan.Location = new System.Drawing.Point(3, 3);
             this.flpkvBan.Name = "flpkvBan";
-            this.flpkvBan.Size = new System.Drawing.Size(424, 589);
+            this.flpkvBan.Size = new System.Drawing.Size(418, 617);
             this.flpkvBan.TabIndex = 1;
             this.flpkvBan.Paint += new System.Windows.Forms.PaintEventHandler(this.flpkvBan_Paint);
             // 
@@ -1072,7 +1072,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmailNV.Location = new System.Drawing.Point(1091, 12);
+            this.lbEmailNV.Location = new System.Drawing.Point(1109, 12);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
@@ -1090,7 +1090,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 963F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 981F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
@@ -1104,6 +1104,10 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1262, 45);
             this.tableLayoutPanel1.TabIndex = 16;
+            // 
+            // errorSDTKH
+            // 
+            this.errorSDTKH.ContainerControl = this;
             // 
             // pbThongKe
             // 
@@ -1183,10 +1187,6 @@ namespace GUI_DingDoong
             this.pbThucDon.MouseEnter += new System.EventHandler(this.pbThucDon_MouseEnter);
             this.pbThucDon.MouseLeave += new System.EventHandler(this.pbThucDon_MouseLeave);
             // 
-            // errorSDTKH
-            // 
-            this.errorSDTKH.ContainerControl = this;
-            // 
             // FormKhuVucBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1222,13 +1222,13 @@ namespace GUI_DingDoong
             this.menuBan.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSDTKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThucDon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorSDTKH)).EndInit();
             this.ResumeLayout(false);
 
         }
