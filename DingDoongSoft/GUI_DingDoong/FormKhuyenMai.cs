@@ -79,6 +79,8 @@ namespace GUI_DingDoong
             dtpNgBD.Enabled = false;
             dtpNgKT.Enabled = false;
             btLuu.Enabled = false;
+            btCapNhat.Enabled = false;
+
         }
 
         private void btThem_Click(object sender, EventArgs e)
@@ -92,6 +94,7 @@ namespace GUI_DingDoong
             dtpNgBD.Enabled = true;
             dtpNgKT.Enabled = true;
             btLuu.Enabled = true;
+            btCapNhat.Enabled = false;
         }
         public bool checktkm(string tkm, BUS_KhuyenMai busKM)
         {
@@ -190,6 +193,7 @@ namespace GUI_DingDoong
             txtChietKhau.Enabled = true;
             dtpNgBD.Enabled = true;
             dtpNgKT.Enabled = true;
+            btCapNhat.Enabled = true;
         }
 
         private void btXoa_Click(object sender, EventArgs e)
