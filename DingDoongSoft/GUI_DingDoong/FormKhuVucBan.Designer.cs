@@ -114,13 +114,13 @@ namespace GUI_DingDoong
             this.cmsReset = new System.Windows.Forms.ToolStripMenuItem();
             this.lbEmailNV = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.errorSDTKH = new System.Windows.Forms.ErrorProvider(this.components);
             this.pbThongKe = new System.Windows.Forms.PictureBox();
             this.pbBan = new System.Windows.Forms.PictureBox();
             this.pbKhachHang = new System.Windows.Forms.PictureBox();
             this.pbHome = new System.Windows.Forms.PictureBox();
             this.pbNhanVien = new System.Windows.Forms.PictureBox();
             this.pbThucDon = new System.Windows.Forms.PictureBox();
+            this.errorSDTKH = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -136,13 +136,13 @@ namespace GUI_DingDoong
             this.panel8.SuspendLayout();
             this.menuBan.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorSDTKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThucDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSDTKH)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -436,25 +436,35 @@ namespace GUI_DingDoong
             // btThemKhach
             // 
             this.btThemKhach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btThemKhach.BackColor = System.Drawing.Color.Gainsboro;
+            this.btThemKhach.Enabled = false;
+            this.btThemKhach.FlatAppearance.BorderSize = 0;
+            this.btThemKhach.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btThemKhach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemKhach.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemKhach.Location = new System.Drawing.Point(283, 112);
             this.btThemKhach.Name = "btThemKhach";
             this.btThemKhach.Size = new System.Drawing.Size(123, 38);
             this.btThemKhach.TabIndex = 13;
             this.btThemKhach.Text = "Thêm khách hàng";
-            this.btThemKhach.UseVisualStyleBackColor = true;
+            this.btThemKhach.UseVisualStyleBackColor = false;
             this.btThemKhach.Click += new System.EventHandler(this.btThemKhach_Click);
             // 
             // btBatDau
             // 
             this.btBatDau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBatDau.BackColor = System.Drawing.Color.Gainsboro;
+            this.btBatDau.Enabled = false;
+            this.btBatDau.FlatAppearance.BorderSize = 0;
+            this.btBatDau.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btBatDau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btBatDau.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBatDau.Location = new System.Drawing.Point(283, 18);
             this.btBatDau.Name = "btBatDau";
             this.btBatDau.Size = new System.Drawing.Size(123, 68);
             this.btBatDau.TabIndex = 11;
             this.btBatDau.Text = "Bắt đầu";
-            this.btBatDau.UseVisualStyleBackColor = true;
+            this.btBatDau.UseVisualStyleBackColor = false;
             this.btBatDau.Click += new System.EventHandler(this.btBatDau_Click);
             // 
             // lbViTriBan
@@ -837,20 +847,22 @@ namespace GUI_DingDoong
             // btThem
             // 
             this.btThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btThem.BackColor = System.Drawing.Color.Gainsboro;
+            this.btThem.Enabled = false;
+            this.btThem.FlatAppearance.BorderSize = 0;
+            this.btThem.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThem.Location = new System.Drawing.Point(206, 116);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(85, 29);
             this.btThem.TabIndex = 6;
             this.btThem.Text = "Thêm";
-            this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.UseVisualStyleBackColor = false;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // dgvThucDon
             // 
-            this.dgvThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvThucDon.BackgroundColor = System.Drawing.Color.White;
             this.dgvThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThucDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -859,6 +871,7 @@ namespace GUI_DingDoong
             this.dgvThucDon.Name = "dgvThucDon";
             this.dgvThucDon.ReadOnly = true;
             this.dgvThucDon.RowHeadersWidth = 51;
+            this.dgvThucDon.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvThucDon.Size = new System.Drawing.Size(288, 365);
             this.dgvThucDon.TabIndex = 3;
             this.dgvThucDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucDon_CellClick);
@@ -894,12 +907,17 @@ namespace GUI_DingDoong
             // btTimKiem
             // 
             this.btTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btTimKiem.BackColor = System.Drawing.Color.Gainsboro;
+            this.btTimKiem.Enabled = false;
+            this.btTimKiem.FlatAppearance.BorderSize = 0;
+            this.btTimKiem.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTimKiem.Location = new System.Drawing.Point(198, 182);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(90, 26);
             this.btTimKiem.TabIndex = 1;
             this.btTimKiem.Text = "Tìm kiếm";
-            this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.UseVisualStyleBackColor = false;
             this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // txtTenTD
@@ -935,13 +953,18 @@ namespace GUI_DingDoong
             // 
             this.btBill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBill.BackColor = System.Drawing.Color.Gainsboro;
+            this.btBill.Enabled = false;
+            this.btBill.FlatAppearance.BorderSize = 0;
+            this.btBill.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btBill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBill.Location = new System.Drawing.Point(3, 495);
             this.btBill.Name = "btBill";
             this.btBill.Size = new System.Drawing.Size(88, 60);
             this.btBill.TabIndex = 10;
             this.btBill.Text = "Xuất hóa đơn";
-            this.btBill.UseVisualStyleBackColor = true;
+            this.btBill.UseVisualStyleBackColor = false;
             this.btBill.Click += new System.EventHandler(this.btBill_Click);
             // 
             // btKhuyenMai
@@ -949,45 +972,63 @@ namespace GUI_DingDoong
             this.btKhuyenMai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btKhuyenMai.BackColor = System.Drawing.Color.Gainsboro;
+            this.btKhuyenMai.Enabled = false;
+            this.btKhuyenMai.FlatAppearance.BorderSize = 0;
+            this.btKhuyenMai.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhuyenMai.Location = new System.Drawing.Point(3, 561);
             this.btKhuyenMai.Name = "btKhuyenMai";
             this.btKhuyenMai.Size = new System.Drawing.Size(88, 52);
             this.btKhuyenMai.TabIndex = 9;
             this.btKhuyenMai.Text = "Chiết khấu";
-            this.btKhuyenMai.UseVisualStyleBackColor = true;
+            this.btKhuyenMai.UseVisualStyleBackColor = false;
             this.btKhuyenMai.Click += new System.EventHandler(this.btKhuyenMai_Click);
             // 
             // btRemove1
             // 
             this.btRemove1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btRemove1.BackColor = System.Drawing.Color.Gainsboro;
+            this.btRemove1.Enabled = false;
+            this.btRemove1.FlatAppearance.BorderSize = 0;
+            this.btRemove1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btRemove1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btRemove1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btRemove1.Location = new System.Drawing.Point(3, 329);
             this.btRemove1.Name = "btRemove1";
             this.btRemove1.Size = new System.Drawing.Size(88, 29);
             this.btRemove1.TabIndex = 7;
             this.btRemove1.Text = ">";
-            this.btRemove1.UseVisualStyleBackColor = true;
+            this.btRemove1.UseVisualStyleBackColor = false;
             this.btRemove1.Click += new System.EventHandler(this.btRemove1_Click);
             // 
             // btAdd1
             // 
             this.btAdd1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btAdd1.BackColor = System.Drawing.Color.Gainsboro;
+            this.btAdd1.Enabled = false;
+            this.btAdd1.FlatAppearance.BorderSize = 0;
+            this.btAdd1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btAdd1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdd1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAdd1.Location = new System.Drawing.Point(3, 294);
             this.btAdd1.Name = "btAdd1";
             this.btAdd1.Size = new System.Drawing.Size(88, 29);
             this.btAdd1.TabIndex = 6;
             this.btAdd1.Text = "<";
-            this.btAdd1.UseVisualStyleBackColor = true;
+            this.btAdd1.UseVisualStyleBackColor = false;
             this.btAdd1.Click += new System.EventHandler(this.btAdd1_Click);
             // 
             // btLamMoi
             // 
             this.btLamMoi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLamMoi.FlatAppearance.BorderSize = 0;
+            this.btLamMoi.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLamMoi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLamMoi.Location = new System.Drawing.Point(3, 159);
             this.btLamMoi.Name = "btLamMoi";
@@ -1001,26 +1042,36 @@ namespace GUI_DingDoong
             // 
             this.btGopBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btGopBan.BackColor = System.Drawing.Color.Gainsboro;
+            this.btGopBan.Enabled = false;
+            this.btGopBan.FlatAppearance.BorderSize = 0;
+            this.btGopBan.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btGopBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btGopBan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGopBan.Location = new System.Drawing.Point(3, 87);
             this.btGopBan.Name = "btGopBan";
             this.btGopBan.Size = new System.Drawing.Size(88, 60);
             this.btGopBan.TabIndex = 1;
             this.btGopBan.Text = "Gộp bàn";
-            this.btGopBan.UseVisualStyleBackColor = true;
+            this.btGopBan.UseVisualStyleBackColor = false;
             this.btGopBan.Click += new System.EventHandler(this.btGopBan_Click);
             // 
             // btChuyenBan
             // 
             this.btChuyenBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btChuyenBan.BackColor = System.Drawing.Color.Gainsboro;
+            this.btChuyenBan.Enabled = false;
+            this.btChuyenBan.FlatAppearance.BorderSize = 0;
+            this.btChuyenBan.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btChuyenBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btChuyenBan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btChuyenBan.Location = new System.Drawing.Point(3, 18);
             this.btChuyenBan.Name = "btChuyenBan";
             this.btChuyenBan.Size = new System.Drawing.Size(88, 60);
             this.btChuyenBan.TabIndex = 0;
             this.btChuyenBan.Text = "Chuyển bàn";
-            this.btChuyenBan.UseVisualStyleBackColor = true;
+            this.btChuyenBan.UseVisualStyleBackColor = false;
             this.btChuyenBan.Click += new System.EventHandler(this.btChuyenBan_Click);
             // 
             // timer1
@@ -1072,7 +1123,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmailNV.Location = new System.Drawing.Point(1109, 12);
+            this.lbEmailNV.Location = new System.Drawing.Point(1115, 12);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
@@ -1090,7 +1141,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 981F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 987F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
@@ -1104,10 +1155,6 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1262, 45);
             this.tableLayoutPanel1.TabIndex = 16;
-            // 
-            // errorSDTKH
-            // 
-            this.errorSDTKH.ContainerControl = this;
             // 
             // pbThongKe
             // 
@@ -1187,6 +1234,10 @@ namespace GUI_DingDoong
             this.pbThucDon.MouseEnter += new System.EventHandler(this.pbThucDon_MouseEnter);
             this.pbThucDon.MouseLeave += new System.EventHandler(this.pbThucDon_MouseLeave);
             // 
+            // errorSDTKH
+            // 
+            this.errorSDTKH.ContainerControl = this;
+            // 
             // FormKhuVucBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1222,13 +1273,13 @@ namespace GUI_DingDoong
             this.menuBan.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorSDTKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThongKe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThucDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSDTKH)).EndInit();
             this.ResumeLayout(false);
 
         }

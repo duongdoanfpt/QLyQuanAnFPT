@@ -33,6 +33,12 @@ namespace GUI_DingDoong
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThucDon));
             this.LayoutMenu = new System.Windows.Forms.TableLayoutPanel();
             this.lblUsers = new System.Windows.Forms.Label();
+            this.ThongKe = new System.Windows.Forms.PictureBox();
+            this.Ban = new System.Windows.Forms.PictureBox();
+            this.KhachHang = new System.Windows.Forms.PictureBox();
+            this.NhanVien = new System.Windows.Forms.PictureBox();
+            this.Home = new System.Windows.Forms.PictureBox();
+            this.ptbMenuThucDon = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,47 +50,41 @@ namespace GUI_DingDoong
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btOpenDialog = new System.Windows.Forms.Button();
+            this.ptbThucDon = new System.Windows.Forms.PictureBox();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.btEnable = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CheckBoxDanhSach = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.DgvThucDon = new System.Windows.Forms.DataGridView();
-            this.MaTD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btTimKiem = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
             this.btBoQua = new System.Windows.Forms.Button();
             this.btCapNhat = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
-            this.ptbThucDon = new System.Windows.Forms.PictureBox();
-            this.ThongKe = new System.Windows.Forms.PictureBox();
-            this.Ban = new System.Windows.Forms.PictureBox();
-            this.KhachHang = new System.Windows.Forms.PictureBox();
-            this.NhanVien = new System.Windows.Forms.PictureBox();
-            this.Home = new System.Windows.Forms.PictureBox();
-            this.ptbMenuThucDon = new System.Windows.Forms.PictureBox();
+            this.DgvThucDon = new System.Windows.Forms.DataGridView();
+            this.MaTD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LayoutMenu.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvThucDon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbThucDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ban)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMenuThucDon)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbThucDon)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvThucDon)).BeginInit();
             this.SuspendLayout();
             // 
             // LayoutMenu
@@ -99,7 +99,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1004F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1007F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -119,11 +119,88 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1151, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1154, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
             this.lblUsers.Text = "email123@gmail.com";
+            // 
+            // ThongKe
+            // 
+            this.ThongKe.Image = global::GUI_DingDoong.Properties.Resources.Fasticon_Database_Table_edit1;
+            this.ThongKe.Location = new System.Drawing.Point(218, 6);
+            this.ThongKe.Name = "ThongKe";
+            this.ThongKe.Size = new System.Drawing.Size(44, 31);
+            this.ThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ThongKe.TabIndex = 5;
+            this.ThongKe.TabStop = false;
+            this.ThongKe.Click += new System.EventHandler(this.ThongKe_Click);
+            this.ThongKe.MouseEnter += new System.EventHandler(this.ThongKe_MouseEnter);
+            this.ThongKe.MouseLeave += new System.EventHandler(this.ThongKe_MouseLeave);
+            // 
+            // Ban
+            // 
+            this.Ban.Image = global::GUI_DingDoong.Properties.Resources.Chrisl21_Minecraft_Crafting_Table2;
+            this.Ban.Location = new System.Drawing.Point(165, 6);
+            this.Ban.Name = "Ban";
+            this.Ban.Size = new System.Drawing.Size(44, 31);
+            this.Ban.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Ban.TabIndex = 4;
+            this.Ban.TabStop = false;
+            this.Ban.Click += new System.EventHandler(this.Ban_Click);
+            this.Ban.MouseEnter += new System.EventHandler(this.Ban_MouseEnter);
+            this.Ban.MouseLeave += new System.EventHandler(this.Ban_MouseLeave);
+            // 
+            // KhachHang
+            // 
+            this.KhachHang.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Basic_User_Group2;
+            this.KhachHang.Location = new System.Drawing.Point(112, 6);
+            this.KhachHang.Name = "KhachHang";
+            this.KhachHang.Size = new System.Drawing.Size(44, 31);
+            this.KhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.KhachHang.TabIndex = 3;
+            this.KhachHang.TabStop = false;
+            this.KhachHang.Click += new System.EventHandler(this.KhachHang_Click);
+            this.KhachHang.MouseEnter += new System.EventHandler(this.KhachHang_MouseEnter);
+            this.KhachHang.MouseLeave += new System.EventHandler(this.KhachHang_MouseLeave);
+            // 
+            // NhanVien
+            // 
+            this.NhanVien.Image = global::GUI_DingDoong.Properties.Resources.Icons_Land_Vista_People_Office_Customer_Male_Light1;
+            this.NhanVien.Location = new System.Drawing.Point(59, 6);
+            this.NhanVien.Name = "NhanVien";
+            this.NhanVien.Size = new System.Drawing.Size(44, 31);
+            this.NhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.NhanVien.TabIndex = 2;
+            this.NhanVien.TabStop = false;
+            this.NhanVien.Click += new System.EventHandler(this.NhanVien_Click);
+            this.NhanVien.MouseEnter += new System.EventHandler(this.NhanVien_MouseEnter_1);
+            this.NhanVien.MouseLeave += new System.EventHandler(this.NhanVien_MouseLeave);
+            // 
+            // Home
+            // 
+            this.Home.Image = global::GUI_DingDoong.Properties.Resources.Apathae_Chakram_2_Home1;
+            this.Home.Location = new System.Drawing.Point(6, 6);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(44, 31);
+            this.Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Home.TabIndex = 1;
+            this.Home.TabStop = false;
+            this.Home.Click += new System.EventHandler(this.Home_Click);
+            this.Home.MouseEnter += new System.EventHandler(this.Home_MouseEnter);
+            this.Home.MouseLeave += new System.EventHandler(this.Home_MouseLeave);
+            // 
+            // ptbMenuThucDon
+            // 
+            this.ptbMenuThucDon.Image = global::GUI_DingDoong.Properties.Resources.Flameia_Rabbit_Xp_Apple_menu;
+            this.ptbMenuThucDon.Location = new System.Drawing.Point(271, 6);
+            this.ptbMenuThucDon.Name = "ptbMenuThucDon";
+            this.ptbMenuThucDon.Size = new System.Drawing.Size(35, 31);
+            this.ptbMenuThucDon.TabIndex = 6;
+            this.ptbMenuThucDon.TabStop = false;
+            this.ptbMenuThucDon.Click += new System.EventHandler(this.ptbMenuThucDon_Click);
+            this.ptbMenuThucDon.MouseEnter += new System.EventHandler(this.ptbMenuThucDon_MouseEnter);
+            this.ptbMenuThucDon.MouseLeave += new System.EventHandler(this.ptbMenuThucDon_MouseLeave);
             // 
             // tableLayoutPanel2
             // 
@@ -258,7 +335,9 @@ namespace GUI_DingDoong
             // btOpenDialog
             // 
             this.btOpenDialog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btOpenDialog.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btOpenDialog.FlatAppearance.BorderSize = 0;
+            this.btOpenDialog.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btOpenDialog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btOpenDialog.Location = new System.Drawing.Point(149, 92);
             this.btOpenDialog.Name = "btOpenDialog";
             this.btOpenDialog.Size = new System.Drawing.Size(70, 23);
@@ -266,6 +345,18 @@ namespace GUI_DingDoong
             this.btOpenDialog.Text = "Choose File";
             this.btOpenDialog.UseVisualStyleBackColor = true;
             this.btOpenDialog.Click += new System.EventHandler(this.btOpenDialog_Click);
+            // 
+            // ptbThucDon
+            // 
+            this.ptbThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.ptbThucDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbThucDon.Location = new System.Drawing.Point(3, 3);
+            this.ptbThucDon.Name = "ptbThucDon";
+            this.ptbThucDon.Size = new System.Drawing.Size(141, 112);
+            this.ptbThucDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbThucDon.TabIndex = 0;
+            this.ptbThucDon.TabStop = false;
             // 
             // txtMoTa
             // 
@@ -283,7 +374,9 @@ namespace GUI_DingDoong
             // 
             this.btEnable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.btEnable.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btEnable.FlatAppearance.BorderSize = 0;
+            this.btEnable.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEnable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEnable.ForeColor = System.Drawing.Color.Black;
             this.btEnable.Location = new System.Drawing.Point(79, 127);
@@ -313,6 +406,23 @@ namespace GUI_DingDoong
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1257, 44);
             this.tableLayoutPanel4.TabIndex = 5;
+            // 
+            // btTimKiem
+            // 
+            this.btTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btTimKiem.FlatAppearance.BorderSize = 0;
+            this.btTimKiem.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTimKiem.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Basic_Zoom;
+            this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTimKiem.Location = new System.Drawing.Point(295, 3);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(131, 38);
+            this.btTimKiem.TabIndex = 12;
+            this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -372,6 +482,109 @@ namespace GUI_DingDoong
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1262, 39);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
+            // btThoat
+            // 
+            this.btThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btThoat.FlatAppearance.BorderSize = 0;
+            this.btThoat.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThoat.Image = global::GUI_DingDoong.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout;
+            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThoat.Location = new System.Drawing.Point(1103, 3);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(106, 33);
+            this.btThoat.TabIndex = 11;
+            this.btThoat.Text = "Trở về";
+            this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
+            // 
+            // btBoQua
+            // 
+            this.btBoQua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btBoQua.FlatAppearance.BorderSize = 0;
+            this.btBoQua.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btBoQua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBoQua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBoQua.Image = global::GUI_DingDoong.Properties.Resources.Oxygen_Icons_1;
+            this.btBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btBoQua.Location = new System.Drawing.Point(890, 3);
+            this.btBoQua.Name = "btBoQua";
+            this.btBoQua.Size = new System.Drawing.Size(110, 33);
+            this.btBoQua.TabIndex = 9;
+            this.btBoQua.Text = "Bỏ qua";
+            this.btBoQua.UseVisualStyleBackColor = true;
+            this.btBoQua.Click += new System.EventHandler(this.btBoQua_Click);
+            // 
+            // btCapNhat
+            // 
+            this.btCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btCapNhat.FlatAppearance.BorderSize = 0;
+            this.btCapNhat.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCapNhat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCapNhat.Image = global::GUI_DingDoong.Properties.Resources.Oxygen_Icons;
+            this.btCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btCapNhat.Location = new System.Drawing.Point(678, 3);
+            this.btCapNhat.Name = "btCapNhat";
+            this.btCapNhat.Size = new System.Drawing.Size(113, 33);
+            this.btCapNhat.TabIndex = 7;
+            this.btCapNhat.Text = "Cập nhật";
+            this.btCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btCapNhat.UseVisualStyleBackColor = true;
+            this.btCapNhat.Click += new System.EventHandler(this.btCapNhat_Click);
+            // 
+            // btXoa
+            // 
+            this.btXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btXoa.FlatAppearance.BorderSize = 0;
+            this.btXoa.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btXoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Software_Windows_Close_Program;
+            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXoa.Location = new System.Drawing.Point(467, 3);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(116, 33);
+            this.btXoa.TabIndex = 5;
+            this.btXoa.Text = "Xóa";
+            this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
+            // 
+            // btLuu
+            // 
+            this.btLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btLuu.FlatAppearance.BorderSize = 0;
+            this.btLuu.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLuu.Image = global::GUI_DingDoong.Properties.Resources.Custom_Icon_Design_Pretty_Office_7_Save;
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.Location = new System.Drawing.Point(260, 3);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(109, 33);
+            this.btLuu.TabIndex = 3;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.UseVisualStyleBackColor = true;
+            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
+            // 
+            // btThem
+            // 
+            this.btThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btThem.FlatAppearance.BorderSize = 0;
+            this.btThem.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThem.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Soft_Scraps_Button_Add__1___1_;
+            this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThem.Location = new System.Drawing.Point(54, 3);
+            this.btThem.Name = "btThem";
+            this.btThem.Size = new System.Drawing.Size(102, 33);
+            this.btThem.TabIndex = 1;
+            this.btThem.Text = "Thêm";
+            this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
+            // 
             // DgvThucDon
             // 
             this.DgvThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -424,194 +637,6 @@ namespace GUI_DingDoong
             this.MoTa.HeaderText = "Mô Tả";
             this.MoTa.Name = "MoTa";
             // 
-            // btTimKiem
-            // 
-            this.btTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTimKiem.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Basic_Zoom;
-            this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiem.Location = new System.Drawing.Point(295, 3);
-            this.btTimKiem.Name = "btTimKiem";
-            this.btTimKiem.Size = new System.Drawing.Size(131, 38);
-            this.btTimKiem.TabIndex = 12;
-            this.btTimKiem.Text = "Tìm kiếm";
-            this.btTimKiem.UseVisualStyleBackColor = true;
-            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
-            // 
-            // btThoat
-            // 
-            this.btThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btThoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoat.Image = global::GUI_DingDoong.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout;
-            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(1103, 3);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(106, 33);
-            this.btThoat.TabIndex = 11;
-            this.btThoat.Text = "Trở về";
-            this.btThoat.UseVisualStyleBackColor = true;
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
-            // btBoQua
-            // 
-            this.btBoQua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btBoQua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBoQua.Image = global::GUI_DingDoong.Properties.Resources.Oxygen_Icons_1;
-            this.btBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBoQua.Location = new System.Drawing.Point(890, 3);
-            this.btBoQua.Name = "btBoQua";
-            this.btBoQua.Size = new System.Drawing.Size(110, 33);
-            this.btBoQua.TabIndex = 9;
-            this.btBoQua.Text = "Bỏ qua";
-            this.btBoQua.UseVisualStyleBackColor = true;
-            this.btBoQua.Click += new System.EventHandler(this.btBoQua_Click);
-            // 
-            // btCapNhat
-            // 
-            this.btCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btCapNhat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCapNhat.Image = global::GUI_DingDoong.Properties.Resources.Oxygen_Icons;
-            this.btCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCapNhat.Location = new System.Drawing.Point(678, 3);
-            this.btCapNhat.Name = "btCapNhat";
-            this.btCapNhat.Size = new System.Drawing.Size(113, 33);
-            this.btCapNhat.TabIndex = 7;
-            this.btCapNhat.Text = "Cập nhật";
-            this.btCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btCapNhat.UseVisualStyleBackColor = true;
-            this.btCapNhat.Click += new System.EventHandler(this.btCapNhat_Click);
-            // 
-            // btXoa
-            // 
-            this.btXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btXoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Software_Windows_Close_Program;
-            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(467, 3);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(116, 33);
-            this.btXoa.TabIndex = 5;
-            this.btXoa.Text = "Xóa";
-            this.btXoa.UseVisualStyleBackColor = true;
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
-            // 
-            // btLuu
-            // 
-            this.btLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLuu.Image = global::GUI_DingDoong.Properties.Resources.Custom_Icon_Design_Pretty_Office_7_Save;
-            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLuu.Location = new System.Drawing.Point(260, 3);
-            this.btLuu.Name = "btLuu";
-            this.btLuu.Size = new System.Drawing.Size(109, 33);
-            this.btLuu.TabIndex = 3;
-            this.btLuu.Text = "Lưu";
-            this.btLuu.UseVisualStyleBackColor = true;
-            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
-            // 
-            // btThem
-            // 
-            this.btThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThem.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Soft_Scraps_Button_Add__1___1_;
-            this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThem.Location = new System.Drawing.Point(54, 3);
-            this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(102, 33);
-            this.btThem.TabIndex = 1;
-            this.btThem.Text = "Thêm";
-            this.btThem.UseVisualStyleBackColor = true;
-            this.btThem.Click += new System.EventHandler(this.btThem_Click);
-            // 
-            // ptbThucDon
-            // 
-            this.ptbThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.ptbThucDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbThucDon.Location = new System.Drawing.Point(3, 3);
-            this.ptbThucDon.Name = "ptbThucDon";
-            this.ptbThucDon.Size = new System.Drawing.Size(141, 112);
-            this.ptbThucDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbThucDon.TabIndex = 0;
-            this.ptbThucDon.TabStop = false;
-            // 
-            // ThongKe
-            // 
-            this.ThongKe.Image = global::GUI_DingDoong.Properties.Resources.Fasticon_Database_Table_edit1;
-            this.ThongKe.Location = new System.Drawing.Point(218, 6);
-            this.ThongKe.Name = "ThongKe";
-            this.ThongKe.Size = new System.Drawing.Size(44, 31);
-            this.ThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ThongKe.TabIndex = 5;
-            this.ThongKe.TabStop = false;
-            this.ThongKe.Click += new System.EventHandler(this.ThongKe_Click);
-            this.ThongKe.MouseEnter += new System.EventHandler(this.ThongKe_MouseEnter);
-            this.ThongKe.MouseLeave += new System.EventHandler(this.ThongKe_MouseLeave);
-            // 
-            // Ban
-            // 
-            this.Ban.Image = global::GUI_DingDoong.Properties.Resources.Chrisl21_Minecraft_Crafting_Table2;
-            this.Ban.Location = new System.Drawing.Point(165, 6);
-            this.Ban.Name = "Ban";
-            this.Ban.Size = new System.Drawing.Size(44, 31);
-            this.Ban.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Ban.TabIndex = 4;
-            this.Ban.TabStop = false;
-            this.Ban.Click += new System.EventHandler(this.Ban_Click);
-            this.Ban.MouseEnter += new System.EventHandler(this.Ban_MouseEnter);
-            this.Ban.MouseLeave += new System.EventHandler(this.Ban_MouseLeave);
-            // 
-            // KhachHang
-            // 
-            this.KhachHang.Image = global::GUI_DingDoong.Properties.Resources.Hopstarter_Sleek_Xp_Basic_User_Group2;
-            this.KhachHang.Location = new System.Drawing.Point(112, 6);
-            this.KhachHang.Name = "KhachHang";
-            this.KhachHang.Size = new System.Drawing.Size(44, 31);
-            this.KhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.KhachHang.TabIndex = 3;
-            this.KhachHang.TabStop = false;
-            this.KhachHang.Click += new System.EventHandler(this.KhachHang_Click);
-            this.KhachHang.MouseEnter += new System.EventHandler(this.KhachHang_MouseEnter);
-            this.KhachHang.MouseLeave += new System.EventHandler(this.KhachHang_MouseLeave);
-            // 
-            // NhanVien
-            // 
-            this.NhanVien.Image = global::GUI_DingDoong.Properties.Resources.Icons_Land_Vista_People_Office_Customer_Male_Light1;
-            this.NhanVien.Location = new System.Drawing.Point(59, 6);
-            this.NhanVien.Name = "NhanVien";
-            this.NhanVien.Size = new System.Drawing.Size(44, 31);
-            this.NhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.NhanVien.TabIndex = 2;
-            this.NhanVien.TabStop = false;
-            this.NhanVien.Click += new System.EventHandler(this.NhanVien_Click);
-            this.NhanVien.MouseEnter += new System.EventHandler(this.NhanVien_MouseEnter_1);
-            this.NhanVien.MouseLeave += new System.EventHandler(this.NhanVien_MouseLeave);
-            // 
-            // Home
-            // 
-            this.Home.Image = global::GUI_DingDoong.Properties.Resources.Apathae_Chakram_2_Home1;
-            this.Home.Location = new System.Drawing.Point(6, 6);
-            this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(44, 31);
-            this.Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Home.TabIndex = 1;
-            this.Home.TabStop = false;
-            this.Home.Click += new System.EventHandler(this.Home_Click);
-            this.Home.MouseEnter += new System.EventHandler(this.Home_MouseEnter);
-            this.Home.MouseLeave += new System.EventHandler(this.Home_MouseLeave);
-            // 
-            // ptbMenuThucDon
-            // 
-            this.ptbMenuThucDon.Image = global::GUI_DingDoong.Properties.Resources.Flameia_Rabbit_Xp_Apple_menu;
-            this.ptbMenuThucDon.Location = new System.Drawing.Point(271, 6);
-            this.ptbMenuThucDon.Name = "ptbMenuThucDon";
-            this.ptbMenuThucDon.Size = new System.Drawing.Size(35, 31);
-            this.ptbMenuThucDon.TabIndex = 6;
-            this.ptbMenuThucDon.TabStop = false;
-            this.ptbMenuThucDon.Click += new System.EventHandler(this.ptbMenuThucDon_Click);
-            this.ptbMenuThucDon.MouseEnter += new System.EventHandler(this.ptbMenuThucDon_MouseEnter);
-            this.ptbMenuThucDon.MouseLeave += new System.EventHandler(this.ptbMenuThucDon_MouseLeave);
-            // 
             // FormThucDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -633,22 +658,22 @@ namespace GUI_DingDoong
             this.Load += new System.EventHandler(this.FormThucDon_Load);
             this.LayoutMenu.ResumeLayout(false);
             this.LayoutMenu.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvThucDon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbThucDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ban)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMenuThucDon)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbThucDon)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvThucDon)).EndInit();
             this.ResumeLayout(false);
 
         }

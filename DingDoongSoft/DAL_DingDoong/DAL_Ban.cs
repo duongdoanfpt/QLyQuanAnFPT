@@ -33,6 +33,27 @@ namespace DAL_DingDoong
                 _conn.Close();
             }
         }
+
+        public DataTable DanhSachBanALL()
+        {
+
+            try
+            {
+                _conn.Open();
+                SqlCommand cm = new SqlCommand();
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.CommandText = "sp_DanhSachBanALL";
+                cm.Connection = _conn;
+                DataTable dtBan = new DataTable();
+                dtBan.Load(cm.ExecuteReader());
+                return dtBan;
+            }
+            finally
+            {
+
+                _conn.Close();
+            }
+        }
         public DataTable CTHDtheoMaHD(string MaHD)
         {
 

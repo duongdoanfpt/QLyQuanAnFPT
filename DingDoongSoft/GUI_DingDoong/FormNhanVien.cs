@@ -39,7 +39,7 @@ namespace GUI_DingDoong
             foreach (var bt in GetAll(this, typeof(Button)))
             {
                 (bt as Button).Paint += Bt_Paint;
-                (bt as Button).FlatStyle = FlatStyle.Standard;
+               
             }
         }
 

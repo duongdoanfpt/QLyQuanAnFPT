@@ -37,7 +37,7 @@ namespace GUI_DingDoong
             foreach (var bt in GetAll(this, typeof(Button)))
             {
                 (bt as Button).Paint += Bt_Paint;
-                (bt as Button).FlatStyle = FlatStyle.Standard;
+                
             }
         }
 
@@ -103,6 +103,8 @@ namespace GUI_DingDoong
             dtpNgaySinh.Enabled = false;
             
             btLuu.Enabled = false;
+            btCapNhat.Enabled = false;
+            
         }
 
         public bool isvailphone(string phone)

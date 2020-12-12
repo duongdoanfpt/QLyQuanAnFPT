@@ -59,7 +59,19 @@ namespace GUI_DingDoong
             return autoSourceCollection;
         }
 
-        
+        //Kiểm tra tồn tại bàn đóng hoặc mở
+        private bool checkBan(BUS_Ban busBan, int trangthai)
+        {
+            foreach(DataRow dr in busBan.dtBan().Rows)
+            {
+                if ((int)dr[2] == trangthai && string.Compare(dr[1].ToString(), lbViTriBan.Text, true) != 0)
+                {
+                    return true;
+                }
+                
+            }
+            return false;
+        }
 
         private void bt3d()
         {
@@ -67,7 +79,12 @@ namespace GUI_DingDoong
             {
 
                 (bt as Button).Enabled = false;
-                (bt as Button).FlatStyle = FlatStyle.Standard;
+               
+
+                bt.EnabledChanged += Bt_EnabledChanged;
+                
+
+
                 bt.Paint += Bt_Paint;
 
 
@@ -75,15 +92,57 @@ namespace GUI_DingDoong
             ChkBKhachHang.Enabled = false;
         }
 
+        private void Bt_EnabledChanged(object sender, EventArgs e)
+        {
+            Button bt = sender as Button;
+            var g = bt.CreateGraphics();
+            
+            
+            if(bt.Enabled == true)
+            {
+                bt.BackColor = Color.White;
+
+                ControlPaint.DrawBorder(g, bt.ClientRectangle,
+                SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+
+            }    
+            else
+            {
+                bt.BackColor = Color.LightGray;
+
+                ControlPaint.DrawBorder(g, bt.ClientRectangle,
+                SystemColors.ControlLightLight, 1, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 1, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 1, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 1, ButtonBorderStyle.Outset);
+            }
+           
+        }
+
         // làm nút 3d
         private void Bt_Paint(object sender, PaintEventArgs e)
         {
             Button bt = sender as Button;
-            ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
-            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
-            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
-            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
-            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+            if(bt.Enabled == true)
+            {
+                ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
+                SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+            } 
+            else
+            {
+                ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
+               SystemColors.ControlLightLight, 1, ButtonBorderStyle.Outset,
+               SystemColors.ControlLightLight, 1, ButtonBorderStyle.Outset,
+               SystemColors.ControlLightLight, 1, ButtonBorderStyle.Outset,
+               SystemColors.ControlLightLight, 1, ButtonBorderStyle.Outset);
+            }    
+           
         }
         // ẩn button cell cuối hdct
         public static void DataGridViewCellVisibility(DataGridViewCell cell, bool visible)
@@ -129,6 +188,7 @@ namespace GUI_DingDoong
                 btChuyenBan.Enabled = true;
                 btGopBan.Enabled = true;
                 btTimKiem.Enabled = true;
+                btThem.Enabled = true;
                 
 
                 if (string.IsNullOrWhiteSpace(hd.SDT_KH))
@@ -170,6 +230,7 @@ namespace GUI_DingDoong
                 btTimKiem.Enabled = false;
                 btAdd1.Enabled = false;
                 btRemove1.Enabled = false;
+                btThem.Enabled = false;
 
 
             }
@@ -428,6 +489,7 @@ namespace GUI_DingDoong
 
         private void FormKhuVucBan_Load(object sender, EventArgs e)
         {
+            bt3d();
             NV = busNV.curNV(lbEmailNV.Text);
             dgvHDCT.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvHDCT.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -759,19 +821,35 @@ namespace GUI_DingDoong
 
         private void btChuyenBan_Click(object sender, EventArgs e)
         {
-            DTO_Ban curBan = busBan.curBan(lbViTriBan.Text);
-            FormChuyenBan frmcb = new FormChuyenBan(curBan,hd.MaHD);
-            frmcb.Show();
-            frmcb.FormClosed += new FormClosedEventHandler(CloseFrm);
+            if(checkBan(busBan,0))
+            {
+                DTO_Ban curBan = busBan.curBan(lbViTriBan.Text);
+                FormChuyenBan frmcb = new FormChuyenBan(curBan, hd.MaHD);
+                frmcb.Show();
+                frmcb.FormClosed += new FormClosedEventHandler(CloseFrm);
+            }
+            else
+            {
+                MessageBox.Show("Không có bàn trống để chuyển bàn");
+            }    
+           
 
         }
 
         private void btGopBan_Click(object sender, EventArgs e)
         {
-            DTO_Ban curBan = busBan.curBan(lbViTriBan.Text);
-            FormGopBan frmgb = new FormGopBan(curBan);
-            frmgb.Show();
-            frmgb.FormClosed += new FormClosedEventHandler(CloseFrm);
+            if(checkBan(busBan,1))
+            {
+                DTO_Ban curBan = busBan.curBan(lbViTriBan.Text);
+                FormGopBan frmgb = new FormGopBan(curBan);
+                frmgb.Show();
+                frmgb.FormClosed += new FormClosedEventHandler(CloseFrm);
+            }
+            else
+            {
+                MessageBox.Show("Không bàn nào đang mở để gộp bàn vui long kiểm tra lại!");
+            }    
+           
         }
 
         // Phân Quyền

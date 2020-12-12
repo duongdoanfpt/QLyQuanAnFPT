@@ -16,6 +16,10 @@ namespace BUS_DingDoong
         {
             return dalBan.DanhSachBan();
         }
+        public DataTable DanhSachBanALL()
+        {
+            return dalBan.DanhSachBanALL(); 
+        }
         public DataTable CTHDtheoMaHD(string MaHD)
         {
             return dalBan.CTHDtheoMaHD(MaHD);

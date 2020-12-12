@@ -313,7 +313,17 @@ namespace GUI_DingDoong
                 ngayBatDau.Visible = true;
                 ngayKetThuc.Visible = true;
                 btnThongKe.Visible = true;
-                DgvData.Columns[5].Visible = false;
+                DataGridViewCellVisibility(DgvData.Rows[DgvData.Rows.Count - 1].Cells["Detail"], false);
+                DgvData.Columns[1].HeaderText = "Mã Hoá Đơn";
+                DgvData.Columns[2].HeaderText = "Mã nhân viên";
+                DgvData.Columns[3].HeaderText = "Số điện thoại KH";
+                DgvData.Columns[4].HeaderText = "Id Bàn";
+                DgvData.Columns[5].HeaderText = "Ngày";
+                DgvData.Columns[6].HeaderText = "Khuyến Mãi";
+                DgvData.Columns[7].HeaderText = "Thành Tiền";
+                DgvData.Columns[0].HeaderText = "Chi tiết";
+
+
 
                 if (DgvData.Columns["Detail"] is null)
                 {
@@ -381,7 +391,7 @@ namespace GUI_DingDoong
                 ngayBatDau.Visible = false;
                 ngayKetThuc.Visible = false;
                 btnThongKe.Visible = false;
-                DgvData.Columns[5].Visible = false;
+               
 
                 if (DgvData.Columns["Detail"] is null)
                 {
@@ -391,6 +401,14 @@ namespace GUI_DingDoong
                     buttonColumn.UseColumnTextForButtonValue = true;
                     DgvData.Columns.Add(buttonColumn);
                     DataGridViewCellVisibility(DgvData.Rows[DgvData.Rows.Count - 1].Cells["Detail"], false);
+                    DgvData.Columns[0].HeaderText = "Mã Hoá Đơn";
+                    DgvData.Columns[1].HeaderText = "Mã nhân viên";
+                    DgvData.Columns[2].HeaderText = "Số điện thoại KH";
+                    DgvData.Columns[3].HeaderText = "Id Bàn";
+                    DgvData.Columns[4].HeaderText = "Ngày";
+                    DgvData.Columns[5].HeaderText = "Khuyến Mãi";
+                    DgvData.Columns[6].HeaderText = "Thành Tiền";
+                    DgvData.Columns[7].HeaderText = "Chi tiết";
                 }
 
                 int tien = DgvData.Rows.Count;
@@ -433,8 +451,7 @@ namespace GUI_DingDoong
                 txtDenNgay.Visible = false;
                 ngayBatDau.Visible = false;
                 ngayKetThuc.Visible = false;
-                btnThongKe.Visible = false;
-                DgvData.Columns[5].Visible = false;
+               
 
                 if (DgvData.Columns["Detail"] is null)
                 {
@@ -444,6 +461,14 @@ namespace GUI_DingDoong
                     buttonColumn.UseColumnTextForButtonValue = true;
                     DgvData.Columns.Add(buttonColumn);
                     DataGridViewCellVisibility(DgvData.Rows[DgvData.Rows.Count - 1].Cells["Detail"], false);
+                    DgvData.Columns[0].HeaderText = "Mã Hoá Đơn";
+                    DgvData.Columns[1].HeaderText = "Mã nhân viên";
+                    DgvData.Columns[2].HeaderText = "Số điện thoại KH";
+                    DgvData.Columns[3].HeaderText = "Id Bàn";
+                    DgvData.Columns[4].HeaderText = "Ngày";
+                    DgvData.Columns[5].HeaderText = "Khuyến Mãi";
+                    DgvData.Columns[6].HeaderText = "Thành Tiền";
+                    DgvData.Columns[7].HeaderText = "Chi tiết";
                 }
 
                 int tien = DgvData.Rows.Count;
@@ -602,9 +627,10 @@ namespace GUI_DingDoong
                 ngayBatDau.Visible = true;
                 ngayKetThuc.Visible = true;
                 btnThongKe.Visible = true;
-                DgvData.Columns[5].Visible = false;
-                
-                if(DgvData.Columns["Detail"] is null)
+               
+               
+
+                if (DgvData.Columns["Detail"] is null)
                 {
                     DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
                     buttonColumn.Name = "Detail";
@@ -612,7 +638,15 @@ namespace GUI_DingDoong
                     buttonColumn.UseColumnTextForButtonValue = true;
                     DgvData.Columns.Add(buttonColumn);
                     DataGridViewCellVisibility(DgvData.Rows[DgvData.Rows.Count - 1].Cells["Detail"], false);
-                   
+                    DgvData.Columns[0].HeaderText = "Mã Hoá Đơn";
+                    DgvData.Columns[1].HeaderText = "Mã nhân viên";
+                    DgvData.Columns[2].HeaderText = "Số điện thoại KH";
+                    DgvData.Columns[3].HeaderText = "Id Bàn";
+                    DgvData.Columns[4].HeaderText = "Ngày";
+                    DgvData.Columns[5].HeaderText = "Khuyến Mãi";
+                    DgvData.Columns[6].HeaderText = "Thành Tiền";
+                    DgvData.Columns[7].HeaderText = "Chi tiết";
+
 
                 }
                 
@@ -645,15 +679,18 @@ namespace GUI_DingDoong
 
         private void DgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
            if (e.ColumnIndex == DgvData.Columns["Detail"].Index && e.RowIndex >= 0 && e.RowIndex<DgvData.Rows.Count-1)
             {
                 
-                DTO_HoaDon hd = busTK.curHD(DgvData.CurrentRow.Cells[0].FormattedValue.ToString());
+                DTO_HoaDon hd = busTK.curHD(DgvData.CurrentRow.Cells["MaHD"].FormattedValue.ToString());
+                
                 string TenNV = (from DataRow dr in busNv.DanhSachNhanVienAll().Rows
                                 where string.Compare(dr[0].ToString(), hd.MaNV, true) == 0
                                 select dr[2].ToString()).FirstOrDefault();
+            
 
-                string TenBan = (from DataRow dr in busBan.dtBan().Rows
+                string TenBan = (from DataRow dr in busBan.DanhSachBanALL().Rows
                                  where (int)dr[0] == hd.IdBan
                                  select dr[1].ToString()).FirstOrDefault();
 
