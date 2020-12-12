@@ -72,6 +72,7 @@ namespace GUI_DingDoong
             this.label9 = new System.Windows.Forms.Label();
             this.DgvData = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btSendMail = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btExcel = new System.Windows.Forms.Button();
             this.ptbNext = new System.Windows.Forms.PictureBox();
@@ -79,7 +80,6 @@ namespace GUI_DingDoong
             this.txtDenNgay = new System.Windows.Forms.Label();
             this.ngayBatDau = new System.Windows.Forms.DateTimePicker();
             this.txtTuNgay = new System.Windows.Forms.Label();
-            this.btSendMail = new System.Windows.Forms.Button();
             this.LayoutMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ban)).BeginInit();
@@ -119,7 +119,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1028F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1031F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -139,7 +139,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1175, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1178, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
@@ -697,6 +697,21 @@ namespace GUI_DingDoong
             this.panel5.Size = new System.Drawing.Size(934, 49);
             this.panel5.TabIndex = 0;
             // 
+            // btSendMail
+            // 
+            this.btSendMail.BackColor = System.Drawing.Color.White;
+            this.btSendMail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSendMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSendMail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSendMail.Location = new System.Drawing.Point(751, 10);
+            this.btSendMail.Name = "btSendMail";
+            this.btSendMail.Size = new System.Drawing.Size(82, 25);
+            this.btSendMail.TabIndex = 7;
+            this.btSendMail.Text = "Gửi mail";
+            this.btSendMail.UseVisualStyleBackColor = false;
+            this.btSendMail.Visible = false;
+            this.btSendMail.Click += new System.EventHandler(this.btSendMail_Click);
+            // 
             // btnThongKe
             // 
             this.btnThongKe.BackColor = System.Drawing.Color.White;
@@ -775,20 +790,6 @@ namespace GUI_DingDoong
             this.txtTuNgay.Size = new System.Drawing.Size(68, 17);
             this.txtTuNgay.TabIndex = 0;
             this.txtTuNgay.Text = "Từ ngày : ";
-            // 
-            // btSendMail
-            // 
-            this.btSendMail.BackColor = System.Drawing.Color.White;
-            this.btSendMail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSendMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSendMail.Location = new System.Drawing.Point(723, 11);
-            this.btSendMail.Name = "btSendMail";
-            this.btSendMail.Size = new System.Drawing.Size(82, 25);
-            this.btSendMail.TabIndex = 7;
-            this.btSendMail.Text = "Gửi mail";
-            this.btSendMail.UseVisualStyleBackColor = false;
-            this.btSendMail.Visible = false;
-            this.btSendMail.Click += new System.EventHandler(this.btSendMail_Click);
             // 
             // FormThongKe
             // 

@@ -337,3 +337,5 @@ D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormG
 D:\GITHUB\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormNoiDungMail.resources
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormGuiMail.resources
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormNoiDungMail.resources
+D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormGuiMail.resources
+D:\DingDong_Main_Main\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormNoiDungMail.resources
