@@ -171,6 +171,8 @@ namespace GUI_DingDoong
             {
                 MessageBox.Show("Thêm thành công");
                 LoadGridview_Khach();
+                btLuu.Enabled = false;
+
             }
             else
             {
@@ -192,6 +194,10 @@ namespace GUI_DingDoong
             dtpNgaySinh.Enabled = true;
             
             btLuu.Enabled = true;
+            btCapNhat.Enabled = false;
+            
+            
+            txtTen.Focus();
         }
 
         private void DgvKhach_Click(object sender, EventArgs e)
@@ -213,6 +219,7 @@ namespace GUI_DingDoong
             txtSDT.Enabled = true;
             txtEmail.Enabled = true;
             dtpNgaySinh.Enabled = true;
+            btCapNhat.Enabled = true;
         }
 
         private void btCapNhat_Click(object sender, EventArgs e)
@@ -274,6 +281,13 @@ namespace GUI_DingDoong
             rdNu.Checked = false;
             btLuu.Enabled = true;
             LoadGridview_Khach();
+            btLuu.Enabled = false;
+            btCapNhat.Enabled = false;
+            txtTen.Enabled = false;
+            txtEmail.Enabled = false;
+            txtSDT.Enabled = false;
+            dtpNgaySinh.Enabled = false;
+            rdNam.Checked = true;
         }
 
         private void pbHome_Click(object sender, EventArgs e)
@@ -334,13 +348,13 @@ namespace GUI_DingDoong
 
         private void pbHome_MouseEnter(object sender, EventArgs e)
         {
-            pbHome.BorderStyle = BorderStyle.Fixed3D;
+            pbHome.SizeMode = PictureBoxSizeMode.Zoom;
             pbHome.Cursor = Cursors.Hand;
         }
 
         private void pbHome_MouseLeave(object sender, EventArgs e)
         {
-            pbHome.BorderStyle = BorderStyle.None;
+            pbHome.SizeMode = PictureBoxSizeMode.CenterImage;
             pbHome.Cursor = Cursors.Default;
 
 
@@ -348,61 +362,61 @@ namespace GUI_DingDoong
 
         private void pbNhanVien_MouseEnter(object sender, EventArgs e)
         {
-            pbNhanVien.BorderStyle = BorderStyle.Fixed3D;
+            pbNhanVien.SizeMode = PictureBoxSizeMode.Zoom;
             pbNhanVien.Cursor = Cursors.Hand;
         }
 
         private void pbNhanVien_MouseLeave(object sender, EventArgs e)
         {
-            pbNhanVien.BorderStyle = BorderStyle.None;
+            pbNhanVien.SizeMode = PictureBoxSizeMode.CenterImage;
             pbNhanVien.Cursor = Cursors.Default;
         }
 
         private void pbKhachHang_MouseEnter(object sender, EventArgs e)
         {
-            pbKhachHang.BorderStyle = BorderStyle.Fixed3D;
+            pbKhachHang.SizeMode = PictureBoxSizeMode.Zoom;
             pbKhachHang.Cursor = Cursors.Hand;
         }
 
         private void pbKhachHang_MouseLeave(object sender, EventArgs e)
         {
-            pbKhachHang.BorderStyle = BorderStyle.None;
+            pbKhachHang.SizeMode = PictureBoxSizeMode.CenterImage;
             pbKhachHang.Cursor = Cursors.Default;
         }
 
         private void pbBan_MouseEnter(object sender, EventArgs e)
         {
-            pbBan.BorderStyle = BorderStyle.Fixed3D;
+            pbBan.SizeMode = PictureBoxSizeMode.Zoom;
             pbBan.Cursor = Cursors.Hand;
         }
 
         private void pbBan_MouseLeave(object sender, EventArgs e)
         {
-            pbBan.BorderStyle = BorderStyle.None;
+            pbBan.SizeMode = PictureBoxSizeMode.CenterImage;
             pbBan.Cursor = Cursors.Default;
         }
 
         private void pbThongKe_MouseEnter(object sender, EventArgs e)
         {
-            pbThongKe.BorderStyle = BorderStyle.Fixed3D;
+            pbThongKe.SizeMode = PictureBoxSizeMode.Zoom;
             pbThongKe.Cursor = Cursors.Hand;
         }
 
         private void pbThongKe_MouseLeave(object sender, EventArgs e)
         {
-            pbThongKe.BorderStyle = BorderStyle.None;
+            pbThongKe.SizeMode = PictureBoxSizeMode.CenterImage;
             pbThongKe.Cursor = Cursors.Default;
         }
 
         private void pbThucDon_MouseEnter(object sender, EventArgs e)
         {
-            pbThucDon.BorderStyle = BorderStyle.Fixed3D;
+            pbThucDon.SizeMode = PictureBoxSizeMode.Zoom;
             pbThucDon.Cursor = Cursors.Hand;
         }
 
         private void pbThucDon_MouseLeave(object sender, EventArgs e)
         {
-            pbThucDon.BorderStyle = BorderStyle.None;
+            pbThucDon.SizeMode = PictureBoxSizeMode.CenterImage;
             pbThucDon.Cursor = Cursors.Default;
         }
 
