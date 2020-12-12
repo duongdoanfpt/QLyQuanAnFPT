@@ -50,10 +50,10 @@ namespace BUS_DingDoong
                         MaHD = dr[0].ToString(),
                         MaNV = dr[1].ToString(),
                         IdBan = (int)dr[3],
-                        KhuyenMai = float.Parse(dr[6].ToString()),
+                        KhuyenMai = float.Parse(dr[5].ToString()),
                         SDT_KH = dr[2].ToString(),
                         NgayHD = (DateTime)dr[4],
-                        ThanhTien = float.Parse(dr[7].ToString())
+                        ThanhTien = float.Parse(dr[6].ToString())
 
 
                     }).FirstOrDefault();

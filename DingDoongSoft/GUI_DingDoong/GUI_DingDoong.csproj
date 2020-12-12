@@ -60,6 +60,12 @@
       <DependentUpon>crpBill.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReport\Detail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Detail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataSet\DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
@@ -170,6 +176,12 @@
     <Compile Include="FrmBill.Designer.cs">
       <DependentUpon>FrmBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetail.Designer.cs">
+      <DependentUpon>frmDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSetupBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +199,10 @@
     <EmbeddedResource Include="CrystalReport\crpBill.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpBill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\Detail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Detail.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChangePass.resx">
       <DependentUpon>FormChangePass.cs</DependentUpon>
@@ -238,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBill.resx">
       <DependentUpon>FrmBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetail.resx">
+      <DependentUpon>frmDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSetupBan.resx">
       <DependentUpon>FrmSetupBan.cs</DependentUpon>

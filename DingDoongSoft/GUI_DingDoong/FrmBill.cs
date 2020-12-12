@@ -12,7 +12,7 @@ namespace GUI_DingDoong
 {
     public partial class FrmBill : Form
     {
-        public FrmBill(CrystalReport.crpBill cb)
+        public FrmBill( CrystalReport.crpBill cb)
         {
             InitializeComponent();
             crystalReportViewer1.ReportSource = cb;

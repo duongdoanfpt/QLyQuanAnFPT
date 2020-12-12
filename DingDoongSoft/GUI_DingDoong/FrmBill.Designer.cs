@@ -56,6 +56,7 @@
             this.Name = "FrmBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm2";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm2_Load);
             this.ResumeLayout(false);
 
