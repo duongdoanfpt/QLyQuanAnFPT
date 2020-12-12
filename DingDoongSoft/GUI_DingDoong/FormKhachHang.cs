@@ -103,6 +103,7 @@ namespace GUI_DingDoong
             dtpNgaySinh.Enabled = false;
             
             btLuu.Enabled = false;
+            btCapNhat.Enabled = false;
         }
 
         public bool isvailphone(string phone)
@@ -216,7 +217,7 @@ namespace GUI_DingDoong
             dtpNgaySinh.Text = khach.NgaySinh.ToString();
 
             txtTen.Enabled = true;
-            txtSDT.Enabled = true;
+            txtSDT.Enabled = false;
             txtEmail.Enabled = true;
             dtpNgaySinh.Enabled = true;
             btCapNhat.Enabled = true;
