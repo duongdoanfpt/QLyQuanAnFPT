@@ -679,7 +679,7 @@ namespace GUI_DingDoong
 
         private void DgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            if(cbKhachHang.Checked == false )
            if (e.ColumnIndex == DgvData.Columns["Detail"].Index && e.RowIndex >= 0 && e.RowIndex<DgvData.Rows.Count-1)
             {
                 

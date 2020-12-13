@@ -46,7 +46,7 @@
             // 
             // pbLogo
             // 
-            this.pbLogo.BackgroundImage = global::GUI_DingDoong.Properties.Resources.logo;
+            this.pbLogo.BackgroundImage = global::GUI_DingDoong.Properties.Resources.LOGOPNG;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLogo.Location = new System.Drawing.Point(139, 12);
             this.pbLogo.Name = "pbLogo";

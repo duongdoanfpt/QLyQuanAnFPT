@@ -1,0 +1,6 @@
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\bin\Release\DTO_DingDoong.dll
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\bin\Release\DTO_DingDoong.pdb
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Release\DTO_DingDoong.csprojAssemblyReference.cache
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Release\DTO_DingDoong.csproj.CoreCompileInputs.cache
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Release\DTO_DingDoong.dll
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\DTO_DingDoong\obj\Release\DTO_DingDoong.pdb
