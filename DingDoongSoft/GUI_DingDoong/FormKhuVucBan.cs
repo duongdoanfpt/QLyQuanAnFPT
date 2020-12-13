@@ -227,7 +227,7 @@ namespace GUI_DingDoong
                 dgvHDCT.Enabled = false;
                 btChuyenBan.Enabled = false;
                 btGopBan.Enabled = false;
-                btTimKiem.Enabled = false;
+             
                 btAdd1.Enabled = false;
                 btRemove1.Enabled = false;
                 btThem.Enabled = false;
@@ -360,12 +360,12 @@ namespace GUI_DingDoong
                 flp.Height = 120;
                 PictureBox ptb = new PictureBox();
                 ptb.Width = 60;
-                ptb.Height = 70;
+                ptb.Height = 60;
                 ptb.Cursor = Cursors.Hand;
                 flp.Margin = new Padding(15, 15, 15, 15);
                 if (int.Parse(dr[2].ToString()) == 1)
                 {
-                    ptb.Image = Image.FromFile(startupPath + @"\image\banMo.ico");
+                    ptb.Image = Image.FromFile(startupPath + @"\image\banMo.png");
 
 
                 }
@@ -375,6 +375,7 @@ namespace GUI_DingDoong
 
                 }
                 ptb.SizeMode = PictureBoxSizeMode.StretchImage;
+                ptb.BackColor = Color.Transparent;
                 Label lbBan = new Label();
                 lbBan.Text = dr[1].ToString();
                 lbBan.Font = new Font("Segoe UI", 10);
@@ -382,7 +383,7 @@ namespace GUI_DingDoong
 
 
 
-                lbBan.Margin = new Padding(10, 10, 0, 0);
+                lbBan.Margin = new Padding(6, 0, 0, 0);
                 flp.Controls.Add(ptb);
                 flp.Controls.Add(lbBan);
 
@@ -568,7 +569,7 @@ namespace GUI_DingDoong
                     lbEndTime.Visible = true;
                     lbMaHD.Text = "HD" + DateTime.Now.ToString("ddMMyyyy_") + (DateTime.Now.Hour < 10 ? "0" + DateTime.Now.Hour.ToString() : DateTime.Now.Hour.ToString()) + (DateTime.Now.Minute < 10 ? "0" + DateTime.Now.Minute.ToString() : DateTime.Now.Minute.ToString()) + (DateTime.Now.Second < 10 ? "0" + DateTime.Now.Second.ToString() : DateTime.Now.Second.ToString()); ;
                     btBatDau.Enabled = false;
-                    (flpkvBan.Controls[IndexBan].Controls[0] as PictureBox).Image = Image.FromFile(startupPath + @"\image\banMo.ico");
+                    (flpkvBan.Controls[IndexBan].Controls[0] as PictureBox).Image = Image.FromFile(startupPath + @"\image\banMo.png");
                     hd = new DTO_HoaDon(lbMaHD.Text, Ban.IdBan);
                     busBan.ThemHoaDonTam(hd);
                     dgvThucDon.Enabled = true;
@@ -969,7 +970,7 @@ namespace GUI_DingDoong
                     dgvHDCT.Enabled = false;
                     btChuyenBan.Enabled = false;
                     btGopBan.Enabled = false;
-                    btTimKiem.Enabled = false;
+                 
                     btAdd1.Enabled = false;
                     btRemove1.Enabled = false;
                     btBill.Enabled = false;
