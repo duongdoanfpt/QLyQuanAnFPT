@@ -573,6 +573,9 @@ namespace GUI_DingDoong
             DgvData.Columns[2].HeaderText = "Email";
             DgvData.Columns[3].HeaderText = "Tổng tiền";
 
+            DgvData.Columns[3].DefaultCellStyle.Format = "c";
+
+
 
 
         }
@@ -596,6 +599,7 @@ namespace GUI_DingDoong
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 LoadNameKhachHang(busTK.thongKeKhachHang(ngayBatDau.Value, ngayKetThuc.Value));
 
+
             }
             else
             {
@@ -618,7 +622,7 @@ namespace GUI_DingDoong
                 cbKhachHang.Checked = false;
                 cbDTThang.Checked = false;
                 cbDTNam.Checked = false;
-
+                cbSinhNhat.Checked = false;
                 DgvData.DataSource = busTK.thongKeHoaDon(null, null);
                 DgvData.Columns["ThanhTien"].DefaultCellStyle.Format = "c";
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

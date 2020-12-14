@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>oWHhyEs4hq9LoZsvX8NfGJo9HmKLHf33pMXGBdGCkF0=</dsig:DigestValue>
+        <dsig:DigestValue>7JmHDKBknDkDbMPhnDj+e21ZHGkVjFv2ReJod2a/1Wo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -266,7 +266,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CGQMg4nw12qDtgdtx58Vysumhf87n9kPOgMKxTzGLnk=</dsig:DigestValue>
+        <dsig:DigestValue>pcKNt2brf0rXZQs7mBX3PuAHRzhJidgG5y6zi52UMHo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -283,14 +283,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI_DingDoong.exe" size="3775472">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI_DingDoong.exe" size="3898352">
       <assemblyIdentity name="GUI_DingDoong" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qN5KfpfJDJHfGYXDjqLzjOnEIY6rQHG6F8Vfr3joGQM=</dsig:DigestValue>
+        <dsig:DigestValue>I2xOjP/T5OWf3D9t3xscR0ALnGZC0w0KEZzj6iT4SZA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -307,24 +307,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stdole.dll" size="25480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stdole.dll" size="25464">
       <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GG/bJw9FnTOrwWlAT4ADENstB6x+XwxZGCkqSpfqols=</dsig:DigestValue>
+        <dsig:DigestValue>w+WKWN8hrnAPMBVWrF/2DJ15GS7h6GEY4Dbbbs02KsQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="GUI_DingDoong.exe.config" size="662">
+  <file name="GUI_DingDoong.exe.config" size="529">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>q31wzg5i3vroxHydXMnKXm2/YDAsN25SMWXlRhRU5pw=</dsig:DigestValue>
+      <dsig:DigestValue>WabCJUOCx7NCxdpIS6rkfBEgcRaVgx6KFH0muFhg5pM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ICOLOGO.ico" size="122305">

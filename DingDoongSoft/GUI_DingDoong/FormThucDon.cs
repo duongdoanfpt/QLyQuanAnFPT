@@ -31,6 +31,16 @@ namespace GUI_DingDoong
                                       .Concat(controls)
                                       .Where(c => c.GetType() == type);
         }
+
+        static bool IsNumber(string pValue)
+        {
+            foreach (Char c in pValue)
+            {
+                if (Char.IsDigit(c) == false)
+                    return false;
+            }
+            return true;
+        }
         private void bt3d()
         {
             foreach (var bt in GetAll(this, typeof(Button)))
@@ -83,6 +93,8 @@ namespace GUI_DingDoong
             DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Disable_Textbox_Button();
             lblUsers.Text = FormLogin.NvMain.Email;
+            ptbThucDon.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
+            ptbThucDon.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         //Change Value Image
@@ -145,6 +157,14 @@ namespace GUI_DingDoong
             {
                 MessageBox.Show("Đã tồn tại");
             }
+            else if (!IsNumber(txtDonGia.Text))
+            {
+                MessageBox.Show("Đơn giá phải là số và lớn hơn 0");
+            }
+            else if(float.Parse(txtDonGia.Text) < 0)
+            {
+                MessageBox.Show("Đơn giá phải là một số lớn hơn 0");
+            }
             else if (string.IsNullOrEmpty(txtDonGia.Text) || string.IsNullOrWhiteSpace(txtDonGia.Text))
             {
                 MessageBox.Show("Bạn chưa nhập đơn giá", "Thông báo");
@@ -166,6 +186,10 @@ namespace GUI_DingDoong
                     DgvThucDon.DataSource = busThucDon.DanhSachThucDon_1();
                     DgvThucDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     Disable_Textbox_Button();
+
+                    ptbThucDon.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
+                    ptbThucDon.BackgroundImageLayout = ImageLayout.Stretch;
+
 
                 }
                 else
@@ -211,12 +235,16 @@ namespace GUI_DingDoong
             SetNull_Value();
             
             txtTenMon.Focus();
+            ptbThucDon.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
+            ptbThucDon.BackgroundImageLayout = ImageLayout.Stretch;
 
         }
 
         private void btBoQua_Click(object sender, EventArgs e)
         {
             Disable_Textbox_Button();
+            ptbThucDon.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
+            ptbThucDon.BackgroundImageLayout = ImageLayout.Stretch;
         }
         private void LoadDanhSachThucDon(DataTable dt)
         {
@@ -546,6 +574,7 @@ namespace GUI_DingDoong
                 {
                     MessageBox.Show(td.TenTD + " đã được hoạt động lại");
                     DgvThucDon.DataSource = busThucDon.DanhSachThucDonAll();
+
                     foreach (DataGridViewRow dr in DgvThucDon.Rows)
                     {
                         if (!string.IsNullOrWhiteSpace(dr.Cells[5].FormattedValue.ToString()))
@@ -572,6 +601,8 @@ namespace GUI_DingDoong
             }
             
         }
+
+
 
         
     }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_DingDoong;
 using BUS_DingDoong;
+using System.Net.Mail;
 
 namespace GUI_DingDoong
 {
@@ -45,7 +46,20 @@ namespace GUI_DingDoong
 
             }    
         }
+        public bool Isvaild(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+                return true;
 
+            }
+            catch (FormatException)
+            {
+
+                return false;
+            }
+        }
         private void FormKhachHangMini_Load(object sender, EventArgs e)
         {
 
@@ -71,7 +85,11 @@ namespace GUI_DingDoong
                 if (rdbNu.Checked == true)
                     gioitinh = 0;
                 DTO_Khach KhachHang = new DTO_Khach(txtTenKH.Text, txtSDT.Text, dtpNgS.Value.Date, txtEmail.Text, gioitinh);
-                if(busKH.insertKhach(KhachHang))
+                if (!Isvaild(txtEmail.Text))
+                {
+                    MessageBox.Show("Email không hợp lệ");
+                }
+                else if(busKH.insertKhach(KhachHang))
                 {
                     MessageBox.Show(txtSDT.Text);
                     FormKhuVucBan.hd.SDT_KH = txtSDT.Text;
