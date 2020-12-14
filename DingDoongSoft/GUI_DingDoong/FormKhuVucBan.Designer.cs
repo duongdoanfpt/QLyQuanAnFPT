@@ -1123,7 +1123,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmailNV.Location = new System.Drawing.Point(1115, 12);
+            this.lbEmailNV.Location = new System.Drawing.Point(1118, 12);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
@@ -1141,7 +1141,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 987F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 990F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);
@@ -1204,6 +1204,7 @@ namespace GUI_DingDoong
             this.pbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbHome.TabIndex = 1;
             this.pbHome.TabStop = false;
+            this.pbHome.Tag = "";
             this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
             this.pbHome.MouseEnter += new System.EventHandler(this.pbHome_MouseEnter);
             this.pbHome.MouseLeave += new System.EventHandler(this.pbHome_MouseLeave);

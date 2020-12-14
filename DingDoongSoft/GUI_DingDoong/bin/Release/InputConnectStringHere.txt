@@ -1,0 +1,1 @@
+Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QLyQuanAn.mdf;Integrated Security=True;Connect Timeout=10

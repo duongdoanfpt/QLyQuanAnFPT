@@ -341,3 +341,8 @@ D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.frmDe
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormGuiMail.resources
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FormNoiDungMail.resources
 F:\POR131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.frmDetail.resources
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\GUI_DingDoong.exe.manifest
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\bin\Debug\GUI_DingDoong.application
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.exe.manifest
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.application
+D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Debug\GUI_DingDoong.FrmReconnectDataBase.resources

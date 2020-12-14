@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DTO_DingDoong;
 using BUS_DingDoong;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace GUI_DingDoong
 {
@@ -20,10 +21,14 @@ namespace GUI_DingDoong
         {
             InitializeComponent();
             this.CenterToScreen();
-           
+
         }
 
-        public static DTO_NhanVien  NvMain;
+        public static DTO_NhanVien NvMain;
+
+
+
+
         private void writeUserInfor(DTO_NhanVien nv)
         {
 
@@ -162,7 +167,7 @@ namespace GUI_DingDoong
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 DTO_NhanVien nv = new DTO_NhanVien();
                 nv.Email = txtEmail.Text;
@@ -195,11 +200,13 @@ namespace GUI_DingDoong
                     txtPassword.Text = null;
                     txtEmail.Focus();
                 }
-            }    
+            }
         }
+       
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
+
             try
             {
                 string startupPath = Environment.CurrentDirectory;
@@ -224,6 +231,11 @@ namespace GUI_DingDoong
 
             }
         }
+ 
+            
+
+          
+        
 
         private void btExit_Click(object sender, EventArgs e)
         {
@@ -241,6 +253,8 @@ namespace GUI_DingDoong
             lblForgotPass.Font = new Font(lblForgotPass.Font.Name, lblForgotPass.Font.SizeInPoints, FontStyle.Bold);
 
         }
+
+       
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -8,6 +9,32 @@ namespace GUI_DingDoong
 {
     static class Program
     {
+        static bool checkconnect(string connect)
+        {
+
+            using (SqlConnection conn = new SqlConnection(connect))
+            {
+                try
+                {
+
+                    conn.Open();
+                    conn.Close();
+                    return true;
+                }
+                catch (SqlException ex)
+                {
+                    
+                    return false;
+                }
+                finally
+                {
+
+                }
+            }
+
+
+        }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,9 +43,17 @@ namespace GUI_DingDoong
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FormMain());
-            //Application.Run(new FormLogin());
-            Application.Run(new FormLogin());
+            if (checkconnect(System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+                //Application.Run(new FormMain());
+                //Application.Run(new FormLogin());
+                Application.Run(new FormLogin());
+            }
+            else
+            {
+                MessageBox.Show("Không có kết nối với cơ sở dữ liệu vui lòng chọn lại server");
+                Application.Run(new FrmReconnectDataBase());
+            }
         }
     }
 }
