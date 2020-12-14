@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DTO_DingDoong;
 using BUS_DingDoong;
 using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace GUI_DingDoong
 {
@@ -69,7 +70,13 @@ namespace GUI_DingDoong
         {
 
         }
-
+        public bool isvailphone(string phone)
+        {
+            string strRegex = @"((09|03|07|08|05)+([0-9]{8})\b)";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(phone)) return true;
+            else return false;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if(isOld == 1)
@@ -84,6 +91,14 @@ namespace GUI_DingDoong
                 int gioitinh = 1;
                 if (rdbNu.Checked == true)
                     gioitinh = 0;
+
+                if (!isvailphone(txtSDT.Text))
+                {
+                    MessageBox.Show("Định dạng số điện thoại không hợp lệ, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtSDT.Focus();
+                    return;
+                }
+
                 DTO_Khach KhachHang = new DTO_Khach(txtTenKH.Text, txtSDT.Text, dtpNgS.Value.Date, txtEmail.Text, gioitinh);
                 if (!Isvaild(txtEmail.Text))
                 {
