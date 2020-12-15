@@ -40,6 +40,7 @@ namespace GUI_DingDoong
             // 
             // btCancel
             // 
+            this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCancel.Location = new System.Drawing.Point(298, 306);
             this.btCancel.Name = "btCancel";
@@ -51,6 +52,7 @@ namespace GUI_DingDoong
             // 
             // btOK
             // 
+            this.btOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btOK.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btOK.Location = new System.Drawing.Point(201, 306);
             this.btOK.Name = "btOK";
@@ -66,7 +68,7 @@ namespace GUI_DingDoong
             this.cbBan.FormattingEnabled = true;
             this.cbBan.Location = new System.Drawing.Point(181, 174);
             this.cbBan.Name = "cbBan";
-            this.cbBan.Size = new System.Drawing.Size(233, 33);
+            this.cbBan.Size = new System.Drawing.Size(222, 33);
             this.cbBan.TabIndex = 5;
             // 
             // label1

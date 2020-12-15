@@ -60,5 +60,10 @@ namespace GUI_DingDoong
         {
             Application.Exit();
         }
+
+        private void FormForgot_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

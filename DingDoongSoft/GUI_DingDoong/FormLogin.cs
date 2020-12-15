@@ -26,6 +26,32 @@ namespace GUI_DingDoong
 
         public static DTO_NhanVien NvMain;
 
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+        private void bt3d()
+        {
+            foreach (var bt in GetAll(this, typeof(Button)))
+            {
+                (bt as Button).Paint += Bt_Paint;
+
+            }
+        }
+
+        private void Bt_Paint(object sender, PaintEventArgs e)
+        {
+            Button bt = sender as Button;
+            ControlPaint.DrawBorder(e.Graphics, bt.ClientRectangle,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
+            SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+        }
 
 
 
@@ -157,7 +183,7 @@ namespace GUI_DingDoong
             //{
             //    MessageBox.Show("Email Không tồn tại");
             //}
-
+            
             FormForgot frmForgot = new FormForgot();
             this.Hide();
 
@@ -206,7 +232,7 @@ namespace GUI_DingDoong
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
+            bt3d();
             try
             {
                 string startupPath = Environment.CurrentDirectory;

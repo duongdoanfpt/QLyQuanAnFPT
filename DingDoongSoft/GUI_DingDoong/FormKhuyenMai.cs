@@ -80,6 +80,7 @@ namespace GUI_DingDoong
             dtpNgKT.Enabled = false;
             btLuu.Enabled = false;
             btCapNhat.Enabled = false;
+            btXoa.Enabled = false;
 
         }
 
@@ -198,6 +199,7 @@ namespace GUI_DingDoong
             dtpNgKT.Enabled = true;
             btCapNhat.Enabled = true;
             btXoa.Enabled = true;
+            btLuu.Enabled = false;
         }
 
         private void btXoa_Click(object sender, EventArgs e)

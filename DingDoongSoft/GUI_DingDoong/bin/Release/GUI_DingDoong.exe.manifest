@@ -266,7 +266,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yiBD+eeRWyRDxsUzfcNjYmLTy3zhha37mRN6o1SwkP4=</dsig:DigestValue>
+        <dsig:DigestValue>j6T4/6ehFCgMnGxIKZkI+hBOmG78mTHg0HLhYBHpKPk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -278,19 +278,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BKab6eOJvP1pqzet/yJsyS5aDonAaapof/YO6ziSHKo=</dsig:DigestValue>
+        <dsig:DigestValue>ikcS5Z6eBy7CsDA89XJ8VSu8gRI2mozT9FBwOisBnac=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI_DingDoong.exe" size="3882992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI_DingDoong.exe" size="3884016">
       <assemblyIdentity name="GUI_DingDoong" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zAVZN5VpNeGA3UigASXR9rF/VpGANDwzy1SPpT177D8=</dsig:DigestValue>
+        <dsig:DigestValue>vTYYGNVM8aFk8R29LYQjU39Ugae65yuGQB+Vfo5cNPY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

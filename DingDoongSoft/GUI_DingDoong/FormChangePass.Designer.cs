@@ -149,6 +149,7 @@
             // 
             // btExit
             // 
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btExit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btExit.Location = new System.Drawing.Point(223, 474);
             this.btExit.Name = "btExit";
@@ -160,6 +161,7 @@
             // 
             // btSubmit
             // 
+            this.btSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSubmit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSubmit.Location = new System.Drawing.Point(93, 474);
             this.btSubmit.Name = "btSubmit";

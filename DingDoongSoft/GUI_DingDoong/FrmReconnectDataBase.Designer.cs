@@ -126,23 +126,27 @@
             // 
             // bttest
             // 
+            this.bttest.BackColor = System.Drawing.Color.White;
+            this.bttest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttest.Location = new System.Drawing.Point(406, 234);
             this.bttest.Name = "bttest";
             this.bttest.Size = new System.Drawing.Size(87, 30);
             this.bttest.TabIndex = 24;
             this.bttest.Text = "Test Connect";
-            this.bttest.UseVisualStyleBackColor = true;
+            this.bttest.UseVisualStyleBackColor = false;
             this.bttest.Click += new System.EventHandler(this.bttest_Click);
             // 
             // btok
             // 
+            this.btok.BackColor = System.Drawing.Color.White;
             this.btok.Enabled = false;
+            this.btok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btok.Location = new System.Drawing.Point(272, 234);
             this.btok.Name = "btok";
             this.btok.Size = new System.Drawing.Size(84, 30);
             this.btok.TabIndex = 23;
             this.btok.Text = "OK";
-            this.btok.UseVisualStyleBackColor = true;
+            this.btok.UseVisualStyleBackColor = false;
             this.btok.Click += new System.EventHandler(this.btok_Click);
             // 
             // txtServer

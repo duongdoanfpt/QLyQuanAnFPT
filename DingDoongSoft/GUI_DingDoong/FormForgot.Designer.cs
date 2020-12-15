@@ -67,6 +67,7 @@
             // 
             // btExit
             // 
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btExit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btExit.Location = new System.Drawing.Point(241, 192);
             this.btExit.Name = "btExit";
@@ -78,6 +79,7 @@
             // 
             // btSendMail
             // 
+            this.btSendMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSendMail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSendMail.Location = new System.Drawing.Point(111, 192);
             this.btSendMail.Name = "btSendMail";
@@ -103,6 +105,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormForgot";
             this.Text = "Quên Mật Khẩu";
+            this.Load += new System.EventHandler(this.FormForgot_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

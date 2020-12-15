@@ -96,6 +96,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Black;
             this.lblEmail.Location = new System.Drawing.Point(36, 198);
@@ -168,6 +169,7 @@
             // btLogin
             // 
             this.btLogin.AccessibleName = "btLogin";
+            this.btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLogin.Location = new System.Drawing.Point(97, 418);
             this.btLogin.Name = "btLogin";
@@ -180,6 +182,7 @@
             // btExit
             // 
             this.btExit.AccessibleName = "btExit";
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btExit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btExit.Location = new System.Drawing.Point(226, 418);
             this.btExit.Name = "btExit";
