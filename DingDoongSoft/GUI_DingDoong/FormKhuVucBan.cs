@@ -100,13 +100,14 @@ namespace GUI_DingDoong
             
             if(bt.Enabled == true)
             {
-                bt.BackColor = Color.White;
 
                 ControlPaint.DrawBorder(g, bt.ClientRectangle,
                 SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
                 SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
                 SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset,
                 SystemColors.ControlLightLight, 4, ButtonBorderStyle.Outset);
+
+                bt.BackColor = Color.White;
 
             }    
             else
@@ -118,6 +119,7 @@ namespace GUI_DingDoong
                 SystemColors.ControlLightLight, 1, ButtonBorderStyle.Outset,
                 SystemColors.ControlLightLight, 1, ButtonBorderStyle.Outset,
                 SystemColors.ControlLightLight, 1, ButtonBorderStyle.Outset);
+                bt.BackColor = Color.LightGray;
             }
            
         }
