@@ -21,7 +21,7 @@ namespace GUI_DingDoong
         {
             InitializeComponent();
         }
-
+        
         public IEnumerable<Control> GetAll(Control control, Type type)
         {
             var controls = control.Controls.Cast<Control>();
@@ -169,6 +169,9 @@ namespace GUI_DingDoong
             {
                 MessageBox.Show("Thêm thành công");
                 LoadGridview_KM();
+                btLuu.Enabled = false;
+                btXoa.Enabled = false;
+                btCapNhat.Enabled = false;
             }
             else
             {
@@ -194,6 +197,7 @@ namespace GUI_DingDoong
             dtpNgBD.Enabled = true;
             dtpNgKT.Enabled = true;
             btCapNhat.Enabled = true;
+            btXoa.Enabled = true;
         }
 
         private void btXoa_Click(object sender, EventArgs e)
@@ -294,7 +298,8 @@ namespace GUI_DingDoong
             txtMaKM.Text = null;
             txtTenKM.Text = null;
             txtChietKhau.Text = null;
-
+            btCapNhat.Enabled = false;
+            btXoa.Enabled = false;
             LoadGridview_KM();
         }
 
