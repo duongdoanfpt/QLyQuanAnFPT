@@ -1093,6 +1093,19 @@ namespace GUI_DingDoong
         {
 
         }
+
+        private void dgvThucDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvThucDon.CurrentRow.Index < dgvThucDon.Rows.Count - 1)
+            {
+                TD = busTD.curTD(dgvThucDon.CurrentRow.Cells[0].FormattedValue.ToString());
+                DTO_CTHD curCTHD = new DTO_CTHD(lbMaHD.Text, TD.MaTD, 1);
+
+
+                busBan.ThemCTHDTam(curCTHD);
+                LoadCTHD();
+            }
+        }
     }
  }
  

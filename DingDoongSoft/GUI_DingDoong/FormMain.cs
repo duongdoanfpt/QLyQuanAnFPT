@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -425,6 +426,19 @@ namespace GUI_DingDoong
             FrmSetupBan frmSetting = new FrmSetupBan();
             frmSetting.FormClosed += FormMain_Load;
             frmSetting.Show();
+        }
+
+        private void pbHuongDan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "Guide.docx");
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("The file is not found in the specified location");
+            }
         }
     }
 }

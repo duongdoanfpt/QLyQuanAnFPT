@@ -34,6 +34,7 @@ namespace GUI_DingDoong
             {
                 if(busBan.setUpBan(int.Parse(txtSoLuong.Text)))
                 {
+                    MessageBox.Show("Thiết lập lại số lượng bàn thành công");
                     this.Close();
                 } 
                 else

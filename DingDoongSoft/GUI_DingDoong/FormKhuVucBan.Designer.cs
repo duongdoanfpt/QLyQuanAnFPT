@@ -875,6 +875,7 @@ namespace GUI_DingDoong
             this.dgvThucDon.Size = new System.Drawing.Size(288, 365);
             this.dgvThucDon.TabIndex = 3;
             this.dgvThucDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucDon_CellClick);
+            this.dgvThucDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucDon_CellDoubleClick);
             // 
             // TenTD
             // 
@@ -1123,7 +1124,7 @@ namespace GUI_DingDoong
             this.lbEmailNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbEmailNV.AutoSize = true;
             this.lbEmailNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmailNV.Location = new System.Drawing.Point(1121, 12);
+            this.lbEmailNV.Location = new System.Drawing.Point(1124, 12);
             this.lbEmailNV.Name = "lbEmailNV";
             this.lbEmailNV.Size = new System.Drawing.Size(194, 21);
             this.lbEmailNV.TabIndex = 6;
@@ -1141,7 +1142,7 @@ namespace GUI_DingDoong
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 993F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 996F));
             this.tableLayoutPanel1.Controls.Add(this.pbThongKe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbBan, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pbKhachHang, 2, 0);

@@ -19,8 +19,8 @@ namespace GUI_DingDoong
         public FormNhanVien()
         {
             InitializeComponent();
-            //lblUsers.Text = FormLogin.NvMain.Email;
-            lblUsers.Text = "duongdoan@gmail.com";
+            lblUsers.Text = FormLogin.NvMain.Email;
+
         }
         private string imagePath;
         string startupPath = Environment.CurrentDirectory;
@@ -157,6 +157,7 @@ namespace GUI_DingDoong
             btXoa.Enabled = true;
             btCapNhat.Enabled = true;
             btBoQua.Enabled = true;
+            pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
         }
         public void SetNull_Value()
         {
@@ -172,11 +173,16 @@ namespace GUI_DingDoong
             pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
             pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
             SetNull_Value();
+            btCapNhat.Enabled = false;
+       
+            btXoa.Enabled = false;
         }
 
         private void btBoQua_Click(object sender, EventArgs e)
         {
             Disable_Textbox_Button();
+            btThem.Enabled = true;
+            pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
         }
 
         //Check Rule Email
@@ -300,6 +306,7 @@ namespace GUI_DingDoong
                     dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                     dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     Disable_Textbox_Button();
+                    pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
                     //pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
                     //pbHinh.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -373,6 +380,7 @@ namespace GUI_DingDoong
                 
                 dgvNhanVien.DataSource = busnhanvien.getDanhSachNV();
                 dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                pbHinh.BackgroundImage = Image.FromFile(startupPath + @"\image\logo.jpg");
 
             }
             else

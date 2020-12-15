@@ -91,6 +91,7 @@
             // 
             // cmbAuthentication
             // 
+            this.cmbAuthentication.BackColor = System.Drawing.Color.White;
             this.cmbAuthentication.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAuthentication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cmbAuthentication.FormattingEnabled = true;

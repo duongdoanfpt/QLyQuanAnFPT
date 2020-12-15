@@ -283,14 +283,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI_DingDoong.exe" size="3884016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI_DingDoong.exe" size="3885040">
       <assemblyIdentity name="GUI_DingDoong" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vTYYGNVM8aFk8R29LYQjU39Ugae65yuGQB+Vfo5cNPY=</dsig:DigestValue>
+        <dsig:DigestValue>zJGRMXV9vDPCIU9TmH4Tn52vZGqBLhsi+Pn/vblzqjY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

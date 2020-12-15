@@ -222,6 +222,7 @@ namespace GUI_DingDoong
             txtEmail.Enabled = true;
             dtpNgaySinh.Enabled = true;
             btCapNhat.Enabled = true;
+            btLuu.Enabled = false;
         }
 
         private void btCapNhat_Click(object sender, EventArgs e)
