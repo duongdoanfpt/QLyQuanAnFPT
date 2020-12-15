@@ -331,7 +331,7 @@ namespace GUI_DingDoong
                     btCapNhat.Enabled = true;
                     btBoQua.Enabled = true;
                     txtTenNhanVien.Enabled = true;
-                    txtEmail.Enabled = true;
+                    txtEmail.Enabled = false;
                     txtDiaChi.Enabled = true;
                     dateTimeNVL.Enabled = true;
                     rdNhanVien.Enabled = true;
