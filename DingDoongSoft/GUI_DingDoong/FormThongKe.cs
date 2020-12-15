@@ -597,7 +597,13 @@ namespace GUI_DingDoong
                 DgvData.Refresh();
                 DgvData.DataSource = busTK.thongKeKhachHang(null, null);
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                LoadNameKhachHang(busTK.thongKeKhachHang(ngayBatDau.Value, ngayKetThuc.Value));
+                DgvData.Columns[0].HeaderText = "Tên khách hàng";
+                DgvData.Columns[1].HeaderText = "Số điện thoại";
+                DgvData.Columns[2].HeaderText = "Email";
+                DgvData.Columns[3].HeaderText = "Tổng tiền";
+
+                DgvData.Columns[3].DefaultCellStyle.Format = "c";
+
 
 
             }
@@ -683,7 +689,7 @@ namespace GUI_DingDoong
 
         private void DgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(cbKhachHang.Checked == false )
+            if (cbHoaDon.Checked == true || cbDTNam.Checked == true || cbDTThang.Checked == true  )
            if (e.ColumnIndex == DgvData.Columns["Detail"].Index && e.RowIndex >= 0 && e.RowIndex<DgvData.Rows.Count-1)
             {
                 

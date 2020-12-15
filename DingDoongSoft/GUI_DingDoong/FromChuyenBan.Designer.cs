@@ -60,6 +60,7 @@ namespace GUI_DingDoong
             // btOK
             // 
             this.btOK.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btOK.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btOK.Location = new System.Drawing.Point(185, 315);
             this.btOK.Name = "btOK";
@@ -71,6 +72,7 @@ namespace GUI_DingDoong
             // 
             // btCancel
             // 
+            this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCancel.Location = new System.Drawing.Point(290, 315);
             this.btCancel.Name = "btCancel";
@@ -78,6 +80,7 @@ namespace GUI_DingDoong
             this.btCancel.TabIndex = 3;
             this.btCancel.Text = "Cancel";
             this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // label2
             // 

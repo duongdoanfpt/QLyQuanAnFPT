@@ -56,6 +56,7 @@
             // 
             // btSave
             // 
+            this.btSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSave.Location = new System.Drawing.Point(183, 137);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(75, 23);
@@ -66,6 +67,7 @@
             // 
             // btCancel
             // 
+            this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancel.Location = new System.Drawing.Point(274, 137);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);

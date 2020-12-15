@@ -42,7 +42,6 @@ D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Release\GUI_DingDoong.For
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Release\GUI_DingDoong.FormLogin.resources
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Release\GUI_DingDoong.FormMain.resources
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Release\GUI_DingDoong.FormNhanVien.resources
-D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Release\GUI_DingDoong.FormNoiDungMail.resources
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Release\GUI_DingDoong.FormThongKe.resources
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Release\GUI_DingDoong.FormThongTin.resources
 D:\PRO131\QLyQuanAnFPT\DingDoongSoft\GUI_DingDoong\obj\Release\GUI_DingDoong.FormThucDon.resources

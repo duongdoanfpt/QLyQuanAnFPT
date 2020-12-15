@@ -191,22 +191,21 @@ namespace GUI_DingDoong
                 btGopBan.Enabled = true;
                 btTimKiem.Enabled = true;
                 btThem.Enabled = true;
-                
-
+                ChkBKhachHang.Enabled = true;
+                ChkBKhachHang.Checked = false;
+                btThemKhach.Enabled = false;
+                txtSDTKH.Enabled = false;
                 if (string.IsNullOrWhiteSpace(hd.SDT_KH))
                 {
-                    ChkBKhachHang.Enabled = true;
-                    btThemKhach.Enabled = false;
-                    txtSDTKH.Enabled = false;
+                    
+                  
                     txtSDTKH.Text = null;
-                    ChkBKhachHang.Checked = false;
+                   
                 }
                 else
                 {
-                    ChkBKhachHang.Enabled = false;
-                    ChkBKhachHang.Checked = false;
-                    btThemKhach.Enabled = false;
-                    txtSDTKH.Enabled = false;
+                   
+                   
                     txtSDTKH.Text = hd.SDT_KH;
                 }
 
@@ -507,7 +506,7 @@ namespace GUI_DingDoong
             dgvThucDon.ReadOnly = true;
             cbNhom.SelectedIndex = 0;
             txtTenTD.AutoCompleteCustomSource = GetAutoSourceFromTable(busTD.DanhSachThucDonBan());
-            txtTenTD.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txtTenTD.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txtTenTD.AutoCompleteSource = AutoCompleteSource.CustomSource;
             pbBan.Enabled = false;
             pbBan.BorderStyle = BorderStyle.Fixed3D;

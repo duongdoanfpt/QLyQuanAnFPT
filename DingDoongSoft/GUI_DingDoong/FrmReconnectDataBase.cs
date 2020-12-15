@@ -44,7 +44,7 @@ namespace GUI_DingDoong
                     conn.Close();
                     return true;
                 }
-                catch (SqlException ex)
+                catch (SqlException )
                 {
                    
                     return false;
