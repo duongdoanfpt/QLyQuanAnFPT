@@ -423,7 +423,7 @@ namespace DAL_DingDoong
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 
             }
@@ -452,7 +452,7 @@ namespace DAL_DingDoong
                     return true;
             }
 
-            catch (Exception ex)
+            catch (Exception )
             {
                 
             }
@@ -561,9 +561,9 @@ namespace DAL_DingDoong
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                Console.WriteLine(e.Message);
+               
             }
             finally
             {
@@ -617,9 +617,9 @@ namespace DAL_DingDoong
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                Console.WriteLine(e.Message);
+               
             }
             finally
             {

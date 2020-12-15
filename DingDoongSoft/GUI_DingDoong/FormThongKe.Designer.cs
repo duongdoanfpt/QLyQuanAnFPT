@@ -69,7 +69,7 @@ namespace GUI_DingDoong
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tongTien = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbDoanhThu = new System.Windows.Forms.Label();
             this.DgvData = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btSendMail = new System.Windows.Forms.Button();
@@ -119,7 +119,7 @@ namespace GUI_DingDoong
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1031F));
+            this.LayoutMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1034F));
             this.LayoutMenu.Controls.Add(this.lblUsers, 6, 0);
             this.LayoutMenu.Controls.Add(this.ThongKe, 4, 0);
             this.LayoutMenu.Controls.Add(this.Ban, 3, 0);
@@ -139,7 +139,7 @@ namespace GUI_DingDoong
             this.lblUsers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsers.AutoSize = true;
             this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsers.Location = new System.Drawing.Point(1178, 11);
+            this.lblUsers.Location = new System.Drawing.Point(1181, 11);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(162, 21);
             this.lblUsers.TabIndex = 7;
@@ -636,7 +636,7 @@ namespace GUI_DingDoong
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.tongTien);
-            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.lbDoanhThu);
             this.panel4.Controls.Add(this.DgvData);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Location = new System.Drawing.Point(323, 4);
@@ -654,17 +654,17 @@ namespace GUI_DingDoong
             this.tongTien.Size = new System.Drawing.Size(232, 33);
             this.tongTien.TabIndex = 3;
             // 
-            // label9
+            // lbDoanhThu
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(528, 595);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 25);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Tổng doanh thu: ";
+            this.lbDoanhThu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbDoanhThu.AutoSize = true;
+            this.lbDoanhThu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDoanhThu.ForeColor = System.Drawing.Color.Red;
+            this.lbDoanhThu.Location = new System.Drawing.Point(528, 595);
+            this.lbDoanhThu.Name = "lbDoanhThu";
+            this.lbDoanhThu.Size = new System.Drawing.Size(166, 25);
+            this.lbDoanhThu.TabIndex = 2;
+            this.lbDoanhThu.Text = "Tổng doanh thu: ";
             // 
             // DgvData
             // 
@@ -882,7 +882,7 @@ namespace GUI_DingDoong
         private System.Windows.Forms.PictureBox ptbNext;
         private System.Windows.Forms.Button btExcel;
         private System.Windows.Forms.TextBox tongTien;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbDoanhThu;
         private System.Windows.Forms.DataGridView DgvData;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;

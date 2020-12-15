@@ -1104,6 +1104,7 @@ namespace GUI_DingDoong
 
                 busBan.ThemCTHDTam(curCTHD);
                 LoadCTHD();
+                lbTongTien.Text = (busBan.TongTienHDTam(hd) - busBan.TongTienHDTam(hd) * hd.KhuyenMai / 100).ToString();
             }
         }
     }

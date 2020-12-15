@@ -211,6 +211,7 @@ namespace GUI_DingDoong
                 txtTuNgay.Visible = true;
                 txtDenNgay.Visible = true;
                 cbKhachHang.Checked = false;
+                cbSinhNhat.Checked = false;
                 cbDTThang.Checked = false;
                 cbDTNam.Checked = false;
                 cbHoaDon.Checked = false;
@@ -221,6 +222,8 @@ namespace GUI_DingDoong
                 DgvData.Refresh();
                 DgvData.DataSource = busTK.dtSLTD(null, null);
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                lbDoanhThu.Visible = false;
+                tongTien.Visible = false;
                 
 
             }
@@ -380,7 +383,8 @@ namespace GUI_DingDoong
                 cbHoaDon.Checked = false;
                 cbSinhNhat.Checked = false;
 
-
+                lbDoanhThu.Visible = true;
+                tongTien.Visible = true;
 
                 DgvData.DataSource = busTK.doanhThuThang_Main();
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -440,6 +444,8 @@ namespace GUI_DingDoong
                 cbDTThang.Checked = false;
                 cbHoaDon.Checked = false;
                 cbSinhNhat.Checked = false;
+                lbDoanhThu.Visible = true;
+                tongTien.Visible = true;
 
 
 
@@ -597,6 +603,8 @@ namespace GUI_DingDoong
                 DgvData.Refresh();
                 DgvData.DataSource = busTK.thongKeKhachHang(null, null);
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                lbDoanhThu.Visible = false;
+                tongTien.Visible = false;
                 DgvData.Columns[0].HeaderText = "Tên khách hàng";
                 DgvData.Columns[1].HeaderText = "Số điện thoại";
                 DgvData.Columns[2].HeaderText = "Email";
@@ -629,6 +637,8 @@ namespace GUI_DingDoong
                 cbDTThang.Checked = false;
                 cbDTNam.Checked = false;
                 cbSinhNhat.Checked = false;
+                lbDoanhThu.Visible = true;
+                tongTien.Visible = true;
                 DgvData.DataSource = busTK.thongKeHoaDon(null, null);
                 DgvData.Columns["ThanhTien"].DefaultCellStyle.Format = "c";
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -744,7 +754,9 @@ namespace GUI_DingDoong
                 cbDTThang.Checked = false;
                 cbDTNam.Checked = false;
                 cbHoaDon.Checked = false;
-                
+                lbDoanhThu.Visible = false;
+                tongTien.Visible = false;
+
                 DgvData.DataSource = busTK.sinhNhatKhachHang();
                 DgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 DgvData.Columns[0].HeaderText = "Số điện thoại";
