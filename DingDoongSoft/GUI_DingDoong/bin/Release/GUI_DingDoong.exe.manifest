@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0FJhyCHiIJwt3UsPxYrcp6HwqZNrYL4rTTYuMh3UZMY=</dsig:DigestValue>
+        <dsig:DigestValue>aRsbR6eP0Ie6piB2hdAtrQ5nRrNJtjiQ12zpanbwAqc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -266,7 +266,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>j6T4/6ehFCgMnGxIKZkI+hBOmG78mTHg0HLhYBHpKPk=</dsig:DigestValue>
+        <dsig:DigestValue>Qw9ImQ13c/HdknMy8Xwmy+53WL3ZNqwbWYJjlWCUYSM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -278,19 +278,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BKab6eOJvP1pqzet/yJsyS5aDonAaapof/YO6ziSHKo=</dsig:DigestValue>
+        <dsig:DigestValue>ikcS5Z6eBy7CsDA89XJ8VSu8gRI2mozT9FBwOisBnac=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI_DingDoong.exe" size="3882992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI_DingDoong.exe" size="3883504">
       <assemblyIdentity name="GUI_DingDoong" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DxWqM01+Qow/vQualZJqOAhbt4fMPOXUXrg2DNeiVrM=</dsig:DigestValue>
+        <dsig:DigestValue>EXYu29nEzD9680IwN8w7D6uhtohBdqGDFkS8ac/oOX4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -307,14 +307,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stdole.dll" size="25480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stdole.dll" size="25464">
       <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GG/bJw9FnTOrwWlAT4ADENstB6x+XwxZGCkqSpfqols=</dsig:DigestValue>
+        <dsig:DigestValue>w+WKWN8hrnAPMBVWrF/2DJ15GS7h6GEY4Dbbbs02KsQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
