@@ -146,6 +146,13 @@ namespace GUI_DingDoong
             if (rdNu.Checked == true)
                 gioitinh = 0;
 
+            if (txtTen.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập tên khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTen.Focus();
+                return;
+            }
+
             if (!isvailphone(txtSDT.Text))
             {
                 MessageBox.Show("Định dạng số điện thoại không hợp lệ, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -230,6 +237,20 @@ namespace GUI_DingDoong
             int gioitinh = 1;
             if (rdNu.Checked == true)
                 gioitinh = 0;
+
+            if (txtTen.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập tên khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTen.Focus();
+                return;
+            }
+
+            if (!Isvaild(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Định dạng email không hợp lệ, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.Focus();
+                return;
+            }
 
             DTO_Khach khach = new DTO_Khach(txtTen.Text, txtSDT.Text, dtpNgaySinh.Value, txtEmail.Text, gioitinh);
             if (busKhach.UpdateKhach(khach))

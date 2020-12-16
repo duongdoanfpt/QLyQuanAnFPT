@@ -351,6 +351,14 @@ namespace GUI_DingDoong
                 {
                     MessageBox.Show("Bạn chưa nhập đơn giá", "Thông báo");
                 }
+                else if (!IsNumber(txtDonGia.Text))
+                {
+                    MessageBox.Show("Đơn giá phải là số và lớn hơn 0");
+                }
+                else if (float.Parse(txtDonGia.Text) < 0)
+                {
+                    MessageBox.Show("Đơn giá phải là một số lớn hơn 0");
+                }
                 else if (string.IsNullOrEmpty(txtNhom.Text) || string.IsNullOrWhiteSpace(txtNhom.Text))
                 {
                     MessageBox.Show("Bạn chưa nhập nhóm", "Thông báo");

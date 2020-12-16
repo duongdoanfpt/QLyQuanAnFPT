@@ -349,11 +349,11 @@
             this.lbDayofweek.AutoSize = true;
             this.lbDayofweek.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDayofweek.ForeColor = System.Drawing.Color.White;
-            this.lbDayofweek.Location = new System.Drawing.Point(140, 167);
+            this.lbDayofweek.Location = new System.Drawing.Point(128, 168);
             this.lbDayofweek.Name = "lbDayofweek";
-            this.lbDayofweek.Size = new System.Drawing.Size(113, 86);
+            this.lbDayofweek.Size = new System.Drawing.Size(153, 86);
             this.lbDayofweek.TabIndex = 4;
-            this.lbDayofweek.Text = "Fri";
+            this.lbDayofweek.Text = "Thu";
             this.lbDayofweek.MouseEnter += new System.EventHandler(this.lbDayofweek_MouseEnter);
             this.lbDayofweek.MouseLeave += new System.EventHandler(this.lbDayofweek_MouseLeave);
             // 
@@ -362,7 +362,7 @@
             this.lbDate.AutoSize = true;
             this.lbDate.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDate.ForeColor = System.Drawing.Color.White;
-            this.lbDate.Location = new System.Drawing.Point(37, 167);
+            this.lbDate.Location = new System.Drawing.Point(26, 168);
             this.lbDate.Name = "lbDate";
             this.lbDate.Size = new System.Drawing.Size(111, 86);
             this.lbDate.TabIndex = 1;
